@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
-import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info } from 'lucide-react';
+import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info, MessageSquare } from 'lucide-react';
 import { getCartCount } from '@/utils/cart';
 import type { Product } from '@/types/product';
 import ClientOnly from './ClientOnly';
@@ -56,7 +56,7 @@ const Header = () => {
   const announcements = [
     <span key="nav-1">🚚 <span className="font-bold">Free Shipping</span> Across North America</span>,
     <span key="nav-2">📦 <span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>,
-    "whatsapp-contact" // Special marker for WhatsApp announcement
+    "livechat-contact" // Marker for Live Chat announcement
   ];
 
   // Announcement bar animation - PRESERVED EXACTLY
@@ -158,26 +158,17 @@ const Header = () => {
         <div suppressHydrationWarning={true} className="container mx-auto px-4 flex items-center justify-center relative w-full h-full">
           {/* Announcement Text - PRESERVED */}
           <div suppressHydrationWarning={true} className="text-center font-medium px-4 sm:px-16 transition-all duration-500 ease-in-out h-full flex items-center justify-center min-h-[24px]">
-            {announcements[currentAnnouncement] === "whatsapp-contact" ? (
+            {announcements[currentAnnouncement] === "livechat-contact" ? (
               <div key={currentAnnouncement} className="flex items-center justify-center animate-fade-in text-xs sm:text-sm md:text-base h-full w-full">
-                <a
-                  href="https://wa.me/19129231747"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 sm:gap-1.5 hover:opacity-80 transition-opacity flex-wrap justify-center"
-                  aria-label="Contact us on WhatsApp"
+                <Link
+                  href="/livechat"
+                  className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-wrap justify-center"
+                  aria-label="Inquiries? Live Chat Available 24/7"
                 >
-                  <Image
-                    src="/whatsapp-svgrepo-com.svg"
-                    alt="WhatsApp"
-                    width={20}
-                    height={20}
-                    className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"
-                    style={{ filter: 'brightness(0) invert(1)' }}
-                  />
-                  <span className="whitespace-nowrap">Need a hand? <span className="font-bold">Message us on WhatsApp</span></span>
-                  <span className="underline whitespace-nowrap font-bold">+19129231747</span>
-                </a>
+                  <MessageSquare className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 text-[#f5970c]" />
+                  <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available 24/7</span></span>
+                  <span className="underline whitespace-nowrap font-bold text-[#f5970c] ml-1">Chat With Us</span>
+                </Link>
               </div>
             ) : (
               <span key={currentAnnouncement} className="inline-block animate-fade-in whitespace-nowrap text-sm sm:text-base h-full flex items-center">
