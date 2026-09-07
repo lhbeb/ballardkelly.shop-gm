@@ -7,9 +7,15 @@ import type { Review } from '@/types/product';
 // Transform Supabase row to Product type
 export function transformProduct(row: any): Product {
   const meta = row.meta || {};
-  // Default to published=true for backward compatibility (existing products without meta.published should be considered published)
-  // Only explicitly set to false if meta.published === false
-  const published = meta.published === false ? false : true;
+  // Treat products as published unless explicitly marked as draft
+  const isDraft = meta.is_draft === true || meta.draft === true;
+  const published = isDraft ? false : true;
+  const transformedMeta = {
+    ...meta,
+    published,
+    gmc_enabled: meta.gmc_enabled !== undefined ? meta.gmc_enabled : true,
+  };
+
   return {
     id: row.id || row.slug,
     slug: row.slug,
@@ -25,15 +31,15 @@ export function transformProduct(row: any): Product {
     payeeEmail: row.payee_email || '',
     currency: row.currency || 'USD',
     checkoutLink: row.checkout_link,
-    checkoutFlow: row.checkout_flow || 'buymeacoffee', // Default to buymeacoffee for backward compatibility
+    checkoutFlow: row.checkout_flow || 'buymeacoffee',
     reviews: row.reviews || [],
-    meta: meta,
-    published: published, // Default to true unless explicitly set to false
+    meta: transformedMeta,
+    published: published,
     isFeatured: Boolean(row.is_featured),
     inStock: row.in_stock !== undefined ? Boolean(row.in_stock) : true,
     listedBy: row.listed_by || null,
     sellerId: row.seller_id || null,
-    collections: row.collections || [], // Array of collection tags
+    collections: row.collections || [],
     original_price: row.original_price !== undefined ? row.original_price : (meta.original_price || meta.originalPrice || null),
     originalPrice: row.original_price !== undefined ? row.original_price : (meta.original_price || meta.originalPrice || null),
   };
@@ -313,8 +319,16 @@ export async function getFeaturedProducts(): Promise<Product[]> {
 
     const products = (data || []).map(transformProduct);
 
-    // Filter out drafts - only return published products
-    return products.filter(p => p.published !== false);
+    const filtered = products.filter(p => p.published !== false);
+    if (filtered.length === 0) {
+      const { data: recentData } = await supabaseAdmin
+        .from('products')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(FEATURED_PRODUCT_LIMIT);
+      return (recentData || []).map(transformProduct).filter(p => p.published !== false);
+    }
+    return filtered;
   } catch (error) {
     console.error('Error loading featured products:', error);
     return [];

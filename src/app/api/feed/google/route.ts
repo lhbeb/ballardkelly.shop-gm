@@ -5,10 +5,10 @@ import { isGmcFeedEligibleProduct } from '@/lib/gmc';
 import { enrichGmcDescription } from '@/lib/gmc-description';
 import { getMarket } from '@/lib/markets';
 
-const BASE_URL = 'https://cokaro.com';
-
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+const BASE_URL = 'https://cokaro.com';
 
 function escapeXml(unsafe: string): string {
   return unsafe
