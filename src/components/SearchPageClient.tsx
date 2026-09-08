@@ -11,17 +11,7 @@ interface SearchPageClientProps {
   initialCategory?: string;
 }
 
-const CATALOG_CATEGORIES = [
-  "Blowers",
-  "Hardware",
-  "Lawn Mowers",
-  "Pressure Washers",
-  "Swimming Pools",
-  "Bikes",
-  "Electric Scooters",
-  "Tents",
-  "Vacuum Cleaners",
-] as const;
+const CATALOG_CATEGORIES: string[] = [];
 
 function getExactCatalogCategory(value: string): string {
   const normalizedValue = value.trim().toLowerCase();
