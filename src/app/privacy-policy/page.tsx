@@ -1,4 +1,5 @@
 import React from 'react';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 
 const PrivacyPolicyPage = () => (
   <div className="min-h-screen flex flex-col bg-gray-50 py-12">
@@ -8,8 +9,10 @@ const PrivacyPolicyPage = () => (
       <div className="prose max-w-none text-gray-700 space-y-8">
         {/* Introduction */}
         <p className="text-lg leading-relaxed">
-          At Cokaro, your privacy is important to us. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices you have regarding your personal data when you visit or use our website.
+          At Cokaro, your privacy is important to us. Cokaro sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment, including products identified by third-party brand and model marks. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices you have regarding your personal data when you visit or use our website.
         </p>
+
+        <ResellerBrandNotice compact />
 
         {/* Information We Collect */}
         <div>
@@ -54,6 +57,7 @@ const PrivacyPolicyPage = () => (
             <li>Respond to customer inquiries and support requests</li>
             <li>Send marketing emails if you have opted in</li>
             <li>Improve our website, products, and services</li>
+            <li>Display relevant product categories, brands, model names, and reseller inventory information</li>
             <li>Detect and prevent fraud</li>
             <li>Comply with legal requirements</li>
           </ul>
@@ -63,7 +67,7 @@ const PrivacyPolicyPage = () => (
         <div>
           <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">Information Sharing</h2>
           <p className="mb-4">
-            We do not sell or trade your personal information to third parties. We may share your information only with trusted service providers who help us operate our website or fulfill your orders, such as:
+            We do not sell or trade your personal information to third parties. We may share your information only with service providers who help us operate our website or fulfill your orders, such as:
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-4">
             <li>Payment processors</li>

@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </Link>
             <p className="mb-4 text-[#F0F6FF]">
-              Dependable lawn mowers, power tools, generators, and garden essentials for projects of every size.
+              Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for homes, backyards, acreage, and farm upkeep.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">

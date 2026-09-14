@@ -116,8 +116,8 @@ export const DEFAULT_MARKET: MarketConfig = MARKETS.us;
  * Get market config for a given key, falling back to US default.
  */
 export function getMarket(key?: string | null): MarketConfig {
-  if (!key) return DEFAULT_MARKET;
-  return MARKETS[key as MarketKey] ?? DEFAULT_MARKET;
+  if (!key || key === 'us') return DEFAULT_MARKET;
+  return DEFAULT_MARKET;
 }
 
 /**
@@ -150,12 +150,8 @@ export function getDeliveryRange(market: MarketConfig): string {
 }
 
 export const MARKET_OPTIONS = [
-  { value: '', label: '🌍 Global (Default — USD)' },
-  { value: 'us', label: '🇺🇸 United States (USD)' },
-  { value: 'uk', label: '🇬🇧 United Kingdom (GBP £)' },
-  { value: 'eu', label: '🇪🇺 European Union (EUR €)' },
-  { value: 'ca', label: '🇨🇦 Canada (CAD)' },
-  { value: 'au', label: '🇦🇺 Australia (AUD)' },
+  { value: '', label: 'United States (Default - USD)' },
+  { value: 'us', label: 'United States (USD)' },
 ] as const;
 
 /** Auto-currency mapping for each market */

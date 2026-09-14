@@ -232,11 +232,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
-        { "@type": "ListItem", "position": 2, "name": "Products", "item": `${BASE_URL}/#products` },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": `${BASE_URL}/search` },
         {
           "@type": "ListItem", "position": 3,
           "name": p.category || 'Category',
-          "item": `${BASE_URL}/#products?category=${encodeURIComponent(p.category || '')}`
+          "item": `${BASE_URL}/search?category=${encodeURIComponent(p.category || '')}`
         },
         { "@type": "ListItem", "position": 4, "name": p.title || 'Product', "item": `${BASE_URL}/products/${p.slug}` }
       ]

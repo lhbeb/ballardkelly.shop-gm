@@ -25,9 +25,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cokaro - Power Your Outdoor and Home Projects With Confidence",
-  description: "Shop lawn mowers, power tools, portable generators, and garden essentials at Cokaro. Reliable outdoor equipment for every task. Fast shipping, fair prices, and secure checkout.",
-  keywords: "Cokaro, lawn mowers, power tools, portable generators, garden equipment, outdoor power equipment, ride mowers, garden essentials, outdoor tools, home improvement, power equipment",
+  title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
+  description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro. Reliable products for home, backyard, acreage, and farm upkeep.",
+  keywords: "Cokaro, reseller, sourced equipment, lawn mowers, pressure washers, chainsaws, blowers, trimmers, outdoor power equipment, backyard equipment, farm equipment, home maintenance equipment",
   authors: [{ name: "Cokaro" }],
   creator: "Cokaro",
   publisher: "Cokaro",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://cokaro.com"),
   openGraph: {
-    title: "Cokaro - Power Your Outdoor and Home Projects With Confidence",
-    description: "Shop lawn mowers, power tools, portable generators, and garden essentials at Cokaro. Reliable outdoor equipment for every task.",
+    title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
+    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro.",
     url: "https://cokaro.com",
     siteName: "Cokaro",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: "/g7x.jpeg",
         width: 1200,
         height: 630,
-        alt: "Cokaro - Outdoor Power Equipment & Garden Essentials",
+        alt: "Cokaro - Outdoor Power Equipment for Home, Backyard, and Farm Care",
       },
     ],
     locale: "en_US",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cokaro - Power Your Outdoor and Home Projects With Confidence",
-    description: "Shop lawn mowers, power tools, portable generators, and garden essentials at Cokaro. Reliable outdoor equipment for every task.",
+    title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
+    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro.",
     images: ["/g7x.jpeg"],
   },
   robots: {
@@ -128,7 +128,7 @@ export default function RootLayout({
                 "name": "Cokaro",
                 "url": "https://cokaro.com",
                 "logo": "https://cokaro.com/logosvg.svg",
-                "description": "Cokaro - Power Your Outdoor and Home Projects With Confidence. Discover reliable lawn mowers, power tools, generators, and garden essentials.",
+                "description": "Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
                 "sameAs": [
                   "https://www.tiktok.com/@cokaro_officiel",
                   "https://www.instagram.com/cokaro_officiel/",
@@ -165,7 +165,7 @@ export default function RootLayout({
                 "@type": "WebSite",
                 "name": "Cokaro",
                 "url": "https://cokaro.com",
-                "description": "Cokaro - Power Your Outdoor and Home Projects With Confidence. Discover reliable lawn mowers, power tools, generators, and garden essentials.",
+                "description": "Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
                 "potentialAction": {
                   "@type": "SearchAction",
                   "target": {

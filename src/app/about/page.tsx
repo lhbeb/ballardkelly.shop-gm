@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AboutNotifier from '@/components/AboutNotifier';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 import {
   Users,
   Shield,
@@ -25,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: 'About Us | Cokaro',
   description:
-    'Learn about Cokaro, your trusted source for lawn mowers, power tools, portable generators, and garden essentials. Operating across the United States with fair prices and quality service.',
+    'Learn about Cokaro, a US-based seller and reseller of lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.',
 };
 
 export default function AboutPage() {
@@ -38,7 +39,7 @@ export default function AboutPage() {
         'url': 'https://cokaro.com/about',
         'name': 'About Cokaro',
         'description':
-          'Cokaro is an ecommerce retailer serving customers across the United States with outdoor power equipment and garden essentials.',
+          'Cokaro is an ecommerce seller and reseller serving customers across the United States with outdoor power equipment for home, backyard, acreage, and farm care.',
         'mainEntity': {
           '@id': 'https://cokaro.com/#organization',
         },
@@ -49,7 +50,7 @@ export default function AboutPage() {
         'name': 'Cokaro',
         'url': 'https://cokaro.com',
         'description':
-          'Ecommerce store serving the United States with lawn mowers, power tools, portable generators, and garden essentials.',
+          'Ecommerce seller and reseller serving the United States with lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment.',
         'email': 'contact@cokaro.com',
         'telephone': ['+19129231747'],
         'address': {
@@ -87,12 +88,16 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-5xl font-bold mb-6">About Cokaro</h1>
           <p className="text-xl text-[#F0F6FF]/85 leading-relaxed max-w-3xl mx-auto">
-            Welcome to Cokaro, your trusted source for outdoor power equipment and home project essentials. Based in the United States, we help smart shoppers find reliable lawn mowers, power tools, portable generators, and garden essentials at fair and transparent prices.
+            Welcome to Cokaro, a US-based seller and reseller of outdoor power equipment for the places you maintain every week: your home, backyard, acreage, workshop, and farm. We help customers find reliable lawn mowers, pressure washers, chainsaws, blowers, trimmers, and related equipment at fair and transparent prices.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 max-w-4xl py-12">
+        <div className="mb-12">
+          <ResellerBrandNotice />
+        </div>
+
         {/* US Presence */}
         <section className="mb-12 border-y border-[#0a3075]/15 py-9">
           <div className="grid gap-8 md:grid-cols-[220px_minmax(0,1fr)] md:items-start">
@@ -116,13 +121,13 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* How We Keep Prices Low */}
+        {/* How We Source Responsibly */}
         <div className="bg-white rounded-2xl shadow-lg border border-[#0a3075]/10 p-8 mb-12">
           <div className="mb-6">
-            <h2 className="text-3xl font-bold text-[#262626]">How We Keep Prices Low While Staying 100 Percent Legit</h2>
+            <h2 className="text-3xl font-bold text-[#262626]">How We Source Responsibly</h2>
           </div>
           <p className="text-gray-700 mb-8 text-lg">
-            Our business model is based on experience, smart sourcing, and efficiency. The reason our items are often 30 to 50 percent below retail is because we purchase differently from traditional stores.
+            Our business model is based on legitimate resale, authorized reseller or supplier relationships only where they apply, smart sourcing, and efficient fulfillment. We purchase differently from traditional stores, then inspect, verify, and present each product clearly before it is offered for sale.
           </p>
 
           <div className="space-y-6">
@@ -132,9 +137,9 @@ export default function AboutPage() {
                   1
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We win thousands of online auctions before items reach the public</h3>
+                  <h3 className="text-xl font-bold text-[#262626] mb-2">We source equipment through auctions and verified resale channels</h3>
                   <p className="text-gray-700">
-                    Our sourcing team participates daily in high volume auctions across multiple platforms. By buying in bulk before products reach regular marketplaces, we secure lower costs and pass those savings directly to our customers.
+                    Our sourcing team participates in high volume auctions and resale channels across multiple platforms. By buying carefully and in bulk, we secure lower costs on equipment for homes, backyards, acreage, and farm work.
                   </p>
                 </div>
               </div>
@@ -146,9 +151,9 @@ export default function AboutPage() {
                   2
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We negotiate deals across major online marketplaces</h3>
+                  <h3 className="text-xl font-bold text-[#262626] mb-2">We negotiate with sellers and suppliers</h3>
                   <p className="text-gray-700">
-                    Our dedicated team searches Facebook Marketplace, OfferUp, eBay, Kleinanzeigen, and other local platforms. We negotiate directly with private sellers, compare prices, and secure the highest value possible, which allows us to keep prices low and inventory diverse.
+                    Our team works with approved private sellers, marketplace partners, wholesalers, liquidators, and supplier channels. That mix helps us carry a practical range of lawn mowers, pressure washers, chainsaws, blowers, trimmers, and other outdoor power equipment.
                   </p>
                 </div>
               </div>
@@ -162,7 +167,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-bold text-[#262626] mb-2">We partner with the return and liquidation departments of major retailers</h3>
                   <p className="text-gray-700 mb-2">
-                    When possible, we obtain bulk lots from companies such as Amazon, Target, Best Buy, and others. These lots include overstock, open box items, shelf pulls, refurbished pieces, and customer returns.
+                    When possible, we obtain bulk lots from retailer and supplier programs. These lots may include overstock, open box items, shelf pulls, refurbished pieces, and customer returns.
                   </p>
                   <p className="text-gray-700">
                     Every product is carefully inspected, tested, cleaned, or refurbished before being listed.
@@ -219,15 +224,15 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-[#F0F6FF] rounded-lg p-4 border border-[#0a3075]/10">
               <CheckCircle2 className="h-6 w-6 text-[#0a3075] mb-2" />
-              <p className="text-gray-700 font-medium">verifying authentic condition</p>
+              <p className="text-gray-700 font-medium">checking condition and listing accuracy</p>
             </div>
             <div className="bg-[#F0F6FF] rounded-lg p-4 border border-[#0a3075]/10">
               <Zap className="h-6 w-6 text-[#0a3075] mb-2" />
-              <p className="text-gray-700 font-medium">confirming that the product works perfectly</p>
+              <p className="text-gray-700 font-medium">testing function where applicable</p>
             </div>
             <div className="bg-[#F0F6FF] rounded-lg p-4 border border-[#0a3075]/10">
               <DollarSign className="h-6 w-6 text-[#0a3075] mb-2" />
-              <p className="text-gray-700 font-medium">validating that the price reflects real market value</p>
+              <p className="text-gray-700 font-medium">reviewing price against current market data</p>
             </div>
           </div>
 
@@ -244,7 +249,7 @@ export default function AboutPage() {
               When you purchase from a private seller on our platform, it is clearly stated on the product page. The seller sends the item to us first, we inspect it, and only then do we ship it to you.
             </p>
             <p className="text-gray-700 mb-3">
-              This process protects buyers and ensures that every product, whether sold by us or by a trusted partner, meets the same high standard.
+              This process protects buyers and helps each product, whether sold by us or by an approved partner, meet the same listing and fulfillment standards.
             </p>
             <p className="text-gray-700">
               Private sellers benefit by earning their own fair profits, while customers benefit from greater variety and consistent quality control.
@@ -259,10 +264,10 @@ export default function AboutPage() {
           </div>
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
           <p className="text-xl text-[#F0F6FF]/85 mb-4">
-            To give every homeowner and professional access to quality outdoor and power equipment at honest prices.
+            To give homeowners, property owners, contractors, and farm operators access to quality outdoor and power equipment at honest prices.
           </p>
           <p className="text-lg text-[#F0F6FF]/85">
-            Whether you need a ride mower, pressure washer, generator, or set of power tools, you should not have to pay more than necessary.
+            Whether you need a ride mower, walk-behind mower, pressure washer, chainsaw, leaf blower, trimmer, or other equipment for your land and buildings, you should not have to pay more than necessary.
           </p>
         </div>
 
@@ -297,7 +302,7 @@ export default function AboutPage() {
                 <DollarSign className="h-6 w-6 text-[#0a3075]" />
                 <h3 className="text-xl font-bold text-[#262626]">Real Value</h3>
               </div>
-              <p className="text-gray-700">We constantly compare and track market prices to ensure every listing is a genuine deal.</p>
+              <p className="text-gray-700">We compare listings against current market pricing so customers can judge the value clearly before they buy.</p>
             </div>
 
             <div className="bg-[#F0F6FF] rounded-xl p-6 border border-[#0a3075]/10">
@@ -355,24 +360,24 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Company Stats */}
+        {/* Customer Expectations */}
         <div className="bg-gradient-to-r from-[#0a3075] to-[#0a3075] rounded-2xl shadow-lg p-10 mb-12 text-[#F0F6FF]">
-          <h3 className="text-3xl font-bold mb-8 text-center">Company Stats</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center">What Customers Can Expect</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-[#F0F6FF]/10 backdrop-blur-sm rounded-xl border border-[#F0F6FF]/20">
-              <div className="text-4xl font-bold mb-2">5000+</div>
-              <div className="text-[#F0F6FF]/80 text-sm">happy customers</div>
+              <div className="text-4xl font-bold mb-2">US</div>
+              <div className="text-[#F0F6FF]/80 text-sm">dispatch support</div>
             </div>
             <div className="text-center p-6 bg-[#F0F6FF]/10 backdrop-blur-sm rounded-xl border border-[#F0F6FF]/20">
-              <div className="text-4xl font-bold mb-2">1000+</div>
-              <div className="text-[#F0F6FF]/80 text-sm">products sold</div>
+              <div className="text-4xl font-bold mb-2">Curated</div>
+              <div className="text-[#F0F6FF]/80 text-sm">equipment selection</div>
             </div>
             <div className="text-center p-6 bg-[#F0F6FF]/10 backdrop-blur-sm rounded-xl border border-[#F0F6FF]/20">
-              <div className="text-4xl font-bold mb-2">99%</div>
-              <div className="text-[#F0F6FF]/80 text-sm">satisfaction rate</div>
+              <div className="text-4xl font-bold mb-2">30-day</div>
+              <div className="text-[#F0F6FF]/80 text-sm">return window</div>
             </div>
             <div className="text-center p-6 bg-[#F0F6FF]/10 backdrop-blur-sm rounded-xl border border-[#F0F6FF]/20">
-              <div className="text-4xl font-bold mb-2">Dedicated</div>
+              <div className="text-4xl font-bold mb-2">Human</div>
               <div className="text-[#F0F6FF]/80 text-sm">customer support</div>
             </div>
           </div>

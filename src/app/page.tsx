@@ -38,7 +38,7 @@ export default async function HomePage() {
       <CategorySection
         products={featuredProducts}
         title="Featured Equipment"
-        subtitle="A considered selection of reliable tools and outdoor essentials."
+        subtitle="Resold and sourced equipment for lawns, backyards, workshops, acreage, and farm upkeep."
         maxDisplay={FEATURED_PRODUCT_LIMIT}
         shuffleForVisitor
         visitorShuffleKey="home-featured"
@@ -55,7 +55,7 @@ export default async function HomePage() {
             editorialCard={{
               title: 'Dependable Performance for Every Lawn',
               description:
-                'Cokaro lawn mowers combine dependable power, durable construction, and clean, consistent cutting across lawns of every size. Choose gas or cordless performance and make routine yard care simpler, faster, and easier to manage.',
+                'Cokaro sells and resells lawn mowers built for routine yard care, wide lawns, backyard upkeep, and larger property maintenance. Choose gas or cordless equipment from recognized product marks and keep your outdoor spaces easier to manage.',
             }}
             randomizeForVisitor
             visitorShuffleKey="home-lawn-garden"
@@ -68,7 +68,7 @@ export default async function HomePage() {
           <ProductGrid
             products={smallToolProducts}
             sectionId="durable-tools"
-            title="Dependable Tools for Every Job"
+            title="Equipment for Home, Backyard, and Farm Work"
             randomizeForVisitor
             visitorShuffleKey="home-durable-tools"
           />

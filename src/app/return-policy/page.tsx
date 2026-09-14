@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 import {
   RotateCcw,
   RefreshCw,
@@ -18,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: 'Return & Exchange Policy | Cokaro',
   description:
-    'Cokaro Return & Exchange Policy. We accept returns for both defective and non-defective products within 30 days. Free return label included, no restocking fee, 5-day refund processing.',
+    'Cokaro Return & Exchange Policy for resold and sourced lawn, outdoor power, home-care, backyard, and farm-care equipment. We accept returns for both defective and non-defective products within 30 days.',
 };
 
 export default function ReturnPolicyPage() {
@@ -58,7 +59,7 @@ export default function ReturnPolicyPage() {
             Return & Exchange Policy
           </h1>
           <p className="text-gray-600 mt-3 text-base sm:text-lg max-w-2xl">
-            We want you to be completely happy with your purchase. If something isn&apos;t right, our return and exchange process is simple and hassle-free.
+            We want you to understand the return process before you buy, whether you choose a resold mower, pressure washer, chainsaw, blower, trimmer, or another product for home, backyard, acreage, or farm care. If something isn&apos;t right, this page explains how returns and exchanges are handled.
           </p>
         </div>
 
@@ -116,8 +117,10 @@ export default function ReturnPolicyPage() {
 
           {/* Introduction */}
           <p className="text-lg leading-relaxed text-gray-800">
-            At <strong className="text-[#090A28]">Cokaro</strong>, your satisfaction is our top priority. We want you to shop with complete confidence. If your purchase isn&apos;t right for any reason, we&apos;re here to make it simple.
+            At <strong className="text-[#090A28]">Cokaro</strong>, we sell and resell outdoor power and property-care equipment. This policy explains the return window, item-condition requirements, refund timing, and how to contact us before sending an item back.
           </p>
+
+          <ResellerBrandNotice compact />
 
           {/* 1. Returns */}
           <div className="space-y-4 pt-4 border-t border-gray-100">
@@ -130,13 +133,13 @@ export default function ReturnPolicyPage() {
               <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200">
                 <h3 className="font-bold text-emerald-900 text-base mb-1">Defective & Damaged Items</h3>
                 <p className="text-sm text-emerald-800">
-                  If your order arrives damaged, defective, or incorrect, we provide a <strong>100% free return</strong> with a prepaid shipping label.
+                  If your order arrives damaged, defective, or incorrect, we provide a prepaid shipping label after the return request is approved.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-200">
                 <h3 className="font-bold text-blue-900 text-base mb-1">Change of Mind</h3>
                 <p className="text-sm text-blue-800">
-                  Changed your mind or ordered the wrong item? You can return it within 30 days with a free prepaid return label for a full refund of the item price.
+                  Changed your mind or ordered the wrong item? You can request a return within 30 days. Approved returns receive a prepaid label and are refunded for the eligible item price after inspection.
                 </p>
               </div>
             </div>
@@ -183,7 +186,7 @@ export default function ReturnPolicyPage() {
                 <strong>Contact us</strong> at <a href="mailto:contact@cokaro.com" className="text-blue-600 hover:underline font-semibold">contact@cokaro.com</a> or call <span className="font-semibold">+19129231747</span>.
               </li>
               <li>
-                <strong>Get your free return label</strong>. We&apos;ll email you a prepaid label after approving your return request.
+                <strong>Get your return label</strong>. We&apos;ll email you a prepaid label after approving your return request.
               </li>
               <li>
                 <strong>Ship it back</strong> securely. Return postage is free for all eligible US returns, including defective items and change-of-mind returns.
@@ -202,7 +205,7 @@ export default function ReturnPolicyPage() {
             </div>
             <div className="p-4 rounded-xl bg-gray-50 border border-gray-200">
               <p className="font-medium text-gray-800">
-                We do <strong>not</strong> charge any restocking, handling, or processing fees. You receive 100% of the purchased item price back.
+                We do <strong>not</strong> charge any restocking, handling, or processing fees. Approved refunds are issued for the eligible purchased item price.
               </p>
             </div>
           </div>
@@ -227,7 +230,7 @@ export default function ReturnPolicyPage() {
               <h2 className="text-2xl font-bold text-[#090A28]">7. Marketplace Seller Items</h2>
             </div>
             <p>
-              Products from our verified marketplace partners follow the exact same 30-day return policy. All returns are shipped to our central warehouse for inspection, so the experience is consistent regardless of the seller.
+              Products from our verified marketplace partners, supplier channels, and authorized reseller relationships where applicable follow the same 30-day return process unless a listing states otherwise. All returns are shipped to our central warehouse for inspection, so the experience is consistent regardless of the seller or source.
             </p>
           </div>
 

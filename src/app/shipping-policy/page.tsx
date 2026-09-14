@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 import { Clock, Mail, MapPin, PackageCheck, ShieldCheck, Truck } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Shipping Policy | Cokaro',
   description:
-    'Official Cokaro Shipping Policy. Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
+    'Cokaro Shipping Policy for resold and sourced lawn mowers, pressure washers, outdoor power equipment, and home, backyard, acreage, and farm-care products.',
 };
 
 const timeline = [
@@ -20,7 +21,7 @@ const policySections = [
     items: [
       'Free standard shipping on all orders across the United States',
       'No minimum purchase requirement',
-      'Tracked shipping via premium logistics partners (USPS, FedEx, UPS, DHL)',
+      'Tracked shipping through carriers such as USPS, FedEx, UPS, or DHL',
     ],
   },
   {
@@ -44,7 +45,7 @@ const policySections = [
   {
     title: 'Package Protection & Safety',
     items: [
-      '100% full shipping insurance on all packages',
+      'Shipping protection for eligible packages',
       'Signature confirmation for high-value orders over $500',
       'Weather-resistant outer mailers',
       'Protective bubble/foam layering for fragile items',
@@ -62,7 +63,7 @@ export default function ShippingPolicyPage() {
         'url': 'https://cokaro.com/shipping-policy',
         'name': 'Shipping Policy | Cokaro',
         'description':
-          'Cokaro Shipping Policy: Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
+          'Cokaro Shipping Policy for resold and sourced outdoor power equipment: Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
       },
       {
         '@type': 'OfferShippingDetails',
@@ -114,9 +115,13 @@ export default function ShippingPolicyPage() {
             Shipping Policy
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-[#F0F6FF]/80 sm:text-lg">
-            At Cokaro, we focus on fast, reliable fulfillment with transparent delivery windows, free standard shipping to the US, and real-time tracking from warehouse to door.
+            At Cokaro, we ship the equipment customers use to care for homes, backyards, acreage, and farms, including resold lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power products. We focus on fast, reliable fulfillment with transparent delivery windows, free standard shipping to the US, and real-time tracking from warehouse to door.
           </p>
         </section>
+
+        <div className="mb-8">
+          <ResellerBrandNotice compact />
+        </div>
 
         <section className="mb-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
@@ -137,7 +142,7 @@ export default function ShippingPolicyPage() {
             <ShieldCheck className="mb-4 h-6 w-6 text-[#0a3075]" />
             <h2 className="text-lg font-bold text-[#262626]">Insured Deliveries</h2>
             <p className="mt-2 text-sm leading-6 text-gray-600">
-              All shipments include full insurance, protective packaging, and end-to-end tracking updates.
+              Eligible shipments include shipping protection, protective packaging, and end-to-end tracking updates.
             </p>
           </div>
         </section>

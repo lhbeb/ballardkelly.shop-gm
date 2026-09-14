@@ -35,7 +35,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Place your order by 2:00 PM EST and we&apos;ll process, pack, and hand it to one of our trusted delivery partners that same day. At <strong>Cokaro</strong>, fast, dependable fulfillment is part of every order.
+              Place your order by 2:00 PM EST and we&apos;ll process, pack, and hand it to a carrier the same business day. At <strong>Cokaro</strong>, clear fulfillment timing is part of every order.
             </p>
             <Link
               href="/shipping-policy"
@@ -94,7 +94,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
                 Tracking You Can Follow
               </h3>
               <p className="text-gray-600 text-sm">
-                Our trusted carrier partners provide real-time tracking, so you can follow your package from dispatch to delivery.
+                Carrier tracking lets you follow your package from dispatch to delivery.
               </p>
             </div>
           </div>

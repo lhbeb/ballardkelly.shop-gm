@@ -16,8 +16,8 @@ interface CategorySectionProps {
 
 const CategorySection: React.FC<CategorySectionProps> = ({
   products,
-  title = 'Power Tools & Generators',
-  subtitle = 'Reliable equipment to get the job done.',
+  title = 'Outdoor Power Equipment',
+  subtitle = 'Reliable equipment for home, backyard, acreage, and farm work.',
   maxDisplay = 8,
   shuffleForVisitor = false,
   visitorShuffleKey = 'home-power-tools',
@@ -46,7 +46,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   }
 
   return (
-    <section id="power-tools" className="py-16 bg-white">
+    <section id="outdoor-power-equipment" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="w-full max-w-7xl mx-auto">
           <div className="mb-12 text-left">

@@ -66,7 +66,7 @@ export interface Product {
   inStock?: boolean;
   listedBy?: string | null; // The user who listed this product (admin-only, internal)
   sellerId?: string | null; // The public-facing seller associated with this product
-  collections?: string[]; // Array of collection tags (electronics, entertainment, hobbies-collectibles, featured, etc.)
+  collections?: string[]; // Array of collection tags (lawn-mowers, pressure-washers, outdoor-power-equipment, featured, etc.)
   original_price?: number;
   originalPrice?: number;
 }

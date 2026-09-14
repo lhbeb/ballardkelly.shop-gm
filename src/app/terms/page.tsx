@@ -1,4 +1,5 @@
 import React from 'react';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 
 const TermsPage = () => {
   const currentDate = new Date().toLocaleDateString('en-US', { 
@@ -15,16 +16,19 @@ const TermsPage = () => {
         
         <div className="prose max-w-none text-gray-700 space-y-8">
           <p className="text-lg leading-relaxed">
-            Welcome to Cokaro. By accessing or using our website, marketplace, or services, you agree to be bound by these Terms of Service. Please read them carefully. If you do not agree, please discontinue using the site.
+            Welcome to Cokaro. Cokaro sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment through our website and marketplace. By accessing or using our website, marketplace, or services, you agree to be bound by these Terms of Service. Please read them carefully. If you do not agree, please discontinue using the site.
           </p>
+
+          <ResellerBrandNotice compact />
 
           {/* Section 1: Overview */}
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">1. Overview</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Cokaro operates as a direct retailer and as a curated marketplace.</li>
-              <li>We source products through auctions, private sellers, liquidators, wholesalers, and other third-party suppliers.</li>
+              <li>Cokaro operates as an independent seller, reseller, and curated marketplace for outdoor power and property-care equipment, with authorized reseller or supplier relationships only where expressly applicable.</li>
+              <li>We source products through verified suppliers, auctions, private sellers, liquidators, wholesalers, marketplace partners, and other third-party suppliers.</li>
               <li>We also allow approved private sellers to list items on our platform after a full inspection by our team.</li>
+              <li>Our catalog may include products bearing marks such as Briggs & Stratton, Craftsman, Cub Cadet, DeWalt, EGO, GreenWorks, Honda, Husqvarna, and other product or model marks shown on product pages.</li>
               <li>All purchases made through Cokaro are processed under these Terms.</li>
             </ul>
           </div>
@@ -50,7 +54,7 @@ const TermsPage = () => {
             <h3 className="text-xl font-bold text-[#262626] mt-6 mb-3">3.1 Seller Onboarding Process</h3>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>Private sellers must be screened and approved before listing items.</li>
-              <li>Sellers send their inventory to our warehouse, where it is inspected, authenticated, tested, and verified before any listing goes live.</li>
+              <li>Sellers send their inventory to our warehouse, where it is condition-checked, tested where applicable, and reviewed for listing accuracy before any listing goes live.</li>
             </ul>
 
             <h3 className="text-xl font-bold text-[#262626] mt-6 mb-3">3.2 Fulfillment Process</h3>
@@ -68,7 +72,7 @@ const TermsPage = () => {
             <h3 className="text-xl font-bold text-[#262626] mt-6 mb-3">3.3 Seller Responsibility</h3>
             <p className="mb-2">Sellers on the Cokaro platform are responsible for:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>The authenticity of their products</li>
+              <li>Lawful ownership and accurate representation of their products</li>
               <li>Providing accurate condition descriptions</li>
               <li>Meeting our quality and safety standards</li>
             </ul>
@@ -82,8 +86,10 @@ const TermsPage = () => {
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">4. Product Terms</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>We aim to provide accurate and detailed product descriptions.</li>
-              <li>We sell new, open-box, refurbished, and pre owned items, each clearly labeled.</li>
-              <li>All used or open-box electronics are tested prior to sale.</li>
+              <li>We sell and resell new, open-box, refurbished, and pre owned items, each clearly labeled.</li>
+              <li>Product names, brand names, logos, and marks are used for identification of the products offered for sale.</li>
+              <li>Unless expressly stated on a product page, Cokaro is not claiming manufacturer sponsorship, endorsement, or ownership of third-party marks.</li>
+              <li>All used, open-box, or resale products are inspected prior to sale when they pass through our warehouse.</li>
               <li>Product availability is not guaranteed until an order is processed.</li>
               <li>Prices may change at any time due to market conditions and sourcing costs.</li>
               <li>We reserve the right to modify, limit, or discontinue any product or listing.</li>
@@ -99,6 +105,7 @@ const TermsPage = () => {
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>Online auctions and bidding platforms</li>
               <li>Private sellers and independent sourcers</li>
+              <li>Authorized reseller or supplier relationships where applicable</li>
               <li>Liquidation and return departments of major retailers</li>
               <li>Garage sales, local auctions, and community sales</li>
               <li>Wholesalers and bulk suppliers</li>
@@ -144,19 +151,19 @@ const TermsPage = () => {
             </p>
           </div>
 
-          {/* Section 8: Returns and Satisfaction Guarantee */}
+          {/* Section 8: Returns and Customer Support */}
           <div>
-            <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">8. Returns and Satisfaction Guarantee</h2>
+            <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">8. Returns and Customer Support</h2>
             <p className="mb-4">Your satisfaction is our priority.</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>We offer a 30 day hassle free return policy.</li>
+              <li>We offer a 30-day return policy for eligible items.</li>
               <li>Items must be returned in the same condition received.</li>
               <li>Refunds are issued after the item passes inspection at our warehouse.</li>
               <li>Exchanges are available when inventory permits.</li>
               <li>We work quickly to resolve any concerns, disputes, or issues.</li>
             </ul>
             <p className="mt-4">
-              Marketplace seller products also fall under this guarantee unless specifically stated otherwise.
+              Marketplace seller products follow the same return process unless specifically stated otherwise.
             </p>
           </div>
 

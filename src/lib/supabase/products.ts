@@ -240,7 +240,7 @@ export async function getRecommendedProducts(
 }
 
 /**
- * Get products by collection tag (e.g., 'fashion', 'electronics', 'entertainment')
+ * Get products by collection tag (e.g., 'lawn-mowers', 'pressure-washers', 'outdoor-power-equipment')
  * Filters products by collection tag in the collections array
  * Only returns published products (drafts are excluded)
  */

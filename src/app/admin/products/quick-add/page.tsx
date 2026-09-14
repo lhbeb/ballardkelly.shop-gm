@@ -126,7 +126,7 @@ export default function QuickAddProductPage() {
       description: "This is an example product description.",
       price: 99.99,
       brand: "Example Brand",
-      category: "Example Category",
+      category: "Outdoor Power Equipment",
       condition: "New",
       payeeEmail: "your-email@example.com",
       checkoutLink: "https://buymeacoffee.com/example",
@@ -135,7 +135,7 @@ export default function QuickAddProductPage() {
         "/products/example-product/img1.webp"
       ],
       listedBy: "walid",
-      collections: ["electronics"],
+      collections: ["outdoor-power-equipment"],
       rating: 4.5,
       reviewCount: 10,
       inStock: true,

@@ -1,4 +1,5 @@
 import React from 'react';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 
 const CookiesPage = () => (
   <div className="min-h-screen flex flex-col bg-gray-50 py-12">
@@ -8,8 +9,10 @@ const CookiesPage = () => (
       <div className="prose max-w-none text-gray-700 space-y-8">
         {/* Introduction */}
         <p className="text-lg leading-relaxed">
-          This Cookies Policy explains how Cokaro uses cookies and similar tracking technologies on our website. By using our website, you agree to the use of cookies as described in this policy.
+          This Cookies Policy explains how Cokaro uses cookies and similar tracking technologies on our website, where we sell and resell outdoor power, lawn, backyard, home-care, and farm-care equipment. By using our website, you agree to the use of cookies as described in this policy.
         </p>
+
+        <ResellerBrandNotice compact />
 
         {/* What Are Cookies */}
         <div>
@@ -34,7 +37,7 @@ const CookiesPage = () => (
             <div>
               <h3 className="text-xl font-bold text-[#262626] mb-2">Performance Cookies</h3>
               <p>
-                These cookies collect anonymous data about how visitors use our website. They help us understand user behavior and improve website performance.
+                These cookies collect anonymous data about how visitors use our website. They help us understand user behavior, improve website performance, and make catalog navigation clearer for product categories and brand marks shown in our inventory.
               </p>
             </div>
             
@@ -74,7 +77,7 @@ const CookiesPage = () => (
         <div>
           <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">Third-Party Cookies</h2>
           <p className="mb-4">
-            We may use services provided by trusted third parties that use cookies, such as:
+            We may use services provided by third parties that use cookies, such as:
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-4">
             <li>Google Analytics for website performance and analytics</li>

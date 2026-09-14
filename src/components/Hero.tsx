@@ -13,7 +13,7 @@ const Hero = () => {
     const element = typingTextRef.current;
     if (!element) return;
 
-    const words = ['Lawn Mowers', 'Power Tools', 'Portable Generators', 'Garden Essentials'];
+    const words = ['Lawn Mowers', 'Pressure Washers', 'Chainsaws', 'Outdoor Power'];
     let isAnimating = true;
     let currentIndex = 0;
 
@@ -82,13 +82,13 @@ const Hero = () => {
                 {placeholder}
               </span>
               <span className="block leading-tight">
-                Get Every Outdoor and Home Project Done with Confidence
+                Equipment for Your Home, Backyard, and Farm
               </span>
             </h1>
 
             {/* Description - PRESERVED content */}
             <p className="mt-4 max-w-[580px] text-sm leading-relaxed text-[#F0F6FF]/90 md:text-base">
-              Find dependable lawn and garden equipment, hard-working power tools, portable generators, and ride-on mowers built to perform from start to finish.
+              Cokaro sells and resells dependable equipment for lawn care, backyard cleanup, property maintenance, and farm work, including products bearing recognized marks such as DeWalt, EGO, Honda, Husqvarna, GreenWorks, Craftsman, Cub Cadet, and Briggs & Stratton.
             </p>
 
             {/* Shop Now Button - PRESERVED href */}

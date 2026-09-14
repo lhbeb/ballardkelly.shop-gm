@@ -6,7 +6,7 @@ import { STORE_FAQS } from '@/lib/storeFaqs';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Cokaro',
   description:
-    'Find answers about Cokaro products, ordering, shipping, returns, tracking, local pickup, and customer support.',
+    'Find answers about Cokaro resold and sourced outdoor power equipment, product marks, ordering, shipping, returns, tracking, local pickup, and customer support.',
   alternates: {
     canonical: 'https://cokaro.com/frequently-asked-questions',
   },
@@ -42,7 +42,7 @@ export default function FrequentlyAskedQuestionsPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-[#F0F6FF]/75 sm:text-lg">
-            Straightforward answers about shopping, delivery, returns, pickup, and support at Cokaro.
+            Straightforward answers about shopping for Cokaro equipment, product marks, delivery, returns, pickup, and support.
           </p>
         </div>
       </section>

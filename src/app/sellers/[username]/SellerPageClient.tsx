@@ -179,17 +179,17 @@ export default function SellerPageClient({ seller }: Props) {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-sm font-semibold text-[#262626] mb-1">Shipping</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Fast, fully tracked shipping worldwide. Orders are processed within 24 hours of payment confirmation. Every package is carefully wrapped to ensure it arrives in perfect condition.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Fast, tracked shipping across the United States. Orders are processed promptly after payment confirmation and packaged carefully for transit.</p>
                   </div>
                   <div className="h-px bg-gray-100 w-full" />
                   <div>
                     <h3 className="text-sm font-semibold text-[#262626] mb-1">Returns</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Returns accepted within 14 days of delivery. The item must be returned in the same condition it was received. Buyer pays return shipping.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Eligible returns are accepted within 30 days of delivery. Items must be returned in the same condition received and are inspected before refund approval.</p>
                   </div>
                   <div className="h-px bg-gray-100 w-full" />
                   <div>
-                    <h3 className="text-sm font-semibold text-[#262626] mb-1">Authenticity</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">100% genuine products. Backed by the Cokaro Guarantee.</p>
+                    <h3 className="text-sm font-semibold text-[#262626] mb-1">Product Review</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Products are reviewed through Cokaro&apos;s verification process and covered by our customer support standards.</p>
                   </div>
                 </div>
               </div>

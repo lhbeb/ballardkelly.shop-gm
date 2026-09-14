@@ -3,10 +3,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter, useSearchParams, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info, MessageSquare } from 'lucide-react';
 import { getCartCount } from '@/utils/cart';
-import type { Product } from '@/types/product';
 import ClientOnly from './ClientOnly';
 import SearchBar from './SearchBar';
 
@@ -17,35 +16,26 @@ const desktopNavLinkClass =
 const mobileMenuLinkClass =
   'text-center font-medium text-[#003099] transition-colors duration-200 hover:text-[#4575ba] focus-visible:text-[#4575ba] focus-visible:outline-none';
 
+const productNavLinks = [
+  { label: 'All Products', href: '/search' },
+  { label: 'Lawn Mowers', href: '/search?category=Lawn+Mowers' },
+  { label: 'Pressure Washers', href: '/search?category=Pressure+Washers' },
+  { label: 'Outdoor Power Equipment', href: '/search?category=Outdoor+Power+Equipment' },
+];
+
+const utilityNavLinks = [
+  { label: 'Featured', href: '/#featured' },
+  { label: 'Track Order', href: '/track' },
+  { label: 'Contact', href: '/contact' },
+];
+
 const Header = () => {
-  const [dynamicCategories, setDynamicCategories] = useState<{label: string, href: string}[]>([
-    { label: 'All Products', href: '/search' }
-  ]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  useEffect(() => {
-    fetch('/api/categories')
-      .then(res => res.json())
-      .then(cats => {
-        if (Array.isArray(cats) && cats.length > 0) {
-           const links = cats.map(c => ({
-             label: c,
-             href: `/search?category=${encodeURIComponent(c)}`
-           }));
-           setDynamicCategories([
-             { label: 'All Products', href: '/search' },
-             ...links
-           ]);
-        }
-      })
-      .catch(e => console.error('Failed to fetch categories', e));
-  }, []);
   const [cartCount, setCartCount] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
   const router = useRouter();
-  const searchParams = useSearchParams();
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const announcementIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -54,7 +44,7 @@ const Header = () => {
   const isCheckoutPage = pathname === '/checkout';
 
   const announcements = [
-    <span key="nav-1">🚚 <span className="font-bold">Free Shipping</span> Across North America</span>,
+    <span key="nav-1">🚚 <span className="font-bold">Free Shipping</span> Across the United States</span>,
     <span key="nav-2">📦 <span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>,
     "livechat-contact" // Marker for Live Chat announcement
   ];
@@ -312,25 +302,34 @@ const Header = () => {
         <div suppressHydrationWarning={true} className="hidden lg:block bg-[#f3f4f6] border-t border-[#0a3075]/10">
           <div suppressHydrationWarning={true} className="container mx-auto px-4">
             <nav className="flex items-center gap-6 bg-[#f3f4f6] py-3 font-heading overflow-x-auto scrollbar-hide">
-              <Link href="/search" className={desktopNavLinkClass}>All Products</Link>
-              <Link href="/search?category=Lawn+Mowers" className={desktopNavLinkClass}>Lawn Mowers</Link>
-              <Link href="/search?category=Power+Equipment" className={desktopNavLinkClass}>Power Equipment</Link>
-              <Link href="/search?category=Pressure+Washers" className={desktopNavLinkClass}>Pressure Washers</Link>
-              <Link href="/search?category=Blowers" className={desktopNavLinkClass}>Blowers</Link>
-              <Link href="/search?category=Bikes" className={desktopNavLinkClass}>Bikes</Link>
-              <Link href="/#featured" className={desktopNavLinkClass}>Featured</Link>
-              <Link href="/track" className={desktopNavLinkClass}>Track Order</Link>
-              <Link href="/contact" className={desktopNavLinkClass}>Contact</Link>
+              {[...productNavLinks, ...utilityNavLinks].map((item) => (
+                <Link key={item.label} href={item.href} className={desktopNavLinkClass}>
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
 
-        {/* Mobile menu - Only Track Order, Contact Us, and Sell Now */}
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-[#f3f4f6] border-t border-[#0a3075]/10">
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col bg-[#f3f4f6] font-heading">
-                <Link href="/track" className={`${mobileMenuLinkClass} pb-4 border-b border-[#0a3075]/10`} onClick={handleMobileMenuClose}>
+                {productNavLinks.map((item, index) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={`${mobileMenuLinkClass} ${index === 0 ? 'pb-4' : 'py-4'} border-b border-[#0a3075]/10`}
+                    onClick={handleMobileMenuClose}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Link href="/#featured" className={`${mobileMenuLinkClass} py-4 border-b border-[#0a3075]/10`} onClick={handleMobileMenuClose}>
+                  Featured
+                </Link>
+                <Link href="/track" className={`${mobileMenuLinkClass} py-4 border-b border-[#0a3075]/10`} onClick={handleMobileMenuClose}>
                   Track Order
                 </Link>
                 <Link href="/frequently-asked-questions" className={`${mobileMenuLinkClass} py-4 border-b border-[#0a3075]/10`} onClick={handleMobileMenuClose}>
@@ -353,17 +352,7 @@ const Header = () => {
         <div suppressHydrationWarning={true} className="lg:hidden bg-[#f3f4f6] border-t border-[#0a3075]/10">
           <div suppressHydrationWarning={true} className="overflow-x-auto scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
             <nav className="flex min-w-max items-center gap-3 bg-[#f3f4f6] px-4 py-3">
-              {[
-                { label: 'All Products', href: '/search' },
-                { label: 'Lawn Mowers', href: '/search?category=Lawn+Mowers' },
-                { label: 'Power Equipment', href: '/search?category=Power+Equipment' },
-                { label: 'Pressure Washers', href: '/search?category=Pressure+Washers' },
-                { label: 'Blowers', href: '/search?category=Blowers' },
-                { label: 'Bikes', href: '/search?category=Bikes' },
-                { label: 'Featured', href: '/#featured' },
-                { label: 'Track Order', href: '/track' },
-                { label: 'Contact', href: '/contact' },
-              ].map((item) => (
+              {[...productNavLinks, ...utilityNavLinks].map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}

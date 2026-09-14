@@ -1048,8 +1048,8 @@ export default function EditProductPage() {
         ═══════════════════════════════════════════════════════════════ */}
         <Section id="gmc" icon={Globe} title="Google Merchant Center" description="Product attributes for Google feeds" defaultOpen={false}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <Field label="Google Product Category" hint="e.g. Apparel & Accessories > Clothing (ID: 166)">
-              <input type="text" value={formData.gmc_category} onChange={(e) => updateField('gmc_category', e.target.value)} placeholder="Apparel & Accessories > Clothing" className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#090A28] outline-none" />
+            <Field label="Google Product Category" hint="e.g. Home & Garden > Lawn & Garden > Outdoor Power Equipment">
+              <input type="text" value={formData.gmc_category} onChange={(e) => updateField('gmc_category', e.target.value)} placeholder="Home & Garden > Lawn & Garden > Outdoor Power Equipment" className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#090A28] outline-none" />
             </Field>
             <Field label="Age Group" hint="newborn, infant, toddler, kids, adult">
               <input type="text" value={formData.gmc_age_group} onChange={(e) => updateField('gmc_age_group', e.target.value)} placeholder="e.g. adult" className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#090A28] outline-none" />

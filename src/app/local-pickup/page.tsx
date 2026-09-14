@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 import { Clock3, MapPin, PackageCheck, ShieldCheck } from 'lucide-react';
 
 const pickupSteps = [
@@ -32,12 +33,14 @@ export default function LocalPickupPage() {
               Pick up your Cokaro order with confidence
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#D9E6FF] sm:text-base">
-              Eligible outdoor power equipment and garden products can be collected from our location in Delaware, Ohio. This page covers what to expect, what to bring, and how collection works once your order is ready.
+              Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Delaware, Ohio. This page covers what to expect, what to bring, and how collection works once your order is ready.
             </p>
           </section>
 
           <div className="grid gap-6 px-6 py-8 sm:px-10 sm:py-10 lg:grid-cols-[minmax(0,1.2fr)_360px]">
             <div className="space-y-8">
+              <ResellerBrandNotice compact />
+
               <section className="rounded-[24px] border border-[#DCE5F5] bg-white p-6 sm:p-7">
                 <h2 className="text-2xl font-semibold text-[#262626]">How local pickup works</h2>
                 <div className="mt-6 grid gap-4">
@@ -73,7 +76,7 @@ export default function LocalPickupPage() {
               <section className="rounded-[24px] border border-[#DCE5F5] bg-white p-6 sm:p-7">
                 <h2 className="text-2xl font-semibold text-[#262626]">Need help first?</h2>
                 <p className="mt-3 text-sm leading-7 text-[#5B6785]">
-                  If you are unsure whether a product is available for local pickup, please contact us before placing the order so we can confirm availability and timing.
+                  If you are unsure whether a mower, pressure washer, chainsaw, blower, trimmer, or other product is available for local pickup, please contact us before placing the order so we can confirm availability and timing.
                 </p>
                 <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                   <a
@@ -132,7 +135,7 @@ export default function LocalPickupPage() {
               <section className="rounded-[24px] border border-[#DCE5F5] bg-white p-6">
                 <h2 className="text-lg font-semibold text-[#262626]">Important note</h2>
                 <p className="mt-3 text-sm leading-7 text-[#5B6785]">
-                  Local pickup availability varies by item. Some products remain shipping-only. Wait for your confirmation message before travelling.
+                  Local pickup availability varies by item, source, size, and inspection status. Some products remain shipping-only. Wait for your confirmation message before travelling.
                 </p>
               </section>
             </aside>

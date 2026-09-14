@@ -114,14 +114,9 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // For non-admin routes, detect geolocation and set market headers
-  // Next.js 15+ removed request.geo, so we use Vercel's standard header
-  const country = request.headers.get('x-vercel-ip-country') || 'US';
-  let market = 'us';
-  if (country === 'GB') market = 'uk';
-  else if (country === 'CA') market = 'ca';
-  else if (country === 'AU') market = 'au';
-  else if (['DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'IE', 'PT', 'FI', 'GR', 'SE', 'DK', 'PL'].includes(country)) market = 'eu';
+  // Keep public product, price, shipping, and schema copy aligned with the US
+  // Merchant Center setup until separate international policies are verified.
+  const market = 'us';
 
   const response = NextResponse.next();
   response.headers.set('x-pathname', pathname);
