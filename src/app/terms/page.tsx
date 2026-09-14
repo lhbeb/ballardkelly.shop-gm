@@ -125,9 +125,9 @@ const TermsPage = () => {
               Free standard shipping applies to all orders across the United States.
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Same-day shipping is available for orders placed before 2:00 PM EST on business days.</li>
-              <li>Standard processing time is 0 to 1 business day.</li>
-              <li>Domestic USA delivery time is 5 to 9 business days.</li>
+              <li>Standard order processing time is 1 business day.</li>
+              <li>Domestic USA transit time is 3 to 4 business days after shipment.</li>
+              <li>Total estimated domestic USA delivery time is 4 to 5 business days after order placement.</li>
               <li>All orders qualify for free standard shipping with no minimum spend required.</li>
               <li>Tracking information is sent to the customer via email once the order ships.</li>
             </ul>

@@ -16,12 +16,28 @@ const desktopNavLinkClass =
 const mobileMenuLinkClass =
   'text-center font-medium text-[#003099] transition-colors duration-200 hover:text-[#4575ba] focus-visible:text-[#4575ba] focus-visible:outline-none';
 
-const productNavLinks = [
-  { label: 'All Products', href: '/search' },
-  { label: 'Lawn Mowers', href: '/search?category=Lawn+Mowers' },
-  { label: 'Pressure Washers', href: '/search?category=Pressure+Washers' },
-  { label: 'Outdoor Power Equipment', href: '/search?category=Outdoor+Power+Equipment' },
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+const allProductsLink: NavLink = { label: 'All Products', href: '/search' };
+
+const fallbackCatalogCategories = [
+  'Pressure Washers',
+  'Outdoor Power Equipment',
+  'Lawn Mowers',
 ];
+
+const staleCatalogCategoryLabels = new Set([
+  'Coffee Makers & Brewers',
+  'Espresso Machines',
+  'Electronics',
+  'Entertainment',
+  'Fashion',
+  'Hardware',
+  'Hobbies & Collectibles',
+]);
 
 const utilityNavLinks = [
   { label: 'Featured', href: '/#featured' },
@@ -29,16 +45,27 @@ const utilityNavLinks = [
   { label: 'Contact', href: '/contact' },
 ];
 
+function categoryToNavLink(category: string): NavLink {
+  return {
+    label: category,
+    href: `/search?category=${encodeURIComponent(category).replace(/%20/g, '+')}`,
+  };
+}
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
+  const [catalogCategoryLinks, setCatalogCategoryLinks] = useState<NavLink[]>(() =>
+    fallbackCatalogCategories.map(categoryToNavLink)
+  );
   const router = useRouter();
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const announcementIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const productNavLinks = [allProductsLink, ...catalogCategoryLinks];
 
   // Check if we're on the checkout page
   const isCheckoutPage = pathname === '/checkout';
@@ -48,6 +75,49 @@ const Header = () => {
     <span key="nav-2">📦 <span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>,
     "livechat-contact" // Marker for Live Chat announcement
   ];
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadCatalogCategories() {
+      try {
+        const response = await fetch('/api/categories', {
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) {
+          throw new Error(`Category request failed with ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data)) {
+          return;
+        }
+
+        const categories = data
+          .map((category) => (typeof category === 'string' ? category.trim() : ''))
+          .filter(Boolean)
+          .filter((category, index, list) => list.indexOf(category) === index);
+
+        const hasStaleCatalogCategory = categories.some((category) =>
+          staleCatalogCategoryLabels.has(category)
+        );
+
+        if (!cancelled && categories.length > 0 && !hasStaleCatalogCategory) {
+          setCatalogCategoryLinks(categories.map(categoryToNavLink));
+        }
+      } catch (error) {
+        console.warn('Unable to load catalog categories for navigation:', error);
+      }
+    }
+
+    loadCatalogCategories();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Announcement bar animation - PRESERVED EXACTLY
   useEffect(() => {

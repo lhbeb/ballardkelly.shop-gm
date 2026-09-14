@@ -179,7 +179,7 @@ export default function SellerPageClient({ seller }: Props) {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-sm font-semibold text-[#262626] mb-1">Shipping</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Fast, tracked shipping across the United States. Orders are processed promptly after payment confirmation and packaged carefully for transit.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Free standard shipping across the United States. Orders are processed within 1 business day, then estimated transit time is 3-4 business days.</p>
                   </div>
                   <div className="h-px bg-gray-100 w-full" />
                   <div>

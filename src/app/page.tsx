@@ -5,6 +5,7 @@ import ProductGrid from '@/components/ProductGrid';
 import HomeReviews from '@/components/HomeReviews';
 import CategorySection from '@/components/CategorySection';
 import PopularCategories from '@/components/PopularCategories';
+import BrandCatalogSection from '@/components/BrandCatalogSection';
 import { getFeaturedProducts, getProducts } from '@/lib/data';
 import { homeReviews, homeReviewsStats } from '@/lib/homeReviews';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -31,7 +32,7 @@ export default async function HomePage() {
       <Suspense fallback={null}>
         <ScrollToTop />
       </Suspense>
-      <Hero />
+      <Hero products={products} />
 
       <PopularCategories products={products} />
 
@@ -45,6 +46,8 @@ export default async function HomePage() {
       />
 
       <SameDayShipping />
+
+      <BrandCatalogSection />
 
       {lawnGardenProducts.length > 0 && (
         <Suspense fallback={null}>

@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const timeline = [
-  ['Same-day orders', 'Ships same day when placed before 2:00 PM EST'],
-  ['Standard processing', '0-1 business day'],
-  ['United States delivery', '5-9 business days (Free Standard Shipping)'],
+  ['Order processing', '1 business day'],
+  ['Transit time', '3-4 business days'],
+  ['United States delivery', '4-5 business days total (Free Standard Shipping)'],
 ];
 
 const policySections = [
@@ -63,7 +63,7 @@ export default function ShippingPolicyPage() {
         'url': 'https://cokaro.com/shipping-policy',
         'name': 'Shipping Policy | Cokaro',
         'description':
-          'Cokaro Shipping Policy for resold and sourced outdoor power equipment: Free standard shipping across the United States. Same-day processing for orders placed before 2:00 PM EST.',
+          'Cokaro Shipping Policy for resold and sourced outdoor power equipment: Free standard shipping across the United States with 1 business day processing and 3-4 business days in transit.',
       },
       {
         '@type': 'OfferShippingDetails',
@@ -81,17 +81,16 @@ export default function ShippingPolicyPage() {
           '@type': 'ShippingDeliveryTime',
           'handlingTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 0,
+            'minValue': 1,
             'maxValue': 1,
             'unitCode': 'DAY',
           },
           'transitTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 5,
-            'maxValue': 9,
+            'minValue': 3,
+            'maxValue': 4,
             'unitCode': 'DAY',
           },
-          'cutoffTime': '14:00:00-05:00',
         },
       },
     ],
@@ -126,9 +125,9 @@ export default function ShippingPolicyPage() {
         <section className="mb-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
             <Clock className="mb-4 h-6 w-6 text-[#0a3075]" />
-            <h2 className="text-lg font-bold text-[#262626]">Order by 2:00 PM EST</h2>
+            <h2 className="text-lg font-bold text-[#262626]">1 Business Day Processing</h2>
             <p className="mt-2 text-sm leading-6 text-gray-600">
-              Orders placed before the 2:00 PM EST cutoff are processed, packed, and shipped the same business day.
+              Orders are reviewed, packed, and prepared for carrier pickup within 1 business day.
             </p>
           </div>
           <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
@@ -151,10 +150,10 @@ export default function ShippingPolicyPage() {
           <div className="flex flex-col gap-3 border-b border-gray-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-2xl font-bold text-[#262626]">Delivery Timelines</h2>
-              <p className="mt-2 text-sm text-gray-600">Same-day dispatch applies to orders placed before 2:00 PM EST on business days.</p>
+              <p className="mt-2 text-sm text-gray-600">Orders are processed within 1 business day, followed by 3-4 business days in transit.</p>
             </div>
             <span className="inline-flex w-fit rounded-full bg-[#f5970c] px-3.5 py-1 text-sm font-semibold text-[#0a3075]">
-              Same-day dispatch cutoff: 2:00 PM EST
+              Estimated delivery: 4-5 business days
             </span>
           </div>
 

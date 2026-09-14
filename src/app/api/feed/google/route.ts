@@ -88,6 +88,10 @@ export async function GET() {
         <g:country>US</g:country>
         <g:service>Standard Shipping</g:service>
         <g:price>0.00 ${itemCurrency}</g:price>
+        <g:min_handling_time>1</g:min_handling_time>
+        <g:max_handling_time>1</g:max_handling_time>
+        <g:min_transit_time>3</g:min_transit_time>
+        <g:max_transit_time>4</g:max_transit_time>
       </g:shipping>`;
         
         const gmcCategory = p.meta?.gmc_category ? `\n      <g:google_product_category>${escapeXml(p.meta.gmc_category)}</g:google_product_category>` : '';

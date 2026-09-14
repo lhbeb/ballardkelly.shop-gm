@@ -31,11 +31,11 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
           {/* Right Section - Content */}
           <div className="md:w-[55%] bg-[#0a3075] text-[#F0F6FF] p-12 flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#ffffff]">
-              Same-Day Dispatch
+              Fast Order Processing
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Place your order by 2:00 PM EST and we&apos;ll process, pack, and hand it to a carrier the same business day. At <strong>Cokaro</strong>, clear fulfillment timing is part of every order.
+              Cokaro processes orders within 1 business day, then ships with an estimated 3-4 business days in transit. Clear fulfillment timing is part of every order.
             </p>
             <Link
               href="/shipping-policy"
@@ -57,10 +57,10 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             </div>
             <div>
               <h3 className="font-bold text-[#262626] text-lg mb-2">
-                Fast, Same-Day Processing
+                1-Day Processing
               </h3>
               <p className="text-gray-600 text-sm">
-                Order before 2:00 PM EST and we&apos;ll prepare your package to begin its journey that same day.
+                We review, pack, and prepare eligible orders for carrier pickup within 1 business day.
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             Ready to get your order moving?
           </p>
           <p className="text-2xl md:text-3xl font-bold text-[#262626]">
-            Order by <span className="text-[#0a3075]">2:00 PM EST</span> for same-day dispatch
+            <span className="text-[#0a3075]">1 business day</span> processing, then 3-4 business days in transit
           </p>
         </div>
         <a

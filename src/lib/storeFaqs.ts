@@ -34,7 +34,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'Where do you ship and how long does delivery take?',
     answer:
-      'Current shipping destinations, handling times, carriers, and estimated delivery windows are listed in our Shipping Policy. Tracking is provided after an eligible order is dispatched.',
+      'Cokaro currently offers free standard shipping across the United States. Orders are processed within 1 business day, transit time is 3-4 business days, and tracking is provided after an eligible order is dispatched.',
     linkHref: '/shipping-policy',
     linkLabel: 'Read our Shipping Policy',
   },
