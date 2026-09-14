@@ -33,7 +33,7 @@ export default function LocalPickupPage() {
               Pick up your Cokaro order with confidence
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#D9E6FF] sm:text-base">
-              Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Delaware, Ohio. This page covers what to expect, what to bring, and how collection works once your order is ready.
+              Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Wichita, Kansas. This page covers what to expect, what to bring, and how collection works once your order is ready.
             </p>
           </section>
 
@@ -105,12 +105,12 @@ export default function LocalPickupPage() {
                     <h2 className="text-lg font-semibold text-[#262626]">Pickup location</h2>
                     <div className="mt-4 space-y-4 text-sm leading-7 text-[#5B6785]">
                       <address className="not-italic">
-                        <span className="block font-semibold text-[#262626]">United States</span>
-                        305 Greif Pkwy
+                        <span className="block font-semibold text-[#262626]">USA</span>
+                        1239 N Washington Ave
                         <br />
-                        Delaware, OH 43015
+                        Wichita, KS 67214
                         <br />
-                        United States
+                        USA
                       </address>
 
                     </div>

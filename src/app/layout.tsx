@@ -143,10 +143,10 @@ export default function RootLayout({
                 },
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "305 Greif Pkwy",
-                  "addressLocality": "Delaware",
-                  "addressRegion": "OH",
-                  "postalCode": "43015",
+                  "streetAddress": "1239 N Washington Ave",
+                  "addressLocality": "Wichita",
+                  "addressRegion": "KS",
+                  "postalCode": "67214",
                   "addressCountry": "US"
                 }
               })

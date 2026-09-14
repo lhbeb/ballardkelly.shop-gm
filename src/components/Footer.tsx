@@ -42,7 +42,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 shrink-0 text-[#4575ba] mr-2 mt-1" />
                 <div>
                   <span className="block font-semibold text-white">US Dispatch Center</span>
-                  <span>305 Greif Pkwy, Delaware, OH 43015, United States</span>
+                  <span>1239 N Washington Ave, Wichita, KS 67214, USA</span>
                 </div>
               </div>
               <div className="pt-2 flex gap-3">

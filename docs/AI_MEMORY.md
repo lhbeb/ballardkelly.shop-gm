@@ -26,7 +26,7 @@ Footer: /src/components/Footer.tsx
 Checkout: /src/app/checkout/page.tsx
 Current Configuration
 
-Business Address: 305 Greif Pkwy, Delaware, OH 43015, United States
+Business Address: 1239 N Washington Ave, Wichita, KS 67214, USA
 Tech Stack: Next.js 15, TypeScript, Tailwind CSS
 Supported Countries: US, Canada, UK, Australia, Netherlands
 

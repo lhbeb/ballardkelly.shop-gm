@@ -48,10 +48,10 @@ export default function ContactPage() {
         ],
         'address': {
           '@type': 'PostalAddress',
-            'streetAddress': '305 Greif Pkwy',
-            'addressLocality': 'Delaware',
-            'addressRegion': 'OH',
-            'postalCode': '43015',
+            'streetAddress': '1239 N Washington Ave',
+            'addressLocality': 'Wichita',
+            'addressRegion': 'KS',
+            'postalCode': '67214',
             'addressCountry': 'US',
         },
       },
@@ -215,7 +215,7 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">US Dispatch Center</h3>
-                        <p className="text-gray-600 mt-1">305 Greif Pkwy, Delaware, OH 43015, United States</p>
+                        <p className="text-gray-600 mt-1">1239 N Washington Ave, Wichita, KS 67214, USA</p>
                       </div>
                     </div>
                     <div className="flex items-start">

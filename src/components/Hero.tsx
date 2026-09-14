@@ -103,7 +103,7 @@ const Hero = () => {
           {/* Image panel — equal height to the content panel on desktop */}
           <div className="relative order-1 min-h-[280px] overflow-hidden md:order-2 md:min-h-0">
             <Image
-              src="/mower2.png"
+              src="/mower2.jpg"
               alt="Lawn mower in use on a landscaped yard"
               fill
               priority

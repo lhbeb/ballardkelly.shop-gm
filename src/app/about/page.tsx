@@ -55,10 +55,10 @@ export default function AboutPage() {
         'telephone': ['+19129231747'],
         'address': {
           '@type': 'PostalAddress',
-            'streetAddress': '305 Greif Pkwy',
-            'addressLocality': 'Delaware',
-            'addressRegion': 'OH',
-            'postalCode': '43015',
+            'streetAddress': '1239 N Washington Ave',
+            'addressLocality': 'Wichita',
+            'addressRegion': 'KS',
+            'postalCode': '67214',
             'addressCountry': 'US',
         },
         'contactPoint': [
@@ -109,7 +109,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4 text-base leading-7 text-gray-700">
               <p>
-                Cokaro operates out of Delaware, Ohio, serving customers across the United States. Our central warehouse and fulfillment operations are designed to get your order to you fast.
+                Cokaro operates out of Wichita, Kansas, serving customers across the United States. Our central warehouse and fulfillment operations are designed to get your order to you fast.
               </p>
               <p>
                 Eligible products can be collected locally from our Delaware location. Our team confirms the available pickup address and collection time for each order before you travel.
@@ -398,7 +398,7 @@ export default function AboutPage() {
                 <MapPin className="h-5 w-5 text-[#0a3075]" />
                 <div className="font-medium text-[#262626]">US Dispatch Center</div>
               </div>
-              <div className="text-gray-600 ml-8">305 Greif Pkwy, Delaware, OH 43015, United States</div>
+              <div className="text-gray-600 ml-8">1239 N Washington Ave, Wichita, KS 67214, USA</div>
             </div>
             <div className="bg-[#F0F6FF] rounded-xl p-6 border border-[#0a3075]/10">
               <div className="flex items-center gap-3 mb-3">

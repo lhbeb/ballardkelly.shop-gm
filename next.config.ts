@@ -43,6 +43,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'aio-vita.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   // Security headers to allow Ko-fi iframes, Tidio live chat, and prevent ad blocker issues

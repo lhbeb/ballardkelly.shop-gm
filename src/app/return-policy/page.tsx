@@ -270,7 +270,7 @@ export default function ReturnPolicyPage() {
 
                   <div>
                     <strong className="text-gray-900 block">US Dispatch Center:</strong>
-                    305 Greif Pkwy, Delaware, OH 43015, United States
+                    1239 N Washington Ave, Wichita, KS 67214, USA
                   </div>
                 </div>
               </div>
