@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Star, CheckCircle2, X, Send, ThumbsUp, ZoomIn, Upload } from 'lucide-react';
 import type { Review } from '@/types/product';
+import { getReviewDisplayAuthor } from '@/utils/reviewDisplay';
 
 interface HomeReviewsProps {
   reviews?: Review[];
@@ -345,13 +346,14 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
                   ? review.images.filter((image): image is string => typeof image === 'string' && image.length > 0)
                   : [];
                 const previewImages = reviewImages.slice(0, 4);
+                const displayAuthor = getReviewDisplayAuthor(review, index);
 
                 return (
                   <div key={`${review.id}-${index}`} className="bg-gray-50 rounded-lg p-5 border border-gray-200">
                   <div className="flex items-start gap-3 mb-3">
                     <Image 
                       src={getReviewAvatarSrc(review)}
-                      alt={review.author}
+                      alt={displayAuthor}
                       width={48}
                       height={48}
                       unoptimized={true}
@@ -361,7 +363,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
                       <div className="flex items-start justify-between gap-2 mb-1">
                         <div className="min-w-0 flex-1">
                           <h3 className="font-medium text-[#262626] flex items-center gap-2 flex-wrap">
-                            {review.author}
+                            {displayAuthor}
                               {review.verified && (
                               <span className="flex items-center text-[#0a3075] text-xs whitespace-nowrap">
                                 <CheckCircle2 className="h-3.5 w-3.5 mr-1" />
@@ -427,7 +429,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
                         >
                           <Image
                             src={img}
-                            alt={`Review image ${imgIndex + 1} by ${review.author}`}
+                            alt={`Review image ${imgIndex + 1} by ${displayAuthor}`}
                             fill
                             className="object-cover"
                             sizes="64px"

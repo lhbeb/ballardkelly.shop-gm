@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Star, ThumbsUp, CheckCircle2, ChevronDown, X, ZoomIn, ExternalLink } from 'lucide-react';
 import type { Review } from '@/types/product';
 import { lockScroll, unlockScroll } from '@/utils/scrollUtils';
+import { getReviewDisplayAuthor } from '@/utils/reviewDisplay';
 
 interface ProductReviewsProps {
   reviews: Review[];
@@ -205,7 +206,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
 
         {/* Reviews List */}
         <div className="divide-y divide-gray-200">
-          {sortedReviews.map((review, index) => (
+          {sortedReviews.map((review, index) => {
+            const displayAuthor = getReviewDisplayAuthor(review, index);
+
+            return (
             <div key={`${review.id}-${index}`} className="p-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100 flex items-center justify-center border border-gray-200">
@@ -213,7 +217,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
                     // Use next/image with unoptimized=true for arbitrary external/base64 avatars
                     <Image
                       src={review.avatar}
-                      alt={review.author}
+                      alt={displayAuthor}
                       width={48}
                       height={48}
                       unoptimized={true}
@@ -229,7 +233,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
                   <div className="flex items-start justify-between mb-2">
                     <div>
                       <h3 className="font-medium text-[#262626] flex items-center gap-2 flex-wrap sm:flex-nowrap">
-                        {review.author}
+                        {displayAuthor}
                         {review.verified && (
                           <span className="flex items-center text-[#090A28] text-sm">
                             <CheckCircle2 className="h-4 w-4 mr-1" />
@@ -279,7 +283,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
                           >
                             <Image
                               src={image}
-                              alt={`Review image ${imgIndex + 1} by ${review.author}`}
+                              alt={`Review image ${imgIndex + 1} by ${displayAuthor}`}
                               width={80}
                               height={80}
                               className="w-20 h-20 object-cover group-hover:scale-105 transition-transform duration-200"
@@ -315,7 +319,8 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

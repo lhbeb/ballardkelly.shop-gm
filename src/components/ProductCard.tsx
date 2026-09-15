@@ -9,12 +9,14 @@ import type { Product } from '@/types/product';
 interface ProductCardProps {
   product: Product;
   cardBackground?: string;
+  imageBackground?: string;
   showFullImage?: boolean;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
   product,
   cardBackground = 'bg-white',
+  imageBackground = 'bg-white',
   showFullImage = false,
 }) => {
   const { slug, title, price, images, inStock } = product;
@@ -24,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className={`${cardBackground} rounded-md shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col`}>
       <Link href={`/products/${slug}`} className="block">
-        <div className={`relative w-full bg-white ${showFullImage ? 'aspect-square' : 'h-48'}`}>
+        <div className={`relative w-full ${imageBackground} ${showFullImage ? 'aspect-square' : 'h-48'}`}>
           {!imgLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse rounded-t-md z-10">
               <div className="h-12 w-12 bg-gray-300 rounded-full" />

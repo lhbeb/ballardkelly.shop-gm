@@ -73,8 +73,6 @@ export default async function HomePage() {
       </Suspense>
       <Hero products={products} />
 
-      <PopularCategories products={products} />
-
       <CategorySection
         products={featuredProducts}
         title="Featured Equipment"
@@ -104,6 +102,8 @@ export default async function HomePage() {
           />
         </Suspense>
       )}
+
+      <PopularCategories products={products} />
 
       {smallToolProducts.length > 0 && (
         <Suspense fallback={null}>
