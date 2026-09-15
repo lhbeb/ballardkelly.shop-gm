@@ -112,11 +112,10 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
             <p>© 2026 Cokaro. All rights reserved.</p>
             <div className="flex items-center justify-center sm:justify-end">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/paymenticons.svg"
                 alt="Accepted payment methods"
-                width={560}
-                height={44}
                 className="h-8 w-auto max-w-[min(100%,25rem)] object-contain"
               />
             </div>
