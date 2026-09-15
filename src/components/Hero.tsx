@@ -126,14 +126,15 @@ export default function Hero({ products = [] }: HeroProps) {
   }
 
   const [mainTile, secondaryTile, ...smallTiles] = tiles;
+  const hasSideTiles = Boolean(secondaryTile || smallTiles.length > 0);
 
   return (
-    <section className="bg-gray-100 py-6 md:py-8" aria-labelledby="home-hero-title">
+    <section className="bg-gray-100 py-4 md:py-6" aria-labelledby="home-hero-title">
       <div className="container mx-auto px-4">
-        <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[1.05fr_1fr]">
+        <div className={`mx-auto grid max-w-7xl gap-3 ${hasSideTiles ? 'lg:grid-cols-[1.1fr_1fr]' : ''}`}>
           <Link
             href={mainTile.href}
-            className="group relative min-h-[440px] overflow-hidden rounded-xl bg-[#0a3075] shadow-sm md:min-h-[520px]"
+            className={`group relative min-h-[340px] overflow-hidden rounded-xl bg-[#0a3075] shadow-sm sm:min-h-[360px] ${hasSideTiles ? 'lg:min-h-[398px]' : 'lg:min-h-[330px]'}`}
           >
             <Image
               src={mainTile.image}
@@ -145,21 +146,21 @@ export default function Hero({ products = [] }: HeroProps) {
               unoptimized={mainTile.image.startsWith('http')}
             />
             <div className="absolute inset-0 bg-[#0a0f32]/45" aria-hidden="true" />
-            <div className="absolute left-5 right-5 top-8 max-w-[620px] rounded-xl bg-[#0a0f32]/70 p-6 text-white md:left-10 md:right-auto md:top-10 md:p-8">
+            <div className="absolute left-4 right-4 top-6 max-w-[560px] rounded-xl bg-[#0a0f32]/70 p-5 text-white md:left-8 md:right-auto md:top-8 md:p-6">
               <p className="text-sm font-semibold text-[#F0F6FF]/80">{mainTile.label}</p>
               <p className="mt-2 line-clamp-2 text-sm font-medium text-[#F0F6FF]/80">
                 Featured product: {mainTile.productTitle}
               </p>
               <h1
                 id="home-hero-title"
-                className="mt-3 text-3xl font-bold leading-tight text-white md:text-5xl"
+                className="mt-2 text-3xl font-bold leading-tight text-white md:text-4xl"
               >
                 {mainTile.title}
               </h1>
-              <p className="mt-4 max-w-xl text-base leading-7 text-[#F0F6FF]/90 md:text-lg">
+              <p className="mt-3 max-w-xl text-base leading-6 text-[#F0F6FF]/90">
                 {mainTile.description}
               </p>
-              <span className="mt-6 inline-flex items-center justify-center rounded-lg bg-[#0a3075] px-6 py-3 text-sm font-bold text-[#F0F6FF] transition-colors group-hover:bg-[#08255f]">
+              <span className="mt-5 inline-flex items-center justify-center rounded-lg bg-[#0a3075] px-5 py-2.5 text-sm font-bold text-[#F0F6FF] transition-colors group-hover:bg-[#08255f]">
                 {mainTile.cta}
               </span>
             </div>
@@ -170,30 +171,30 @@ export default function Hero({ products = [] }: HeroProps) {
               {secondaryTile && (
                 <Link
                   href={secondaryTile.href}
-                  className="group grid min-h-[260px] overflow-hidden rounded-xl bg-white shadow-sm md:grid-cols-[0.9fr_1.1fr]"
+                  className="group grid min-h-[214px] overflow-hidden rounded-xl bg-white shadow-sm md:grid-cols-[0.92fr_1.08fr]"
                 >
-                  <div className="flex flex-col justify-center p-6 md:p-10">
+                  <div className="flex flex-col justify-center p-5 md:p-7">
                     <p className="text-sm font-semibold text-[#0a3075]">{secondaryTile.label}</p>
                     <p className="mt-2 line-clamp-2 text-sm font-medium text-gray-500">
                       Featured product: {secondaryTile.productTitle}
                     </p>
-                    <h2 className="mt-3 text-3xl font-bold leading-tight text-[#262626] md:text-4xl">
+                    <h2 className="mt-2 text-2xl font-bold leading-tight text-[#262626] md:text-3xl">
                       {secondaryTile.title}
                     </h2>
-                    <p className="mt-3 text-sm leading-6 text-gray-600 md:text-base">
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
                       {secondaryTile.description}
                     </p>
-                    <span className="mt-6 inline-flex w-fit items-center rounded-lg bg-[#0a3075] px-6 py-3 text-sm font-bold text-[#F0F6FF] transition-colors group-hover:bg-[#0a0f32]">
+                    <span className="mt-4 inline-flex w-fit items-center rounded-lg bg-[#0a3075] px-5 py-2.5 text-sm font-bold text-[#F0F6FF] transition-colors group-hover:bg-[#0a0f32]">
                       {secondaryTile.cta}
                     </span>
                   </div>
-                  <div className="relative min-h-[220px] bg-white md:min-h-full">
+                  <div className="relative min-h-[190px] bg-white md:min-h-full">
                     <Image
                       src={secondaryTile.image}
                       alt={secondaryTile.alt}
                       fill
                       sizes="(max-width: 1023px) 100vw, 35vw"
-                      className="object-contain p-6 transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
                       unoptimized={secondaryTile.image.startsWith('http')}
                     />
                   </div>
@@ -206,18 +207,18 @@ export default function Hero({ products = [] }: HeroProps) {
                     <Link
                       key={tile.href}
                       href={tile.href}
-                      className="group grid min-h-[210px] grid-cols-[1fr_0.9fr] overflow-hidden rounded-xl bg-white shadow-sm"
+                      className="group grid min-h-[170px] grid-cols-[1fr_0.9fr] overflow-hidden rounded-xl bg-white shadow-sm"
                     >
-                      <div className="flex flex-col justify-center p-5 md:p-6">
+                      <div className="flex flex-col justify-center p-4 md:p-5">
                         <p className="text-sm font-semibold text-[#0a3075]">{tile.label}</p>
                         <p className="mt-2 line-clamp-2 text-sm font-medium text-gray-500">
                           Featured product: {tile.productTitle}
                         </p>
-                        <h2 className="mt-2 text-2xl font-bold leading-tight text-[#262626]">
+                        <h2 className="mt-2 line-clamp-2 text-xl font-bold leading-tight text-[#262626]">
                           {tile.title}
                         </h2>
-                        <p className="mt-2 text-sm leading-6 text-gray-600">{tile.description}</p>
-                        <span className="mt-4 text-sm font-bold text-[#0a3075] group-hover:text-[#0a0f32]">
+                        <p className="mt-2 line-clamp-2 text-sm leading-5 text-gray-600">{tile.description}</p>
+                        <span className="mt-3 text-sm font-bold text-[#0a3075] group-hover:text-[#0a0f32]">
                           {tile.cta}
                         </span>
                       </div>

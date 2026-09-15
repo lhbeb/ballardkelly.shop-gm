@@ -50,7 +50,7 @@ export default function BrandCatalogSection() {
               id="brand-catalog-title"
               className="text-3xl font-bold leading-tight text-[#262626] md:text-5xl"
             >
-              Cokaro &amp; the Brands in Our Catalog
+              Cokaro &amp; THE BRANDS YOU TRUST
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-600 md:text-lg lg:mx-0">
               Cokaro sells and resells lawn mowers, pressure washers, generators, and outdoor

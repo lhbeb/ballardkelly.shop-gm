@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
-import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info, MessageSquare } from 'lucide-react';
+import { ShoppingCart, Menu, X, Search, ChevronLeft, ChevronRight, Info, MessageSquare, PackageCheck, Truck } from 'lucide-react';
 import { getCartCount } from '@/utils/cart';
 import ClientOnly from './ClientOnly';
 import SearchBar from './SearchBar';
@@ -71,8 +71,14 @@ const Header = () => {
   const isCheckoutPage = pathname === '/checkout';
 
   const announcements = [
-    <span key="nav-1">🚚 <span className="font-bold">Free Shipping</span> Across the United States</span>,
-    <span key="nav-2">📦 <span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>,
+    <span key="nav-1" className="inline-flex items-center gap-2">
+      <Truck className="h-4 w-4 text-[#7EA6D9]" aria-hidden="true" />
+      <span><span className="font-bold">Free Shipping</span> Across the United States</span>
+    </span>,
+    <span key="nav-2" className="inline-flex items-center gap-2">
+      <PackageCheck className="h-4 w-4 text-[#7EA6D9]" aria-hidden="true" />
+      <span><span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>
+    </span>,
     "livechat-contact" // Marker for Live Chat announcement
   ];
 
@@ -225,9 +231,9 @@ const Header = () => {
                   className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-wrap justify-center"
                   aria-label="Inquiries? Live Chat Available 24/7"
                 >
-                  <MessageSquare className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 text-[#f5970c]" />
+                  <MessageSquare className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 text-[#7EA6D9]" />
                   <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available 24/7</span></span>
-                  <span className="underline whitespace-nowrap font-bold text-[#f5970c] ml-1">Chat With Us</span>
+                  <span className="underline whitespace-nowrap font-bold text-[#7EA6D9] ml-1">Chat With Us</span>
                 </Link>
               </div>
             ) : (
@@ -304,7 +310,7 @@ const Header = () => {
               {isSticky && (
                 <button
                   onClick={() => setIsSearchOpen(true)}
-                  className="lg:hidden text-[#0a3075] hover:text-[#f5970c] transition-colors duration-300"
+                  className="lg:hidden text-[#0a3075] hover:text-[#4575ba] transition-colors duration-300"
                   aria-label="Search products"
                 >
                   <Search className="h-5 w-5" />
@@ -314,7 +320,7 @@ const Header = () => {
               {/* Help Center Icon - Desktop */}
               <Link
                 href="/contact"
-                className="hidden sm:flex text-[#0a3075] hover:text-[#f5970c] transition-colors duration-300"
+                className="hidden sm:flex text-[#0a3075] hover:text-[#4575ba] transition-colors duration-300"
                 aria-label="Help Center"
               >
                 <Info className="h-5 w-5" />
@@ -323,12 +329,12 @@ const Header = () => {
               {/* Cart - PRESERVED with color update */}
               <button
                 onClick={handleCartClick}
-                className="relative text-[#0a3075] hover:text-[#f5970c] transition-colors duration-300"
+                className="relative text-[#0a3075] hover:text-[#4575ba] transition-colors duration-300"
                 aria-label={`Shopping cart ${cartCount > 0 ? `with ${cartCount} items` : '(empty)'}`}
               >
                 <ShoppingCart className="h-5 w-5" />
                 <ClientOnly>
-                  <span className={`absolute -top-2 -right-2 bg-[#f5970c] text-[#0a3075] text-xs rounded-full h-5 min-w-[1.25rem] px-1 flex items-center justify-center font-semibold transition-opacity duration-300 ${cartCount > 0 ? 'opacity-100' : 'opacity-0'}`}>
+                  <span className={`absolute -top-2 -right-2 bg-[#7EA6D9] text-[#062B63] text-xs rounded-full h-5 min-w-[1.25rem] px-1 flex items-center justify-center font-semibold transition-opacity duration-300 ${cartCount > 0 ? 'opacity-100' : 'opacity-0'}`}>
                     {cartCount}
                   </span>
                 </ClientOnly>
@@ -337,7 +343,7 @@ const Header = () => {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden text-[#0a3075] hover:text-[#f5970c] transition-colors duration-300"
+                className="lg:hidden text-[#0a3075] hover:text-[#4575ba] transition-colors duration-300"
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
