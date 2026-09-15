@@ -7,8 +7,6 @@ import { createVisitorRotationSeed, selectRotatedProducts } from '@/utils/visito
 
 interface CategorySectionProps {
   products: Product[];
-  title?: string;
-  subtitle?: string;
   maxDisplay?: number;
   shuffleForVisitor?: boolean;
   visitorShuffleKey?: string;
@@ -16,8 +14,6 @@ interface CategorySectionProps {
 
 const CategorySection: React.FC<CategorySectionProps> = ({
   products,
-  title = 'Outdoor Power Equipment',
-  subtitle = 'Reliable equipment for home, backyard, acreage, and farm work.',
   maxDisplay = 8,
   shuffleForVisitor = false,
   visitorShuffleKey = 'home-power-tools',
@@ -49,15 +45,6 @@ const CategorySection: React.FC<CategorySectionProps> = ({
     <section id="outdoor-power-equipment" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="w-full max-w-7xl mx-auto">
-          <div className="mb-12 text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#262626] mb-4">
-              {title}
-            </h2>
-            <p className="max-w-2xl text-lg text-gray-600">
-              {subtitle}
-            </p>
-          </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {displayedProducts.map((product) => (
               <ProductCard

@@ -78,8 +78,6 @@ export default async function HomePage() {
 
       <CategorySection
         products={featuredProducts}
-        title="Featured Equipment"
-        subtitle="Resold and sourced equipment for lawns, backyards, workshops, acreage, and farm upkeep."
         maxDisplay={FEATURED_PRODUCT_LIMIT}
         shuffleForVisitor
         visitorShuffleKey="home-featured"
