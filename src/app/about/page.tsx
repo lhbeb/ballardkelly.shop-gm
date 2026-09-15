@@ -112,7 +112,7 @@ export default function AboutPage() {
                 Cokaro operates out of Wichita, Kansas, serving customers across the United States. Our central warehouse and fulfillment operations are designed to get your order to you fast.
               </p>
               <p>
-                Eligible products can be collected locally from our Delaware location. Our team confirms the available pickup address and collection time for each order before you travel.
+                Eligible products can be collected locally from our Wichita, Kansas location. Our team confirms the available pickup address and collection time for each order before you travel.
               </p>
               <Link href="/local-pickup" className="inline-flex font-semibold text-[#0a3075] hover:text-[#0a0f32] hover:underline">
                 View the local pickup guide
@@ -267,7 +267,7 @@ export default function AboutPage() {
             To give homeowners, property owners, contractors, and farm operators access to quality outdoor and power equipment at honest prices.
           </p>
           <p className="text-lg text-[#F0F6FF]/85">
-            Whether you need a ride mower, walk-behind mower, pressure washer, chainsaw, leaf blower, trimmer, or other equipment for your land and buildings, you should not have to pay more than necessary.
+            Whether you need a riding mower, walk-behind mower, pressure washer, chainsaw, leaf blower, trimmer, or other equipment for your land and buildings, you should not have to pay more than necessary.
           </p>
         </div>
 
@@ -426,8 +426,8 @@ export default function AboutPage() {
                 <div className="font-medium text-[#262626]">Business Hours:</div>
               </div>
               <div className="text-gray-600 ml-8 space-y-1">
-                <div>Monday to Friday, 9:00 AM to 5:00 PM EST</div>
-                <div>Saturday, 10:00 AM to 3:00 PM EST</div>
+                <div>Monday to Friday, 9:00 AM to 5:00 PM CT</div>
+                <div>Saturday, 10:00 AM to 3:00 PM CT</div>
                 <div>Sunday, Closed</div>
               </div>
             </div>

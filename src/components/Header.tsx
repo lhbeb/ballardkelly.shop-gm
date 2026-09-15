@@ -229,10 +229,10 @@ const Header = () => {
                 <Link
                   href="/livechat"
                   className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-wrap justify-center"
-                  aria-label="Inquiries? Live Chat Available 24/7"
+                  aria-label="Inquiries? Live Chat Available"
                 >
                   <MessageSquare className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 text-[#7EA6D9]" />
-                  <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available 24/7</span></span>
+                  <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available</span></span>
                   <span className="underline whitespace-nowrap font-bold text-[#7EA6D9] ml-1">Chat With Us</span>
                 </Link>
               </div>

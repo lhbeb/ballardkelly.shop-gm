@@ -24,19 +24,14 @@ const CATEGORY_RULES: CategoryRule[] = [
     terms: ['mower', 'mowers', 'mähroboter', 'maehroboter', 'automower', 'miimo', 'robocut'],
   },
   {
-    name: 'Robotic Mowers',
-    href: '/search?query=M%C3%A4hroboter',
-    terms: ['mähroboter', 'maehroboter', 'automower', 'miimo', 'robocut'],
-  },
-  {
     name: 'Honda Mowers',
     href: '/search?query=Honda',
     terms: ['honda'],
   },
   {
-    name: 'Husqvarna Automowers',
+    name: 'Husqvarna Outdoor Equipment',
     href: '/search?query=Husqvarna',
-    terms: ['husqvarna', 'automower'],
+    terms: ['husqvarna'],
   },
   {
     name: 'Pressure Washers',
@@ -53,21 +48,6 @@ const CATEGORY_RULES: CategoryRule[] = [
     name: 'Blowers & Trimmers',
     href: '/search?query=Blower%20Trimmer',
     terms: ['blower', 'trimmer', 'string trimmer'],
-  },
-  {
-    name: 'Generators & Backup Power',
-    href: '/search?query=Generator',
-    terms: ['generator', 'backup power', 'portable power'],
-  },
-  {
-    name: 'Practixx Mowers',
-    href: '/search?query=Practixx',
-    terms: ['practixx'],
-  },
-  {
-    name: 'Scheppach Mowers',
-    href: '/search?query=Scheppach',
-    terms: ['scheppach'],
   },
 ];
 

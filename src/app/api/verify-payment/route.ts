@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { getOrderById } from '@/lib/supabase/orders';
+import { getOrderById, updateOrderStripeStatus } from '@/lib/supabase/orders';
 import { getStripeConfig } from '@/lib/supabase/payment-settings';
 
 // Stripe initialization deferred to handler to avoid build-time crashes
@@ -48,14 +48,39 @@ export async function POST(request: NextRequest) {
             );
         }
         
-        // Wait for webhook to update local DB (give it a bit of time or just check immediately)
         const order = await getOrderById(orderId);
-        
-        if (!order || order.status !== 'paid') {
-            return NextResponse.json({
-                status: 'pending',
-                message: 'Order record pending sync or not paid locally'
+
+        if (!order) {
+            return NextResponse.json({ error: 'Order record was not found.' }, { status: 404 });
+        }
+
+        const expectedAmount = Math.round(Number(order.product_price) * 100);
+        if (!Number.isFinite(expectedAmount) || session.amount_total !== expectedAmount) {
+            console.error('[Payment Verification] Stripe amount does not match the order:', {
+                orderId,
+                expectedAmount,
+                stripeAmount: session.amount_total,
             });
+            return NextResponse.json({ error: 'Payment amount could not be verified.' }, { status: 409 });
+        }
+
+        if (order.status !== 'paid') {
+            const paymentIntentId = typeof session.payment_intent === 'string'
+                ? session.payment_intent
+                : session.payment_intent?.id;
+            const updated = await updateOrderStripeStatus(orderId, {
+                status: 'paid',
+                stripe_payment_intent_id: paymentIntentId,
+                stripe_payment_status: session.payment_status,
+                paid_at: new Date().toISOString(),
+            });
+
+            if (!updated) {
+                return NextResponse.json({
+                    status: 'pending',
+                    message: 'Payment is confirmed but the order record is still syncing.',
+                });
+            }
         }
 
         // Return payment status and details securely

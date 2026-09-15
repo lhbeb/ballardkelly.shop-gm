@@ -3,6 +3,7 @@ import Stripe from 'stripe';
 import { headers } from 'next/headers';
 import { updateOrderStripeStatus } from '@/lib/supabase/orders';
 import { getStripeConfig } from '@/lib/supabase/payment-settings';
+import { deactivateStripeConnectionByAccountId } from '@/lib/stripe-connect';
 
 // Stripe initialization deferred to handler to avoid build-time crashes
 
@@ -64,6 +65,13 @@ export async function POST(request: NextRequest) {
 
             case 'payment_intent.payment_failed':
                 await handlePaymentFailed(event.data.object as Stripe.PaymentIntent);
+                break;
+
+            case 'account.application.deauthorized':
+                if (typeof event.account === 'string') {
+                    await deactivateStripeConnectionByAccountId(event.account);
+                    console.log('[Stripe Webhook] Connected account deactivated:', event.account);
+                }
                 break;
 
             default:

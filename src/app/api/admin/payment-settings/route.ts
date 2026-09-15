@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import Stripe from 'stripe';
+import { getAdminAuthFromRequest } from '@/lib/admin-request-auth';
 import { supabaseAdmin } from '@/lib/supabase/server';
 import {
     invalidatePaypalApiConfigCache,
@@ -10,36 +12,10 @@ import {
     PaypalApiError,
     validatePaypalApiCredentials,
 } from '@/lib/paypal-api';
-
-// Helper to get admin auth from request
-async function getAdminAuth(request: NextRequest) {
-    // Bypass authentication in development if enabled
-    const { shouldBypassAuth } = await import('@/lib/supabase/auth');
-    if (shouldBypassAuth()) {
-        return { authenticated: true, role: 'SUPER_ADMIN', email: 'dev@localhost' };
-    }
-
-    const token = request.cookies.get('admin_token')?.value;
-    if (token) {
-        try {
-            const { jwtVerify } = await import('jose');
-            const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
-            const getSecretKey = () => new TextEncoder().encode(JWT_SECRET);
-            const { payload } = await jwtVerify(token, getSecretKey());
-            const decoded = payload as { role: string; isActive: boolean; email: string };
-            const normalizedRole = decoded.role?.toUpperCase();
-
-            if (!decoded.isActive) return null;
-            if (!['SUPER_ADMIN', 'REGULAR_ADMIN', 'ADMIN'].includes(normalizedRole)) return null;
-
-            return { authenticated: true, role: decoded.role, email: decoded.email };
-        } catch (error) {
-            console.error('❌ [AUTH] JWT verification failed:', error);
-            return null;
-        }
-    }
-    return null;
-}
+import {
+    getStripeConnectConfiguration,
+    STRIPE_CONNECT_PROVIDER,
+} from '@/lib/stripe-connect';
 
 async function getPaypalSettingsRow() {
     let data: { payee_email?: string | null; publishable_key?: string | null; is_active?: boolean | null } | null = null;
@@ -71,7 +47,7 @@ async function getPaypalSettingsRow() {
 
 export async function GET(request: NextRequest) {
     try {
-        const auth = await getAdminAuth(request);
+        const auth = await getAdminAuthFromRequest(request);
         if (!auth) {
             return NextResponse.json({ error: 'Unauthorized: Admin access required' }, { status: 401 });
         }
@@ -82,6 +58,12 @@ export async function GET(request: NextRequest) {
             .select('publishable_key, secret_key, mode, is_active')
             .eq('provider', 'stripe')
             .single();
+
+        const { data: stripeConnectData, error: stripeConnectError } = await supabaseAdmin
+            .from('payment_settings')
+            .select('publishable_key, payee_email, mode, is_active, updated_at')
+            .eq('provider', STRIPE_CONNECT_PROVIDER)
+            .maybeSingle();
 
         // Fetch PayPal settings
         const { data: paypalData, error: paypalError } = await getPaypalSettingsRow();
@@ -97,6 +79,10 @@ export async function GET(request: NextRequest) {
             console.error('Error fetching Stripe settings:', stripeError);
         }
 
+        if (stripeConnectError && stripeConnectError.code !== 'PGRST116') {
+            console.error('Error fetching Stripe Connect settings:', stripeConnectError);
+        }
+
         if (paypalError && paypalError.code !== 'PGRST116') {
             console.error('Error fetching PayPal settings:', paypalError);
         }
@@ -107,6 +93,10 @@ export async function GET(request: NextRequest) {
 
         const response: any = {
             stripe: null,
+            stripeConnect: {
+                isAvailable: Boolean(getStripeConnectConfiguration()),
+                isConnected: false,
+            },
             paypal: null,
             paypalApi: null,
         };
@@ -122,6 +112,43 @@ export async function GET(request: NextRequest) {
                 secretKey: maskedSecret,
                 mode: stripeData.mode,
                 isActive: stripeData.is_active
+            };
+        }
+
+        if (stripeConnectData?.is_active && stripeConnectData.publishable_key) {
+            let accountStatus: {
+                accountName?: string;
+                chargesEnabled?: boolean;
+                detailsSubmitted?: boolean;
+            } = {};
+
+            if (stripeData?.secret_key) {
+                try {
+                    const connectedStripe = new Stripe(stripeData.secret_key, {
+                        apiVersion: '2026-01-28.clover' as any,
+                    });
+                    const account = await connectedStripe.accounts.retrieve();
+                    accountStatus = {
+                        accountName:
+                            account.business_profile?.name ||
+                            account.settings?.dashboard?.display_name ||
+                            undefined,
+                        chargesEnabled: account.charges_enabled,
+                        detailsSubmitted: account.details_submitted,
+                    };
+                } catch (statusError) {
+                    console.error('[Stripe Connect] Could not refresh connected account status:', statusError);
+                }
+            }
+
+            response.stripeConnect = {
+                isAvailable: Boolean(getStripeConnectConfiguration()),
+                isConnected: true,
+                accountId: stripeConnectData.publishable_key,
+                accountEmail: stripeConnectData.payee_email || '',
+                mode: stripeConnectData.mode,
+                connectedAt: stripeConnectData.updated_at,
+                ...accountStatus,
             };
         }
 
@@ -155,7 +182,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
     try {
-        const auth = await getAdminAuth(request);
+        const auth = await getAdminAuthFromRequest(request);
         if (!auth) {
             return NextResponse.json({ error: 'Unauthorized: Admin access required' }, { status: 401 });
         }
@@ -371,6 +398,17 @@ export async function POST(request: NextRequest) {
         if (stripeError) {
             console.error('Error saving Stripe settings:', stripeError);
             return NextResponse.json({ error: 'Failed to save configuration' }, { status: 500 });
+        }
+
+
+        const { error: deactivateConnectError } = await supabaseAdmin
+            .from('payment_settings')
+            .update({ is_active: false })
+            .eq('provider', STRIPE_CONNECT_PROVIDER);
+
+        if (deactivateConnectError) {
+            console.error('Error clearing previous Stripe Connect status:', deactivateConnectError);
+            return NextResponse.json({ error: 'Stripe keys were saved, but connection status could not be updated.' }, { status: 500 });
         }
 
         invalidateStripeConfigCache();

@@ -28,7 +28,7 @@ const TermsPage = () => {
               <li>Cokaro operates as an independent seller, reseller, and curated marketplace for outdoor power and property-care equipment, with authorized reseller or supplier relationships only where expressly applicable.</li>
               <li>We source products through verified suppliers, auctions, private sellers, liquidators, wholesalers, marketplace partners, and other third-party suppliers.</li>
               <li>We also allow approved private sellers to list items on our platform after a full inspection by our team.</li>
-              <li>Our catalog may include products bearing marks such as Briggs & Stratton, Craftsman, Cub Cadet, DeWalt, EGO, GreenWorks, Honda, Husqvarna, and other product or model marks shown on product pages.</li>
+              <li>Our catalog may include products bearing marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, Husqvarna, and other product or model marks shown on product pages.</li>
               <li>All purchases made through Cokaro are processed under these Terms.</li>
             </ul>
           </div>
@@ -126,8 +126,8 @@ const TermsPage = () => {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Standard order processing time is 1 business day.</li>
-              <li>Domestic USA transit time is 3 to 4 business days after shipment.</li>
-              <li>Total estimated domestic USA delivery time is 4 to 5 business days after order placement.</li>
+              <li>Domestic USA transit time is 1 to 3 business days after shipment.</li>
+              <li>Total estimated domestic USA delivery time is 2 to 4 business days after order placement.</li>
               <li>All orders qualify for free standard shipping with no minimum spend required.</li>
               <li>Tracking information is sent to the customer via email once the order ships.</li>
             </ul>
@@ -214,8 +214,8 @@ const TermsPage = () => {
               </div>
               <div>
                 <div className="font-medium text-[#262626] mb-1">Hours:</div>
-                <div className="text-gray-600">Monday to Friday, 9:00 AM to 5:00 PM EST</div>
-                <div className="text-gray-600">Saturday, 10:00 AM to 3:00 PM EST</div>
+                <div className="text-gray-600">Monday to Friday, 9:00 AM to 5:00 PM CT</div>
+                <div className="text-gray-600">Saturday, 10:00 AM to 3:00 PM CT</div>
                 <div className="text-gray-600">Sunday, Closed</div>
               </div>
             </div>

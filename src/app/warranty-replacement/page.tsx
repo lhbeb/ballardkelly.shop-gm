@@ -34,17 +34,17 @@ export default function WarrantyReplacementPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Warranty</h2>
             <p className="text-gray-600 leading-relaxed">
-              We provide a Three-Year Warranty for all products in our store.
+              Warranty coverage varies by product, source, condition, and manufacturer policy. If a product includes a specific Cokaro, seller, or manufacturer warranty, the available warranty details will be stated on the product page or order communication. This page does not create a blanket warranty for every item in the catalog.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Customer Support</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              We offer 24/7 Customer Support to assist you with any inquiries or issues you may have. Feel free to reach out to us anytime!
+              Our customer support team is available during published business hours. You can contact us by email, phone, or the contact form, and we will respond as soon as possible.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              At Cokaro, we bring innovation and performance to every lawn and garden. From powerful mowers to essential outdoor tools, we deliver quality products backed by brands you can trust.
+              At Cokaro, we aim to provide clear product details, transparent condition information, and a consistent support process for the lawn, outdoor power, backyard, and property-care equipment in our catalog.
             </p>
           </section>
 

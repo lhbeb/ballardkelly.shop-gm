@@ -53,10 +53,10 @@ export default function BrandCatalogSection() {
               Cokaro &amp; THE BRANDS YOU TRUST
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-600 md:text-lg lg:mx-0">
-              Cokaro sells and resells lawn mowers, pressure washers, generators, and outdoor
-              power equipment for home, backyard, acreage, and farm care. Brand names and logos
-              help identify the products offered in our catalog; each mark remains the property
-              of its respective owner.
+              Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers,
+              and outdoor power equipment for home, backyard, acreage, and farm care. Brand names
+              and logos help identify the products offered in our catalog; each mark remains the
+              property of its respective owner.
             </p>
             <Link
               href="#outdoor-power-equipment"

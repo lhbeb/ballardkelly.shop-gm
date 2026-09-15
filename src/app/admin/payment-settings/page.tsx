@@ -2,7 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import AdminLayout from '@/components/AdminLayout';
-import { CreditCard, Save, ShieldOff, Eye, EyeOff, AlertCircle, RefreshCw, CheckCircle2, XCircle, KeyRound } from 'lucide-react';
+import { CreditCard, Save, ShieldOff, Eye, EyeOff, AlertCircle, RefreshCw, CheckCircle2, XCircle, KeyRound, Link2, Unplug, ExternalLink, ChevronDown } from 'lucide-react';
+
+interface StripeConnectStatus {
+    isAvailable: boolean;
+    isConnected: boolean;
+    accountId?: string;
+    accountEmail?: string;
+    accountName?: string;
+    mode?: 'live' | 'test';
+    connectedAt?: string;
+    chargesEnabled?: boolean;
+    detailsSubmitted?: boolean;
+}
 
 export default function PaymentSettingsPage() {
     const [adminRole, setAdminRole] = useState<string | null>(null);
@@ -15,6 +27,13 @@ export default function PaymentSettingsPage() {
     const [mode, setMode] = useState('live');
     const [showSecret, setShowSecret] = useState(false);
     const [isConfigured, setIsConfigured] = useState(false);
+    const [stripeConnect, setStripeConnect] = useState<StripeConnectStatus>({
+        isAvailable: false,
+        isConnected: false,
+    });
+    const [isConnectingStripe, setIsConnectingStripe] = useState(false);
+    const [isDisconnectingStripe, setIsDisconnectingStripe] = useState(false);
+    const [showManualStripeKeys, setShowManualStripeKeys] = useState(true);
     
     // PayPal Direct redirect state
     const [paypalEmail, setPaypalEmail] = useState('');
@@ -66,6 +85,23 @@ export default function PaymentSettingsPage() {
         };
         setAdminRole(getRole() || '');
 
+        const params = new URLSearchParams(window.location.search);
+        const stripeResult = params.get('stripe_connect');
+        if (stripeResult === 'connected') {
+            setStatusMessage({ type: 'success', text: 'Stripe account connected. New Stripe checkouts will use this account.' });
+        } else if (stripeResult === 'cancelled') {
+            setStatusMessage({ type: 'error', text: 'Stripe connection was cancelled. No payment settings were changed.' });
+        } else if (stripeResult === 'error') {
+            const reason = params.get('reason');
+            const text = reason === 'invalid_state'
+                ? 'Stripe authorization expired or could not be verified. Start the connection again.'
+                : 'Stripe could not complete the account connection. Check the Connect configuration and try again.';
+            setStatusMessage({ type: 'error', text });
+        }
+        if (stripeResult) {
+            window.history.replaceState({}, '', window.location.pathname);
+        }
+
         fetchSettings();
     }, []);
 
@@ -79,6 +115,7 @@ export default function PaymentSettingsPage() {
             });
             
             if (res.ok) {
+                setAdminRole((currentRole) => currentRole || 'ADMIN');
                 const data = await res.json();
                 
                 // Stripe data
@@ -87,6 +124,11 @@ export default function PaymentSettingsPage() {
                     setPublishableKey(data.stripe.publishableKey || '');
                     setSecretKey(data.stripe.secretKey || '');
                     setMode(data.stripe.mode || 'live');
+                }
+
+                if (data.stripeConnect) {
+                    setStripeConnect(data.stripeConnect);
+                    setShowManualStripeKeys(!data.stripeConnect.isConnected);
                 }
 
                 // PayPal data
@@ -103,12 +145,69 @@ export default function PaymentSettingsPage() {
                     setPaypalApiMode(data.paypalApi.mode === 'live' ? 'live' : 'sandbox');
                 }
             } else if (res.status === 401) {
+                setAdminRole('');
                 console.log("Unauthorized to fetch settings");
             }
         } catch (error) {
             console.error('Failed to fetch payment settings:', error);
         } finally {
             setIsLoading(false);
+        }
+    };
+
+    const handleConnectStripe = async () => {
+        setIsConnectingStripe(true);
+        setStatusMessage(null);
+
+        try {
+            const token = localStorage.getItem('admin_token');
+            const response = await fetch('/api/admin/payment-settings/stripe-connect/start', {
+                headers: {
+                    ...(token && { Authorization: `Bearer ${token}` }),
+                },
+            });
+            const data = await response.json();
+
+            if (!response.ok || !data.url) {
+                setStatusMessage({ type: 'error', text: data.error || 'Could not start Stripe authorization.' });
+                setIsConnectingStripe(false);
+                return;
+            }
+
+            window.location.assign(data.url);
+        } catch {
+            setStatusMessage({ type: 'error', text: 'Could not reach Stripe authorization. Please try again.' });
+            setIsConnectingStripe(false);
+        }
+    };
+
+    const handleDisconnectStripe = async () => {
+        if (!window.confirm('Disconnect this Stripe account from Cokaro checkout?')) return;
+
+        setIsDisconnectingStripe(true);
+        setStatusMessage(null);
+
+        try {
+            const token = localStorage.getItem('admin_token');
+            const response = await fetch('/api/admin/payment-settings/stripe-connect/disconnect', {
+                method: 'POST',
+                headers: {
+                    ...(token && { Authorization: `Bearer ${token}` }),
+                },
+            });
+            const data = await response.json();
+
+            if (!response.ok) {
+                setStatusMessage({ type: 'error', text: data.error || 'Could not disconnect Stripe.' });
+                return;
+            }
+
+            setStatusMessage({ type: 'success', text: 'Stripe account disconnected from Cokaro checkout.' });
+            await fetchSettings();
+        } catch {
+            setStatusMessage({ type: 'error', text: 'Could not disconnect Stripe. Please try again.' });
+        } finally {
+            setIsDisconnectingStripe(false);
         }
     };
 
@@ -316,13 +415,121 @@ export default function PaymentSettingsPage() {
                                     <h3 className="font-semibold text-[#262626] text-base">Stripe Integration</h3>
                                     <div className="flex items-center gap-2 mt-1">
                                         <div className={`w-2 h-2 rounded-full ${isConfigured ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                                        <p className="text-sm text-gray-500">{isConfigured ? 'Active & Configured' : 'Not Configured'}</p>
+                                        <p className="text-sm text-gray-500">
+                                            {stripeConnect.isConnected
+                                                ? 'Connected with Stripe'
+                                                : isConfigured
+                                                    ? 'Manual keys active'
+                                                    : 'Not configured'}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <form onSubmit={handleSave} className="p-6 space-y-5">
+                        <div className="p-6 space-y-5">
+                            <div className={`rounded-lg border p-5 ${
+                                stripeConnect.isConnected
+                                    ? stripeConnect.chargesEnabled === false
+                                        ? 'border-amber-200 bg-amber-50'
+                                        : 'border-emerald-200 bg-emerald-50'
+                                    : 'border-gray-200 bg-gray-50'
+                            }`}>
+                                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                                    <div className="min-w-0">
+                                        <div className="flex items-center gap-2">
+                                            <Link2 className={`h-5 w-5 ${stripeConnect.isConnected ? 'text-emerald-700' : 'text-gray-500'}`} />
+                                            <h4 className="text-sm font-semibold text-gray-900">
+                                                {stripeConnect.isConnected ? 'Stripe account linked' : 'Connect a Stripe account'}
+                                            </h4>
+                                        </div>
+
+                                        {stripeConnect.isConnected ? (
+                                            <div className="mt-3 space-y-1.5 text-sm text-gray-600">
+                                                <p className="truncate font-medium text-gray-900">
+                                                    {stripeConnect.accountName || stripeConnect.accountEmail || stripeConnect.accountId}
+                                                </p>
+                                                {stripeConnect.accountName && stripeConnect.accountEmail && (
+                                                    <p className="truncate">{stripeConnect.accountEmail}</p>
+                                                )}
+                                                <p className="font-mono text-xs text-gray-500">{stripeConnect.accountId}</p>
+                                                <div className="flex flex-wrap items-center gap-2 pt-1">
+                                                    <span className={`rounded-md px-2 py-1 text-xs font-semibold ${
+                                                        stripeConnect.mode === 'live'
+                                                            ? 'bg-emerald-100 text-emerald-800'
+                                                            : 'bg-amber-100 text-amber-800'
+                                                    }`}>
+                                                        {stripeConnect.mode === 'live' ? 'Live mode' : 'Test mode'}
+                                                    </span>
+                                                    {stripeConnect.chargesEnabled === false && (
+                                                        <span className="rounded-md bg-amber-100 px-2 py-1 text-xs font-semibold text-amber-800">
+                                                            Stripe setup required
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <p className="mt-2 max-w-md text-sm leading-6 text-gray-600">
+                                                Authorize an existing Stripe account. Cokaro will use it for new embedded Stripe Checkout sessions.
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    <div className="flex flex-shrink-0 flex-wrap gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={handleConnectStripe}
+                                            disabled={isConnectingStripe || !stripeConnect.isAvailable}
+                                            className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[#635BFF] px-4 text-sm font-semibold text-white transition-colors hover:bg-[#5147e5] disabled:cursor-not-allowed disabled:opacity-50"
+                                        >
+                                            {isConnectingStripe ? (
+                                                <RefreshCw className="h-4 w-4 animate-spin" />
+                                            ) : (
+                                                <ExternalLink className="h-4 w-4" />
+                                            )}
+                                            {stripeConnect.isConnected ? 'Reconnect' : 'Connect with Stripe'}
+                                        </button>
+                                        {stripeConnect.isConnected && (
+                                            <button
+                                                type="button"
+                                                onClick={handleDisconnectStripe}
+                                                disabled={isDisconnectingStripe}
+                                                className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                                            >
+                                                {isDisconnectingStripe ? (
+                                                    <RefreshCw className="h-4 w-4 animate-spin" />
+                                                ) : (
+                                                    <Unplug className="h-4 w-4" />
+                                                )}
+                                                Disconnect
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {!stripeConnect.isAvailable && (
+                                    <p className="mt-4 flex items-start gap-2 text-xs leading-5 text-amber-700">
+                                        <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                                        Add the Stripe Connect client ID and platform secret to enable account authorization.
+                                    </p>
+                                )}
+                            </div>
+
+                            <button
+                                type="button"
+                                onClick={() => setShowManualStripeKeys((current) => !current)}
+                                className="flex w-full items-center justify-between rounded-md border border-gray-200 bg-white px-4 py-3 text-left text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
+                                aria-expanded={showManualStripeKeys}
+                            >
+                                <span className="flex items-center gap-2">
+                                    <KeyRound className="h-4 w-4 text-gray-500" />
+                                    Manual API key setup
+                                </span>
+                                <ChevronDown className={`h-4 w-4 text-gray-400 transition-transform ${showManualStripeKeys ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {showManualStripeKeys && (
+                            <form onSubmit={handleSave} className="space-y-5 border-t border-gray-100 pt-5">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Environment Mode</label>
                                 <select
@@ -393,7 +600,9 @@ export default function PaymentSettingsPage() {
                                     )}
                                 </button>
                             </div>
-                        </form>
+                            </form>
+                            )}
+                        </div>
                         </div>
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                         <div className="p-6 border-b border-gray-100 flex items-center justify-between">

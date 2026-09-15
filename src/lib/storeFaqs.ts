@@ -9,7 +9,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'What products does Cokaro sell?',
     answer:
-      'Cokaro sells and resells outdoor power and property-care equipment for homes, backyards, acreage, and farms, including lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials from product marks such as Briggs & Stratton, Craftsman, Cub Cadet, DeWalt, EGO, GreenWorks, Honda, and Husqvarna.',
+      'Cokaro sells and resells outdoor power and property-care equipment for homes, backyards, acreage, and farms, including lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials from product marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, and Husqvarna.',
   },
   {
     question: 'Is Cokaro affiliated with the brands shown?',

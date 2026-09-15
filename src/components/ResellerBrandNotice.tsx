@@ -1,5 +1,5 @@
 const catalogMarks =
-  'Briggs & Stratton, Craftsman, Cub Cadet, DeWalt, EGO, GreenWorks, Honda, Husqvarna, and other product or model marks shown in our catalog';
+  'Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, Husqvarna, and other product or model marks shown in our catalog';
 
 interface ResellerBrandNoticeProps {
   compact?: boolean;

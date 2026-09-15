@@ -27,24 +27,24 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Secure Sockets Layer (128 Bit SSL Security)</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Cokaro.com uses Secure Sockets Layer (SSL) technology to provide you with the safest, most secure shopping experience possible. SSL technology enables encryption (scrambling) of sensitive information, including passwords and MasterCard numbers, during your online transactions. All of the forms on our site are secured with SSL technology, ensuring your personal information stays safe and out of malicious hands.
+              Cokaro.com uses Secure Sockets Layer (SSL) technology to help protect information submitted during online transactions. Payment details are processed by third-party payment providers, and we do not intentionally collect or store full card numbers on our own servers.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">PCI Compliant</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle MasterCard and revolving credit information. Defined by the Payment Card Industry Security Standards Council, the standard was created to increase controls around MasterCard data to reduce fraud via its exposure.
+              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle payment card data. Cokaro uses third-party payment providers for checkout so card details are handled through payment systems built for secure processing.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Payment Terms and Conditions</h2>
             <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-relaxed">
-              <li>We currently accept all major credit cards, including Visa, MasterCard, Discover, and more.</li>
+              <li>Available payment methods are shown during checkout and may include credit card, debit card, PayPal, Apple Pay, Google Pay, or other supported payment options depending on the product and checkout provider.</li>
               <li>All prices and figures are listed in USD.</li>
               <li>
-                Additional charges apply: Shipping is calculated at checkout. Please read our{' '}
+                Free standard shipping is currently offered for US orders unless a product page or checkout page clearly states otherwise. Please read our{' '}
                 <Link href="/shipping-policy" className="text-[#0a3075] hover:underline font-medium">
                   Shipping Policy
                 </Link>{' '}
@@ -57,17 +57,17 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Is Cokaro.com PCI Compliant?</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Yes, Cokaro.com is certified Level 1 PCI DSS compliant.
+              Cokaro uses payment providers and checkout services that are responsible for secure payment processing and PCI-controlled card handling.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              We are committed to your online security and have invested significant time and resources to certify our solution as PCI compliant. From annual on-site assessments to continuous risk management, we work diligently to ensure our platform remains secure.
+              We are committed to keeping checkout secure by using SSL on our website and routing payment details through third-party payment systems rather than storing full card numbers ourselves.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Your Payment Information</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Your MasterCard number is not accessible to us. Once your purchase is completed, we only have access to your billing information, shipping information, order details, and the last 4 digits of your MasterCard number.
+              Full card numbers are not stored by Cokaro. After an order is placed, we may have access to order details, billing details, shipping details, payment status, and limited payment references supplied by the payment provider.
             </p>
           </section>
 

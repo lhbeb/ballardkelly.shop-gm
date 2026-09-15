@@ -59,7 +59,7 @@ export default function ReturnPolicyPage() {
             Return & Exchange Policy
           </h1>
           <p className="text-gray-600 mt-3 text-base sm:text-lg max-w-2xl">
-            We want you to understand the return process before you buy, whether you choose a resold mower, pressure washer, chainsaw, blower, trimmer, or another product for home, backyard, acreage, or farm care. If something isn&apos;t right, this page explains how returns and exchanges are handled.
+            We want you to understand the return process before you buy, whether you choose a mower, pressure washer, chainsaw, blower, trimmer, log splitter, or another product for home, backyard, acreage, or farm care. If something isn&apos;t right, this page explains how returns and exchanges are handled.
           </p>
         </div>
 

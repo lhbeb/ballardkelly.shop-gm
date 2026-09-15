@@ -12,6 +12,9 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { FEATURED_PRODUCT_LIMIT } from '@/config/products';
 import type { Product } from '@/types/product';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const OUTDOOR_EQUIPMENT_CATEGORIES = new Set([
   'lawn mowers',
   'pressure washers',
@@ -95,7 +98,7 @@ export default async function HomePage() {
             editorialCard={{
               title: 'Equipment for Lawn, Backyard, and Farm Care',
               description:
-                'Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, generators, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
+                'Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
             }}
             randomizeForVisitor
             visitorShuffleKey="home-outdoor-care"

@@ -76,7 +76,7 @@ export default function LocalPickupPage() {
               <section className="rounded-[24px] border border-[#DCE5F5] bg-white p-6 sm:p-7">
                 <h2 className="text-2xl font-semibold text-[#262626]">Need help first?</h2>
                 <p className="mt-3 text-sm leading-7 text-[#5B6785]">
-                  If you are unsure whether a mower, pressure washer, chainsaw, blower, trimmer, or other product is available for local pickup, please contact us before placing the order so we can confirm availability and timing.
+                  If you are unsure whether a mower, pressure washer, chainsaw, blower, trimmer, log splitter, or other product is available for local pickup, please contact us before placing the order so we can confirm availability and timing.
                 </p>
                 <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                   <a

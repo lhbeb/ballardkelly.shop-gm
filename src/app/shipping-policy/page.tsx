@@ -92,7 +92,7 @@ export default function ShippingPolicyPage() {
             <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-relaxed">
               <li><strong>Handling Time:</strong> 1 business day (Mon–Fri)</li>
               <li><strong>Transit Time:</strong> 1–3 business days (Mon–Fri)</li>
-              <li><strong>Order Cut-off Time:</strong> 02:00 PM CST (GMT-05:00)</li>
+              <li><strong>Order Cut-off Time:</strong> 02:00 PM Central Time</li>
             </ul>
           </section>
 
@@ -116,7 +116,7 @@ export default function ShippingPolicyPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Returns & Exchanges</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              We accept returns within 90 days of delivery if unused and in original condition.
+              We accept eligible returns within 30 calendar days of delivery when the item is unused, in the condition received, and returned with original packaging where possible.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
               If your item arrives damaged, email us with your order number and a photo. We’ll do our best to resolve it.
@@ -129,7 +129,7 @@ export default function ShippingPolicyPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Customer Support</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              We’re available 24/7 for any inquiries.
+              Our support team is available during published business hours and will respond as soon as possible.
             </p>
             <div className="space-y-4 text-gray-600">
               <p>

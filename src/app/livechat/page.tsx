@@ -35,7 +35,7 @@ export default function LiveChatPage() {
     {
       icon: <Clock className="h-5 w-5" />,
       title: 'Available Daily',
-      desc: 'Support available Monday–Friday 9 AM–5 PM & Saturday 10 AM–3 PM EST.',
+      desc: 'Support available Monday-Friday 9 AM-5 PM and Saturday 10 AM-3 PM CT.',
     },
   ];
 

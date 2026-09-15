@@ -103,12 +103,9 @@ export default function Hero({ products = [] }: HeroProps) {
   const pressureWasher = findProduct(products, 'Pressure Washers', ['pressure washer']);
   if (pressureWasher?.slug) usedSlugs.add(pressureWasher.slug);
 
-  const roboticMower = findProductByTerms(products, ['husqvarna', 'automower', 'miimo'], usedSlugs);
-  if (roboticMower?.slug) usedSlugs.add(roboticMower.slug);
-
   const chainsaw =
     findProduct(products, 'Outdoor Power Equipment', ['chainsaw'], usedSlugs) ??
-    findProductByTerms(products, ['practixx', 'robocut'], usedSlugs);
+    findProductByTerms(products, ['chainsaw', 'chain saw'], usedSlugs);
   if (chainsaw?.slug) usedSlugs.add(chainsaw.slug);
 
   const blowerOrTrimmer =
@@ -117,7 +114,7 @@ export default function Hero({ products = [] }: HeroProps) {
       'Outdoor Power Equipment',
       ['blower', 'trimmer', 'splitter'],
       usedSlugs,
-    ) ?? findProductByTerms(products, ['scheppach', 'maehroboter', 'mähroboter'], usedSlugs);
+    ) ?? findProductByTerms(products, ['blower', 'trimmer', 'splitter'], usedSlugs);
 
   const tiles = [
     createTile(
@@ -127,12 +124,10 @@ export default function Hero({ products = [] }: HeroProps) {
       'Shop riding, self-propelled, walk-behind, and zero-turn mower options from the Cokaro catalog.',
     ),
     createTile(
-      pressureWasher ?? roboticMower,
-      pressureWasher ? 'Pressure Washers' : 'Robotic Mowers',
-      pressureWasher ? 'Pressure Washers for Tough Cleanup' : 'Smart Robotic Mowers',
-      pressureWasher
-        ? 'Clean driveways, decks, tools, equipment, siding, and outdoor work areas.'
-        : 'Automatic mower options for keeping lawns ready with less weekly work.',
+      pressureWasher,
+      'Pressure Washers',
+      'Pressure Washers for Tough Cleanup',
+      'Clean driveways, decks, tools, equipment, siding, and outdoor work areas.',
     ),
     createTile(
       chainsaw,
