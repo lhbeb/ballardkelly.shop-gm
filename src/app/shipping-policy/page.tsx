@@ -1,57 +1,10 @@
-import type { Metadata } from 'next';
+import React from 'react';
 import Link from 'next/link';
-import ResellerBrandNotice from '@/components/ResellerBrandNotice';
-import { Clock, Mail, MapPin, PackageCheck, ShieldCheck, Truck } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Shipping Policy | Cokaro',
-  description:
-    'Cokaro Shipping Policy for resold and sourced lawn mowers, pressure washers, outdoor power equipment, and home, backyard, acreage, and farm-care products.',
+export const metadata = {
+  title: 'Shipping & Delivery | Cokaro',
+  description: 'Cokaro Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
 };
-
-const timeline = [
-  ['Order processing', '1 business day'],
-  ['Transit time', '3-4 business days'],
-  ['United States delivery', '4-5 business days total (Free Standard Shipping)'],
-];
-
-const policySections = [
-  {
-    title: 'Free Shipping (US)',
-    items: [
-      'Free standard shipping on all orders across the United States',
-      'No minimum purchase requirement',
-      'Tracked shipping through carriers such as USPS, FedEx, UPS, or DHL',
-    ],
-  },
-  {
-    title: 'Order Tracking',
-    items: [
-      'Automatic shipping confirmation email upon dispatch',
-      'Real-time package tracking link provided',
-      'Estimated delivery date visibility',
-      'Carrier milestone email updates',
-    ],
-  },
-  {
-    title: 'Shipping Destinations',
-    items: [
-      'We ship across all 50 US States nationwide',
-      'PO boxes supported for standard US deliveries',
-      'APO/FPO/DPO military addresses fully supported',
-      'Discreet, eco-friendly, protective packaging',
-    ],
-  },
-  {
-    title: 'Package Protection & Safety',
-    items: [
-      'Shipping protection for eligible packages',
-      'Signature confirmation for high-value orders over $500',
-      'Weather-resistant outer mailers',
-      'Protective bubble/foam layering for fragile items',
-    ],
-  },
-];
 
 export default function ShippingPolicyPage() {
   const schemaMarkup = {
@@ -61,9 +14,9 @@ export default function ShippingPolicyPage() {
         '@type': 'WebPage',
         '@id': 'https://cokaro.com/shipping-policy',
         'url': 'https://cokaro.com/shipping-policy',
-        'name': 'Shipping Policy | Cokaro',
+        'name': 'Shipping & Delivery | Cokaro',
         'description':
-          'Cokaro Shipping Policy for resold and sourced outdoor power equipment: Free standard shipping across the United States with 1 business day processing and 3-4 business days in transit.',
+          'Cokaro Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
       },
       {
         '@type': 'OfferShippingDetails',
@@ -87,10 +40,11 @@ export default function ShippingPolicyPage() {
           },
           'transitTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 3,
-            'maxValue': 4,
+            'minValue': 1,
+            'maxValue': 3,
             'unitCode': 'DAY',
           },
+          'cutoffTime': '14:00:00-05:00',
         },
       },
     ],
@@ -104,113 +58,99 @@ export default function ShippingPolicyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
 
-      <div className="container mx-auto max-w-5xl px-4">
+      <div className="container mx-auto max-w-4xl px-4">
+        
+        {/* Header Section */}
         <section className="mb-10 rounded-2xl bg-[#0a3075] px-6 py-8 text-[#F0F6FF] sm:px-8 sm:py-10 shadow-lg">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F0F6FF]/10 bg-[#0a3075]/25 px-3.5 py-1.5 text-sm font-semibold text-[#f5970c]">
-            <Truck className="h-4 w-4" />
-            Fast & Free Shipping Across US
-          </div>
           <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
-            Shipping Policy
+            Shipping & Delivery
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-[#F0F6FF]/80 sm:text-lg">
-            At Cokaro, we ship the equipment customers use to care for homes, backyards, acreage, and farms, including resold lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power products. We focus on fast, reliable fulfillment with transparent delivery windows, free standard shipping to the US, and real-time tracking from warehouse to door.
+            Review our shipping and delivery details, tracking information, and fulfillment policies.
           </p>
         </section>
 
-        <div className="mb-8">
-          <ResellerBrandNotice compact />
+        {/* Content Sections */}
+        <div className="space-y-8">
+          
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Where do we deliver?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              We ship across the United States.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Shipping Cost</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Enjoy <strong>Free Standard Shipping</strong> on all orders.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Delivery Details</h2>
+            <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-relaxed">
+              <li><strong>Handling Time:</strong> 1 business day (Mon–Fri)</li>
+              <li><strong>Transit Time:</strong> 1–3 business days (Mon–Fri)</li>
+              <li><strong>Order Cut-off Time:</strong> 02:00 PM CST (GMT-05:00)</li>
+            </ul>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Multiple Addresses</h2>
+            <p className="text-gray-600 leading-relaxed">
+              We do not support multiple shipping addresses in a single order. For multiple destinations, please place separate orders.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Order Status & Tracking</h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Once shipped, you’ll receive an email with a tracking number. Please allow up to 48 hours for tracking updates.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              If your order hasn’t arrived within 20 days, email us at <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline font-medium">contact@cokaro.com</a> with your name and order number.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Returns & Exchanges</h2>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              We accept returns within 90 days of delivery if unused and in original condition.
+            </p>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              If your item arrives damaged, email us with your order number and a photo. We’ll do our best to resolve it.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              For full details, visit our <Link href="/return-policy" className="text-[#0a3075] hover:underline font-medium">Return Policy</Link>.
+            </p>
+          </section>
+
+          <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Customer Support</h2>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              We’re available 24/7 for any inquiries.
+            </p>
+            <div className="space-y-4 text-gray-600">
+              <p>
+                <strong>📍 Address:</strong>{' '}
+                <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#0a3075] hover:underline">
+                  1239 N Washington Ave, Wichita, KS 67214, USA
+                </a>
+              </p>
+              <p>
+                <strong>✆ Phone:</strong> +1 912-923-1747
+              </p>
+              <p>
+                <strong>✉ Email:</strong>{' '}
+                <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline">
+                  contact@cokaro.com
+                </a>
+              </p>
+            </div>
+          </section>
+
         </div>
-
-        <section className="mb-8 grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
-            <Clock className="mb-4 h-6 w-6 text-[#0a3075]" />
-            <h2 className="text-lg font-bold text-[#262626]">1 Business Day Processing</h2>
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              Orders are reviewed, packed, and prepared for carrier pickup within 1 business day.
-            </p>
-          </div>
-          <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
-            <PackageCheck className="mb-4 h-6 w-6 text-[#0a3075]" />
-            <h2 className="text-lg font-bold text-[#262626]">Free Standard Shipping</h2>
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              Free shipping on all orders across the United States with no minimum spend required.
-            </p>
-          </div>
-          <div className="rounded-xl border border-[#0a3075]/10 bg-white p-5 shadow-sm">
-            <ShieldCheck className="mb-4 h-6 w-6 text-[#0a3075]" />
-            <h2 className="text-lg font-bold text-[#262626]">Insured Deliveries</h2>
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              Eligible shipments include shipping protection, protective packaging, and end-to-end tracking updates.
-            </p>
-          </div>
-        </section>
-
-        <section className="mb-8 rounded-2xl border border-[#0a3075]/10 bg-white p-6 shadow-sm sm:p-8">
-          <div className="flex flex-col gap-3 border-b border-gray-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="text-2xl font-bold text-[#262626]">Delivery Timelines</h2>
-              <p className="mt-2 text-sm text-gray-600">Orders are processed within 1 business day, followed by 3-4 business days in transit.</p>
-            </div>
-            <span className="inline-flex w-fit rounded-full bg-[#f5970c] px-3.5 py-1 text-sm font-semibold text-[#0a3075]">
-              Estimated delivery: 4-5 business days
-            </span>
-          </div>
-
-          <div className="mt-6 divide-y divide-gray-100">
-            {timeline.map(([label, value]) => (
-              <div key={label} className="flex flex-col gap-1 py-4 sm:flex-row sm:items-center sm:justify-between">
-                <span className="font-semibold text-[#262626]">{label}</span>
-                <span className="text-sm font-medium text-gray-700 sm:text-right">{value}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="grid gap-5 md:grid-cols-2">
-          {policySections.map((section) => (
-            <div key={section.title} className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-[#262626]">{section.title}</h2>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-600">
-                {section.items.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#0a3075]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
-
-        <section className="mt-8 rounded-2xl border border-[#0a3075]/10 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-2xl font-bold text-[#262626]">Need Help With Shipping?</h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-gray-600">
-            If you have questions about your delivery or need assistance tracking a package, reach out to our support team:
-          </p>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4">
-              <MapPin className="h-5 w-5 text-[#0a3075]" />
-              <span className="text-sm font-medium text-[#262626]">United States</span>
-            </div>
-            <div className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4">
-              <Mail className="h-5 w-5 text-[#0a3075]" />
-              <span className="text-sm font-medium text-[#262626]">contact@cokaro.com</span>
-            </div>
-            <div className="flex items-center gap-3 rounded-xl bg-[#F5F7FB] p-4">
-              <Clock className="h-5 w-5 text-[#0a3075]" />
-              <span className="text-sm font-medium text-[#262626]">Mon-Fri, 9 AM-5 PM EST</span>
-            </div>
-          </div>
-
-          <Link
-            href="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-xl bg-[#0a3075] px-5 py-3 text-sm font-semibold text-[#F0F6FF] transition hover:bg-[#0a0f32]"
-          >
-            Contact Support
-          </Link>
-        </section>
       </div>
     </main>
   );

@@ -214,7 +214,7 @@ export default function ContactPage() {
                     <div className="flex items-start">
                       <MapPin className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
                       <div className="ml-4">
-                        <h3 className="font-medium text-[#262626]">US Dispatch Center</h3>
+                        <h3 className="font-medium text-[#262626]">Address</h3>
                         <p className="text-gray-600 mt-1">1239 N Washington Ave, Wichita, KS 67214, USA</p>
                       </div>
                     </div>

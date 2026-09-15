@@ -35,7 +35,7 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     freeShippingText: 'Free standard shipping',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders are processed within 1 business day. Transit time is 3-4 business days, making the total estimated delivery time 4-5 business days.',
+      'Orders are processed within 1 business day. Transit time is 1-3 business days, making the total estimated delivery time 2-4 business days.',
     faqFreeShippingAnswer:
       'Yes, standard shipping is free across the United States. If faster delivery is available, you\'ll see those options at checkout.',
   },
@@ -52,7 +52,7 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     freeShippingText: 'Free delivery to United Kingdom',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders are processed within 1 business day at our US facility. Transit time is 3-4 business days, making the total estimated delivery time to the UK 4-5 business days.',
+      'Orders are processed within 1 business day at our US facility. Transit time is 1-3 business days, making the total estimated delivery time to the UK 2-4 business days.',
     faqFreeShippingAnswer:
       'Yes, standard delivery is free across the United Kingdom. If express delivery is available for a product, you\'ll see those options at checkout.',
   },
@@ -69,7 +69,7 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     freeShippingText: 'Free delivery across Europe',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders to the European Union are processed within 1 business day at our US facility. Transit time is 3-4 business days, making the total estimated delivery time 4-5 business days depending on your country.',
+      'Orders to the European Union are processed within 1 business day at our US facility. Transit time is 1-3 business days, making the total estimated delivery time 2-4 business days depending on your country.',
     faqFreeShippingAnswer:
       'Yes, standard delivery is free across the European Union. Express options may be available at checkout.',
   },
@@ -86,7 +86,7 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     freeShippingText: 'Free standard shipping across Canada',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders to Canada are processed within 1 business day at our US facility. Transit time is 3-4 business days, making the total estimated delivery time 4-5 business days.',
+      'Orders to Canada are processed within 1 business day at our US facility. Transit time is 1-3 business days, making the total estimated delivery time 2-4 business days.',
     faqFreeShippingAnswer:
       'Yes, standard shipping is free across Canada. Faster delivery options may be available at checkout.',
   },
@@ -103,7 +103,7 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     freeShippingText: 'Free standard shipping across Australia',
     returnsText: '30-day returns',
     faqShippingAnswer:
-      'Orders to Australia are processed within 1 business day at our US facility. Transit time is 3-4 business days, making the total estimated delivery time 4-5 business days.',
+      'Orders to Australia are processed within 1 business day at our US facility. Transit time is 1-3 business days, making the total estimated delivery time 2-4 business days.',
     faqFreeShippingAnswer:
       'Yes, standard shipping is free across Australia. Express options may be available at checkout.',
   },

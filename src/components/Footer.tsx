@@ -41,7 +41,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 shrink-0 text-[#4575ba] mr-2 mt-1" />
                 <div>
-                  <span className="block font-semibold text-white">US Dispatch Center</span>
+                  <span className="block font-semibold text-white">Address</span>
                   <span>1239 N Washington Ave, Wichita, KS 67214, USA</span>
                 </div>
               </div>
@@ -113,11 +113,11 @@ const Footer = () => {
             <p>© 2026 Cokaro. All rights reserved.</p>
             <div className="flex items-center justify-center sm:justify-end">
               <Image
-                src="/paymenticons.webp"
+                src="/paymenticons.svg"
                 alt="Accepted payment methods"
-                width={220}
-                height={34}
-                className="h-8 w-auto max-w-full object-contain"
+                width={560}
+                height={44}
+                className="h-8 w-auto max-w-[min(100%,25rem)] object-contain"
               />
             </div>
           </div>

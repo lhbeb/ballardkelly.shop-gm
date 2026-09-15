@@ -150,7 +150,7 @@ const PrivacyPolicyPage = () => (
               <div className="text-gray-600">contact@cokaro.com</div>
             </div>
             <div>
-              <div className="font-medium text-[#262626] mb-1">US Dispatch Center:</div>
+              <div className="font-medium text-[#262626] mb-1">Address:</div>
               <div className="text-gray-600">1239 N Washington Ave, Wichita, KS 67214, USA</div>
             </div>
             <div>

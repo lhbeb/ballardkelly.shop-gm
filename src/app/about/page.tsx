@@ -310,7 +310,7 @@ export default function AboutPage() {
                 <Headphones className="h-6 w-6 text-[#0a3075]" />
                 <h3 className="text-xl font-bold text-[#262626]">Customer Focus</h3>
               </div>
-              <p className="text-gray-700">We offer free standard shipping within the United States, with 1 business day processing, 3-4 business days in transit, a 30 day return policy, and reliable human support.</p>
+              <p className="text-gray-700">We offer free standard shipping within the United States, with 1 business day processing, 1-3 business days in transit, a 30 day return policy, and reliable human support.</p>
             </div>
 
             <div className="bg-[#F0F6FF] rounded-xl p-6 border border-[#0a3075]/10 md:col-span-2">
@@ -396,7 +396,7 @@ export default function AboutPage() {
             <div className="bg-[#F0F6FF] rounded-xl p-6 border border-[#0a3075]/10">
               <div className="flex items-center gap-3 mb-3">
                 <MapPin className="h-5 w-5 text-[#0a3075]" />
-                <div className="font-medium text-[#262626]">US Dispatch Center</div>
+                <div className="font-medium text-[#262626]">Address</div>
               </div>
               <div className="text-gray-600 ml-8">1239 N Washington Ave, Wichita, KS 67214, USA</div>
             </div>

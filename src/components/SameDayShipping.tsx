@@ -35,7 +35,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Cokaro processes orders within 1 business day, then ships with an estimated 3-4 business days in transit. Clear fulfillment timing is part of every order.
+              Cokaro processes orders within 1 business day, then ships with an estimated 1-3 business days in transit. Clear fulfillment timing is part of every order.
             </p>
             <Link
               href="/shipping-policy"
@@ -108,7 +108,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             Ready to get your order moving?
           </p>
           <p className="text-2xl md:text-3xl font-bold text-[#262626]">
-            <span className="text-[#0a3075]">1 business day</span> processing, then 3-4 business days in transit
+            <span className="text-[#0a3075]">1 business day</span> processing, then 1-3 business days in transit
           </p>
         </div>
         <a

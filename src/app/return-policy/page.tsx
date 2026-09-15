@@ -269,7 +269,7 @@ export default function ReturnPolicyPage() {
                 <div className="text-sm text-gray-600 pl-7 space-y-2">
 
                   <div>
-                    <strong className="text-gray-900 block">US Dispatch Center:</strong>
+                    <strong className="text-gray-900 block">Address:</strong>
                     1239 N Washington Ave, Wichita, KS 67214, USA
                   </div>
                 </div>
