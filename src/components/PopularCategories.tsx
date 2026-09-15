@@ -2,67 +2,200 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/types/product';
 
-const POPULAR_CATEGORY_NAMES = [
-  'Lawn Mowers',
-  'Pressure Washers',
-  'Outdoor Power Equipment',
-] as const;
+interface CategoryRule {
+  name: string;
+  href: string;
+  terms?: string[];
+  category?: string;
+}
+
+interface CategoryTile {
+  name: string;
+  href: string;
+  count: number;
+  images: string[];
+}
+
+const CATEGORY_RULES: CategoryRule[] = [
+  {
+    name: 'Lawn Mowers',
+    href: '/search?category=Lawn%20Mowers',
+    category: 'Lawn Mowers',
+    terms: ['mower', 'mowers', 'mähroboter', 'maehroboter', 'automower', 'miimo', 'robocut'],
+  },
+  {
+    name: 'Robotic Mowers',
+    href: '/search?query=M%C3%A4hroboter',
+    terms: ['mähroboter', 'maehroboter', 'automower', 'miimo', 'robocut'],
+  },
+  {
+    name: 'Honda Mowers',
+    href: '/search?query=Honda',
+    terms: ['honda'],
+  },
+  {
+    name: 'Husqvarna Automowers',
+    href: '/search?query=Husqvarna',
+    terms: ['husqvarna', 'automower'],
+  },
+  {
+    name: 'Pressure Washers',
+    href: '/search?category=Pressure%20Washers',
+    category: 'Pressure Washers',
+    terms: ['pressure washer', 'psi', 'gpm'],
+  },
+  {
+    name: 'Chainsaws',
+    href: '/search?query=Chainsaw',
+    terms: ['chainsaw', 'chain saw'],
+  },
+  {
+    name: 'Blowers & Trimmers',
+    href: '/search?query=Blower%20Trimmer',
+    terms: ['blower', 'trimmer', 'string trimmer'],
+  },
+  {
+    name: 'Generators & Backup Power',
+    href: '/search?query=Generator',
+    terms: ['generator', 'backup power', 'portable power'],
+  },
+  {
+    name: 'Practixx Mowers',
+    href: '/search?query=Practixx',
+    terms: ['practixx'],
+  },
+  {
+    name: 'Scheppach Mowers',
+    href: '/search?query=Scheppach',
+    terms: ['scheppach'],
+  },
+];
 
 interface PopularCategoriesProps {
   products: Product[];
 }
 
-export default function PopularCategories({ products }: PopularCategoriesProps) {
-  const categories = POPULAR_CATEGORY_NAMES.map((name) => {
-    const categoryProducts = products.filter(
-      (product) => product.category?.trim().toLowerCase() === name.toLowerCase(),
-    );
+function normalize(value?: string) {
+  return value?.trim().toLowerCase() ?? '';
+}
 
-    return {
-      name,
-      count: categoryProducts.length,
-      image: categoryProducts.find((product) => product.images?.[0])?.images[0],
-    };
-  }).filter((category) => category.count > 0 && category.image);
+function productMatchesRule(product: Product, rule: CategoryRule) {
+  const category = normalize(product.category);
+  const title = normalize(product.title);
+  const brand = normalize(product.brand);
+  const description = normalize(product.description);
+  const searchable = `${title} ${brand} ${category} ${description}`;
+  const categoryMatch = rule.category ? category === normalize(rule.category) : false;
+  const termMatch = rule.terms?.some((term) => searchable.includes(normalize(term))) ?? false;
+
+  return categoryMatch || termMatch;
+}
+
+function buildCategoryTile(products: Product[], rule: CategoryRule): CategoryTile | null {
+  const matchingProducts = products.filter(
+    (product) =>
+      product.published !== false &&
+      product.inStock !== false &&
+      product.slug &&
+      product.images?.[0] &&
+      productMatchesRule(product, rule),
+  );
+
+  if (matchingProducts.length === 0) {
+    return null;
+  }
+
+  const images = Array.from(
+    new Set(
+      matchingProducts
+        .flatMap((product) => product.images || [])
+        .filter((image): image is string => Boolean(image)),
+    ),
+  ).slice(0, 3);
+
+  if (images.length === 0) {
+    return null;
+  }
+
+  return {
+    name: rule.name,
+    href: rule.href,
+    count: matchingProducts.length,
+    images,
+  };
+}
+
+export default function PopularCategories({ products }: PopularCategoriesProps) {
+  const categories = CATEGORY_RULES.map((rule) => buildCategoryTile(products, rule)).filter(
+    (category): category is CategoryTile => Boolean(category),
+  );
 
   if (categories.length === 0) return null;
 
   return (
-    <section className="bg-[#f3f4f6] py-14 md:py-20" aria-labelledby="popular-categories-title">
+    <section className="bg-[#f3f4f6] py-10 md:py-14" aria-labelledby="popular-categories-title">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 md:mb-10">
+          <div className="mb-6 md:mb-8">
             <h2
               id="popular-categories-title"
-              className="text-3xl font-bold tracking-tight text-[#0a3075] md:text-4xl"
+              className="text-3xl font-bold text-[#0a3075] md:text-4xl"
             >
               Explore Popular Categories
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6">
             {categories.map((category) => (
               <Link
                 key={category.name}
-                href={`/search?category=${encodeURIComponent(category.name)}`}
-                className="relative overflow-hidden rounded-2xl border border-[#0a3075]/10 bg-white shadow-[0_12px_30px_rgba(10,48,117,0.06)] transition-colors duration-200 hover:border-[#0a3075]/25"
+                href={category.href}
+                className="group relative overflow-hidden rounded-xl border border-[#0a3075]/10 bg-white shadow-[0_12px_30px_rgba(10,48,117,0.06)] transition-colors duration-200 hover:border-[#0a3075]/25"
                 aria-label={`Shop ${category.name}`}
               >
-                <div className="relative aspect-square overflow-hidden bg-white p-3 sm:p-5">
-                  <Image
-                    src={category.image!}
-                    alt={`${category.name} collection`}
-                    fill
-                    sizes="(max-width: 1023px) 50vw, 20vw"
-                    className="object-contain p-5 sm:p-7"
-                  />
+                <div className="relative aspect-[1.08/1] overflow-hidden bg-white p-3">
+                  <div className="grid h-full grid-cols-[1.2fr_0.8fr] gap-2">
+                    <div className="relative min-h-0 rounded-lg bg-[#f8fafc]">
+                      <Image
+                        src={category.images[0]}
+                        alt={`${category.name} collection`}
+                        fill
+                        sizes="(max-width: 639px) 44vw, (max-width: 1279px) 25vw, 14vw"
+                        className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.04]"
+                        unoptimized={category.images[0].startsWith('http')}
+                      />
+                    </div>
+
+                    <div className="grid grid-rows-2 gap-2">
+                      {(category.images.length > 1
+                        ? category.images.slice(1, 3)
+                        : [category.images[0], category.images[0]]
+                      ).map(
+                        (image, index) => (
+                          <div key={`${category.name}-${image}-${index}`} className="relative min-h-0 rounded-lg bg-[#f8fafc]">
+                            <Image
+                              src={image}
+                              alt={`${category.name} product ${index + 2}`}
+                              fill
+                              sizes="(max-width: 639px) 20vw, (max-width: 1279px) 12vw, 7vw"
+                              className="object-contain p-2 transition-transform duration-300 group-hover:scale-[1.04]"
+                              unoptimized={image.startsWith('http')}
+                            />
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex min-h-20 items-center bg-[#0a3075] px-4 py-4 text-[#F0F6FF] sm:px-5">
+                <div className="flex min-h-[76px] items-center bg-[#0a3075] px-4 py-3 text-[#F0F6FF]">
                   <div className="min-w-0">
                     <h3 className="text-sm font-bold leading-tight sm:text-base">
                       {category.name}
                     </h3>
+                    <p className="mt-1 text-xs font-medium text-[#F0F6FF]/75">
+                      {category.count} {category.count === 1 ? 'item' : 'items'}
+                    </p>
                   </div>
                 </div>
               </Link>
