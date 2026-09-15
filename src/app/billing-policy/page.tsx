@@ -47,7 +47,7 @@ export default function BillingPolicyPage() {
                 </a>
               </p>
               <p>
-                <strong>✆ Phone:</strong> +1 912-923-1747
+                <strong>✆ Phone:</strong> +1 (913) 593-7677
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}

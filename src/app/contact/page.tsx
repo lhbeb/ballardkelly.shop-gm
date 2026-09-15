@@ -36,11 +36,11 @@ export default function ContactPage() {
         'name': 'Cokaro',
         'url': 'https://cokaro.com',
         'email': 'contact@cokaro.com',
-        'telephone': ['+19129231747'],
+        'telephone': ['+1 (913) 593-7677'],
         'contactPoint': [
           {
             '@type': 'ContactPoint',
-            'telephone': '+19129231747',
+            'telephone': '+1 (913) 593-7677',
             'contactType': 'customer service',
             'areaServed': 'US',
             'availableLanguage': ['en'],
@@ -222,7 +222,7 @@ export default function ContactPage() {
                       <Phone className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Phone Support</h3>
-                        <p className="text-gray-600 mt-1"><span className="font-semibold">Phone:</span> +19129231747</p>
+                        <p className="text-gray-600 mt-1"><span className="font-semibold">Phone:</span> +1 (913) 593-7677</p>
                       </div>
                     </div>
                     <div className="flex items-start">

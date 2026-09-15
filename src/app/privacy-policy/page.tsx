@@ -143,7 +143,7 @@ const PrivacyPolicyPage = () => (
           <div className="bg-gray-50 rounded-lg p-6 space-y-3">
             <div>
               <div className="font-medium text-[#262626] mb-1">Phone:</div>
-              <div className="text-gray-600">+19129231747</div>
+              <div className="text-gray-600">+1 (913) 593-7677</div>
             </div>
             <div>
               <div className="font-medium text-[#262626] mb-1">Email:</div>

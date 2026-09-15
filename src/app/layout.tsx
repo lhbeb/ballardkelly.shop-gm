@@ -139,7 +139,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   "contactType": "customer service",
                   "email": "contact@cokaro.com",
-                  "telephone": "+19129231747",
+                  "telephone": "+1 (913) 593-7677",
                   "areaServed": "US"
                 },
                 "address": {

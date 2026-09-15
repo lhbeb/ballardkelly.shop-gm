@@ -72,7 +72,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'How can I contact Cokaro?',
     answer:
-      'You can use our contact form, email contact@cokaro.com, or call +19129231747 during published support hours.',
+      'You can use our contact form, email contact@cokaro.com, or call +1 (913) 593-7677 during published support hours.',
     linkHref: '/contact',
     linkLabel: 'Contact our team',
   },

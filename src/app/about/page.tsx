@@ -52,7 +52,7 @@ export default function AboutPage() {
         'description':
           'Ecommerce seller and reseller serving the United States with lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment.',
         'email': 'contact@cokaro.com',
-        'telephone': ['+19129231747'],
+        'telephone': ['+1 (913) 593-7677'],
         'address': {
           '@type': 'PostalAddress',
             'streetAddress': '1239 N Washington Ave',
@@ -64,7 +64,7 @@ export default function AboutPage() {
         'contactPoint': [
           {
             '@type': 'ContactPoint',
-            'telephone': '+19129231747',
+            'telephone': '+1 (913) 593-7677',
             'contactType': 'customer service',
             'areaServed': 'US',
             'availableLanguage': ['en'],
@@ -407,8 +407,8 @@ export default function AboutPage() {
               </div>
               <div className="ml-8 space-y-3 text-gray-600">
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-1">
-                  <a href="tel:+19129231747" className="whitespace-nowrap hover:text-[#0a3075] transition-colors">
-                    +19129231747
+                  <a href="tel:+1 (913) 593-7677" className="whitespace-nowrap hover:text-[#0a3075] transition-colors">
+                    +1 (913) 593-7677
                   </a>
                 </div>
               </div>
