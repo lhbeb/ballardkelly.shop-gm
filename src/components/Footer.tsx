@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0a3075] text-[#F0F6FF]">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.75fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.5fr_0.9fr_0.75fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
@@ -79,6 +79,16 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Shop Collections</h3>
+            <ul className="space-y-2">
+              <li><Link href="/search" className="hover:text-[#f5970c] transition-colors duration-300">All Products</Link></li>
+              <li><Link href="/search?category=Lawn+Mowers" className="hover:text-[#f5970c] transition-colors duration-300">Lawn Mowers</Link></li>
+              <li><Link href="/search?category=Pressure+Washers" className="hover:text-[#f5970c] transition-colors duration-300">Pressure Washers</Link></li>
+              <li><Link href="/search?category=Outdoor+Power+Equipment" className="hover:text-[#f5970c] transition-colors duration-300">Outdoor Power Equipment</Link></li>
+            </ul>
           </div>
 
           <div>
