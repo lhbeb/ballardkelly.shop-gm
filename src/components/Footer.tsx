@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0a3075] text-[#F0F6FF]">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.75fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
@@ -93,17 +93,28 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Policies & Info</h3>
+            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Policies</h3>
             <ul className="space-y-2">
               <li><Link href="/privacy-policy" className="hover:text-[#f5970c] transition-colors duration-300">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-[#f5970c] transition-colors duration-300">Terms of Service</Link></li>
-              <li><Link href="/about" className="hover:text-[#f5970c] transition-colors duration-300">About Us</Link></li>
-              <li><Link href="/frequently-asked-questions" className="hover:text-[#f5970c] transition-colors duration-300">FAQs</Link></li>
+              <li><Link href="/billing-policy" className="hover:text-[#f5970c] transition-colors duration-300">Billing Policy</Link></li>
+              <li><Link href="/billing-term-and-condition" className="hover:text-[#f5970c] transition-colors duration-300">Billing Terms & Conditions</Link></li>
               <li><Link href="/return-policy" className="hover:text-[#f5970c] transition-colors duration-300">Refund & Return Policy</Link></li>
               <li><Link href="/shipping-policy" className="hover:text-[#f5970c] transition-colors duration-300">Shipping Policy</Link></li>
-              <li><Link href="/local-pickup" className="hover:text-[#f5970c] transition-colors duration-300">Local Pickup Guide</Link></li>
-              <li><Link href="/contact" className="hover:text-[#f5970c] transition-colors duration-300">Contact Us</Link></li>
+              <li><Link href="/warranty-replacement" className="hover:text-[#f5970c] transition-colors duration-300">Warranty & Replacement</Link></li>
               <li><Link href="/cookies" className="hover:text-[#f5970c] transition-colors duration-300">Cookies Policy</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Company & Help</h3>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="hover:text-[#f5970c] transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/frequently-asked-questions" className="hover:text-[#f5970c] transition-colors duration-300">FAQs</Link></li>
+              <li><Link href="/local-pickup" className="hover:text-[#f5970c] transition-colors duration-300">Local Pickup Guide</Link></li>
+              <li><Link href="/wholesale-policies" className="hover:text-[#f5970c] transition-colors duration-300">Wholesale Policies</Link></li>
+              <li><Link href="/report-security-issues" className="hover:text-[#f5970c] transition-colors duration-300">Report Security Issues</Link></li>
+              <li><Link href="/livechat" className="hover:text-[#f5970c] transition-colors duration-300">Live Chat</Link></li>
             </ul>
           </div>
         </div>
