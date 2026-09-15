@@ -64,7 +64,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
                 key={product.id}
                 product={product}
                 cardBackground="bg-[#dce5f2] ring-1 ring-[#c2d1e7]"
-                imageBackground="bg-[#eef3f9]"
+                imageBackground="bg-white"
                 showFullImage
               />
             ))}
