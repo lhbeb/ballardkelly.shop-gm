@@ -109,17 +109,17 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-[#F0F6FF]/20 mt-12 pt-8">
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+            <p>© 2026 Cokaro. All rights reserved.</p>
+            <div className="flex items-center justify-center sm:justify-end">
               <Image
-                src="/secure-checkout.png"
-                alt="Secure Checkout"
-                width={400}
-                height={64}
-                className="h-16 w-auto max-w-full object-contain brightness-110 contrast-110"
+                src="/paymenticons.webp"
+                alt="Accepted payment methods"
+                width={220}
+                height={34}
+                className="h-8 w-auto max-w-full object-contain"
               />
             </div>
-            <p className="text-center">© 2025 Cokaro. All rights reserved.</p>
           </div>
         </div>
       </div>

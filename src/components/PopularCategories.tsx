@@ -13,7 +13,7 @@ interface CategoryTile {
   name: string;
   href: string;
   count: number;
-  images: string[];
+  image: string;
 }
 
 const CATEGORY_RULES: CategoryRule[] = [
@@ -105,15 +105,9 @@ function buildCategoryTile(products: Product[], rule: CategoryRule): CategoryTil
     return null;
   }
 
-  const images = Array.from(
-    new Set(
-      matchingProducts
-        .flatMap((product) => product.images || [])
-        .filter((image): image is string => Boolean(image)),
-    ),
-  ).slice(0, 3);
+  const image = matchingProducts.find((product) => product.images?.[0])?.images[0];
 
-  if (images.length === 0) {
+  if (!image) {
     return null;
   }
 
@@ -121,7 +115,7 @@ function buildCategoryTile(products: Product[], rule: CategoryRule): CategoryTil
     name: rule.name,
     href: rule.href,
     count: matchingProducts.length,
-    images,
+    image,
   };
 }
 
@@ -153,39 +147,15 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
                 className="group relative overflow-hidden rounded-xl border border-[#0a3075]/10 bg-white shadow-[0_12px_30px_rgba(10,48,117,0.06)] transition-colors duration-200 hover:border-[#0a3075]/25"
                 aria-label={`Shop ${category.name}`}
               >
-                <div className="relative aspect-[1.08/1] overflow-hidden bg-white p-3">
-                  <div className="grid h-full grid-cols-[1.2fr_0.8fr] gap-2">
-                    <div className="relative min-h-0 rounded-lg bg-[#f8fafc]">
-                      <Image
-                        src={category.images[0]}
-                        alt={`${category.name} collection`}
-                        fill
-                        sizes="(max-width: 639px) 44vw, (max-width: 1279px) 25vw, 14vw"
-                        className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.04]"
-                        unoptimized={category.images[0].startsWith('http')}
-                      />
-                    </div>
-
-                    <div className="grid grid-rows-2 gap-2">
-                      {(category.images.length > 1
-                        ? category.images.slice(1, 3)
-                        : [category.images[0], category.images[0]]
-                      ).map(
-                        (image, index) => (
-                          <div key={`${category.name}-${image}-${index}`} className="relative min-h-0 rounded-lg bg-[#f8fafc]">
-                            <Image
-                              src={image}
-                              alt={`${category.name} product ${index + 2}`}
-                              fill
-                              sizes="(max-width: 639px) 20vw, (max-width: 1279px) 12vw, 7vw"
-                              className="object-contain p-2 transition-transform duration-300 group-hover:scale-[1.04]"
-                              unoptimized={image.startsWith('http')}
-                            />
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </div>
+                <div className="relative aspect-[1.08/1] overflow-hidden bg-white p-4">
+                  <Image
+                    src={category.image}
+                    alt={`${category.name} collection`}
+                    fill
+                    sizes="(max-width: 639px) 44vw, (max-width: 1279px) 25vw, 14vw"
+                    className="object-contain p-5 transition-transform duration-300 group-hover:scale-[1.04]"
+                    unoptimized={category.image.startsWith('http')}
+                  />
                 </div>
 
                 <div className="flex min-h-[76px] items-center bg-[#0a3075] px-4 py-3 text-[#F0F6FF]">

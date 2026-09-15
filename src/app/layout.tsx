@@ -15,6 +15,7 @@ import FacebookPixel from "@/components/FacebookPixel";
 import { AdminRouteCheck, PublicRouteOnly, AdminRouteOnly, CheckoutRouteOnly } from "@/components/AdminRouteCheck";
 import GlobalErrorReporter from "@/components/GlobalErrorReporter";
 import LiveChatWidget from "@/components/LiveChatWidget";
+import FixedSocialRail from "@/components/FixedSocialRail";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -224,6 +225,7 @@ export default function RootLayout({
             async
           />
         </AdminRouteCheck>
+        <FixedSocialRail />
         <LiveChatWidget />
         <SpeedInsights />
       </body>

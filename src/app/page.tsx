@@ -10,6 +10,47 @@ import { getFeaturedProducts, getProducts } from '@/lib/data';
 import { homeReviews, homeReviewsStats } from '@/lib/homeReviews';
 import ScrollToTop from '@/components/ScrollToTop';
 import { FEATURED_PRODUCT_LIMIT } from '@/config/products';
+import type { Product } from '@/types/product';
+
+const OUTDOOR_EQUIPMENT_CATEGORIES = new Set([
+  'lawn mowers',
+  'pressure washers',
+  'outdoor power equipment',
+]);
+
+const OUTDOOR_EQUIPMENT_TERMS = [
+  'mower',
+  'mowers',
+  'mähroboter',
+  'maehroboter',
+  'automower',
+  'miimo',
+  'robocut',
+  'pressure washer',
+  'chainsaw',
+  'chain saw',
+  'blower',
+  'trimmer',
+  'generator',
+];
+
+function normalizeCatalogText(value?: string) {
+  return value?.trim().toLowerCase() ?? '';
+}
+
+function isOutdoorCareProduct(product: Product) {
+  const category = normalizeCatalogText(product.category);
+  const searchable = `${normalizeCatalogText(product.title)} ${normalizeCatalogText(product.brand)} ${category}`;
+
+  return (
+    product.published !== false &&
+    product.inStock !== false &&
+    Boolean(product.slug) &&
+    Boolean(product.images?.[0]) &&
+    (OUTDOOR_EQUIPMENT_CATEGORIES.has(category) ||
+      OUTDOOR_EQUIPMENT_TERMS.some((term) => searchable.includes(term)))
+  );
+}
 
 export default async function HomePage() {
   try {
@@ -18,9 +59,7 @@ export default async function HomePage() {
       getProducts(),
     ]);
 
-    const lawnGardenProducts = featuredProducts.filter(p =>
-      p.collections?.includes('lawn-garden')
-    );
+    const outdoorCareProducts = products.filter(isOutdoorCareProduct);
 
     const smallToolProducts = products.filter((product) =>
       product.collections?.includes('power-tools') &&
@@ -49,19 +88,19 @@ export default async function HomePage() {
 
       <BrandCatalogSection />
 
-      {lawnGardenProducts.length > 0 && (
+      {outdoorCareProducts.length > 0 && (
         <Suspense fallback={null}>
           <ProductGrid
-            products={lawnGardenProducts}
+            products={outdoorCareProducts}
             sectionId="lawn-garden-equipment"
             title=""
             editorialCard={{
-              title: 'Dependable Performance for Every Lawn',
+              title: 'Equipment for Lawn, Backyard, and Farm Care',
               description:
-                'Cokaro sells and resells lawn mowers built for routine yard care, wide lawns, backyard upkeep, and larger property maintenance. Choose gas or cordless equipment from recognized product marks and keep your outdoor spaces easier to manage.',
+                'Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, generators, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
             }}
             randomizeForVisitor
-            visitorShuffleKey="home-lawn-garden"
+            visitorShuffleKey="home-outdoor-care"
           />
         </Suspense>
       )}
