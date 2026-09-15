@@ -32,7 +32,7 @@ export default function ReportSecurityIssuesPage() {
             <p className="text-gray-600 mb-4 font-semibold">We ask that:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
               <li>You give us reasonable time to review and fix the issue before disclosing it publicly or sharing it with others.</li>
-              <li>You do not interact with or access private accounts without the account owner's consent.</li>
+              <li>You do not interact with or access private accounts without the account owner&apos;s consent.</li>
               <li>You make a good-faith effort to avoid privacy violations, service disruptions, or data destruction.</li>
               <li>You do not exploit the issue for any reason, including to demonstrate further risks or access sensitive data.</li>
               <li>You comply with all applicable laws and regulations.</li>
@@ -42,7 +42,7 @@ export default function ReportSecurityIssuesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Bounty Program</h2>
             <p className="text-gray-600 mb-4">
-              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at Cokaro.com's discretion, based on risk, impact, and report quality.
+              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at Cokaro.com&apos;s discretion, based on risk, impact, and report quality.
             </p>
             <p className="text-gray-600 mb-4 font-semibold">To potentially qualify for a bounty, you must:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
