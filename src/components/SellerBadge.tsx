@@ -13,7 +13,7 @@ interface SellerBadgeProps {
 export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps) {
   const [seller, setSeller] = useState<Seller | null>(null);
   const [loading, setLoading] = useState(!!sellerId);
-  const fallbackAvatarUrl = '/logo.png';
+  const fallbackAvatarUrl = '/logosvg.svg';
 
   useEffect(() => {
     if (!sellerId) { setLoading(false); return; }
@@ -42,7 +42,7 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
 
   const isBallardKellyScott = displaySeller.username === 'BallardKellyScott';
   const href = isBallardKellyScott ? '/' : `/sellers/${displaySeller.username}`;
-  const hasAvatar = displaySeller.avatarUrl && displaySeller.avatarUrl !== fallbackAvatarUrl;
+  const hasAvatar = Boolean(displaySeller.avatarUrl);
 
   /* ── sm (product cards) ─────────────────────────────────────────────────── */
   if (size === 'sm') {
@@ -72,10 +72,10 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
       className="inline-flex items-center gap-2 mt-2 group w-fit"
     >
       {/* Avatar / icon */}
-      <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0 ring-1 ring-gray-200 group-hover:ring-[#12382f]/30 transition-all">
+      <div className="w-5 h-5 rounded-full overflow-hidden bg-white flex items-center justify-center flex-shrink-0 ring-1 ring-gray-200 group-hover:ring-[#12382f]/30 transition-all">
         {hasAvatar ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={displaySeller.avatarUrl} alt={displaySeller.name} className="w-full h-full object-cover" />
+          <img src={displaySeller.avatarUrl} alt={displaySeller.name} className="w-full h-full object-contain p-0.5" />
         ) : isBallardKellyScott ? (
           <ShieldCheck className="w-3 h-3 text-[#12382f]" />
         ) : (
