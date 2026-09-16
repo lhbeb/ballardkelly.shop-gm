@@ -16,6 +16,8 @@ const desktopNavLinkClass =
 const mobileMenuLinkClass =
   'text-center font-medium text-[#1f5a46] transition-colors duration-200 hover:text-[#5f8f7a] focus-visible:text-[#5f8f7a] focus-visible:outline-none';
 
+const promoAccentClass = 'text-[#f1cf74]';
+
 interface NavLink {
   label: string;
   href: string;
@@ -72,11 +74,11 @@ const Header = () => {
 
   const announcements = [
     <span key="nav-1" className="inline-flex items-center gap-2">
-      <Truck className="h-4 w-4 text-[#7EA6D9]" aria-hidden="true" />
+      <Truck className={`h-4 w-4 ${promoAccentClass}`} aria-hidden="true" />
       <span><span className="font-bold">Free Shipping</span> Across the United States</span>
     </span>,
     <span key="nav-2" className="inline-flex items-center gap-2">
-      <PackageCheck className="h-4 w-4 text-[#7EA6D9]" aria-hidden="true" />
+      <PackageCheck className={`h-4 w-4 ${promoAccentClass}`} aria-hidden="true" />
       <span><span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>
     </span>,
     "livechat-contact" // Marker for Live Chat announcement
@@ -219,7 +221,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Announcement bar - Deep Blue background with white text */}
+      {/* Announcement bar */}
       <div suppressHydrationWarning={true} className="bg-[#1f5a46] text-[#ffffff] py-2 relative overflow-hidden h-[40px] flex items-center">
         <div suppressHydrationWarning={true} className="container mx-auto px-4 flex items-center justify-center relative w-full h-full">
           {/* Announcement Text - PRESERVED */}
@@ -231,9 +233,9 @@ const Header = () => {
                   className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity flex-wrap justify-center"
                   aria-label="Inquiries? Live Chat Available"
                 >
-                  <MessageSquare className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 text-[#7EA6D9]" />
+                  <MessageSquare className={`w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 ${promoAccentClass}`} />
                   <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available</span></span>
-                  <span className="underline whitespace-nowrap font-bold text-[#7EA6D9] ml-1">Chat With Us</span>
+                  <span className={`underline whitespace-nowrap font-bold ${promoAccentClass} ml-1`}>Chat With Us</span>
                 </Link>
               </div>
             ) : (
@@ -334,7 +336,7 @@ const Header = () => {
               >
                 <ShoppingCart className="h-5 w-5" />
                 <ClientOnly>
-                  <span className={`absolute -top-2 -right-2 bg-[#7EA6D9] text-[#062B63] text-xs rounded-full h-5 min-w-[1.25rem] px-1 flex items-center justify-center font-semibold transition-opacity duration-300 ${cartCount > 0 ? 'opacity-100' : 'opacity-0'}`}>
+                  <span className={`absolute -top-2 -right-2 bg-[#f1cf74] text-[#12382f] text-xs rounded-full h-5 min-w-[1.25rem] px-1 flex items-center justify-center font-semibold transition-opacity duration-300 ${cartCount > 0 ? 'opacity-100' : 'opacity-0'}`}>
                     {cartCount}
                   </span>
                 </ClientOnly>
