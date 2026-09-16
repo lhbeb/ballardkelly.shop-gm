@@ -282,10 +282,10 @@ const Header = () => {
               <Image
                 src="/logosvg.svg"
                 alt="BallardKellyScott Logo"
-                width={260}
-                height={46}
+                width={182}
+                height={32}
                 priority
-                className="h-auto w-52 sm:w-64"
+                className="h-auto w-36 sm:w-44"
               />
             </Link>
 
