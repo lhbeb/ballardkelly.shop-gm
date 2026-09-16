@@ -21,8 +21,8 @@ interface ErrorLog {
 }
 
 const TYPE_COLORS: Record<string, string> = {
-  client: 'bg-[#0a3075]/10 text-[#0a3075] border-[#0a3075]/20',
-  api: 'bg-blue-100 text-blue-700 border-blue-200',
+  client: 'bg-[#1f5a46]/10 text-[#1f5a46] border-[#1f5a46]/20',
+  api: 'bg-emerald-100 text-emerald-800 border-emerald-200',
   server: 'bg-red-100 text-red-700 border-red-200',
 };
 
@@ -156,7 +156,7 @@ export default function ErrorLogPage() {
             <button
               key={t}
               onClick={() => setFilterType(t)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${filterType === t ? 'bg-[#090A28] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${filterType === t ? 'bg-[#12382f] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
             >
               {t.charAt(0).toUpperCase() + t.slice(1)}
             </button>
@@ -168,7 +168,7 @@ export default function ErrorLogPage() {
             <button
               key={val}
               onClick={() => setFilterResolved(val)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${filterResolved === val ? 'bg-[#090A28] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${filterResolved === val ? 'bg-[#12382f] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
             >
               {label}
             </button>
@@ -234,7 +234,7 @@ export default function ErrorLogPage() {
                     onClick={() => markResolved(log.id, !log.resolved)}
                     disabled={resolving === log.id}
                     title={log.resolved ? 'Mark unresolved' : 'Mark resolved'}
-                    className={`p-1.5 rounded-lg transition-colors ${log.resolved ? 'hover:bg-[#0a3075]/10 text-[#0a3075]' : 'hover:bg-green-50 text-green-500'}`}
+                    className={`p-1.5 rounded-lg transition-colors ${log.resolved ? 'hover:bg-[#1f5a46]/10 text-[#1f5a46]' : 'hover:bg-green-50 text-green-500'}`}
                   >
                     <CheckCircle className="h-4 w-4" />
                   </button>
@@ -254,7 +254,7 @@ export default function ErrorLogPage() {
                   {log.url && (
                     <div className="flex items-start gap-2">
                       <ExternalLink className="h-3.5 w-3.5 text-gray-400 mt-0.5 flex-shrink-0" />
-                      <a href={log.url} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline break-all">{log.url}</a>
+                      <a href={log.url} target="_blank" rel="noopener noreferrer" className="text-xs text-emerald-700 hover:underline break-all">{log.url}</a>
                     </div>
                   )}
                   {log.user_agent && (
@@ -289,7 +289,7 @@ export default function ErrorLogPage() {
                         value={resolveNote}
                         onChange={e => setResolveNote(e.target.value)}
                         placeholder="Optional resolution note..."
-                        className="flex-1 text-xs px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-[#090A28]"
+                        className="flex-1 text-xs px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:border-[#12382f]"
                       />
                       <button
                         onClick={() => markResolved(log.id, true)}

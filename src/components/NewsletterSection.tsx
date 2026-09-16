@@ -52,7 +52,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="bg-[#0a3075] py-16 px-4">
+    <section className="bg-[#1f5a46] py-16 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center">
           <div className="flex justify-center mb-6">
@@ -62,7 +62,7 @@ const NewsletterSection = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join Cokaro&apos;s Project List
+            Join BallardKellyScott&apos;s Project List
           </h2>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -80,7 +80,7 @@ const NewsletterSection = () => {
                     if (error) setError('');
                   }}
                   placeholder="Your email address"
-                  className="w-full px-4 py-3 rounded-lg border-0 text-[#262626] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#0a3075] transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg border-0 text-[#262626] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#1f5a46] transition-all duration-200"
                   disabled={isSubmitting || isSuccess}
                 />
               </div>
@@ -88,11 +88,11 @@ const NewsletterSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || isSuccess}
-                className="bg-[#ffffff] text-[#0a3075] hover:bg-[#f3f4f6] disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 rounded-lg font-bold transition-all duration-200 flex items-center justify-center gap-2 min-w-[140px] shadow-lg shadow-black/10"
+                className="bg-[#ffffff] text-[#1f5a46] hover:bg-[#f3f4f6] disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 rounded-lg font-bold transition-all duration-200 flex items-center justify-center gap-2 min-w-[140px] shadow-lg shadow-black/10"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#0a3075]"></div>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1f5a46]"></div>
                     Signing Up...
                   </>
                 ) : isSuccess ? (

@@ -46,7 +46,7 @@ Professional loading screen with multiple visual elements:
 - ✅ **Custom Message** - Contextual loading messages
 - ✅ **Gradient Background** - Smooth gray gradient
 - ✅ **White Card** - Elevated card with shadow
-- ✅ **Brand Colors** - Uses `#0046be` (brand blue)
+- ✅ **Brand Colors** - Uses `#2e7a62` (brand blue)
 
 #### **Visual Hierarchy:**
 ```
@@ -252,7 +252,7 @@ Benefits:
 ## Styling Details
 
 ### Colors
-- **Primary gradient:** `from-[#0046be] to-[#003494]` (brand blue)
+- **Primary gradient:** `from-[#2e7a62] to-[#003494]` (brand blue)
 - **Active page:** White background with blue text
 - **Inactive pills:** White/10 with white text
 - **Hover states:** White/20 semi-transparent

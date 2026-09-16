@@ -68,7 +68,7 @@ interface Product {
         </span>
       ) : product.checkout_flow === 'kofi' ? (
         <span className="inline-flex items-center gap-1">
-          <span className="font-semibold text-blue-600">Ko-fi</span>
+          <span className="font-semibold text-emerald-700">Ko-fi</span>
         </span>
       ) : (
         <span>Buy Me a Coffee</span>
@@ -157,7 +157,7 @@ ELSE:
 | Type | Database Value | Display Text | Text Color | Use Case |
 |------|---------------|--------------|------------|----------|
 | **Stripe** | `'stripe'` | "Stripe" | Purple (`text-purple-600`) | Embedded Stripe checkout |
-| **Ko-fi** | `'kofi'` | "Ko-fi" | Blue (`text-blue-600`) | Ko-fi donation page |
+| **Ko-fi** | `'kofi'` | "Ko-fi" | Blue (`text-emerald-700`) | Ko-fi donation page |
 | **Buy Me a Coffee** | `'buymeacoffee'` or `null` | "Buy Me a Coffee" | Default blue | Buy Me a Coffee link |
 
 ---
@@ -185,7 +185,7 @@ ALTER COLUMN checkout_flow SET DEFAULT 'buymeacoffee';
 | Checkout Type | Color | Hex Code | Tailwind Class |
 |---------------|-------|----------|----------------|
 | Stripe | Purple | `#9333ea` | `text-purple-600` |
-| Ko-fi | Blue | `#2563eb` | `text-blue-600` |
+| Ko-fi | Blue | `#2563eb` | `text-emerald-700` |
 | Buy Me a Coffee | Default Blue | `#2658A6` | (inherited from link) |
 
 ---

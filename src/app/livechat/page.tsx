@@ -14,7 +14,7 @@ export default function LiveChatPage() {
     }
   }, []);
 
-  const chatSrc = `https://chatapppay-rust.vercel.app/livechat?color=%23090A28&siteUrl=${encodeURIComponent(siteUrl || 'https://cokaro.com')}`;
+  const chatSrc = `https://chatapppay-rust.vercel.app/livechat?color=%23090A28&siteUrl=${encodeURIComponent(siteUrl || 'https://BallardKellyScott.shop')}`;
 
   const features = [
     {
@@ -45,7 +45,7 @@ export default function LiveChatPage() {
         <div className="container mx-auto max-w-6xl flex items-center gap-3">
           <Link
             href="/contact"
-            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#090A28] transition-colors"
+            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#12382f] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Contact
@@ -60,14 +60,14 @@ export default function LiveChatPage() {
 
           <div className="lg:col-span-2 flex flex-col gap-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#090A28]/10 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#12382f]/10 rounded-full mb-4">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                 </span>
-                <span className="text-xs font-semibold text-[#090A28] tracking-wide uppercase">Live Support Online</span>
+                <span className="text-xs font-semibold text-[#12382f] tracking-wide uppercase">Live Support Online</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-[#090A28] leading-tight mb-3">
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#12382f] leading-tight mb-3">
                 Talk to a Real Person, Right Now
               </h1>
               <p className="text-gray-500 text-base leading-relaxed">
@@ -79,21 +79,21 @@ export default function LiveChatPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               {features.map((f) => (
                 <div key={f.title} className="flex items-start gap-3 bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
-                  <div className="flex-shrink-0 w-9 h-9 bg-[#090A28]/10 rounded-lg flex items-center justify-center text-[#090A28]">
+                  <div className="flex-shrink-0 w-9 h-9 bg-[#12382f]/10 rounded-lg flex items-center justify-center text-[#12382f]">
                     {f.icon}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[#090A28]">{f.title}</p>
+                    <p className="text-sm font-semibold text-[#12382f]">{f.title}</p>
                     <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{f.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-[#090A28] rounded-2xl p-5 text-white">
+            <div className="bg-[#12382f] rounded-2xl p-5 text-white">
               <p className="text-sm font-semibold mb-1">Prefer email instead?</p>
               <p className="text-xs text-white/70 mb-3">
-                Send us a message at contact@cokaro.com and we will reply within 24 hours.
+                Send us a message at contact@BallardKellyScott.shop and we will reply within 24 hours.
               </p>
               <Link
                 href="/contact"
@@ -110,12 +110,12 @@ export default function LiveChatPage() {
               className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col"
               style={{ minHeight: 600, height: '75svh', maxHeight: 750 }}
             >
-              <div className="flex items-center gap-3 px-5 py-4 bg-[#090A28]">
+              <div className="flex items-center gap-3 px-5 py-4 bg-[#12382f]">
                 <div className="flex items-center justify-center w-9 h-9 bg-white/15 rounded-full flex-shrink-0">
                   <MessageCircle className="h-5 w-5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white leading-tight">Cokaro Support</p>
+                  <p className="text-sm font-semibold text-white leading-tight">BallardKellyScott Support</p>
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
                     <span className="text-xs text-white/70">Typically replies in a few minutes</span>
@@ -125,8 +125,8 @@ export default function LiveChatPage() {
 
               {!iframeLoaded && (
                 <div className="flex-1 flex flex-col items-center justify-center gap-4 p-8">
-                  <div className="w-14 h-14 bg-[#090A28]/10 rounded-full flex items-center justify-center animate-pulse">
-                    <MessageCircle className="h-7 w-7 text-[#090A28]/40" />
+                  <div className="w-14 h-14 bg-[#12382f]/10 rounded-full flex items-center justify-center animate-pulse">
+                    <MessageCircle className="h-7 w-7 text-[#12382f]/40" />
                   </div>
                   <div className="space-y-2 text-center">
                     <div className="h-3 w-32 bg-gray-100 rounded-full mx-auto animate-pulse" />
@@ -138,7 +138,7 @@ export default function LiveChatPage() {
               {siteUrl && (
                 <iframe
                   src={chatSrc}
-                  title="Cokaro Live Chat Support"
+                  title="BallardKellyScott Live Chat Support"
                   className={`w-full flex-1 border-none block transition-opacity duration-500 ${iframeLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}
                   allow="clipboard-write; camera; microphone"
                   onLoad={() => setIframeLoaded(true)}

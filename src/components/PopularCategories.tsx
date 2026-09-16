@@ -113,7 +113,7 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
           <div className="mb-6 md:mb-8">
             <h2
               id="popular-categories-title"
-              className="text-3xl font-bold text-[#0a3075] md:text-4xl"
+              className="text-3xl font-bold text-[#1f5a46] md:text-4xl"
             >
               Explore Popular Categories
             </h2>
@@ -124,7 +124,7 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
               <Link
                 key={category.name}
                 href={category.href}
-                className="group relative overflow-hidden rounded-xl border border-[#0a3075]/10 bg-white shadow-[0_12px_30px_rgba(10,48,117,0.06)] transition-colors duration-200 hover:border-[#0a3075]/25"
+                className="group relative overflow-hidden rounded-xl border border-[#1f5a46]/10 bg-white shadow-[0_12px_30px_rgba(10,48,117,0.06)] transition-colors duration-200 hover:border-[#1f5a46]/25"
                 aria-label={`Shop ${category.name}`}
               >
                 <div className="relative aspect-[1.08/1] overflow-hidden bg-white p-4">
@@ -138,12 +138,12 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
                   />
                 </div>
 
-                <div className="flex min-h-[76px] items-center bg-[#0a3075] px-4 py-3 text-[#F0F6FF]">
+                <div className="flex min-h-[76px] items-center bg-[#1f5a46] px-4 py-3 text-[#f2f7f4]">
                   <div className="min-w-0">
                     <h3 className="text-sm font-bold leading-tight sm:text-base">
                       {category.name}
                     </h3>
-                    <p className="mt-1 text-xs font-medium text-[#F0F6FF]/75">
+                    <p className="mt-1 text-xs font-medium text-[#f2f7f4]/75">
                       {category.count} {category.count === 1 ? 'item' : 'items'}
                     </p>
                   </div>

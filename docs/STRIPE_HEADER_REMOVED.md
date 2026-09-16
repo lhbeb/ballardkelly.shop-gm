@@ -42,7 +42,7 @@ Removed the entire header section from the Stripe checkout page.
 {/* Header */}
 <div className="p-4 sm:p-6 border-b border-gray-100">
     <div className="flex flex-col items-center">
-        <span className="inline-flex items-center justify-center bg-blue-100 rounded-full p-2 mb-2">
+        <span className="inline-flex items-center justify-center bg-emerald-100 rounded-full p-2 mb-2">
             <Check className="h-6 w-6 text-[#2658A6]" />
         </span>
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#262626] tracking-tight text-center">

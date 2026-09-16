@@ -22,7 +22,7 @@ export default function NotFound() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center justify-center w-full bg-[#0a3075] text-[#F0F6FF] py-3 px-6 rounded-lg font-medium hover:bg-[#0a0f32] transition-colors duration-300"
+              className="inline-flex items-center justify-center w-full bg-[#1f5a46] text-[#f2f7f4] py-3 px-6 rounded-lg font-medium hover:bg-[#102820] transition-colors duration-300"
             >
               <Home className="h-5 w-5 mr-2" />
               Go Home

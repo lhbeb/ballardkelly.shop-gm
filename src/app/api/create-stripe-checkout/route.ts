@@ -32,17 +32,17 @@ function getSafeStripeError(error: any): string {
 
     if (isSensitive) {
         // Return generic error for sensitive issues
-        return 'Payment processing is temporarily unavailable. Please email contact@cokaro.com';
+        return 'Payment processing is temporarily unavailable. Please email contact@BallardKellyScott.shop';
     }
 
     // For non-sensitive errors, we can show a slightly more specific message
     // but still avoid technical jargon
     if (error.type === 'card_error') {
-        return 'There was an issue with your payment method. Please try a different card or email contact@cokaro.com';
+        return 'There was an issue with your payment method. Please try a different card or email contact@BallardKellyScott.shop';
     }
 
     // Generic fallback for any other errors
-    return 'An error occurred during payment processing. Please email contact@cokaro.com';
+    return 'An error occurred during payment processing. Please email contact@BallardKellyScott.shop';
 }
 
 export async function POST(request: NextRequest) {

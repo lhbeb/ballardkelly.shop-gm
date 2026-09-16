@@ -34,14 +34,14 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
   }
 
   const displaySeller = seller || {
-    id: 'cokaro',
-    name: 'Cokaro',
-    username: 'cokaro',
+    id: 'BallardKellyScott',
+    name: 'BallardKellyScott',
+    username: 'BallardKellyScott',
     avatarUrl: fallbackAvatarUrl,
   };
 
-  const isCokaro = displaySeller.username === 'cokaro';
-  const href = isCokaro ? '/' : `/sellers/${displaySeller.username}`;
+  const isBallardKellyScott = displaySeller.username === 'BallardKellyScott';
+  const href = isBallardKellyScott ? '/' : `/sellers/${displaySeller.username}`;
   const hasAvatar = displaySeller.avatarUrl && displaySeller.avatarUrl !== fallbackAvatarUrl;
 
   /* ── sm (product cards) ─────────────────────────────────────────────────── */
@@ -53,11 +53,11 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
         className="inline-flex items-center gap-1.5 mt-2 group w-fit"
       >
         <span className="text-[11px] text-gray-400">Sold by</span>
-        <span className="text-[11px] font-medium text-gray-600 group-hover:text-[#090A28] transition-colors">
+        <span className="text-[11px] font-medium text-gray-600 group-hover:text-[#12382f] transition-colors">
           {displaySeller.name}
         </span>
-        {isCokaro ? (
-          <ShieldCheck className="w-3 h-3 flex-shrink-0 text-[#090A28]/50" />
+        {isBallardKellyScott ? (
+          <ShieldCheck className="w-3 h-3 flex-shrink-0 text-[#12382f]/50" />
         ) : (
           <Star className="w-3 h-3 flex-shrink-0 text-[#EFC154] fill-[#EFC154]" />
         )}
@@ -72,12 +72,12 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
       className="inline-flex items-center gap-2 mt-2 group w-fit"
     >
       {/* Avatar / icon */}
-      <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0 ring-1 ring-gray-200 group-hover:ring-[#090A28]/30 transition-all">
+      <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0 ring-1 ring-gray-200 group-hover:ring-[#12382f]/30 transition-all">
         {hasAvatar ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={displaySeller.avatarUrl} alt={displaySeller.name} className="w-full h-full object-cover" />
-        ) : isCokaro ? (
-          <ShieldCheck className="w-3 h-3 text-[#090A28]" />
+        ) : isBallardKellyScott ? (
+          <ShieldCheck className="w-3 h-3 text-[#12382f]" />
         ) : (
           <User className="w-3 h-3 text-gray-400" />
         )}
@@ -85,20 +85,20 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
 
       {/* Label + name */}
       <span className="text-sm text-gray-400">Sold by</span>
-      <span className="text-sm font-medium text-gray-700 group-hover:text-[#090A28] transition-colors">
+      <span className="text-sm font-medium text-gray-700 group-hover:text-[#12382f] transition-colors">
         {displaySeller.name}
       </span>
 
       {/* Verified tick */}
       <div className="relative group flex items-center">
-        {isCokaro ? (
-          <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-[#090A28]/50" />
+        {isBallardKellyScott ? (
+          <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-[#12382f]/50" />
         ) : (
           <Star className="w-3.5 h-3.5 flex-shrink-0 text-[#EFC154] fill-[#EFC154] cursor-help" />
         )}
         
-        {/* Tooltip for md size only if not Cokaro */}
-        {!isCokaro && (
+        {/* Tooltip for md size only if not BallardKellyScott */}
+        {!isBallardKellyScott && (
           <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-72 p-4 bg-white text-gray-600 text-sm leading-relaxed rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top translate-y-2 group-hover:translate-y-0 text-left">
             <div className="font-bold mb-1.5 flex items-center gap-1.5 text-[#262626]">
               <Star className="w-4 h-4 text-[#EFC154] fill-[#EFC154]" /> Star Seller

@@ -11,12 +11,12 @@ const TermsPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl font-bold text-[#262626] mb-2">Cokaro Terms of Service</h1>
+        <h1 className="text-4xl font-bold text-[#262626] mb-2">BallardKellyScott Terms of Service</h1>
         <p className="text-gray-600 mb-8">Last Updated: {currentDate}</p>
         
         <div className="prose max-w-none text-gray-700 space-y-8">
           <p className="text-lg leading-relaxed">
-            Welcome to Cokaro. Cokaro sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment through our website and marketplace. By accessing or using our website, marketplace, or services, you agree to be bound by these Terms of Service. Please read them carefully. If you do not agree, please discontinue using the site.
+            Welcome to BallardKellyScott. BallardKellyScott sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment through our website and marketplace. By accessing or using our website, marketplace, or services, you agree to be bound by these Terms of Service. Please read them carefully. If you do not agree, please discontinue using the site.
           </p>
 
           <ResellerBrandNotice compact />
@@ -25,11 +25,11 @@ const TermsPage = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">1. Overview</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Cokaro operates as an independent seller, reseller, and curated marketplace for outdoor power and property-care equipment, with authorized reseller or supplier relationships only where expressly applicable.</li>
+              <li>BallardKellyScott operates as an independent seller, reseller, and curated marketplace for outdoor power and property-care equipment, with authorized reseller or supplier relationships only where expressly applicable.</li>
               <li>We source products through verified suppliers, auctions, private sellers, liquidators, wholesalers, marketplace partners, and other third-party suppliers.</li>
               <li>We also allow approved private sellers to list items on our platform after a full inspection by our team.</li>
               <li>Our catalog may include products bearing marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, Husqvarna, and other product or model marks shown on product pages.</li>
-              <li>All purchases made through Cokaro are processed under these Terms.</li>
+              <li>All purchases made through BallardKellyScott are processed under these Terms.</li>
             </ul>
           </div>
 
@@ -48,7 +48,7 @@ const TermsPage = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">3. Marketplace and Private Seller Terms</h2>
             <p className="mb-4">
-              Cokaro hosts a controlled marketplace where approved private sellers may offer products.
+              BallardKellyScott hosts a controlled marketplace where approved private sellers may offer products.
             </p>
 
             <h3 className="text-xl font-bold text-[#262626] mt-6 mb-3">3.1 Seller Onboarding Process</h3>
@@ -66,18 +66,18 @@ const TermsPage = () => {
               <li>Only after passing inspection is the item shipped to the customer.</li>
             </ul>
             <p className="mb-4">
-              Cokaro reserves the right to reject, refund, or cancel any order if the item fails inspection.
+              BallardKellyScott reserves the right to reject, refund, or cancel any order if the item fails inspection.
             </p>
 
             <h3 className="text-xl font-bold text-[#262626] mt-6 mb-3">3.3 Seller Responsibility</h3>
-            <p className="mb-2">Sellers on the Cokaro platform are responsible for:</p>
+            <p className="mb-2">Sellers on the BallardKellyScott platform are responsible for:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>Lawful ownership and accurate representation of their products</li>
               <li>Providing accurate condition descriptions</li>
               <li>Meeting our quality and safety standards</li>
             </ul>
             <p>
-              Cokaro is not responsible for inaccurate representations made by sellers, although we take all reasonable steps to verify product condition before shipment.
+              BallardKellyScott is not responsible for inaccurate representations made by sellers, although we take all reasonable steps to verify product condition before shipment.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ const TermsPage = () => {
               <li>We aim to provide accurate and detailed product descriptions.</li>
               <li>We sell and resell new, open-box, refurbished, and pre owned items, each clearly labeled.</li>
               <li>Product names, brand names, logos, and marks are used for identification of the products offered for sale.</li>
-              <li>Unless expressly stated on a product page, Cokaro is not claiming manufacturer sponsorship, endorsement, or ownership of third-party marks.</li>
+              <li>Unless expressly stated on a product page, BallardKellyScott is not claiming manufacturer sponsorship, endorsement, or ownership of third-party marks.</li>
               <li>All used, open-box, or resale products are inspected prior to sale when they pass through our warehouse.</li>
               <li>Product availability is not guaranteed until an order is processed.</li>
               <li>Prices may change at any time due to market conditions and sourcing costs.</li>
@@ -100,7 +100,7 @@ const TermsPage = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">5. Sourcing Transparency</h2>
             <p className="mb-4">
-              By using our website, you acknowledge that Cokaro sources products through:
+              By using our website, you acknowledge that BallardKellyScott sources products through:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>Online auctions and bidding platforms</li>
@@ -132,7 +132,7 @@ const TermsPage = () => {
               <li>Tracking information is sent to the customer via email once the order ships.</li>
             </ul>
             <p className="mt-4">
-              Cokaro is not responsible for delays caused by carriers or incorrect shipping information provided by the customer.
+              BallardKellyScott is not responsible for delays caused by carriers or incorrect shipping information provided by the customer.
             </p>
           </div>
 
@@ -171,7 +171,7 @@ const TermsPage = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">9. Limitation of Liability</h2>
             <p className="mb-4">
-              Cokaro is not liable for indirect, incidental, punitive, or consequential damages arising from your use of our services, products, or platform.
+              BallardKellyScott is not liable for indirect, incidental, punitive, or consequential damages arising from your use of our services, products, or platform.
             </p>
             <p>
               However, we are committed to resolving legitimate customer concerns and will work with you to reach a fair and reasonable solution.
@@ -182,7 +182,7 @@ const TermsPage = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#262626] mt-10 mb-4">10. Fraud Prevention and Compliance</h2>
             <p className="mb-4">
-              Cokaro monitors orders for unusual activity to protect customers and sellers.
+              BallardKellyScott monitors orders for unusual activity to protect customers and sellers.
             </p>
             <p className="mb-4">
               We reserve the right to cancel or delay orders suspected of fraud or unauthorized use of payment methods.
@@ -205,7 +205,7 @@ const TermsPage = () => {
               </div>
               <div>
                 <div className="font-medium text-[#262626] mb-1">Email:</div>
-                <div className="text-gray-600">contact@cokaro.com</div>
+                <div className="text-gray-600">contact@BallardKellyScott.shop</div>
               </div>
 
               <div>

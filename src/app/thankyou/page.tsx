@@ -132,7 +132,7 @@ function ThankYouContent() {
 
   // Always show success (Stripe only redirects here if payment succeeded)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Success Card */}
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12 text-center">
@@ -175,8 +175,8 @@ function ThankYouContent() {
 
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Clock className="w-4 h-4 text-blue-600" />
+                <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Clock className="w-4 h-4 text-emerald-700" />
                 </div>
                 <div className="text-left">
                   <h3 className="font-medium text-[#262626]">Order Processing</h3>
@@ -195,8 +195,8 @@ function ThankYouContent() {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Package className="w-4 h-4 text-orange-600" />
+                <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Package className="w-4 h-4 text-amber-700" />
                 </div>
                 <div className="text-left">
                   <h3 className="font-medium text-[#262626]">Shipping</h3>
@@ -207,19 +207,19 @@ function ThankYouContent() {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-blue-50 rounded-xl p-6 mb-8">
+          <div className="bg-emerald-50 rounded-xl p-6 mb-8">
             <h3 className="font-semibold text-[#262626] mb-2">Need Help?</h3>
             <p className="text-sm text-gray-600 mb-3">
               If you have any questions about your order, don&apos;t hesitate to reach out:
             </p>
             <div className="space-y-1 text-sm">
               <p className="text-gray-700">
-                📧 <a href="mailto:contact@cokaro.com" className="text-blue-600 hover:text-blue-700 font-medium">
-                  contact@cokaro.com
+                📧 <a href="mailto:contact@BallardKellyScott.shop" className="text-emerald-700 hover:text-emerald-800 font-medium">
+                  contact@BallardKellyScott.shop
                 </a>
               </p>
               <p className="text-gray-700">
-                📞 <a href="tel:+1 (913) 593-7677" className="text-blue-600 hover:text-blue-700 font-medium">
+                📞 <a href="tel:+1 (913) 593-7677" className="text-emerald-700 hover:text-emerald-800 font-medium">
                   +1 (913) 593-7677
                 </a>
               </p>
@@ -230,7 +230,7 @@ function ThankYouContent() {
           <div className="flex justify-center">
             <Link
               href="/"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#090A28] hover:bg-[#1c2070] text-white font-medium rounded-lg transition-colors duration-200"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#12382f] hover:bg-[#276955] text-white font-medium rounded-lg transition-colors duration-200"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Continue Shopping
@@ -254,11 +254,11 @@ function ThankYouContent() {
 // Loading fallback component
 function LoadingState() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-green-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12 text-center">
-          <div className="mx-auto w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <Loader2 className="w-12 h-12 text-blue-600 animate-spin" />
+          <div className="mx-auto w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+            <Loader2 className="w-12 h-12 text-emerald-700 animate-spin" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-[#262626] mb-4">
             Loading...

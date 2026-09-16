@@ -105,7 +105,7 @@ export default function SellersPage() {
         </div>
         <Link
           href="/admin/sellers/new"
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#090A28] text-white text-sm font-medium rounded-xl hover:bg-[#1c2070] transition-all shadow-sm hover:shadow-md whitespace-nowrap"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#12382f] text-white text-sm font-medium rounded-xl hover:bg-[#276955] transition-all shadow-sm hover:shadow-md whitespace-nowrap"
         >
           <Plus className="h-4 w-4" />
           Add Seller
@@ -115,7 +115,7 @@ export default function SellersPage() {
       {/* Stats bar */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         {[
-          { label: 'Total Sellers', value: sellers.length, icon: Users, color: 'bg-blue-50 text-blue-600' },
+          { label: 'Total Sellers', value: sellers.length, icon: Users, color: 'bg-emerald-50 text-emerald-700' },
           { label: 'With Avatars', value: sellers.filter(s => s.avatarUrl).length, icon: User, color: 'bg-purple-50 text-purple-600' },
           { label: 'With Location', value: sellers.filter(s => s.location).length, icon: MapPin, color: 'bg-green-50 text-green-600' },
         ].map(({ label, value, icon: Icon, color }) => (
@@ -142,7 +142,7 @@ export default function SellersPage() {
               placeholder="Search by name or username…"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#090A28] focus:border-[#090A28] outline-none transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#12382f] focus:border-[#12382f] outline-none transition-all"
             />
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function SellersPage() {
                   <Link
                     href={`/admin/sellers/${seller.id}/edit`}
                     title="Edit seller"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors"
                   >
                     <Edit2 className="h-3.5 w-3.5" />
                     Edit

@@ -137,7 +137,7 @@ async function main() {
   const unknown = Object.keys(optimizedTitles).filter((slug) => !databaseSlugs.has(slug));
 
   if (exportData.products.length !== 25 || missing.length || unknown.length) {
-    throw new Error(`Expected the 25-product Cokaro catalog. Found ${exportData.products.length}; missing: ${missing.map((p) => p.slug).join(', ') || 'none'}; unknown: ${unknown.join(', ') || 'none'}.`);
+    throw new Error(`Expected the 25-product BallardKellyScott catalog. Found ${exportData.products.length}; missing: ${missing.map((p) => p.slug).join(', ') || 'none'}; unknown: ${unknown.join(', ') || 'none'}.`);
   }
 
   let updated = 0;
@@ -148,7 +148,7 @@ async function main() {
   });
 
   await writeFile(contentPath, `${JSON.stringify(exportData, null, 2)}\n`, 'utf8');
-  console.log(`Optimized ${updated} of ${exportData.products.length} Cokaro products.`);
+  console.log(`Optimized ${updated} of ${exportData.products.length} BallardKellyScott products.`);
 }
 
 main().catch((error) => {

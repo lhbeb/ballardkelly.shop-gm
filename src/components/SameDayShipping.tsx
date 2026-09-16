@@ -20,7 +20,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
           <div className="relative min-h-[360px] w-full md:min-h-[400px] md:w-[45%]">
             <Image
               src="/delivery-guy.png"
-              alt="Cokaro delivery person"
+              alt="BallardKellyScott delivery person"
               fill
               sizes="(max-width: 768px) 100vw, 45vw"
               className="object-cover object-center"
@@ -29,17 +29,17 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
           </div>
 
           {/* Right Section - Content */}
-          <div className="md:w-[55%] bg-[#0a3075] text-[#F0F6FF] p-12 flex flex-col justify-center">
+          <div className="md:w-[55%] bg-[#1f5a46] text-[#f2f7f4] p-12 flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#ffffff]">
               Fast Order Processing
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Cokaro processes orders within 1 business day, then ships with an estimated 1-3 business days in transit. Clear fulfillment timing is part of every order.
+              BallardKellyScott processes orders within 1 business day, then ships with an estimated 1-3 business days in transit. Clear fulfillment timing is part of every order.
             </p>
             <Link
               href="/shipping-policy"
-              className="text-[#F0F6FF]/80 hover:text-[#F0F6FF] text-lg underline underline-offset-2 transition-colors"
+              className="text-[#f2f7f4]/80 hover:text-[#f2f7f4] text-lg underline underline-offset-2 transition-colors"
             >
               See our shipping policy →
             </Link>
@@ -52,8 +52,8 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
         {/* Card 1 */}
         <div className="bg-white rounded-xl p-6 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="bg-[#0a3075] rounded-full p-3 flex-shrink-0">
-              <Clock className="w-6 h-6 text-[#F0F6FF]" />
+            <div className="bg-[#1f5a46] rounded-full p-3 flex-shrink-0">
+              <Clock className="w-6 h-6 text-[#f2f7f4]" />
             </div>
             <div>
               <h3 className="font-bold text-[#262626] text-lg mb-2">
@@ -69,8 +69,8 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
         {/* Card 2 */}
         <div className="bg-white rounded-xl p-6 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="bg-[#0a3075] rounded-full p-3 flex-shrink-0">
-              <Package className="w-6 h-6 text-[#F0F6FF]" />
+            <div className="bg-[#1f5a46] rounded-full p-3 flex-shrink-0">
+              <Package className="w-6 h-6 text-[#f2f7f4]" />
             </div>
             <div>
               <h3 className="font-bold text-[#262626] text-lg mb-2">
@@ -86,8 +86,8 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
         {/* Card 3 */}
         <div className="bg-white rounded-xl p-6 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="bg-[#0a3075] rounded-full p-3 flex-shrink-0">
-              <Truck className="w-6 h-6 text-[#F0F6FF]" />
+            <div className="bg-[#1f5a46] rounded-full p-3 flex-shrink-0">
+              <Truck className="w-6 h-6 text-[#f2f7f4]" />
             </div>
             <div>
               <h3 className="font-bold text-[#262626] text-lg mb-2">
@@ -108,12 +108,12 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             Ready to get your order moving?
           </p>
           <p className="text-2xl md:text-3xl font-bold text-[#262626]">
-            <span className="text-[#0a3075]">1 business day</span> processing, then 1-3 business days in transit
+            <span className="text-[#1f5a46]">1 business day</span> processing, then 1-3 business days in transit
           </p>
         </div>
         <a
           href="#products"
-          className="bg-[#0a3075] hover:bg-[#0a0f32] text-[#F0F6FF] font-bold py-4 px-10 rounded-xl text-lg transition-colors whitespace-nowrap"
+          className="bg-[#1f5a46] hover:bg-[#102820] text-[#f2f7f4] font-bold py-4 px-10 rounded-xl text-lg transition-colors whitespace-nowrap"
         >
           Browse Products
         </a>

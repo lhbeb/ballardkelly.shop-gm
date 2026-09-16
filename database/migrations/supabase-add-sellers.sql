@@ -1,5 +1,5 @@
 -- ============================================================
--- Cokaro — Multi-Seller System Migration
+-- BallardKellyScott — Multi-Seller System Migration
 -- Run this in Supabase SQL Editor
 -- ============================================================
 

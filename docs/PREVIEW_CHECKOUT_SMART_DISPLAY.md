@@ -83,7 +83,7 @@ Updated the "Preview Checkout" column in the admin products list to intelligentl
     >
       <ExternalLink className="h-4 w-4" />
       {product.checkout_flow === 'kofi' ? (
-        <span className="font-semibold text-blue-600">Preview Ko-fi</span>
+        <span className="font-semibold text-emerald-700">Preview Ko-fi</span>
       ) : (
         <span>Preview Buy Me a Coffee</span>
       )}
@@ -149,7 +149,7 @@ Text: text-[#2658A6]
 Hover: text-[#1a3d70] + underline
 Icon: ExternalLink (Lucide)
 Font: font-medium
-Ko-fi specific: text-blue-600 (#2563eb)
+Ko-fi specific: text-emerald-700 (#2563eb)
 ```
 
 ---
@@ -234,7 +234,7 @@ Ko-fi specific: text-blue-600 (#2563eb)
 ```html
 <a href="https://ko-fi.com/..." target="_blank">
   <ExternalLink />
-  <span class="text-blue-600">Preview Ko-fi</span>
+  <span class="text-emerald-700">Preview Ko-fi</span>
 </a>
 ```
 

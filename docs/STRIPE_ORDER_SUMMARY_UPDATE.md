@@ -43,7 +43,7 @@ Updated the Stripe checkout order summary to match the exact design and layout f
     <h2 className="text-xl font-bold text-[#262626] mb-4">Order Summary</h2>
     
     {/* Product Card with Blue Background */}
-    <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+    <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
         <img className="w-16 h-16 object-cover rounded-lg shadow-sm mb-2 sm:mb-0" />
         <div className="flex-grow flex flex-col justify-between">
             <h3 className="font-semibold text-[#262626] line-clamp-2 text-base mb-1">
@@ -84,7 +84,7 @@ Updated the Stripe checkout order summary to match the exact design and layout f
 ```
 
 **Improvements:**
-- ✅ Blue card background (`bg-blue-50`)
+- ✅ Blue card background (`bg-emerald-50`)
 - ✅ Condition badge ("New")
 - ✅ Quantity display ("Qty: 1")
 - ✅ Subtotal line item
@@ -98,11 +98,11 @@ Updated the Stripe checkout order summary to match the exact design and layout f
 
 ### 1. Product Card Container
 ```tsx
-<div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+<div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
 ```
-- Blue background (`bg-blue-50`)
+- Blue background (`bg-emerald-50`)
 - Rounded corners (`rounded-xl`)
-- Blue border (`border-blue-100`)
+- Blue border (`border-emerald-100`)
 - Padding (`p-4`)
 - Responsive flex layout
 
@@ -140,8 +140,8 @@ Updated the Stripe checkout order summary to match the exact design and layout f
 
 | Element | BuyMeACoffee | Stripe (Now) | Status |
 |---------|--------------|--------------|--------|
-| Card Background | `bg-blue-50` | `bg-blue-50` | ✅ Match |
-| Card Border | `border-blue-100` | `border-blue-100` | ✅ Match |
+| Card Background | `bg-emerald-50` | `bg-emerald-50` | ✅ Match |
+| Card Border | `border-emerald-100` | `border-emerald-100` | ✅ Match |
 | Image Size | `w-16 h-16` | `w-16 h-16` | ✅ Match |
 | Condition Badge | White pill | White pill | ✅ Match |
 | Quantity Display | "Qty: 1" | "Qty: 1" | ✅ Match |

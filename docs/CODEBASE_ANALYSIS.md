@@ -473,7 +473,7 @@ npm run upload-images    # Upload images to Supabase
 ## 🎨 Styling & Design System
 
 ### **Tailwind Configuration**
-- Custom color: `#0046be` (primary blue)
+- Custom color: `#2e7a62` (primary blue)
 - Responsive breakpoints
 - Custom animations (fade-in, scale-fade-in)
 - Dark mode ready (not implemented yet)

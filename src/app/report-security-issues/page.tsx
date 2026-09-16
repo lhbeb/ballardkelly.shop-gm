@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Report Security Issues | Cokaro',
-  description: 'Report security vulnerabilities and issues on Cokaro.',
+  title: 'Report Security Issues | BallardKellyScott',
+  description: 'Report security vulnerabilities and issues on BallardKellyScott.',
 };
 
 export default function ReportSecurityIssuesPage() {
@@ -12,12 +12,12 @@ export default function ReportSecurityIssuesPage() {
       <div className="container mx-auto max-w-4xl px-4">
         
         {/* Header Section */}
-        <section className="mb-10 rounded-2xl bg-[#0a3075] px-6 py-8 text-[#F0F6FF] sm:px-8 sm:py-10 shadow-lg">
+        <section className="mb-10 rounded-2xl bg-[#1f5a46] px-6 py-8 text-[#f2f7f4] sm:px-8 sm:py-10 shadow-lg">
           <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Report Security Issues
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-7 text-[#F0F6FF]/80 sm:text-lg">
-            If you’ve found a security vulnerability on Cokaro.com, we encourage you to contact us immediately. We review all legitimate reports and aim to resolve issues quickly. Before reporting, please review this document — including our fundamentals, bounty program, reward guidelines, and non-reportable issues.
+          <p className="mt-5 max-w-3xl text-base leading-7 text-[#f2f7f4]/80 sm:text-lg">
+            If you’ve found a security vulnerability on BallardKellyScott.shop, we encourage you to contact us immediately. We review all legitimate reports and aim to resolve issues quickly. Before reporting, please review this document — including our fundamentals, bounty program, reward guidelines, and non-reportable issues.
           </p>
         </section>
 
@@ -27,7 +27,7 @@ export default function ReportSecurityIssuesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Fundamentals</h2>
             <p className="text-gray-600 mb-4">
-              If you follow the principles below when reporting a security issue to Cokaro.com, we will not initiate legal action or enforcement investigations against you in response to your report.
+              If you follow the principles below when reporting a security issue to BallardKellyScott.shop, we will not initiate legal action or enforcement investigations against you in response to your report.
             </p>
             <p className="text-gray-600 mb-4 font-semibold">We ask that:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
@@ -42,7 +42,7 @@ export default function ReportSecurityIssuesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Bounty Program</h2>
             <p className="text-gray-600 mb-4">
-              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at Cokaro.com&apos;s discretion, based on risk, impact, and report quality.
+              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at BallardKellyScott.shop&apos;s discretion, based on risk, impact, and report quality.
             </p>
             <p className="text-gray-600 mb-4 font-semibold">To potentially qualify for a bounty, you must:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
@@ -82,7 +82,7 @@ export default function ReportSecurityIssuesPage() {
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-orange-600">High Severity – $100</h4>
+                <h4 className="text-lg font-bold text-amber-700">High Severity – $100</h4>
                 <p className="text-gray-600 mb-2">Includes issues such as:</p>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Lateral authentication bypass</li>
@@ -94,7 +94,7 @@ export default function ReportSecurityIssuesPage() {
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-yellow-600">Medium Severity – $50</h4>
+                <h4 className="text-lg font-bold text-amber-700">Medium Severity – $50</h4>
                 <p className="text-gray-600 mb-2">Examples include:</p>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Logic or business process flaws</li>
@@ -118,13 +118,13 @@ export default function ReportSecurityIssuesPage() {
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Contact Information</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                <strong>📍 Address:</strong> <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#0a3075] hover:underline">1239 N Washington Ave, Wichita, KS 67214, USA</a>
+                <strong>📍 Address:</strong> <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#1f5a46] hover:underline">1239 N Washington Ave, Wichita, KS 67214, USA</a>
               </p>
               <p>
                 <strong>✆ Phone:</strong> +1 (913) 593-7677
               </p>
               <p>
-                <strong>✉ Email:</strong> <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline">contact@cokaro.com</a>
+                <strong>✉ Email:</strong> <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">contact@BallardKellyScott.shop</a>
               </p>
             </div>
           </section>

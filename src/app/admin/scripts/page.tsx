@@ -151,7 +151,7 @@ const SCRIPTS: ScriptCard[] = [
         description:
             'Finds all products listed by a specific admin and assigns them to a public seller. ' +
             'Sets the seller_id field on every matching product. ' +
-            'Enter the seller\'s username (e.g. official-cokaro) or their database ID. ' +
+            'Enter the seller\'s username (e.g. official-BallardKellyScott) or their database ID. ' +
             'Use Preview first to see how many products will be affected before running.',
         danger: false,
         params: {
@@ -163,7 +163,7 @@ const SCRIPTS: ScriptCard[] = [
             sellerId: 'Seller username or ID',
         },
         paramPlaceholders: {
-            sellerId: 'e.g. official-cokaro',
+            sellerId: 'e.g. official-BallardKellyScott',
         },
         paramOptions: {
             listedBy: LISTED_BY_ADMINS,
@@ -178,7 +178,7 @@ const SCRIPTS: ScriptCard[] = [
         description:
             'Finds all products that have NO public seller assigned (seller_id is null/empty) and assigns them to the specified public seller. ' +
             'Sets the seller_id field on every matching product. ' +
-            'Enter the seller\'s username (e.g. official-cokaro) or their database ID. ' +
+            'Enter the seller\'s username (e.g. official-BallardKellyScott) or their database ID. ' +
             'Use Preview first to see how many products will be affected before running.',
         danger: false,
         params: {
@@ -188,7 +188,7 @@ const SCRIPTS: ScriptCard[] = [
             sellerId: 'Assign to Seller username or ID',
         },
         paramPlaceholders: {
-            sellerId: 'e.g. official-cokaro',
+            sellerId: 'e.g. official-BallardKellyScott',
         },
     },
     {
@@ -285,7 +285,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                     <div className="flex items-start gap-4">
                         <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${script.danger
                             ? 'bg-red-50 text-red-600'
-                            : 'bg-[#090A28]/10 text-[#090A28]'
+                            : 'bg-[#12382f]/10 text-[#12382f]'
                             }`}>
                             <Terminal className="h-5 w-5" />
                         </div>
@@ -318,7 +318,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                         value={params[key] || ''}
                                         onChange={(e) => setParams((prev) => ({ ...prev, [key]: e.target.value }))}
                                         disabled={isBusy || state === 'done'}
-                                        className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent disabled:opacity-60"
+                                        className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent disabled:opacity-60"
                                     >
                                         {options.map(opt => {
                                             const label = script.paramOptionLabels?.[key]?.[opt] ?? opt;
@@ -332,7 +332,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                         onChange={(e) => setParams((prev) => ({ ...prev, [key]: e.target.value }))}
                                         disabled={isBusy || state === 'done'}
                                         placeholder={script.paramPlaceholders?.[key] || ''}
-                                        className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent disabled:opacity-60"
+                                        className="w-full px-3 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent disabled:opacity-60"
                                     />
                                 )}
                             </div>
@@ -376,7 +376,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                         <button
                             onClick={handleRun}
                             disabled={!response || response.affected === 0}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#090A28] text-white rounded-xl hover:bg-[#1c2070] transition-colors text-sm font-medium shadow-lg shadow-[#090A28]/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-[#12382f] text-white rounded-xl hover:bg-[#276955] transition-colors text-sm font-medium shadow-lg shadow-[#12382f]/25 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <Play className="h-4 w-4" />
                             Run Script ({response?.affected ?? 0} products)
@@ -386,7 +386,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
 
                 {/* Running spinner */}
                 {state === 'running' && (
-                    <button disabled className="inline-flex items-center gap-2 px-4 py-2 bg-[#090A28] text-white rounded-xl text-sm font-medium opacity-75">
+                    <button disabled className="inline-flex items-center gap-2 px-4 py-2 bg-[#12382f] text-white rounded-xl text-sm font-medium opacity-75">
                         <RefreshCw className="h-4 w-4 animate-spin" />
                         Running...
                     </button>
@@ -477,7 +477,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                                     </span>
                                                 </td>
                                                 <td className="px-4 py-3">
-                                                    <span className="inline-block px-2 py-0.5 bg-[#090A28]/10 text-[#090A28] rounded text-xs font-mono">
+                                                    <span className="inline-block px-2 py-0.5 bg-[#12382f]/10 text-[#12382f] rounded text-xs font-mono">
                                                         {row.newSellerId}
                                                     </span>
                                                 </td>
@@ -485,7 +485,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                         ) : 'checkoutLink' in row ? (
                                                 <>
                                                     <td className="px-4 py-3">
-                                                        <span className="inline-block px-2 py-0.5 bg-[#090A28]/10 text-[#090A28] rounded text-xs font-mono">
+                                                        <span className="inline-block px-2 py-0.5 bg-[#12382f]/10 text-[#12382f] rounded text-xs font-mono">
                                                             {row.sellerUsername}
                                                         </span>
                                                     </td>
@@ -504,7 +504,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                                         <span className="inline-block px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs font-mono">{row.oldFlow}</span>
                                                     </td>
                                                     <td className="px-4 py-3">
-                                                        <span className="inline-block px-2 py-0.5 bg-[#090A28]/10 text-[#090A28] rounded text-xs font-mono">{row.newFlow}</span>
+                                                        <span className="inline-block px-2 py-0.5 bg-[#12382f]/10 text-[#12382f] rounded text-xs font-mono">{row.newFlow}</span>
                                                     </td>
                                                 </>
                                             ) : 'oldStatus' in row ? (
@@ -521,7 +521,7 @@ function ScriptCardComponent({ script }: { script: ScriptCard }) {
                                                     <td className="px-4 py-3 text-gray-500 font-mono text-xs max-w-[200px] truncate" title={row.oldLink}>
                                                         {row.oldLink}
                                                     </td>
-                                                    <td className="px-4 py-3 text-[#090A28] font-mono text-xs max-w-[200px] truncate" title={row.newLink}>
+                                                    <td className="px-4 py-3 text-[#12382f] font-mono text-xs max-w-[200px] truncate" title={row.newLink}>
                                                         {row.newLink}
                                                     </td>
                                                 </>

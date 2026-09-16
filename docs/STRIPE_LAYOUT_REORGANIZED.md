@@ -217,15 +217,15 @@ Completely reorganized the Stripe checkout layout to follow a logical, user-frie
 ### 3. Shipping Details Combined
 ```tsx
 // Before: Two separate cards
-<div className="bg-blue-50">Address</div>
+<div className="bg-emerald-50">Address</div>
 <div className="bg-green-50">Email</div>
 
 // After: One card with both
-<div className="bg-blue-50 border border-blue-100 rounded-2xl p-4 sm:p-5">
+<div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 sm:p-5">
   <div className="mb-3">
     {/* Address */}
   </div>
-  <div className="pt-3 border-t border-blue-200">
+  <div className="pt-3 border-t border-emerald-200">
     {/* Email */}
   </div>
 </div>

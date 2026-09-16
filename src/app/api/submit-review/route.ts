@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get domain name from request headers
-    const domain = request.headers.get('origin') || request.headers.get('referer') || 'https://cokaro.com';
+    const domain = request.headers.get('origin') || request.headers.get('referer') || 'https://BallardKellyScott.shop';
 
     // Get email credentials from environment variables
     const emailUser = process.env.EMAIL_USER;
@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h2 style="color: #0046be; border-bottom: 2px solid #0046be; padding-bottom: 10px;">
+        <h2 style="color: #2e7a62; border-bottom: 2px solid #2e7a62; padding-bottom: 10px;">
           New Customer Review Submitted
         </h2>
         
@@ -69,13 +69,13 @@ export async function POST(request: NextRequest) {
             <li style="margin: 10px 0;"><strong>Review Title:</strong> ${title}</li>
             <li style="margin: 10px 0;"><strong>Review Content:</strong></li>
           </ul>
-          <div style="background-color: white; padding: 15px; border-left: 4px solid #0046be; margin: 10px 0;">
+          <div style="background-color: white; padding: 15px; border-left: 4px solid #2e7a62; margin: 10px 0;">
             "${content}"
           </div>
         </div>
 
         <div style="background-color: #e8f4fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
-          <h4 style="color: #0046be; margin-top: 0;">Submission Information:</h4>
+          <h4 style="color: #2e7a62; margin-top: 0;">Submission Information:</h4>
           <ul style="list-style: none; padding: 0;">
             <li style="margin: 5px 0;"><strong>Submitted At:</strong> ${new Date().toLocaleString()}</li>
             <li style="margin: 5px 0;"><strong>Domain:</strong> ${domain}</li>
@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
 
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
           <p style="color: #666; font-size: 14px;">
-            This review was submitted through the Cokaro website review form.
+            This review was submitted through the BallardKellyScott website review form.
           </p>
         </div>
       </div>

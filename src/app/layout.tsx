@@ -26,29 +26,29 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
-  description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro. Reliable products for home, backyard, acreage, and farm upkeep.",
-  keywords: "Cokaro, reseller, sourced equipment, lawn mowers, pressure washers, chainsaws, blowers, trimmers, outdoor power equipment, backyard equipment, farm equipment, home maintenance equipment",
-  authors: [{ name: "Cokaro" }],
-  creator: "Cokaro",
-  publisher: "Cokaro",
+  title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
+  description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott. Reliable products for home, backyard, acreage, and farm upkeep.",
+  keywords: "BallardKellyScott, reseller, sourced equipment, lawn mowers, pressure washers, chainsaws, blowers, trimmers, outdoor power equipment, backyard equipment, farm equipment, home maintenance equipment",
+  authors: [{ name: "BallardKellyScott" }],
+  creator: "BallardKellyScott",
+  publisher: "BallardKellyScott",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://cokaro.com"),
+  metadataBase: new URL("https://BallardKellyScott.shop"),
   openGraph: {
-    title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
-    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro.",
-    url: "https://cokaro.com",
-    siteName: "Cokaro",
+    title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
+    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott.",
+    url: "https://BallardKellyScott.shop",
+    siteName: "BallardKellyScott",
     images: [
       {
         url: "/g7x.jpeg",
         width: 1200,
         height: 630,
-        alt: "Cokaro - Outdoor Power Equipment for Home, Backyard, and Farm Care",
+        alt: "BallardKellyScott - Outdoor Power Equipment for Home, Backyard, and Farm Care",
       },
     ],
     locale: "en_US",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cokaro - Equipment for Home, Backyard, and Farm Care",
-    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at Cokaro.",
+    title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
+    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott.",
     images: ["/g7x.jpeg"],
   },
   robots: {
@@ -126,19 +126,19 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "Cokaro",
-                "url": "https://cokaro.com",
-                "logo": "https://cokaro.com/logosvg.svg",
-                "description": "Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
+                "name": "BallardKellyScott",
+                "url": "https://BallardKellyScott.shop",
+                "logo": "https://BallardKellyScott.shop/logosvg.svg",
+                "description": "BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
                 "sameAs": [
-                  "https://www.tiktok.com/@cokaro_officiel",
-                  "https://www.instagram.com/cokaro_officiel/",
-                  "https://www.pinterest.com/cokaro_officiel/"
+                  "https://www.tiktok.com/@BallardKellyScott_officiel",
+                  "https://www.instagram.com/BallardKellyScott_officiel/",
+                  "https://www.pinterest.com/BallardKellyScott_officiel/"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "customer service",
-                  "email": "contact@cokaro.com",
+                  "email": "contact@BallardKellyScott.shop",
                   "telephone": "+1 (913) 593-7677",
                   "areaServed": "US"
                 },
@@ -164,14 +164,14 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "Cokaro",
-                "url": "https://cokaro.com",
-                "description": "Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
+                "name": "BallardKellyScott",
+                "url": "https://BallardKellyScott.shop",
+                "description": "BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
                 "potentialAction": {
                   "@type": "SearchAction",
                   "target": {
                     "@type": "EntryPoint",
-                    "urlTemplate": "https://cokaro.com/api/products/search?q={search_term_string}"
+                    "urlTemplate": "https://BallardKellyScott.shop/api/products/search?q={search_term_string}"
                   },
                   "query-input": "required name=search_term_string"
                 }

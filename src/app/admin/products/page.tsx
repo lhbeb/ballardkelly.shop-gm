@@ -695,7 +695,7 @@ export default function AdminProductsPage() {
       const a = document.createElement('a');
       a.href = url;
       const date = new Date().toISOString().slice(0, 10);
-      a.download = `Cokaro-all-products-${date}.csv`;
+      a.download = `BallardKellyScott-all-products-${date}.csv`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -738,7 +738,7 @@ export default function AdminProductsPage() {
         return;
       }
 
-      const domain = 'https://cokaro.com';
+      const domain = 'https://BallardKellyScott.shop';
 
       // 1:1 Match with Google Merchant Center official CSV template headers
       const columns = [
@@ -783,7 +783,7 @@ export default function AdminProductsPage() {
 
         const condition = (p.condition || 'new').toLowerCase().includes('refurbished') ? 'refurbished'
           : (p.condition || 'new').toLowerCase().includes('used') ? 'used' : 'new';
-        const brand = p.brand || 'Cokaro';
+        const brand = p.brand || 'BallardKellyScott';
 
         return [
           escapeCSV(pSlug),                                // id
@@ -884,7 +884,7 @@ export default function AdminProductsPage() {
       const a = document.createElement('a');
       a.href = url;
       const date = new Date().toISOString().slice(0, 10);
-      a.download = `Cokaro-affiliate-json-${date}.json`;
+      a.download = `BallardKellyScott-affiliate-json-${date}.json`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -943,7 +943,7 @@ export default function AdminProductsPage() {
           <button
             onClick={() => setStatusFilter('all')}
             className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${statusFilter === 'all'
-              ? 'bg-[#090A28] text-white shadow-sm'
+              ? 'bg-[#12382f] text-white shadow-sm'
               : 'text-gray-600 hover:bg-gray-50'
               }`}
           >
@@ -952,7 +952,7 @@ export default function AdminProductsPage() {
           <button
             onClick={() => setStatusFilter('published')}
             className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${statusFilter === 'published'
-              ? 'bg-[#090A28] text-white shadow-sm'
+              ? 'bg-[#12382f] text-white shadow-sm'
               : 'text-gray-600 hover:bg-gray-50'
               }`}
           >
@@ -981,7 +981,7 @@ export default function AdminProductsPage() {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent"
             />
           </div>
 
@@ -994,7 +994,7 @@ export default function AdminProductsPage() {
               <select
                 value={featuredFilter}
                 onChange={(e) => setFeaturedFilter(e.target.value as 'all' | 'featured' | 'not_featured')}
-                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent text-sm font-medium"
+                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent text-sm font-medium"
               >
                 <option value="all">All Products</option>
                 <option value="featured">⭐ Featured Only</option>
@@ -1008,7 +1008,7 @@ export default function AdminProductsPage() {
               <select
                 value={stockFilter}
                 onChange={(e) => setStockFilter(e.target.value as 'all' | 'in_stock' | 'sold_out')}
-                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent text-sm font-medium"
+                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent text-sm font-medium"
               >
                 <option value="all">All Stock Status</option>
                 <option value="in_stock">✅ In Stock</option>
@@ -1022,7 +1022,7 @@ export default function AdminProductsPage() {
               <select
                 value={listedByFilter}
                 onChange={(e) => setListedByFilter(e.target.value)}
-                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent text-sm font-medium"
+                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent text-sm font-medium"
               >
                 <option value="all">All Uploaders</option>
                 <option value="walid">walid</option>
@@ -1044,7 +1044,7 @@ export default function AdminProductsPage() {
               <select
                 value={checkoutFilter}
                 onChange={(e) => setCheckoutFilter(e.target.value as typeof checkoutFilter)}
-                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent text-sm font-medium"
+                className="px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent text-sm font-medium"
               >
                 <option value="all">All Checkout Methods</option>
                 <option value="stripe">💳 Stripe</option>
@@ -1104,7 +1104,7 @@ export default function AdminProductsPage() {
             <button
               onClick={handleExportGoogleShoppingCSV}
               disabled={exportingGoogleCSV}
-              className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-emerald-700 text-white rounded-xl hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
               title="Export all products formatted specifically for Google Merchant Center CSV"
             >
               {exportingGoogleCSV ? (
@@ -1120,7 +1120,7 @@ export default function AdminProductsPage() {
               <button
                 onClick={handleEnableGmcAllFiltered}
                 disabled={bulkUpdatingGmc !== null || filteredProducts.length === 0}
-                className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-emerald-700 text-white rounded-xl hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
                 title="Enable GMC for all currently filtered products"
               >
                 {bulkUpdatingGmc === 'include' ? (
@@ -1138,7 +1138,7 @@ export default function AdminProductsPage() {
                 <button
                   onClick={() => handleBulkGmcUpdate(true)}
                   disabled={bulkUpdatingGmc !== null || togglingGmc.size > 0}
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-emerald-700 text-white rounded-xl hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
                   title="Include selected products in the Google Merchant Center feed"
                 >
                   {bulkUpdatingGmc === 'include' ? (
@@ -1177,7 +1177,7 @@ export default function AdminProductsPage() {
                 <button
                   onClick={handleExport}
                   disabled={exporting}
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-[#090A28] text-white rounded-xl hover:bg-[#1c2070] transition-colors shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
+                  className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-[#12382f] text-white rounded-xl hover:bg-[#276955] transition-colors shadow-lg shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm shrink-0"
                   title="Export selected products as .zip"
                 >
                   {exporting ? (
@@ -1193,7 +1193,7 @@ export default function AdminProductsPage() {
             {/* Add Product */}
             <Link
               href="/admin/products/new"
-              className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-[#090A28] text-white rounded-xl hover:bg-[#1c2070] transition-colors shadow-lg shadow-[#090A28]/25 whitespace-nowrap text-sm shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-3 py-2.5 bg-[#12382f] text-white rounded-xl hover:bg-[#276955] transition-colors shadow-lg shadow-[#12382f]/25 whitespace-nowrap text-sm shrink-0"
             >
               <Plus className="h-4 w-4" />
               <span className="font-medium">Add Product</span>
@@ -1204,26 +1204,26 @@ export default function AdminProductsPage() {
 
       {/* Selection Controls */}
       {selectedProducts.size > 0 && (
-        <div className="mb-4 px-4 py-3 bg-[#090A28]/5 border border-[#090A28]/20 rounded-xl flex items-center justify-between">
+        <div className="mb-4 px-4 py-3 bg-[#12382f]/5 border border-[#12382f]/20 rounded-xl flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="text-sm font-medium text-[#1c2070]">
+            <span className="text-sm font-medium text-[#276955]">
               {selectedProducts.size} product{selectedProducts.size !== 1 ? 's' : ''} selected
             </span>
             <button
               onClick={handleSelectAll}
-              className="text-sm text-[#090A28] hover:text-[#1c2070] font-medium"
+              className="text-sm text-[#12382f] hover:text-[#276955] font-medium"
             >
               {selectedProducts.size === paginatedProducts.length ? 'Deselect Page' : 'Select Page'}
             </button>
             <button
               onClick={handleSelectAllFiltered}
-              className="text-sm text-[#090A28] hover:text-[#1c2070] font-medium"
+              className="text-sm text-[#12382f] hover:text-[#276955] font-medium"
             >
               {selectedProducts.size === filteredProducts.length && filteredProducts.length > 0 ? 'Deselect All Filtered' : 'Select All Filtered'}
             </button>
             <button
               onClick={() => setSelectedProducts(new Set())}
-              className="text-sm text-[#090A28] hover:text-[#1c2070] font-medium"
+              className="text-sm text-[#12382f] hover:text-[#276955] font-medium"
             >
               Clear Selection
             </button>
@@ -1233,8 +1233,8 @@ export default function AdminProductsPage() {
 
       {/* Filter Status */}
       {(searchQuery || statusFilter !== 'all' || featuredFilter !== 'all' || stockFilter !== 'all' || listedByFilter !== 'all' || checkoutFilter !== 'all') && (
-        <div className="mb-4 px-4 py-2 bg-[#090A28]/5 border border-[#090A28]/20 rounded-xl">
-          <div className="text-sm text-[#1c2070]">
+        <div className="mb-4 px-4 py-2 bg-[#12382f]/5 border border-[#12382f]/20 rounded-xl">
+          <div className="text-sm text-[#276955]">
             Showing <strong>{filteredProducts.length}</strong> of <strong>{products.length}</strong> product{products.length !== 1 ? 's' : ''}
             {statusFilter === 'published' && ` (${products.filter(p => p.published).length} published)`}
             {statusFilter === 'draft' && ` (${products.filter(p => !p.published).length} drafts)`}
@@ -1263,7 +1263,7 @@ export default function AdminProductsPage() {
           <p className="text-gray-500 mb-4">Get started by adding your first product</p>
           <Link
             href="/admin/products/new"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#090A28] text-white rounded-lg hover:bg-[#1c2070]"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#12382f] text-white rounded-lg hover:bg-[#276955]"
           >
             <Plus className="h-4 w-4" />
             Add Product
@@ -1285,12 +1285,12 @@ export default function AdminProductsPage() {
                     handleToggleSelect(product.slug);
                   }}
                   className={`p-1.5 rounded-lg bg-white/90 backdrop-blur-sm border-2 transition-all ${selectedProducts.has(product.slug)
-                    ? 'border-[#090A28] bg-[#090A28]/5'
+                    ? 'border-[#12382f] bg-[#12382f]/5'
                     : 'border-gray-300 hover:border-gray-400'
                     }`}
                 >
                   {selectedProducts.has(product.slug) ? (
-                    <CheckSquare className="h-4 w-4 text-[#090A28]" />
+                    <CheckSquare className="h-4 w-4 text-[#12382f]" />
                   ) : (
                     <Square className="h-4 w-4 text-gray-400" />
                   )}
@@ -1322,13 +1322,13 @@ export default function AdminProductsPage() {
                     </div>
                   )}
                   {(product.isFeatured || product.is_featured) && (
-                    <div className="px-2 py-1 bg-[#090A28] text-white text-xs font-medium rounded-full flex items-center gap-1">
+                    <div className="px-2 py-1 bg-[#12382f] text-white text-xs font-medium rounded-full flex items-center gap-1">
                       <Star className="h-3 w-3 fill-white" />
                       Featured
                     </div>
                   )}
                   {isGmcEnabled(product) && (
-                    <div className="px-2 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+                    <div className="px-2 py-1 bg-emerald-700 text-white text-xs font-semibold rounded-full">
                       GMC
                     </div>
                   )}
@@ -1349,7 +1349,7 @@ export default function AdminProductsPage() {
                     }}
                     disabled={togglingStock === product.slug}
                     className={`p-2 rounded-lg transition-colors ${product.inStock !== false
-                      ? 'bg-green-500 hover:bg-[#090A28]'
+                      ? 'bg-green-500 hover:bg-[#12382f]'
                       : 'bg-red-500 hover:bg-red-600'
                       } disabled:opacity-50`}
                     title={product.inStock !== false ? 'Mark as sold out' : 'Mark as in stock'}
@@ -1369,7 +1369,7 @@ export default function AdminProductsPage() {
                     }}
                     disabled={togglingFeatured === product.slug || (!(product.isFeatured || product.is_featured) && featuredCount >= FEATURE_LIMIT)}
                     className={`p-2 rounded-lg transition-colors ${(product.isFeatured || product.is_featured)
-                      ? 'bg-[#0a3075] hover:bg-[#0a0f32]'
+                      ? 'bg-[#1f5a46] hover:bg-[#102820]'
                       : 'bg-white hover:bg-gray-100'
                       } disabled:opacity-50`}
                     title={(product.isFeatured || product.is_featured) ? 'Remove from featured' : 'Add to featured'}
@@ -1429,14 +1429,14 @@ export default function AdminProductsPage() {
                   disabled={bulkUpdatingGmc !== null || togglingGmc.has(product.slug)}
                   aria-pressed={isGmcEnabled(product)}
                   className={`mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-colors disabled:opacity-60 ${isGmcEnabled(product)
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'bg-emerald-700 text-white hover:bg-emerald-800'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                   title={isGmcEnabled(product) ? 'Remove product from Google Merchant Center feed' : 'Add product to Google Merchant Center feed'}
                 >
                   {togglingGmc.has(product.slug) && <RefreshCw className="h-3.5 w-3.5 animate-spin" />}
                   GMC
-                  <span className={isGmcEnabled(product) ? 'text-blue-100' : 'text-gray-400'}>
+                  <span className={isGmcEnabled(product) ? 'text-emerald-100' : 'text-gray-400'}>
                     {isGmcEnabled(product) ? 'Included' : 'Excluded'}
                   </span>
                 </button>
@@ -1456,7 +1456,7 @@ export default function AdminProductsPage() {
                     title={selectedProducts.size === paginatedProducts.length ? 'Deselect all' : 'Select all'}
                   >
                     {selectedProducts.size === paginatedProducts.length && paginatedProducts.length > 0 ? (
-                      <CheckSquare className="h-4 w-4 text-[#090A28]" />
+                      <CheckSquare className="h-4 w-4 text-[#12382f]" />
                     ) : (
                       <Square className="h-4 w-4 text-gray-400" />
                     )}
@@ -1483,12 +1483,12 @@ export default function AdminProductsPage() {
                         handleToggleSelect(product.slug);
                       }}
                       className={`p-1.5 rounded-lg border-2 transition-all ${selectedProducts.has(product.slug)
-                        ? 'border-[#090A28] bg-[#090A28]/5'
+                        ? 'border-[#12382f] bg-[#12382f]/5'
                         : 'border-gray-300 hover:border-gray-400'
                         }`}
                     >
                       {selectedProducts.has(product.slug) ? (
-                        <CheckSquare className="h-4 w-4 text-[#090A28]" />
+                        <CheckSquare className="h-4 w-4 text-[#12382f]" />
                       ) : (
                         <Square className="h-4 w-4 text-gray-400" />
                       )}
@@ -1524,13 +1524,13 @@ export default function AdminProductsPage() {
                             </span>
                           )}
                           {(product.isFeatured || product.is_featured) && (
-                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-[#090A28]/10 text-[#1c2070] text-[10px] font-medium rounded">
-                              <Star className="h-2.5 w-2.5 fill-[#1c2070]" />
+                            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-[#12382f]/10 text-[#276955] text-[10px] font-medium rounded">
+                              <Star className="h-2.5 w-2.5 fill-[#276955]" />
                               Featured
                             </span>
                           )}
                           {isGmcEnabled(product) && (
-                            <span className="inline-flex items-center px-1.5 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-semibold rounded">
+                            <span className="inline-flex items-center px-1.5 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-semibold rounded">
                               GMC
                             </span>
                           )}
@@ -1574,7 +1574,7 @@ export default function AdminProductsPage() {
                       </span>
                     ) : product.checkoutFlow === 'paypal-invoice' ? (
                       // PayPal Invoice: Not clickable, just a badge
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 text-blue-700 text-sm font-semibold rounded-lg">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 text-emerald-800 text-sm font-semibold rounded-lg">
                         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 2.79A.859.859 0 0 1 5.79 2h7.832c2.585 0 4.383.56 5.392 1.68.476.523.806 1.105.985 1.75.19.68.19 1.377.003 2.092l-.01.04v.554l.44.248a3.09 3.09 0 0 1 .83.698c.44.528.714 1.201.817 2.002.106.82.067 1.81-.116 2.946-.21 1.3-.576 2.426-1.09 3.35-.47.858-1.073 1.56-1.793 2.09-.686.504-1.5.882-2.42 1.12-.887.23-1.896.346-3.003.346h-.715a1.717 1.717 0 0 0-1.7 1.453l-.09.503-.527 3.36-.024.135a.641.641 0 0 1-.633.545z" />
                         </svg>
@@ -1596,7 +1596,7 @@ export default function AdminProductsPage() {
                         PayPal Redirect
                       </span>
                     ) : product.checkoutFlow === 'paypal-api' ? (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-100 text-blue-800 text-sm font-semibold rounded-lg">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 text-emerald-900 text-sm font-semibold rounded-lg">
                         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 2.79A.859.859 0 0 1 5.79 2h7.832c2.585 0 4.383.56 5.392 1.68.476.523.806 1.105.985 1.75.19.68.19 1.377.003 2.092l-.01.04v.554l.44.248a3.09 3.09 0 0 1 .83.698c.44.528.714 1.201.817 2.002.106.82.067 1.81-.116 2.946-.21 1.3-.576 2.426-1.09 3.35-.47.858-1.073 1.56-1.793 2.09-.686.504-1.5.882-2.42 1.12-.887.23-1.896.346-3.003.346h-.715a1.717 1.717 0 0 0-1.7 1.453l-.09.503-.527 3.36-.024.135a.641.641 0 0 1-.633.545z" />
                         </svg>
@@ -1608,12 +1608,12 @@ export default function AdminProductsPage() {
                         href={product.checkoutLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-[#090A28] hover:text-[#1c2070] hover:underline font-medium"
+                        className="inline-flex items-center gap-1.5 text-sm text-[#12382f] hover:text-[#276955] hover:underline font-medium"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <ExternalLink className="h-4 w-4" />
                         {product.checkoutFlow === 'kofi' ? (
-                          <span className="font-semibold text-blue-600">Preview Ko-fi</span>
+                          <span className="font-semibold text-emerald-700">Preview Ko-fi</span>
                         ) : (
                           <span>Preview Buy Me a Coffee</span>
                         )}
@@ -1630,7 +1630,7 @@ export default function AdminProductsPage() {
                       }}
                       disabled={togglingFeatured === product.slug || (!(product.isFeatured || product.is_featured) && featuredCount >= FEATURE_LIMIT)}
                       className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-colors ${(product.isFeatured || product.is_featured)
-                        ? 'bg-[#0a3075]/10 text-[#0a3075] hover:bg-[#0a3075]/15'
+                        ? 'bg-[#1f5a46]/10 text-[#1f5a46] hover:bg-[#1f5a46]/15'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                         } disabled:opacity-50`}
                       title={(product.isFeatured || product.is_featured) ? 'Remove from featured' : 'Add to featured'}
@@ -1638,7 +1638,7 @@ export default function AdminProductsPage() {
                       {togglingFeatured === product.slug ? (
                         <RefreshCw className="h-3 w-3 animate-spin" />
                       ) : (
-                        <Star className={`h-3 w-3 ${(product.isFeatured || product.is_featured) ? 'fill-[#0a3075]' : ''}`} />
+                        <Star className={`h-3 w-3 ${(product.isFeatured || product.is_featured) ? 'fill-[#1f5a46]' : ''}`} />
                       )}
                       {(product.isFeatured || product.is_featured) ? 'Featured' : 'Feature'}
                     </button>
@@ -1650,7 +1650,7 @@ export default function AdminProductsPage() {
                       disabled={bulkUpdatingGmc !== null || togglingGmc.has(product.slug)}
                       aria-pressed={isGmcEnabled(product)}
                       className={`inline-flex min-w-[72px] items-center justify-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold transition-colors disabled:opacity-60 ${isGmcEnabled(product)
-                        ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                        ? 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200'
                         : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                         }`}
                       title={isGmcEnabled(product) ? 'Remove product from Google Merchant Center feed' : 'Add product to Google Merchant Center feed'}
@@ -1703,15 +1703,15 @@ export default function AdminProductsPage() {
                           }}
                           disabled={togglingFeatured === product.slug || (!(product.isFeatured || product.is_featured) && featuredCount >= FEATURE_LIMIT)}
                           className={`p-2 rounded-lg transition-colors disabled:opacity-50 ${(product.isFeatured || product.is_featured)
-                            ? 'hover:bg-[#0a3075]/10'
+                            ? 'hover:bg-[#1f5a46]/10'
                             : 'hover:bg-gray-100'
                             }`}
                           title={(product.isFeatured || product.is_featured) ? 'Unfeature product' : 'Feature product'}
                         >
                           {togglingFeatured === product.slug ? (
-                            <RefreshCw className="h-4 w-4 text-[#0a3075] animate-spin" />
+                            <RefreshCw className="h-4 w-4 text-[#1f5a46] animate-spin" />
                           ) : (
-                            <Star className={`h-4 w-4 ${(product.isFeatured || product.is_featured) ? 'text-[#0a3075] fill-[#0a3075]' : 'text-gray-500'}`} />
+                            <Star className={`h-4 w-4 ${(product.isFeatured || product.is_featured) ? 'text-[#1f5a46] fill-[#1f5a46]' : 'text-gray-500'}`} />
                           )}
                         </button>
                         <Link
@@ -1776,9 +1776,9 @@ export default function AdminProductsPage() {
                               className="w-full px-4 py-2.5 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-3 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                               {togglingFeatured === product.slug ? (
-                                <RefreshCw className="h-4 w-4 text-[#0a3075] animate-spin" />
+                                <RefreshCw className="h-4 w-4 text-[#1f5a46] animate-spin" />
                               ) : (
-                                <Star className={`h-4 w-4 ${(product.isFeatured || product.is_featured) ? 'text-[#0a3075] fill-[#0a3075]' : 'text-gray-400'}`} />
+                                <Star className={`h-4 w-4 ${(product.isFeatured || product.is_featured) ? 'text-[#1f5a46] fill-[#1f5a46]' : 'text-gray-400'}`} />
                               )}
                               <span>{(product.isFeatured || product.is_featured) ? 'Unfeature Product' : 'Feature Product'}</span>
                             </button>
@@ -1794,9 +1794,9 @@ export default function AdminProductsPage() {
                               className="w-full px-4 py-2.5 text-left text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-3 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                               {togglingGmc.has(product.slug) ? (
-                                <RefreshCw className="h-4 w-4 text-blue-600 animate-spin" />
+                                <RefreshCw className="h-4 w-4 text-emerald-700 animate-spin" />
                               ) : (
-                                <span className={`flex h-4 min-w-8 items-center justify-center rounded px-1 text-[9px] font-bold ${isGmcEnabled(product) ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                <span className={`flex h-4 min-w-8 items-center justify-center rounded px-1 text-[9px] font-bold ${isGmcEnabled(product) ? 'bg-emerald-700 text-white' : 'bg-gray-200 text-gray-500'}`}>
                                   GMC
                                 </span>
                               )}

@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Shipping & Delivery | Cokaro',
-  description: 'Cokaro Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+  title: 'Shipping & Delivery | BallardKellyScott',
+  description: 'BallardKellyScott Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
 };
 
 export default function ShippingPolicyPage() {
@@ -12,15 +12,15 @@ export default function ShippingPolicyPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://cokaro.com/shipping-policy',
-        'url': 'https://cokaro.com/shipping-policy',
-        'name': 'Shipping & Delivery | Cokaro',
+        '@id': 'https://BallardKellyScott.shop/shipping-policy',
+        'url': 'https://BallardKellyScott.shop/shipping-policy',
+        'name': 'Shipping & Delivery | BallardKellyScott',
         'description':
-          'Cokaro Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+          'BallardKellyScott Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
       },
       {
         '@type': 'OfferShippingDetails',
-        '@id': 'https://cokaro.com/shipping-policy#shipping-us',
+        '@id': 'https://BallardKellyScott.shop/shipping-policy#shipping-us',
         'shippingDestination': {
           '@type': 'DefinedRegion',
           'addressCountry': 'US',
@@ -61,11 +61,11 @@ export default function ShippingPolicyPage() {
       <div className="container mx-auto max-w-4xl px-4">
         
         {/* Header Section */}
-        <section className="mb-10 rounded-2xl bg-[#0a3075] px-6 py-8 text-[#F0F6FF] sm:px-8 sm:py-10 shadow-lg">
+        <section className="mb-10 rounded-2xl bg-[#1f5a46] px-6 py-8 text-[#f2f7f4] sm:px-8 sm:py-10 shadow-lg">
           <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Shipping & Delivery
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-7 text-[#F0F6FF]/80 sm:text-lg">
+          <p className="mt-5 max-w-3xl text-base leading-7 text-[#f2f7f4]/80 sm:text-lg">
             Review our shipping and delivery details, tracking information, and fulfillment policies.
           </p>
         </section>
@@ -109,7 +109,7 @@ export default function ShippingPolicyPage() {
               Once shipped, you’ll receive an email with a tracking number. Please allow up to 48 hours for tracking updates.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              If your order hasn’t arrived within 20 days, email us at <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline font-medium">contact@cokaro.com</a> with your name and order number.
+              If your order hasn’t arrived within 20 days, email us at <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline font-medium">contact@BallardKellyScott.shop</a> with your name and order number.
             </p>
           </section>
 
@@ -122,7 +122,7 @@ export default function ShippingPolicyPage() {
               If your item arrives damaged, email us with your order number and a photo. We’ll do our best to resolve it.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              For full details, visit our <Link href="/return-policy" className="text-[#0a3075] hover:underline font-medium">Return Policy</Link>.
+              For full details, visit our <Link href="/return-policy" className="text-[#1f5a46] hover:underline font-medium">Return Policy</Link>.
             </p>
           </section>
 
@@ -134,7 +134,7 @@ export default function ShippingPolicyPage() {
             <div className="space-y-4 text-gray-600">
               <p>
                 <strong>📍 Address:</strong>{' '}
-                <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#0a3075] hover:underline">
+                <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#1f5a46] hover:underline">
                   1239 N Washington Ave, Wichita, KS 67214, USA
                 </a>
               </p>
@@ -143,8 +143,8 @@ export default function ShippingPolicyPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline">
-                  contact@cokaro.com
+                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKellyScott.shop
                 </a>
               </p>
             </div>

@@ -4,42 +4,42 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 const socialIconClass =
-  'inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#4575ba]/60 text-[#F0F6FF] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#4575ba] hover:bg-[#4575ba] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a3075]';
+  'inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#5f8f7a]/60 text-[#f2f7f4] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#5f8f7a] hover:bg-[#5f8f7a] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1f5a46]';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a3075] text-[#F0F6FF]">
+    <footer className="bg-[#1f5a46] text-[#f2f7f4]">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.5fr_0.9fr_0.75fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
                 src="/logosvg.svg"
-                alt="Cokaro Logo"
-                width={160}
-                height={36}
-                className="h-auto w-36 brightness-0 invert sm:w-40"
+                alt="BallardKellyScott Logo"
+                width={260}
+                height={46}
+                className="h-auto w-52 brightness-0 invert sm:w-64"
               />
             </Link>
-            <p className="mb-4 text-[#F0F6FF]">
-              Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for homes, backyards, acreage, and farm upkeep.
+            <p className="mb-4 text-[#f2f7f4]">
+              BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for homes, backyards, acreage, and farm upkeep.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
-                <Phone className="h-5 w-5 shrink-0 text-[#4575ba] mr-2" />
-                <a href="tel:+1 (913) 593-7677" className="hover:text-[#f5970c] transition-colors duration-300">
+                <Phone className="h-5 w-5 shrink-0 text-[#5f8f7a] mr-2" />
+                <a href="tel:+1 (913) 593-7677" className="hover:text-[#c8942f] transition-colors duration-300">
                   <span className="font-semibold">United States:</span> +1 (913) 593-7677
                 </a>
               </div>
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-[#4575ba] mr-2" />
-                <a href="mailto:contact@cokaro.com" className="hover:text-[#f5970c] transition-colors duration-300">
-                  contact@cokaro.com
+                <Mail className="h-5 w-5 text-[#5f8f7a] mr-2" />
+                <a href="mailto:contact@BallardKellyScott.shop" className="hover:text-[#c8942f] transition-colors duration-300">
+                  contact@BallardKellyScott.shop
                 </a>
               </div>
 
               <div className="flex items-start">
-                <MapPin className="h-5 w-5 shrink-0 text-[#4575ba] mr-2 mt-1" />
+                <MapPin className="h-5 w-5 shrink-0 text-[#5f8f7a] mr-2 mt-1" />
                 <div>
                   <span className="block font-semibold text-white">Address</span>
                   <span>1239 N Washington Ave, Wichita, KS 67214, USA</span>
@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="pt-2 flex gap-3">
                 <a
-                  href="https://www.tiktok.com/@cokaro_officiel"
+                  href="https://www.tiktok.com/@BallardKellyScott_officiel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}
@@ -58,7 +58,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/cokaro_officiel/"
+                  href="https://www.instagram.com/BallardKellyScott_officiel/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}
@@ -67,7 +67,7 @@ const Footer = () => {
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.pinterest.com/cokaro_officiel/"
+                  href="https://www.pinterest.com/BallardKellyScott_officiel/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}
@@ -82,56 +82,56 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Shop Collections</h3>
+            <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Shop Collections</h3>
             <ul className="space-y-2">
-              <li><Link href="/search" className="hover:text-[#f5970c] transition-colors duration-300">All Products</Link></li>
-              <li><Link href="/search?category=Lawn+Mowers" className="hover:text-[#f5970c] transition-colors duration-300">Lawn Mowers</Link></li>
-              <li><Link href="/search?category=Pressure+Washers" className="hover:text-[#f5970c] transition-colors duration-300">Pressure Washers</Link></li>
-              <li><Link href="/search?category=Outdoor+Power+Equipment" className="hover:text-[#f5970c] transition-colors duration-300">Outdoor Power Equipment</Link></li>
+              <li><Link href="/search" className="hover:text-[#c8942f] transition-colors duration-300">All Products</Link></li>
+              <li><Link href="/search?category=Lawn+Mowers" className="hover:text-[#c8942f] transition-colors duration-300">Lawn Mowers</Link></li>
+              <li><Link href="/search?category=Pressure+Washers" className="hover:text-[#c8942f] transition-colors duration-300">Pressure Washers</Link></li>
+              <li><Link href="/search?category=Outdoor+Power+Equipment" className="hover:text-[#c8942f] transition-colors duration-300">Outdoor Power Equipment</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Navigation</h3>
+            <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Navigation</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-[#f5970c] transition-colors duration-300">Home</Link></li>
-              <li><Link href="/#products" className="hover:text-[#f5970c] transition-colors duration-300">Products</Link></li>
-              <li><Link href="/#featured" className="hover:text-[#f5970c] transition-colors duration-300">Featured</Link></li>
-              <li><Link href="/track" className="hover:text-[#f5970c] transition-colors duration-300">Track Order</Link></li>
-              <li><Link href="/contact" className="hover:text-[#f5970c] transition-colors duration-300">Contact Us</Link></li>
+              <li><Link href="/" className="hover:text-[#c8942f] transition-colors duration-300">Home</Link></li>
+              <li><Link href="/#products" className="hover:text-[#c8942f] transition-colors duration-300">Products</Link></li>
+              <li><Link href="/#featured" className="hover:text-[#c8942f] transition-colors duration-300">Featured</Link></li>
+              <li><Link href="/track" className="hover:text-[#c8942f] transition-colors duration-300">Track Order</Link></li>
+              <li><Link href="/contact" className="hover:text-[#c8942f] transition-colors duration-300">Contact Us</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Policies</h3>
+            <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Policies</h3>
             <ul className="space-y-2">
-              <li><Link href="/privacy-policy" className="hover:text-[#f5970c] transition-colors duration-300">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-[#f5970c] transition-colors duration-300">Terms of Service</Link></li>
-              <li><Link href="/billing-policy" className="hover:text-[#f5970c] transition-colors duration-300">Billing Policy</Link></li>
-              <li><Link href="/billing-term-and-condition" className="hover:text-[#f5970c] transition-colors duration-300">Billing Terms & Conditions</Link></li>
-              <li><Link href="/return-policy" className="hover:text-[#f5970c] transition-colors duration-300">Refund & Return Policy</Link></li>
-              <li><Link href="/shipping-policy" className="hover:text-[#f5970c] transition-colors duration-300">Shipping Policy</Link></li>
-              <li><Link href="/warranty-replacement" className="hover:text-[#f5970c] transition-colors duration-300">Warranty & Replacement</Link></li>
-              <li><Link href="/cookies" className="hover:text-[#f5970c] transition-colors duration-300">Cookies Policy</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-[#c8942f] transition-colors duration-300">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#c8942f] transition-colors duration-300">Terms of Service</Link></li>
+              <li><Link href="/billing-policy" className="hover:text-[#c8942f] transition-colors duration-300">Billing Policy</Link></li>
+              <li><Link href="/billing-term-and-condition" className="hover:text-[#c8942f] transition-colors duration-300">Billing Terms & Conditions</Link></li>
+              <li><Link href="/return-policy" className="hover:text-[#c8942f] transition-colors duration-300">Refund & Return Policy</Link></li>
+              <li><Link href="/shipping-policy" className="hover:text-[#c8942f] transition-colors duration-300">Shipping Policy</Link></li>
+              <li><Link href="/warranty-replacement" className="hover:text-[#c8942f] transition-colors duration-300">Warranty & Replacement</Link></li>
+              <li><Link href="/cookies" className="hover:text-[#c8942f] transition-colors duration-300">Cookies Policy</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#F0F6FF] mb-4">Company & Help</h3>
+            <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Company & Help</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="hover:text-[#f5970c] transition-colors duration-300">About Us</Link></li>
-              <li><Link href="/frequently-asked-questions" className="hover:text-[#f5970c] transition-colors duration-300">FAQs</Link></li>
-              <li><Link href="/local-pickup" className="hover:text-[#f5970c] transition-colors duration-300">Local Pickup Guide</Link></li>
-              <li><Link href="/wholesale-policies" className="hover:text-[#f5970c] transition-colors duration-300">Wholesale Policies</Link></li>
-              <li><Link href="/report-security-issues" className="hover:text-[#f5970c] transition-colors duration-300">Report Security Issues</Link></li>
-              <li><Link href="/livechat" className="hover:text-[#f5970c] transition-colors duration-300">Live Chat</Link></li>
+              <li><Link href="/about" className="hover:text-[#c8942f] transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/frequently-asked-questions" className="hover:text-[#c8942f] transition-colors duration-300">FAQs</Link></li>
+              <li><Link href="/local-pickup" className="hover:text-[#c8942f] transition-colors duration-300">Local Pickup Guide</Link></li>
+              <li><Link href="/wholesale-policies" className="hover:text-[#c8942f] transition-colors duration-300">Wholesale Policies</Link></li>
+              <li><Link href="/report-security-issues" className="hover:text-[#c8942f] transition-colors duration-300">Report Security Issues</Link></li>
+              <li><Link href="/livechat" className="hover:text-[#c8942f] transition-colors duration-300">Live Chat</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-[#F0F6FF]/20 mt-12 pt-8">
+        <div className="border-t border-[#f2f7f4]/20 mt-12 pt-8">
           <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
-            <p>© 2026 Cokaro. All rights reserved.</p>
+            <p>© 2026 BallardKellyScott. All rights reserved.</p>
             <div className="flex items-center justify-center sm:justify-end">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

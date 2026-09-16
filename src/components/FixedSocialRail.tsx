@@ -17,7 +17,7 @@ const LEGAL_PAGE_PATHS = new Set([
 const socialLinks = [
   {
     name: 'TikTok',
-    href: 'https://www.tiktok.com/@cokaro_officiel',
+    href: 'https://www.tiktok.com/@BallardKellyScott_officiel',
     className: 'bg-black text-white hover:bg-[#111827]',
     icon: (
       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -27,13 +27,13 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/cokaro_officiel/',
+    href: 'https://www.instagram.com/BallardKellyScott_officiel/',
     className: 'bg-[#C94775] text-white hover:bg-[#B73C68]',
     icon: <Instagram className="h-4 w-4" aria-hidden="true" />,
   },
   {
     name: 'Pinterest',
-    href: 'https://www.pinterest.com/cokaro_officiel/',
+    href: 'https://www.pinterest.com/BallardKellyScott_officiel/',
     className: 'bg-[#D8222F] text-white hover:bg-[#C51D29]',
     icon: (
       <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -60,7 +60,7 @@ export default function FixedSocialRail() {
 
   return (
     <nav
-      aria-label="Cokaro social media"
+      aria-label="BallardKellyScott social media"
       className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 overflow-hidden rounded-l-md shadow-[0_12px_30px_rgba(10,48,117,0.18)] md:block"
     >
       <div className="flex flex-col">
@@ -70,8 +70,8 @@ export default function FixedSocialRail() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Follow Cokaro on ${link.name}`}
-            className={`flex h-11 w-11 items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a3075] ${link.className}`}
+            aria-label={`Follow BallardKellyScott on ${link.name}`}
+            className={`flex h-11 w-11 items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1f5a46] ${link.className}`}
           >
             {link.icon}
           </a>

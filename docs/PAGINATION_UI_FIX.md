@@ -98,9 +98,9 @@ const end = Math.min(totalPages, currentPage + range);
 ## Styling
 
 ### Colors
-- **Active page:** `bg-[#0046be]` (brand blue) with white text
+- **Active page:** `bg-[#2e7a62]` (brand blue) with white text
 - **Inactive pages:** White background with gray border
-- **Hover:** Light blue background (`hover:bg-blue-50`)
+- **Hover:** Light blue background (`hover:bg-emerald-50`)
 - **Disabled:** Gray background with gray text
 
 ### Spacing

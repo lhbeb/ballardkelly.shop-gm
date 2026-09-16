@@ -49,7 +49,7 @@ export default function StripeEmbeddedCheckout({
         setStripePromise(loadStripe(data.publishableKey));
       } catch (error) {
         console.error('Failed to load Stripe config:', error);
-        setConfigError('Payment is temporarily unavailable. Please email contact@cokaro.com.');
+        setConfigError('Payment is temporarily unavailable. Please email contact@BallardKellyScott.shop.');
       }
     };
 
@@ -69,7 +69,7 @@ export default function StripeEmbeddedCheckout({
             <button
               type="button"
               onClick={onBack}
-              className="mb-5 inline-flex items-center gap-2 text-sm font-medium text-[#090A28] transition-colors hover:text-[#1c2070]"
+              className="mb-5 inline-flex items-center gap-2 text-sm font-medium text-[#12382f] transition-colors hover:text-[#276955]"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to checkout
@@ -77,22 +77,22 @@ export default function StripeEmbeddedCheckout({
           )}
 
           <div className="mb-6 flex flex-col items-center text-center">
-            <span className="mb-2 inline-flex items-center justify-center rounded-full bg-blue-100 p-2">
-              <Check className="h-7 w-7 text-[#090A28]" />
+            <span className="mb-2 inline-flex items-center justify-center rounded-full bg-emerald-100 p-2">
+              <Check className="h-7 w-7 text-[#12382f]" />
             </span>
             <h1 className="text-2xl font-extrabold tracking-tight text-[#262626] sm:text-3xl">
               Secure Payment
             </h1>
             <p className="mt-2 text-base text-gray-600">
-              Complete your payment below without leaving Cokaro.
+              Complete your payment below without leaving BallardKellyScott.
             </p>
           </div>
 
           <div className="grid gap-4 lg:grid-cols-2">
-            <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+            <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
               <div className="mb-2 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-[#090A28]" />
-                <span className="font-semibold text-[#090A28]">Confirmed Delivery Address</span>
+                <MapPin className="h-5 w-5 text-[#12382f]" />
+                <span className="font-semibold text-[#12382f]">Confirmed Delivery Address</span>
               </div>
               <div className="leading-relaxed text-gray-800">
                 {shippingData.streetAddress && <div>{shippingData.streetAddress}</div>}
@@ -106,7 +106,7 @@ export default function StripeEmbeddedCheckout({
                 )}
               </div>
               {shippingData.email && (
-                <div className="mt-3 flex items-center gap-2 text-[#090A28]">
+                <div className="mt-3 flex items-center gap-2 text-[#12382f]">
                   <Mail className="h-5 w-5" />
                   <span>{shippingData.email}</span>
                 </div>
@@ -120,12 +120,12 @@ export default function StripeEmbeddedCheckout({
               <div className="text-lg font-bold leading-tight text-[#262626]">{product.title}</div>
               {sellerName && (
                 <div className="mt-1 text-sm text-gray-500">
-                  Sold by: <span className="font-medium text-[#090A28]">{sellerName}</span>
+                  Sold by: <span className="font-medium text-[#12382f]">{sellerName}</span>
                 </div>
               )}
               <div className="mt-5 flex items-end justify-between border-t border-gray-100 pt-4">
                 <span className="text-sm font-semibold text-gray-500">Total</span>
-                <span className="text-2xl font-extrabold text-[#090A28]">{formattedPrice}</span>
+                <span className="text-2xl font-extrabold text-[#12382f]">{formattedPrice}</span>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function StripeEmbeddedCheckout({
             </EmbeddedCheckoutProvider>
           ) : (
             <div className="flex min-h-[420px] flex-col items-center justify-center">
-              <div className="mb-4 h-12 w-12 animate-spin rounded-full border-4 border-[#090A28]/25 border-t-[#090A28]" />
+              <div className="mb-4 h-12 w-12 animate-spin rounded-full border-4 border-[#12382f]/25 border-t-[#12382f]" />
               <span className="font-medium text-gray-700">Loading secure payment form...</span>
             </div>
           )}

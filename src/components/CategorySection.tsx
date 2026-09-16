@@ -50,7 +50,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               <ProductCard
                 key={product.id}
                 product={product}
-                cardBackground="bg-[#dce5f2] ring-1 ring-[#c2d1e7]"
+                cardBackground="bg-[#dde9e1] ring-1 ring-[#bfd3c7]"
                 imageBackground="bg-white"
                 showFullImage
               />

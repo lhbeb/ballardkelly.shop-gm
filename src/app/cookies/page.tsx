@@ -9,7 +9,7 @@ const CookiesPage = () => (
       <div className="prose max-w-none text-gray-700 space-y-8">
         {/* Introduction */}
         <p className="text-lg leading-relaxed">
-          This Cookies Policy explains how Cokaro uses cookies and similar tracking technologies on our website, where we sell and resell outdoor power, lawn, backyard, home-care, and farm-care equipment. By using our website, you agree to the use of cookies as described in this policy.
+          This Cookies Policy explains how BallardKellyScott uses cookies and similar tracking technologies on our website, where we sell and resell outdoor power, lawn, backyard, home-care, and farm-care equipment. By using our website, you agree to the use of cookies as described in this policy.
         </p>
 
         <ResellerBrandNotice compact />
@@ -111,7 +111,7 @@ const CookiesPage = () => (
             </div>
             <div>
               <div className="font-medium text-[#262626] mb-1">Email:</div>
-              <div className="text-gray-600">contact@cokaro.com</div>
+              <div className="text-gray-600">contact@BallardKellyScott.shop</div>
             </div>
 
             <div>
@@ -127,7 +127,7 @@ const CookiesPage = () => (
         </div>
 
         {/* Important Note */}
-        <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mt-10">
+        <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200 mt-10">
           <h3 className="text-xl font-bold text-[#262626] mb-3">Important Note</h3>
           <p>
             By continuing to use our website, you agree to our use of cookies as described in this policy. If you do not agree, please adjust your browser settings accordingly.

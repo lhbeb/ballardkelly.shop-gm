@@ -5,7 +5,7 @@
 ### Full Layout
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║  🎨 GRADIENT BLUE HEADER (from-[#0046be] to-[#003494])          ║
+║  🎨 GRADIENT BLUE HEADER (from-[#2e7a62] to-[#003494])          ║
 ║                                                                  ║
 ║  ┌────────────┐         ┌──────────────┐         ┌────────────┐║
 ║  │ < Orders   │         │  PRODUCTS    │         │Add Product>│║
@@ -231,7 +231,7 @@ Skips pages 2 and 3 directly!
 
 ### Header Gradient
 ```
-Start:  #0046be  ██████  (Brand Blue)
+Start:  #2e7a62  ██████  (Brand Blue)
 End:    #003494  ██████  (Dark Blue)
 ```
 
@@ -239,7 +239,7 @@ End:    #003494  ██████  (Dark Blue)
 ```
 Title:        White   ████  with drop-shadow
 Breadcrumb:   White/80 ████  (80% opacity)
-Active pill:  #0046be ██████  (on white bg)
+Active pill:  #2e7a62 ██████  (on white bg)
 Inactive:     White   ████  (on transparent)
 ```
 
@@ -322,7 +322,7 @@ Keyboard Nav       Tab through buttons
                    Enter/Space to activate
 
 Focus Rings        focus:ring-4 on all buttons
-                   focus:ring-[#0046be]
+                   focus:ring-[#2e7a62]
 
 Color Contrast     WCAG AA compliant
                    White on blue: 4.5:1+

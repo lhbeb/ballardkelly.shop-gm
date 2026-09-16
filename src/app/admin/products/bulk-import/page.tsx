@@ -142,12 +142,12 @@ export default function BulkImportPage() {
         )}
 
         {uploadProgress && (
-          <div className="mb-6 p-4 bg-[#090A28]/5 border border-[#090A28]/20 rounded-lg">
+          <div className="mb-6 p-4 bg-[#12382f]/5 border border-[#12382f]/20 rounded-lg">
             <div className="flex items-center gap-3">
               <Loader2 className="h-5 w-5 text-[#06092a] animate-spin flex-shrink-0" />
               <div className="flex-1">
-                <div className="text-sm font-semibold text-[#1c2070]">Processing...</div>
-                <div className="text-sm text-[#1c2070]">{uploadProgress}</div>
+                <div className="text-sm font-semibold text-[#276955]">Processing...</div>
+                <div className="text-sm text-[#276955]">{uploadProgress}</div>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function BulkImportPage() {
           <h2 className="text-lg font-semibold mb-4">How to Use Bulk Import</h2>
           <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-start gap-2">
-              <span className="font-semibold text-[#0046be]">1.</span>
+              <span className="font-semibold text-[#2e7a62]">1.</span>
               <div>
                 <strong>Prepare your ZIP file:</strong> Each product should be in its own folder inside the ZIP.
                 <div className="mt-2 p-3 bg-gray-50 rounded border font-mono text-xs">
@@ -198,7 +198,7 @@ export default function BulkImportPage() {
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <span className="font-semibold text-[#0046be]">2.</span>
+              <span className="font-semibold text-[#2e7a62]">2.</span>
               <div>
                 <strong>product.json structure:</strong> Add any product fields you have. Missing fields will not reject the product; the importer derives a slug, discovers bundled images, and supplies neutral defaults where the database requires a value.
                 <div className="mt-2 p-3 bg-gray-50 rounded border font-mono text-xs">
@@ -217,13 +217,13 @@ export default function BulkImportPage() {
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <span className="font-semibold text-[#0046be]">3.</span>
+              <span className="font-semibold text-[#2e7a62]">3.</span>
               <div>
                 <strong>Upload ZIP file:</strong> Maximum size is 8MB per ZIP. Images will be automatically uploaded to Supabase Storage.
               </div>
             </div>
             <div className="flex items-start gap-2">
-              <span className="font-semibold text-[#0046be]">4.</span>
+              <span className="font-semibold text-[#2e7a62]">4.</span>
               <div>
                 <strong>Note:</strong> Products with the same slug will be updated (upserted). Images will be renamed to img1, img2, img3, etc.
               </div>
@@ -243,7 +243,7 @@ export default function BulkImportPage() {
             className={`
                 border-2 border-dashed rounded-lg p-12 text-center transition-colors
                 ${dragActive
-                ? 'border-[#090A28] bg-[#090A28]/5'
+                ? 'border-[#12382f] bg-[#12382f]/5'
                 : 'border-gray-300 hover:border-gray-400 bg-gray-50'
               }
                 ${uploading ? 'opacity-50 pointer-events-none' : 'cursor-pointer'}
@@ -281,7 +281,7 @@ export default function BulkImportPage() {
                 <div className="mt-4">
                   <button
                     type="button"
-                    className="inline-flex items-center gap-2 px-6 py-2 bg-[#0046be] text-white rounded-lg hover:bg-[#003494] transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-2 bg-[#2e7a62] text-white rounded-lg hover:bg-[#003494] transition-colors"
                   >
                     <Upload className="h-5 w-5" />
                     Select ZIP File
@@ -361,7 +361,7 @@ export default function BulkImportPage() {
                 const input = document.getElementById('zip-file-input') as HTMLInputElement;
                 if (input) input.value = '';
               }}
-              className="px-6 py-2 bg-[#0046be] text-white rounded-lg hover:bg-[#003494] transition-colors"
+              className="px-6 py-2 bg-[#2e7a62] text-white rounded-lg hover:bg-[#003494] transition-colors"
             >
               Import Another ZIP
             </button>

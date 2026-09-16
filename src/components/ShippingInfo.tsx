@@ -16,7 +16,7 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
       <div className="grid grid-cols-1 divide-y divide-[#E8EEF8] md:grid-cols-3 md:divide-x md:divide-y-0">
         <div className="px-5 py-5 sm:px-6">
           <div className="flex items-start gap-3">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#EEF4FF] text-[#0a3075]">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#eef6f1] text-[#1f5a46]">
               <MapPin className="h-4 w-4" />
             </div>
             <div className="min-w-0">
@@ -30,7 +30,7 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
 
         <div className="px-5 py-5 sm:px-6">
           <div className="flex items-start gap-3">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#EEF4FF] text-[#0a3075]">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#eef6f1] text-[#1f5a46]">
               <Truck className="h-4 w-4" />
             </div>
             <div className="min-w-0">
@@ -44,7 +44,7 @@ const ShippingInfo: React.FC<ShippingInfoProps> = ({ className = '', targetMarke
 
         <div className="px-5 py-5 sm:px-6">
           <div className="flex items-start gap-3">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#EEF4FF] text-[#0a3075]">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-[#eef6f1] text-[#1f5a46]">
               <RefreshCw className="h-4 w-4" />
             </div>
             <div className="min-w-0">

@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
     stripe_user: {
       url: request.nextUrl.origin,
       physical_product: 'true',
-      product_description: 'Outdoor power equipment sold through Cokaro.',
+      product_description: 'Outdoor power equipment sold through BallardKellyScott.',
     },
   });
 

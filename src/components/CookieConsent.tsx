@@ -32,13 +32,13 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50" style={{ backgroundColor: '#0a3075' }}>
+    <div className="fixed bottom-0 left-0 right-0 z-50" style={{ backgroundColor: '#1f5a46' }}>
       <div className="px-4 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6">
           {/* Text */}
           <div className="flex items-center space-x-2 text-center sm:text-left">
-            <Cookie className="h-5 w-5 text-[#F0F6FF] flex-shrink-0" />
-            <p className="text-[#F0F6FF] text-sm">
+            <Cookie className="h-5 w-5 text-[#f2f7f4] flex-shrink-0" />
+            <p className="text-[#f2f7f4] text-sm">
               We use cookies to enhance your experience.
               <Link href="/cookies" className="underline ml-1">Learn more</Link>
             </p>
@@ -48,19 +48,19 @@ const CookieConsent: React.FC = () => {
           <div className="flex items-center space-x-3 sm:space-x-4">
             <button
               onClick={handleDecline}
-              className="px-4 sm:px-6 py-2 text-[#F0F6FF] border border-[#F0F6FF]/20 rounded-md hover:bg-[#F0F6FF]/10 transition-colors text-sm font-medium"
+              className="px-4 sm:px-6 py-2 text-[#f2f7f4] border border-[#f2f7f4]/20 rounded-md hover:bg-[#f2f7f4]/10 transition-colors text-sm font-medium"
             >
               Decline
             </button>
             <button
               onClick={handleAccept}
-              className="px-4 sm:px-6 py-2 bg-[#0a3075] text-[#F0F6FF] border border-[#F0F6FF]/20 rounded-md hover:bg-[#0a0f32] transition-colors text-sm font-bold"
+              className="px-4 sm:px-6 py-2 bg-[#1f5a46] text-[#f2f7f4] border border-[#f2f7f4]/20 rounded-md hover:bg-[#102820] transition-colors text-sm font-bold"
             >
               Accept All Cookies
             </button>
             <button
               onClick={handleClose}
-              className="text-[#F0F6FF]/80 hover:text-[#F0F6FF] transition-colors p-2"
+              className="text-[#f2f7f4]/80 hover:text-[#f2f7f4] transition-colors p-2"
               aria-label="Close cookie consent"
             >
               <X className="h-5 w-5" />

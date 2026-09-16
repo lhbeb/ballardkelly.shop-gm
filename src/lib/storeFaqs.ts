@@ -7,17 +7,17 @@ export interface StoreFaq {
 
 export const STORE_FAQS: readonly StoreFaq[] = [
   {
-    question: 'What products does Cokaro sell?',
+    question: 'What products does BallardKellyScott sell?',
     answer:
-      'Cokaro sells and resells outdoor power and property-care equipment for homes, backyards, acreage, and farms, including lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials from product marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, and Husqvarna.',
+      'BallardKellyScott sells and resells outdoor power and property-care equipment for homes, backyards, acreage, and farms, including lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials from product marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, and Husqvarna.',
   },
   {
-    question: 'Is Cokaro affiliated with the brands shown?',
+    question: 'Is BallardKellyScott affiliated with the brands shown?',
     answer:
-      'Cokaro is an independent ecommerce seller and reseller. Some listings may come through authorized reseller or supplier relationships where applicable; others come through verified resale, supplier, marketplace, auction, liquidation, overstock, or private seller channels. Brand and model names are used to identify products and remain the property of their respective owners.',
+      'BallardKellyScott is an independent ecommerce seller and reseller. Some listings may come through authorized reseller or supplier relationships where applicable; others come through verified resale, supplier, marketplace, auction, liquidation, overstock, or private seller channels. Brand and model names are used to identify products and remain the property of their respective owners.',
   },
   {
-    question: 'How does Cokaro review products before sale?',
+    question: 'How does BallardKellyScott review products before sale?',
     answer:
       'Products handled through our warehouse are reviewed for listing accuracy, condition, and function where applicable before fulfillment. The product page shows the available condition and listing details before you order.',
   },
@@ -34,7 +34,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'Where do you ship and how long does delivery take?',
     answer:
-      'Cokaro currently offers free standard shipping across the United States. Orders are processed within 1 business day, transit time is 1-3 business days, and tracking is provided after an eligible order is dispatched.',
+      'BallardKellyScott currently offers free standard shipping across the United States. Orders are processed within 1 business day, transit time is 1-3 business days, and tracking is provided after an eligible order is dispatched.',
     linkHref: '/shipping-policy',
     linkLabel: 'Read our Shipping Policy',
   },
@@ -70,9 +70,9 @@ export const STORE_FAQS: readonly StoreFaq[] = [
       'Contact us as soon as possible. We will try to help before fulfillment begins, but changes or cancellations cannot be guaranteed after an order has entered processing or shipped.',
   },
   {
-    question: 'How can I contact Cokaro?',
+    question: 'How can I contact BallardKellyScott?',
     answer:
-      'You can use our contact form, email contact@cokaro.com, or call +1 (913) 593-7677 during published support hours.',
+      'You can use our contact form, email contact@BallardKellyScott.shop, or call +1 (913) 593-7677 during published support hours.',
     linkHref: '/contact',
     linkLabel: 'Contact our team',
   },

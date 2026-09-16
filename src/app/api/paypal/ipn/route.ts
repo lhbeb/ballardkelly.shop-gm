@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'Cokaro-IPN-Verification',
+        'User-Agent': 'BallardKellyScott-IPN-Verification',
       },
       body: verificationPayload,
     });

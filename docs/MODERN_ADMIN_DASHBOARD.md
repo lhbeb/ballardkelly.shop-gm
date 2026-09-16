@@ -178,7 +178,7 @@ Click any item to navigate:
 Current page is highlighted in blue:
 ```
 Normal:   bg-gray-100 text-gray-700
-Active:   bg-[#0046be] text-white shadow-md
+Active:   bg-[#2e7a62] text-white shadow-md
 ```
 
 ### **Mobile Menu**
@@ -193,7 +193,7 @@ Active:   bg-[#0046be] text-white shadow-md
 ### **Sidebar**
 - Background: White (`#FFFFFF`)
 - Border: Light gray (`#E5E7EB`)
-- Active item: Brand blue (`#0046be`)
+- Active item: Brand blue (`#2e7a62`)
 - Hover: Light gray (`#F3F4F6`)
 
 ### **Header**
@@ -206,9 +206,9 @@ Active:   bg-[#0046be] text-white shadow-md
 - Content cards: White with shadows
 
 ### **Brand Colors**
-- Primary: `#0046be` (Blue)
+- Primary: `#2e7a62` (Blue)
 - Primary Dark: `#003494` (Dark Blue)
-- Gradient: `from-[#0046be] to-[#003494]`
+- Gradient: `from-[#2e7a62] to-[#003494]`
 
 ---
 

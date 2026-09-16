@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Billing Terms and Conditions | Cokaro',
-  description: 'Billing terms, conditions, and payment security information for Cokaro.',
+  title: 'Billing Terms and Conditions | BallardKellyScott',
+  description: 'Billing terms, conditions, and payment security information for BallardKellyScott.',
 };
 
 export default function BillingTermsPage() {
@@ -12,11 +12,11 @@ export default function BillingTermsPage() {
       <div className="container mx-auto max-w-4xl px-4">
         
         {/* Header Section */}
-        <section className="mb-10 rounded-2xl bg-[#0a3075] px-6 py-8 text-[#F0F6FF] sm:px-8 sm:py-10 shadow-lg">
+        <section className="mb-10 rounded-2xl bg-[#1f5a46] px-6 py-8 text-[#f2f7f4] sm:px-8 sm:py-10 shadow-lg">
           <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">
             Billing Terms and Conditions
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-7 text-[#F0F6FF]/80 sm:text-lg">
+          <p className="mt-5 max-w-3xl text-base leading-7 text-[#f2f7f4]/80 sm:text-lg">
             Information regarding our payment terms, PCI compliance, and how we protect your payment information.
           </p>
         </section>
@@ -27,14 +27,14 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Secure Sockets Layer (128 Bit SSL Security)</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Cokaro.com uses Secure Sockets Layer (SSL) technology to help protect information submitted during online transactions. Payment details are processed by third-party payment providers, and we do not intentionally collect or store full card numbers on our own servers.
+              BallardKellyScott.shop uses Secure Sockets Layer (SSL) technology to help protect information submitted during online transactions. Payment details are processed by third-party payment providers, and we do not intentionally collect or store full card numbers on our own servers.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">PCI Compliant</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle payment card data. Cokaro uses third-party payment providers for checkout so card details are handled through payment systems built for secure processing.
+              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle payment card data. BallardKellyScott uses third-party payment providers for checkout so card details are handled through payment systems built for secure processing.
             </p>
           </section>
 
@@ -45,7 +45,7 @@ export default function BillingTermsPage() {
               <li>All prices and figures are listed in USD.</li>
               <li>
                 Free standard shipping is currently offered for US orders unless a product page or checkout page clearly states otherwise. Please read our{' '}
-                <Link href="/shipping-policy" className="text-[#0a3075] hover:underline font-medium">
+                <Link href="/shipping-policy" className="text-[#1f5a46] hover:underline font-medium">
                   Shipping Policy
                 </Link>{' '}
                 for more information.
@@ -55,9 +55,9 @@ export default function BillingTermsPage() {
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
-            <h2 className="text-2xl font-bold text-[#262626] mb-4">Is Cokaro.com PCI Compliant?</h2>
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Is BallardKellyScott.shop PCI Compliant?</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Cokaro uses payment providers and checkout services that are responsible for secure payment processing and PCI-controlled card handling.
+              BallardKellyScott uses payment providers and checkout services that are responsible for secure payment processing and PCI-controlled card handling.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We are committed to keeping checkout secure by using SSL on our website and routing payment details through third-party payment systems rather than storing full card numbers ourselves.
@@ -67,15 +67,15 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Your Payment Information</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Full card numbers are not stored by Cokaro. After an order is placed, we may have access to order details, billing details, shipping details, payment status, and limited payment references supplied by the payment provider.
+              Full card numbers are not stored by BallardKellyScott. After an order is placed, we may have access to order details, billing details, shipping details, payment status, and limited payment references supplied by the payment provider.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Privacy Policy</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Cokaro.com values your privacy as much as you do! We do not rent, sell, or share your personal information with anyone. Our{' '}
-              <Link href="/privacy-policy" className="text-[#0a3075] hover:underline font-medium">
+              BallardKellyScott.shop values your privacy as much as you do! We do not rent, sell, or share your personal information with anyone. Our{' '}
+              <Link href="/privacy-policy" className="text-[#1f5a46] hover:underline font-medium">
                 Privacy Policy
               </Link>{' '}
               details how your personal information is collected and used.
@@ -90,7 +90,7 @@ export default function BillingTermsPage() {
             <div className="space-y-4 text-gray-600">
               <p>
                 <strong>📍 Address:</strong>{' '}
-                <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#0a3075] hover:underline">
+                <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#1f5a46] hover:underline">
                   1239 N Washington Ave, Wichita, KS 67214, USA
                 </a>
               </p>
@@ -99,8 +99,8 @@ export default function BillingTermsPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@cokaro.com" className="text-[#0a3075] hover:underline">
-                  contact@cokaro.com
+                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKellyScott.shop
                 </a>
               </p>
             </div>

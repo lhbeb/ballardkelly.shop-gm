@@ -96,7 +96,7 @@ export default async function HomePage() {
             editorialCard={{
               title: 'Equipment for Lawn, Backyard, and Farm Care',
               description:
-                'Cokaro sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
+                'BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
             }}
             randomizeForVisitor
             visitorShuffleKey="home-outdoor-care"

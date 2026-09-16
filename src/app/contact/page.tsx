@@ -21,21 +21,21 @@ export default function ContactPage() {
     '@graph': [
       {
         '@type': 'ContactPage',
-        '@id': 'https://cokaro.com/contact#webpage',
-        'url': 'https://cokaro.com/contact',
-        'name': 'Contact Us | Cokaro',
+        '@id': 'https://BallardKellyScott.shop/contact#webpage',
+        'url': 'https://BallardKellyScott.shop/contact',
+        'name': 'Contact Us | BallardKellyScott',
         'description':
-          'Contact Cokaro customer support team. Reach us by phone, email, or send us a direct message.',
+          'Contact BallardKellyScott customer support team. Reach us by phone, email, or send us a direct message.',
         'mainEntity': {
-          '@id': 'https://cokaro.com/#organization',
+          '@id': 'https://BallardKellyScott.shop/#organization',
         },
       },
       {
         '@type': 'Organization',
-        '@id': 'https://cokaro.com/#organization',
-        'name': 'Cokaro',
-        'url': 'https://cokaro.com',
-        'email': 'contact@cokaro.com',
+        '@id': 'https://BallardKellyScott.shop/#organization',
+        'name': 'BallardKellyScott',
+        'url': 'https://BallardKellyScott.shop',
+        'email': 'contact@BallardKellyScott.shop',
         'telephone': ['+1 (913) 593-7677'],
         'contactPoint': [
           {
@@ -121,7 +121,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent"
                         disabled={isSending}
                       />
                     </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent"
                         disabled={isSending}
                       />
                     </div>
@@ -150,11 +150,11 @@ export default function ContactPage() {
                         value={formData.contactReason}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent bg-white"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent bg-white"
                         disabled={isSending}
                       >
                         <option value="">Select a reason</option>
-                        <option value="selling">Selling on Cokaro</option>
+                        <option value="selling">Selling on BallardKellyScott</option>
                         <option value="order-inquiry">Inquiring about an order</option>
                         <option value="track-order">Track my order</option>
                         <option value="return-refund">Return or refund request</option>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent"
                         disabled={isSending}
                       />
                     </div>
@@ -190,13 +190,13 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows={4}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#090A28] focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#12382f] focus:border-transparent"
                         disabled={isSending}
                       />
                     </div>
                     <button
                       type="submit"
-                      className={`w-full bg-[#090A28] hover:bg-[#1c2070] text-white font-medium py-3 rounded-lg transition-colors duration-300 ${isSending ? 'opacity-60 cursor-not-allowed' : ''}`}
+                      className={`w-full bg-[#12382f] hover:bg-[#276955] text-white font-medium py-3 rounded-lg transition-colors duration-300 ${isSending ? 'opacity-60 cursor-not-allowed' : ''}`}
                       disabled={isSending}
                     >
                       {isSending ? 'Sending...' : 'Send Message'}
@@ -212,24 +212,24 @@ export default function ContactPage() {
                   <div className="space-y-6">
 
                     <div className="flex items-start">
-                      <MapPin className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
+                      <MapPin className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Address</h3>
                         <p className="text-gray-600 mt-1">1239 N Washington Ave, Wichita, KS 67214, USA</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Phone className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
+                      <Phone className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Phone Support</h3>
                         <p className="text-gray-600 mt-1"><span className="font-semibold">Phone:</span> +1 (913) 593-7677</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <Mail className="h-6 w-6 text-[#090A28] mt-1 shrink-0" />
+                      <Mail className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Email</h3>
-                        <p className="text-gray-600 mt-1">contact@cokaro.com</p>
+                        <p className="text-gray-600 mt-1">contact@BallardKellyScott.shop</p>
                       </div>
                     </div>
                     <div className="border-t border-gray-200 pt-6">

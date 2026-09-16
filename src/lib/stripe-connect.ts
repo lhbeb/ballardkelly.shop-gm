@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase/server';
 import { invalidateStripeConfigCache } from '@/lib/supabase/payment-settings';
 
-export const STRIPE_CONNECT_STATE_COOKIE = 'cokaro_stripe_connect_state';
+export const STRIPE_CONNECT_STATE_COOKIE = 'BallardKellyScott_stripe_connect_state';
 export const STRIPE_CONNECT_PROVIDER = 'stripe-connect';
 
 export interface StripeConnectConfiguration {

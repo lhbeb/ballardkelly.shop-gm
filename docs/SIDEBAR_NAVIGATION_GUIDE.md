@@ -21,7 +21,7 @@ The admin sidebar now features an intelligent **dual highlighting system** that 
 ```
 
 **Color Legend:**
-- **Blue** (`bg-[#0046be]`) - Primary active item (first occurrence)
+- **Blue** (`bg-[#2e7a62]`) - Primary active item (first occurrence)
 - **Dark Grey** (`bg-gray-300`) - Secondary active item (duplicate path)
 - **Light Grey** (`hover:bg-gray-100`) - Inactive items
 
@@ -34,7 +34,7 @@ The **first** menu item with an active path gets the blue highlight.
 
 ```tsx
 // Dashboard is first with path /admin/products
-// Gets: bg-[#0046be] text-white shadow-md
+// Gets: bg-[#2e7a62] text-white shadow-md
 ```
 
 ### 2. **Secondary Highlighting** (Dark Grey)
@@ -86,7 +86,7 @@ Both "Dashboard" and "Products" link to `/admin/products`:
 
 ### Primary Active State
 ```css
-bg-[#0046be]      /* Brand blue background */
+bg-[#2e7a62]      /* Brand blue background */
 text-white        /* White text */
 shadow-md         /* Medium shadow */
 ```
@@ -207,7 +207,7 @@ const isPrimary = active && !secondary;
   return (
     <Link
       className={`
-        ${isPrimary ? 'bg-[#0046be] text-white shadow-md' : ''}
+        ${isPrimary ? 'bg-[#2e7a62] text-white shadow-md' : ''}
         ${secondary ? 'bg-gray-300 text-gray-800 shadow-sm' : ''}
         ${!active ? 'text-gray-700 hover:bg-gray-100' : ''}
       `}

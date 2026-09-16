@@ -43,13 +43,13 @@ export async function POST(request: NextRequest) {
     // Email content
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #0046be;">New Newsletter Subscription</h2>
+        <h2 style="color: #2e7a62;">New Newsletter Subscription</h2>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-        <p><strong>Source:</strong> Cokaro Website Newsletter</p>
+        <p><strong>Source:</strong> BallardKellyScott Website Newsletter</p>
         <hr style="border: 1px solid #eee; margin: 20px 0;">
         <p style="color: #666; font-size: 14px;">
-          This email was sent from the newsletter subscription form on your Cokaro website.
+          This email was sent from the newsletter subscription form on your BallardKellyScott website.
         </p>
       </div>
     `;
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: emailUser,
       to: 'contacthappydeel@gmail.com',
-      subject: 'New Newsletter Subscription - Cokaro',
+      subject: 'New Newsletter Subscription - BallardKellyScott',
       html: emailContent,
     };
 
