@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 const SOURCE_ORIGIN = 'https://aio-vita.com';
 const SITEMAP_INDEX = `${SOURCE_ORIGIN}/wp-sitemap.xml`;
 const STORAGE_BUCKET = 'product-images';
-const USER_AGENT = 'BallardKellyScottCatalogImporter/1.0 (+catalog migration)';
+const USER_AGENT = 'BallardKellyCatalogImporter/1.0 (+catalog migration)';
 const DEFAULT_CONCURRENCY = 4;
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;

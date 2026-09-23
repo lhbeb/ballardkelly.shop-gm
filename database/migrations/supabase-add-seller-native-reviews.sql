@@ -1,5 +1,5 @@
 -- ============================================================
--- BallardKellyScott — Add Reviews Column to Sellers Table
+-- BallardKelly — Add Reviews Column to Sellers Table
 -- Run this in Supabase SQL Editor
 -- ============================================================
 

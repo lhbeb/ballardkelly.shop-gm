@@ -9,7 +9,7 @@ import ProductPageClient from './ProductPageClient';
 import type { Metadata, ResolvingMetadata } from 'next';
 
 // Hardcoded base URL (no environment variable needed)
-const BASE_URL = 'https://BallardKellyScott.shop';
+const BASE_URL = 'https://BallardKelly.shop';
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
@@ -17,13 +17,13 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   try {
     const { slug } = await params;
-    if (!slug) return { title: 'Product Not Found | BallardKellyScott' };
+    if (!slug) return { title: 'Product Not Found | BallardKelly' };
 
     let product = isReviewProduct(slug) ? getReviewProduct(slug) : null;
     if (!product) product = await getProductBySlug(slug);
-    if (!product) return { title: 'Product Not Found | BallardKellyScott' };
+    if (!product) return { title: 'Product Not Found | BallardKelly' };
 
-    const title = `${product.title || 'Product'} - ${product.brand || ''} | ${product.category || ''} | BallardKellyScott`;
+    const title = `${product.title || 'Product'} - ${product.brand || ''} | ${product.category || ''} | BallardKelly`;
     const description = (product.description || '').substring(0, 155) + '...';
     const canonicalUrl = `${BASE_URL}/products/${product.slug}`;
     
@@ -51,7 +51,7 @@ export async function generateMetadata(
         title,
         description,
         url: canonicalUrl,
-        siteName: 'BallardKellyScott',
+        siteName: 'BallardKelly',
         type: 'website',
         images: imageUrls,
       },
@@ -74,8 +74,8 @@ export async function generateMetadata(
   } catch (error) {
     console.error('Error generating metadata:', error);
     return {
-      title: 'Product | BallardKellyScott',
-      description: 'Browse our products on BallardKellyScott',
+      title: 'Product | BallardKelly',
+      description: 'Browse our products on BallardKelly',
     };
   }
 }
@@ -155,7 +155,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         "url": `${BASE_URL}/products/${p.slug}`,
         "seller": {
           "@type": "Organization",
-          "name": "BallardKellyScott"
+          "name": "BallardKelly"
         },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",

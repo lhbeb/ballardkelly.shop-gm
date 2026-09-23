@@ -14,7 +14,7 @@ export default function LiveChatPage() {
     }
   }, []);
 
-  const chatSrc = `https://chatapppay-rust.vercel.app/livechat?color=%23090A28&siteUrl=${encodeURIComponent(siteUrl || 'https://BallardKellyScott.shop')}`;
+  const chatSrc = `https://chatapppay-rust.vercel.app/livechat?color=%23090A28&siteUrl=${encodeURIComponent(siteUrl || 'https://BallardKelly.shop')}`;
 
   const features = [
     {
@@ -93,7 +93,7 @@ export default function LiveChatPage() {
             <div className="bg-[#12382f] rounded-2xl p-5 text-white">
               <p className="text-sm font-semibold mb-1">Prefer email instead?</p>
               <p className="text-xs text-white/70 mb-3">
-                Send us a message at contact@BallardKellyScott.shop and we will reply within 24 hours.
+                Send us a message at contact@BallardKelly.shop and we will reply within 24 hours.
               </p>
               <Link
                 href="/contact"
@@ -115,7 +115,7 @@ export default function LiveChatPage() {
                   <MessageCircle className="h-5 w-5 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-white leading-tight">BallardKellyScott Support</p>
+                  <p className="text-sm font-semibold text-white leading-tight">BallardKelly Support</p>
                   <div className="flex items-center gap-1.5 mt-0.5">
                     <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
                     <span className="text-xs text-white/70">Typically replies in a few minutes</span>
@@ -138,7 +138,7 @@ export default function LiveChatPage() {
               {siteUrl && (
                 <iframe
                   src={chatSrc}
-                  title="BallardKellyScott Live Chat Support"
+                  title="BallardKelly Live Chat Support"
                   className={`w-full flex-1 border-none block transition-opacity duration-500 ${iframeLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}
                   allow="clipboard-write; camera; microphone"
                   onLoad={() => setIframeLoaded(true)}

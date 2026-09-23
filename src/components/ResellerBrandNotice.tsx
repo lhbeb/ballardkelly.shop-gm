@@ -15,7 +15,7 @@ export default function ResellerBrandNotice({ compact = false }: ResellerBrandNo
         Ballard Kelly is an independent ecommerce shop founded by Ballard Kelly Scott, an enthusiast collector of trading cards, collectibles, Topps releases, Pokemon cards, booster boxes, comics, figures, and related hobby goods. Some listings may come through authorized reseller or supplier relationships where applicable; others may come through verified resale, marketplace partner, private seller, auction, wholesale, liquidation, or overstock channels.
       </p>
       <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
-        Product names, brand names, logos, and marks including {catalogMarks} are used only to identify the products offered for sale. Each mark remains the property of its respective owner, and use of those marks does not imply manufacturer affiliation, sponsorship, or endorsement unless BallardKellyScott expressly states that relationship for a specific listing.
+        Product names, brand names, logos, and marks including {catalogMarks} are used only to identify the products offered for sale. Each mark remains the property of its respective owner, and use of those marks does not imply manufacturer affiliation, sponsorship, or endorsement unless BallardKelly expressly states that relationship for a specific listing.
       </p>
     </section>
   );

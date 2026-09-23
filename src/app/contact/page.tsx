@@ -21,21 +21,21 @@ export default function ContactPage() {
     '@graph': [
       {
         '@type': 'ContactPage',
-        '@id': 'https://BallardKellyScott.shop/contact#webpage',
-        'url': 'https://BallardKellyScott.shop/contact',
-        'name': 'Contact Us | BallardKellyScott',
+        '@id': 'https://BallardKelly.shop/contact#webpage',
+        'url': 'https://BallardKelly.shop/contact',
+        'name': 'Contact Us | BallardKelly',
         'description':
-          'Contact BallardKellyScott customer support team. Reach us by phone, email, or send us a direct message.',
+          'Contact BallardKelly customer support team. Reach us by phone, email, or send us a direct message.',
         'mainEntity': {
-          '@id': 'https://BallardKellyScott.shop/#organization',
+          '@id': 'https://BallardKelly.shop/#organization',
         },
       },
       {
         '@type': 'Organization',
-        '@id': 'https://BallardKellyScott.shop/#organization',
-        'name': 'BallardKellyScott',
-        'url': 'https://BallardKellyScott.shop',
-        'email': 'contact@BallardKellyScott.shop',
+        '@id': 'https://BallardKelly.shop/#organization',
+        'name': 'BallardKelly',
+        'url': 'https://BallardKelly.shop',
+        'email': 'contact@BallardKelly.shop',
         'telephone': ['+1 (913) 593-7677'],
         'contactPoint': [
           {
@@ -154,7 +154,7 @@ export default function ContactPage() {
                         disabled={isSending}
                       >
                         <option value="">Select a reason</option>
-                        <option value="selling">Selling on BallardKellyScott</option>
+                        <option value="selling">Selling on BallardKelly</option>
                         <option value="order-inquiry">Inquiring about an order</option>
                         <option value="track-order">Track my order</option>
                         <option value="return-refund">Return or refund request</option>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Email</h3>
-                        <p className="text-gray-600 mt-1">contact@BallardKellyScott.shop</p>
+                        <p className="text-gray-600 mt-1">contact@BallardKelly.shop</p>
                       </div>
                     </div>
                     <div className="border-t border-gray-200 pt-6">

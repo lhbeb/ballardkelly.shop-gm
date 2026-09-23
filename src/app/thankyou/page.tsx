@@ -214,8 +214,8 @@ function ThankYouContent() {
             </p>
             <div className="space-y-1 text-sm">
               <p className="text-gray-700">
-                📧 <a href="mailto:contact@BallardKellyScott.shop" className="text-emerald-700 hover:text-emerald-800 font-medium">
-                  contact@BallardKellyScott.shop
+                📧 <a href="mailto:contact@BallardKelly.shop" className="text-emerald-700 hover:text-emerald-800 font-medium">
+                  contact@BallardKelly.shop
                 </a>
               </p>
               <p className="text-gray-700">

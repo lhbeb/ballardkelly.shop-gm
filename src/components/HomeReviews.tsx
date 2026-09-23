@@ -308,7 +308,7 @@ const HomeReviews: React.FC<HomeReviewsProps> = ({
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
                 {/* Rating Summary */}
                 <div>
-                  <h2 className="text-2xl font-bold text-[#262626] mb-1">What BallardKellyScott Customers Say</h2>
+                  <h2 className="text-2xl font-bold text-[#262626] mb-1">What BallardKelly Customers Say</h2>
                   <p className="text-sm text-gray-600 mb-3">Real feedback on our products, service, and shopping experience.</p>
                   <div className="flex items-center gap-4">
                     <div className="text-4xl font-bold text-[#262626]">{reviewStats.averageRating.toFixed(1)}</div>

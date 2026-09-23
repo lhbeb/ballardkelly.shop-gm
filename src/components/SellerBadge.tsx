@@ -34,14 +34,14 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
   }
 
   const displaySeller = seller || {
-    id: 'BallardKellyScott',
-    name: 'BallardKellyScott',
-    username: 'BallardKellyScott',
+    id: 'BallardKelly',
+    name: 'BallardKelly',
+    username: 'BallardKelly',
     avatarUrl: fallbackAvatarUrl,
   };
 
-  const isBallardKellyScott = displaySeller.username === 'BallardKellyScott';
-  const href = isBallardKellyScott ? '/' : `/sellers/${displaySeller.username}`;
+  const isBallardKelly = displaySeller.username === 'BallardKelly';
+  const href = isBallardKelly ? '/' : `/sellers/${displaySeller.username}`;
   const hasAvatar = Boolean(displaySeller.avatarUrl);
 
   /* ── sm (product cards) ─────────────────────────────────────────────────── */
@@ -56,7 +56,7 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
         <span className="text-[11px] font-medium text-gray-600 group-hover:text-[#12382f] transition-colors">
           {displaySeller.name}
         </span>
-        {isBallardKellyScott ? (
+        {isBallardKelly ? (
           <ShieldCheck className="w-3 h-3 flex-shrink-0 text-[#12382f]/50" />
         ) : (
           <Star className="w-3 h-3 flex-shrink-0 text-[#EFC154] fill-[#EFC154]" />
@@ -76,7 +76,7 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
         {hasAvatar ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={displaySeller.avatarUrl} alt={displaySeller.name} className="w-full h-full object-contain p-0.5" />
-        ) : isBallardKellyScott ? (
+        ) : isBallardKelly ? (
           <ShieldCheck className="w-3 h-3 text-[#12382f]" />
         ) : (
           <User className="w-3 h-3 text-gray-400" />
@@ -91,14 +91,14 @@ export default function SellerBadge({ sellerId, size = 'sm' }: SellerBadgeProps)
 
       {/* Verified tick */}
       <div className="relative group flex items-center">
-        {isBallardKellyScott ? (
+        {isBallardKelly ? (
           <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-[#12382f]/50" />
         ) : (
           <Star className="w-3.5 h-3.5 flex-shrink-0 text-[#EFC154] fill-[#EFC154] cursor-help" />
         )}
         
-        {/* Tooltip for md size only if not BallardKellyScott */}
-        {!isBallardKellyScott && (
+        {/* Tooltip for md size only if not BallardKelly */}
+        {!isBallardKelly && (
           <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-72 p-4 bg-white text-gray-600 text-sm leading-relaxed rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top translate-y-2 group-hover:translate-y-0 text-left">
             <div className="font-bold mb-1.5 flex items-center gap-1.5 text-[#262626]">
               <Star className="w-4 h-4 text-[#EFC154] fill-[#EFC154]" /> Star Seller

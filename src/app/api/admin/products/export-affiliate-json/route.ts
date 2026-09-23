@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Content-Disposition': `attachment; filename="BallardKellyScott-affiliate-json-${date}.json"`,
+        'Content-Disposition': `attachment; filename="BallardKelly-affiliate-json-${date}.json"`,
       },
     });
   } catch (error: any) {

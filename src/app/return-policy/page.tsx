@@ -17,22 +17,22 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Return & Exchange Policy | BallardKellyScott',
+  title: 'Return & Exchange Policy | BallardKelly',
   description:
-    'BallardKellyScott Return & Exchange Policy for resold and sourced lawn, outdoor power, home-care, backyard, and farm-care equipment. We accept returns for both defective and non-defective products within 30 days.',
+    'BallardKelly Return & Exchange Policy for resold and sourced lawn, outdoor power, home-care, backyard, and farm-care equipment. We accept returns for both defective and non-defective products within 30 days.',
 };
 
 export default function ReturnPolicyPage() {
   const schemaMarkup = {
     '@context': 'https://schema.org',
     '@type': 'OnlineStore',
-    '@id': 'https://BallardKellyScott.shop/#organization',
-    'name': 'BallardKellyScott',
-    'url': 'https://BallardKellyScott.shop',
+    '@id': 'https://BallardKelly.shop/#organization',
+    'name': 'BallardKelly',
+    'url': 'https://BallardKelly.shop',
     'hasMerchantReturnPolicy': {
       '@type': 'MerchantReturnPolicy',
-      'name': 'BallardKellyScott Return & Exchange Policy',
-      'merchantReturnLink': 'https://BallardKellyScott.shop/return-policy',
+      'name': 'BallardKelly Return & Exchange Policy',
+      'merchantReturnLink': 'https://BallardKelly.shop/return-policy',
       'applicableCountry': 'US',
       'returnPolicyCategory': 'https://schema.org/MerchantReturnFiniteReturnWindow',
       'merchantReturnDays': 30,
@@ -117,7 +117,7 @@ export default function ReturnPolicyPage() {
 
           {/* Introduction */}
           <p className="text-lg leading-relaxed text-gray-800">
-            At <strong className="text-[#12382f]">BallardKellyScott</strong>, we sell and resell outdoor power and property-care equipment. This policy explains the return window, item-condition requirements, refund timing, and how to contact us before sending an item back.
+            At <strong className="text-[#12382f]">BallardKelly</strong>, we sell and resell outdoor power and property-care equipment. This policy explains the return window, item-condition requirements, refund timing, and how to contact us before sending an item back.
           </p>
 
           <ResellerBrandNotice compact />
@@ -183,7 +183,7 @@ export default function ReturnPolicyPage() {
             <p>All returns are handled <strong>by mail</strong>. Here&apos;s how it works:</p>
             <ol className="list-decimal pl-6 space-y-3">
               <li>
-                <strong>Contact us</strong> at <a href="mailto:contact@BallardKellyScott.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKellyScott.shop</a> or call <span className="font-semibold">+1 (913) 593-7677</span>.
+                <strong>Contact us</strong> at <a href="mailto:contact@BallardKelly.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKelly.shop</a> or call <span className="font-semibold">+1 (913) 593-7677</span>.
               </li>
               <li>
                 <strong>Get your return label</strong>. We&apos;ll email you a prepaid label after approving your return request.
@@ -257,7 +257,7 @@ export default function ReturnPolicyPage() {
                   <span>Email</span>
                 </div>
                 <div className="text-sm text-gray-600 pl-7">
-                  <a href="mailto:contact@BallardKellyScott.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKellyScott.shop</a>
+                  <a href="mailto:contact@BallardKelly.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKelly.shop</a>
                 </div>
               </div>
 

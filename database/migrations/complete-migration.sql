@@ -1,5 +1,5 @@
 -- ============================================
--- BallardKellyScott - COMPLETE DATABASE MIGRATION
+-- BallardKelly - COMPLETE DATABASE MIGRATION
 -- ============================================
 -- Generated from all individual migration files
 -- Safe to run multiple times (idempotent)

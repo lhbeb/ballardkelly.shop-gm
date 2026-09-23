@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Shipping & Delivery | BallardKellyScott',
-  description: 'BallardKellyScott Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+  title: 'Shipping & Delivery | BallardKelly',
+  description: 'BallardKelly Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
 };
 
 export default function ShippingPolicyPage() {
@@ -12,15 +12,15 @@ export default function ShippingPolicyPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://BallardKellyScott.shop/shipping-policy',
-        'url': 'https://BallardKellyScott.shop/shipping-policy',
-        'name': 'Shipping & Delivery | BallardKellyScott',
+        '@id': 'https://BallardKelly.shop/shipping-policy',
+        'url': 'https://BallardKelly.shop/shipping-policy',
+        'name': 'Shipping & Delivery | BallardKelly',
         'description':
-          'BallardKellyScott Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+          'BallardKelly Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
       },
       {
         '@type': 'OfferShippingDetails',
-        '@id': 'https://BallardKellyScott.shop/shipping-policy#shipping-us',
+        '@id': 'https://BallardKelly.shop/shipping-policy#shipping-us',
         'shippingDestination': {
           '@type': 'DefinedRegion',
           'addressCountry': 'US',
@@ -109,7 +109,7 @@ export default function ShippingPolicyPage() {
               Once shipped, you’ll receive an email with a tracking number. Please allow up to 48 hours for tracking updates.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              If your order hasn’t arrived within 20 days, email us at <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline font-medium">contact@BallardKellyScott.shop</a> with your name and order number.
+              If your order hasn’t arrived within 20 days, email us at <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline font-medium">contact@BallardKelly.shop</a> with your name and order number.
             </p>
           </section>
 
@@ -143,8 +143,8 @@ export default function ShippingPolicyPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
-                  contact@BallardKellyScott.shop
+                <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKelly.shop
                 </a>
               </p>
             </div>

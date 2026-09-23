@@ -388,7 +388,7 @@ async function processProductFromZip(
     condition,
     category,
     brand,
-    payee_email: getString(productData.payeeEmail || productData.payee_email, 'admin@BallardKellyScott.shop'),
+    payee_email: getString(productData.payeeEmail || productData.payee_email, 'admin@BallardKelly.shop'),
     checkout_link: checkoutLink,
     currency: getString(productData.currency, 'USD'),
     rating: productData.rating || 0,

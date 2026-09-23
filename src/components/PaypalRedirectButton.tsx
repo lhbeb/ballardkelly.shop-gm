@@ -61,7 +61,7 @@ const PaypalRedirectButton: React.FC<PaypalRedirectButtonProps> = ({
         cancel_return: `${window.location.origin}/checkout?payment=cancelled`,
         notify_url: `${window.location.origin}/api/paypal/ipn`,
         rm: '0',
-        bn: 'BallardKellyScott_BuyNow_WPS_US',
+        bn: 'BallardKelly_BuyNow_WPS_US',
         ...buildPaypalAddressFields(shippingData),
       };
 

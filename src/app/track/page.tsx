@@ -146,13 +146,13 @@ const TrackPage = () => {
           <div className="grid lg:grid-cols-[minmax(0,1.1fr)_360px]">
             <section className="px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
               <div className="mb-3 text-sm font-medium text-[#1f5a46]">
-                BallardKellyScott order tracking
+                BallardKelly order tracking
               </div>
               <h1 className="max-w-2xl text-3xl font-semibold text-[#262626] sm:text-4xl">
                 Track your order
               </h1>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5B6785] sm:text-base">
-                Enter your tracking number below to see the latest carrier updates for your BallardKellyScott order.
+                Enter your tracking number below to see the latest carrier updates for your BallardKelly order.
               </p>
 
               <form onSubmit={handleTrack} className="mt-8 rounded-[24px] border border-[#E8EEF8] bg-[#F8FBFF] p-4 sm:p-5">
@@ -210,7 +210,7 @@ const TrackPage = () => {
                 </h2>
                 <div className="mt-4 space-y-4 text-sm leading-7 text-[#5B6785]">
                   <p>
-                    Use the exact tracking number from your BallardKellyScott shipping confirmation email.
+                    Use the exact tracking number from your BallardKelly shipping confirmation email.
                   </p>
                   <p>
                     Some carriers need a little time before the first update appears after dispatch.
@@ -227,7 +227,7 @@ const TrackPage = () => {
                   Reach out to our team with your order number and tracking number, and we’ll help you from there.
                 </p>
                 <a
-                  href="mailto:contact@BallardKellyScott.shop"
+                  href="mailto:contact@BallardKelly.shop"
                   className="mt-5 inline-flex items-center justify-center rounded-2xl border border-[#1f5a46]/15 bg-[#c8942f] px-5 py-3 text-sm font-semibold text-[#1f5a46] transition hover:bg-[#d9aa46]"
                 >
                   Contact Support

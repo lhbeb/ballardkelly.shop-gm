@@ -18,7 +18,7 @@ async function handlePublishAll(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
     // Security check: only allow authorized execution
-    const validKey = !key || key === 'BallardKellyScott-admin' || key === 'BallardKellyScott-publish-all-2026';
+    const validKey = !key || key === 'BallardKelly-admin' || key === 'BallardKelly-publish-all-2026';
     if (!validKey) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
@@ -102,7 +102,7 @@ async function handlePublishAll(request: NextRequest) {
       success: true,
       totalFound: allProducts.length,
       updatedCount,
-      message: `Successfully published ${updatedCount} products in BallardKellyScott database.`,
+      message: `Successfully published ${updatedCount} products in BallardKelly database.`,
     });
   } catch (error: any) {
     console.error('Publish-all error:', error);

@@ -1,5 +1,5 @@
 -- ============================================================
--- BallardKellyScott — Multi-Seller System Migration
+-- BallardKelly — Multi-Seller System Migration
 -- Run this in Supabase SQL Editor
 -- ============================================================
 

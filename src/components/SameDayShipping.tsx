@@ -20,7 +20,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
           <div className="relative min-h-[360px] w-full md:min-h-[400px] md:w-[45%]">
             <Image
               src="/delivery-guy.png"
-              alt="BallardKellyScott delivery person"
+              alt="BallardKelly delivery person"
               fill
               sizes="(max-width: 768px) 100vw, 45vw"
               className="object-cover object-center"
@@ -35,7 +35,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              BallardKellyScott processes orders within 1 business day, then ships with an estimated 1-3 business days in transit. Clear fulfillment timing is part of every order.
+              BallardKelly processes orders within 1 business day, then ships with an estimated 1-3 business days in transit. Clear fulfillment timing is part of every order.
             </p>
             <Link
               href="/shipping-policy"

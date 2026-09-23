@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Billing Policy | BallardKellyScott',
-  description: 'Billing policy and order limitations for BallardKellyScott.',
+  title: 'Billing Policy | BallardKelly',
+  description: 'Billing policy and order limitations for BallardKelly.',
 };
 
 export default function BillingPolicyPage() {
@@ -51,8 +51,8 @@ export default function BillingPolicyPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
-                  contact@BallardKellyScott.shop
+                <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKelly.shop
                 </a>
               </p>
             </div>

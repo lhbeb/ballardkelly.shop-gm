@@ -49,7 +49,7 @@ export default function StripeEmbeddedCheckout({
         setStripePromise(loadStripe(data.publishableKey));
       } catch (error) {
         console.error('Failed to load Stripe config:', error);
-        setConfigError('Payment is temporarily unavailable. Please email contact@BallardKellyScott.shop.');
+        setConfigError('Payment is temporarily unavailable. Please email contact@BallardKelly.shop.');
       }
     };
 
@@ -84,7 +84,7 @@ export default function StripeEmbeddedCheckout({
               Secure Payment
             </h1>
             <p className="mt-2 text-base text-gray-600">
-              Complete your payment below without leaving BallardKellyScott.
+              Complete your payment below without leaving BallardKelly.
             </p>
           </div>
 

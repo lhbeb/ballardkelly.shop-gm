@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Billing Terms and Conditions | BallardKellyScott',
-  description: 'Billing terms, conditions, and payment security information for BallardKellyScott.',
+  title: 'Billing Terms and Conditions | BallardKelly',
+  description: 'Billing terms, conditions, and payment security information for BallardKelly.',
 };
 
 export default function BillingTermsPage() {
@@ -27,14 +27,14 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Secure Sockets Layer (128 Bit SSL Security)</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              BallardKellyScott.shop uses Secure Sockets Layer (SSL) technology to help protect information submitted during online transactions. Payment details are processed by third-party payment providers, and we do not intentionally collect or store full card numbers on our own servers.
+              BallardKelly.shop uses Secure Sockets Layer (SSL) technology to help protect information submitted during online transactions. Payment details are processed by third-party payment providers, and we do not intentionally collect or store full card numbers on our own servers.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">PCI Compliant</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle payment card data. BallardKellyScott uses third-party payment providers for checkout so card details are handled through payment systems built for secure processing.
+              The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard for organizations that handle payment card data. BallardKelly uses third-party payment providers for checkout so card details are handled through payment systems built for secure processing.
             </p>
           </section>
 
@@ -55,9 +55,9 @@ export default function BillingTermsPage() {
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
-            <h2 className="text-2xl font-bold text-[#262626] mb-4">Is BallardKellyScott.shop PCI Compliant?</h2>
+            <h2 className="text-2xl font-bold text-[#262626] mb-4">Is BallardKelly.shop PCI Compliant?</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              BallardKellyScott uses payment providers and checkout services that are responsible for secure payment processing and PCI-controlled card handling.
+              BallardKelly uses payment providers and checkout services that are responsible for secure payment processing and PCI-controlled card handling.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
               We are committed to keeping checkout secure by using SSL on our website and routing payment details through third-party payment systems rather than storing full card numbers ourselves.
@@ -67,14 +67,14 @@ export default function BillingTermsPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Your Payment Information</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Full card numbers are not stored by BallardKellyScott. After an order is placed, we may have access to order details, billing details, shipping details, payment status, and limited payment references supplied by the payment provider.
+              Full card numbers are not stored by BallardKelly. After an order is placed, we may have access to order details, billing details, shipping details, payment status, and limited payment references supplied by the payment provider.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Privacy Policy</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              BallardKellyScott.shop values your privacy as much as you do! We do not rent, sell, or share your personal information with anyone. Our{' '}
+              BallardKelly.shop values your privacy as much as you do! We do not rent, sell, or share your personal information with anyone. Our{' '}
               <Link href="/privacy-policy" className="text-[#1f5a46] hover:underline font-medium">
                 Privacy Policy
               </Link>{' '}
@@ -99,8 +99,8 @@ export default function BillingTermsPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
-                  contact@BallardKellyScott.shop
+                <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKelly.shop
                 </a>
               </p>
             </div>

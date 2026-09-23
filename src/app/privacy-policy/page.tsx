@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => (
       <div className="prose max-w-none text-gray-700 space-y-8">
         {/* Introduction */}
         <p className="text-lg leading-relaxed">
-          At BallardKellyScott, your privacy is important to us. BallardKellyScott sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment, including products identified by third-party brand and model marks. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices you have regarding your personal data when you visit or use our website.
+          At BallardKelly, your privacy is important to us. BallardKelly sells and resells outdoor power, lawn, backyard, home-care, and farm-care equipment, including products identified by third-party brand and model marks. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices you have regarding your personal data when you visit or use our website.
         </p>
 
         <ResellerBrandNotice compact />
@@ -147,7 +147,7 @@ const PrivacyPolicyPage = () => (
             </div>
             <div>
               <div className="font-medium text-[#262626] mb-1">Email:</div>
-              <div className="text-gray-600">contact@BallardKellyScott.shop</div>
+              <div className="text-gray-600">contact@BallardKelly.shop</div>
             </div>
             <div>
               <div className="font-medium text-[#262626] mb-1">Address:</div>

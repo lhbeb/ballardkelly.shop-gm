@@ -1,6 +1,6 @@
 import type { Product } from '@/types/product';
 
-const VISITOR_ID_KEY = 'BallardKellyScott_visitor_id';
+const VISITOR_ID_KEY = 'BallardKelly_visitor_id';
 const ROTATION_WINDOW_MS = 5 * 60 * 1000;
 
 function hashString(value: string): number {

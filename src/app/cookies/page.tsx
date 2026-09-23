@@ -9,7 +9,7 @@ const CookiesPage = () => (
       <div className="prose max-w-none text-gray-700 space-y-8">
         {/* Introduction */}
         <p className="text-lg leading-relaxed">
-          This Cookies Policy explains how BallardKellyScott uses cookies and similar tracking technologies on our website, where we sell and resell outdoor power, lawn, backyard, home-care, and farm-care equipment. By using our website, you agree to the use of cookies as described in this policy.
+          This Cookies Policy explains how BallardKelly uses cookies and similar tracking technologies on our website, where we sell and resell outdoor power, lawn, backyard, home-care, and farm-care equipment. By using our website, you agree to the use of cookies as described in this policy.
         </p>
 
         <ResellerBrandNotice compact />
@@ -111,7 +111,7 @@ const CookiesPage = () => (
             </div>
             <div>
               <div className="font-medium text-[#262626] mb-1">Email:</div>
-              <div className="text-gray-600">contact@BallardKellyScott.shop</div>
+              <div className="text-gray-600">contact@BallardKelly.shop</div>
             </div>
 
             <div>

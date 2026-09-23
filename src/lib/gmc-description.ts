@@ -32,7 +32,7 @@ function ensureSentence(value: string): string {
 }
 
 export function enrichGmcDescription(product: GmcDescriptionProduct): string {
-  const sourceDescription = product.description || product.title || 'Outdoor power equipment sold by BallardKellyScott.';
+  const sourceDescription = product.description || product.title || 'Outdoor power equipment sold by BallardKelly.';
   const cleanedDescription = ensureSentence(
     normalizeWhitespace(removeUnsupportedPromoPhrases(String(sourceDescription))),
   );
@@ -47,7 +47,7 @@ export function enrichGmcDescription(product: GmcDescriptionProduct): string {
     details.push(`Category: ${normalizeWhitespace(product.category)}.`);
   }
 
-  details.push('Sold by BallardKellyScott, an independent ecommerce seller and reseller.');
+  details.push('Sold by BallardKelly, an independent ecommerce seller and reseller.');
   details.push('Brand and model names are used only to identify the listed product.');
 
   return normalizeWhitespace([cleanedDescription, ...details].filter(Boolean).join(' '));

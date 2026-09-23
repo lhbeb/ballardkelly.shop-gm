@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Wholesale Policies | BallardKellyScott',
-  description: 'Wholesale policies, eligibility, pricing, and terms for BallardKellyScott resellers.',
+  title: 'Wholesale Policies | BallardKelly',
+  description: 'Wholesale policies, eligibility, pricing, and terms for BallardKelly resellers.',
 };
 
 export default function WholesalePoliciesPage() {
@@ -30,19 +30,19 @@ export default function WholesalePoliciesPage() {
               You (“the retailer”) must have a physical shop, with or without an online website, OR be an online only seller with an established following to be eligible for a wholesale account and remain a reseller of our goods. Selling on third-party websites (Etsy, eBay, Amazon) and purchasing items for personal use is strictly prohibited.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              ALL buyers are reviewed and vetted to ensure fit and to confirm that your shop is a legitimate business. BallardKellyScott reserves the right to deny applications that may not be appropriate due to fit or decline orders for any reason after approval.
+              ALL buyers are reviewed and vetted to ensure fit and to confirm that your shop is a legitimate business. BallardKelly reserves the right to deny applications that may not be appropriate due to fit or decline orders for any reason after approval.
             </p>
           </section>
 
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Invoice</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              BallardKellyScott is happy to offer an invoice for payment (in USD). Please{' '}
-              <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
+              BallardKelly is happy to offer an invoice for payment (in USD). Please{' '}
+              <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
               {' '}to place your order.
             </p>
             <p className="text-gray-600 leading-relaxed font-semibold">
-              By making wholesale purchases from BallardKellyScott, retailers agree to these policies.
+              By making wholesale purchases from BallardKelly, retailers agree to these policies.
             </p>
           </section>
 
@@ -96,8 +96,8 @@ export default function WholesalePoliciesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Return Protocol</h2>
             <p className="text-gray-600 leading-relaxed">
-              If you have ordered through BallardKellyScott, please follow our return protocol and{' '}
-              <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
+              If you have ordered through BallardKelly, please follow our return protocol and{' '}
+              <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
               {' '}for the next steps.
             </p>
           </section>
@@ -106,7 +106,7 @@ export default function WholesalePoliciesPage() {
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Damaged Items</h2>
             <p className="text-gray-600 leading-relaxed">
               All items are quality checked before they are shipped. Please inspect all shipments immediately upon arrival and{' '}
-              <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
+              <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline font-medium">contact us</a>
               {' '}within 5 days of receiving the order to discuss any potential issues.
             </p>
           </section>
@@ -128,8 +128,8 @@ export default function WholesalePoliciesPage() {
               </p>
               <p>
                 <strong>✉ Email:</strong>{' '}
-                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">
-                  contact@BallardKellyScott.shop
+                <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">
+                  contact@BallardKelly.shop
                 </a>
               </p>
             </div>

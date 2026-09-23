@@ -832,7 +832,7 @@ export default function NewProductPage() {
                 onChange={(e) => updateField('seller_id', e.target.value)}
                 className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#12382f] focus:border-[#12382f] outline-none transition-all bg-white"
               >
-                <option value="">Unassigned (Fallback: BallardKellyScott)</option>
+                <option value="">Unassigned (Fallback: BallardKelly)</option>
                 {sellers.map((s) => (
                   <option key={s.id} value={s.id}>{s.name} (@{s.username})</option>
                 ))}

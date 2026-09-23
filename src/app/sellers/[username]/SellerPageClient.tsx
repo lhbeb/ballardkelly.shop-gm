@@ -189,7 +189,7 @@ export default function SellerPageClient({ seller }: Props) {
                   <div className="h-px bg-gray-100 w-full" />
                   <div>
                     <h3 className="text-sm font-semibold text-[#262626] mb-1">Product Review</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Products are reviewed through BallardKellyScott&apos;s verification process and covered by our customer support standards.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Products are reviewed through BallardKelly&apos;s verification process and covered by our customer support standards.</p>
                   </div>
                 </div>
               </div>

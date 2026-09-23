@@ -28,7 +28,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Ballard Kelly | Trading Cards, Booster Boxes & Collectibles",
   description: "Explore trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures at Ballard Kelly, a shop founded by collector Ballard Kelly Scott.",
-  keywords: "Ballard Kelly, BallardKellyScott, trading cards, Topps cards, Pokemon cards, booster boxes, collectibles, comics, figures, card collecting, hobby shop, collector gifts",
+  keywords: "Ballard Kelly, BallardKelly, trading cards, Topps cards, Pokemon cards, booster boxes, collectibles, comics, figures, card collecting, hobby shop, collector gifts",
   authors: [{ name: "Ballard Kelly" }],
   creator: "Ballard Kelly",
   publisher: "Ballard Kelly",
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://BallardKellyScott.shop"),
+  metadataBase: new URL("https://BallardKelly.shop"),
   openGraph: {
     title: "Ballard Kelly | Trading Cards, Booster Boxes & Collectibles",
     description: "Shop trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures at Ballard Kelly.",
-    url: "https://BallardKellyScott.shop",
+    url: "https://BallardKelly.shop",
     siteName: "Ballard Kelly",
     images: [
       {
@@ -127,19 +127,19 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Ballard Kelly",
-                "alternateName": "BallardKellyScott",
-                "url": "https://BallardKellyScott.shop",
-                "logo": "https://BallardKellyScott.shop/logosvg.svg",
+                "alternateName": "BallardKelly",
+                "url": "https://BallardKelly.shop",
+                "logo": "https://BallardKelly.shop/logosvg.svg",
                 "description": "Ballard Kelly is a collector-run shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures.",
                 "sameAs": [
-                  "https://www.tiktok.com/@BallardKellyScott_officiel",
+                  "https://www.tiktok.com/@BallardKelly_officiel",
                   "https://www.instagram.com/ballardkelly.shop/",
-                  "https://www.pinterest.com/BallardKellyScott_officiel/"
+                  "https://www.pinterest.com/BallardKelly_officiel/"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "customer service",
-                  "email": "contact@BallardKellyScott.shop",
+                  "email": "contact@BallardKelly.shop",
                   "telephone": "+1 (913) 593-7677",
                   "areaServed": "US"
                 },
@@ -166,14 +166,14 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "Ballard Kelly",
-                "alternateName": "BallardKellyScott",
-                "url": "https://BallardKellyScott.shop",
+                "alternateName": "BallardKelly",
+                "url": "https://BallardKelly.shop",
                 "description": "Ballard Kelly offers trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures for collectors, fans, and hobby enthusiasts.",
                 "potentialAction": {
                   "@type": "SearchAction",
                   "target": {
                     "@type": "EntryPoint",
-                    "urlTemplate": "https://BallardKellyScott.shop/api/products/search?q={search_term_string}"
+                    "urlTemplate": "https://BallardKelly.shop/api/products/search?q={search_term_string}"
                   },
                   "query-input": "required name=search_term_string"
                 }

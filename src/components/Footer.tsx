@@ -15,7 +15,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image
                 src="/logosvg.svg"
-                alt="BallardKellyScott Logo"
+                alt="BallardKelly Logo"
                 width={260}
                 height={46}
                 className="h-auto w-52 brightness-0 invert sm:w-64"
@@ -33,8 +33,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-[#5f8f7a] mr-2" />
-                <a href="mailto:contact@BallardKellyScott.shop" className="hover:text-[#c8942f] transition-colors duration-300">
-                  contact@BallardKellyScott.shop
+                <a href="mailto:contact@BallardKelly.shop" className="hover:text-[#c8942f] transition-colors duration-300">
+                  contact@BallardKelly.shop
                 </a>
               </div>
 
@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="pt-2 flex gap-3">
                 <a
-                  href="https://www.tiktok.com/@BallardKellyScott_officiel"
+                  href="https://www.tiktok.com/@BallardKelly_officiel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}
@@ -67,7 +67,7 @@ const Footer = () => {
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.pinterest.com/BallardKellyScott_officiel/"
+                  href="https://www.pinterest.com/BallardKelly_officiel/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}
@@ -133,7 +133,7 @@ const Footer = () => {
 
         <div className="border-t border-[#f2f7f4]/20 mt-12 pt-8">
           <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
-            <p>© 2026 BallardKellyScott. All rights reserved.</p>
+            <p>© 2026 BallardKelly. All rights reserved.</p>
             <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-end">
               {[
                 { src: '/payment-logos/visa.svg', alt: 'Visa' },

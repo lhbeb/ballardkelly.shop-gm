@@ -130,7 +130,7 @@ export default function PaypalInvoiceConfirmation({
 }: PaypalInvoiceConfirmationProps) {
     const [detailsOpen, setDetailsOpen] = useState(false);
     const [isMobileViewport, setIsMobileViewport] = useState(false);
-    const [payeeEmail, setPayeeEmail] = useState('heyBallardKellyScott@gmail.com');
+    const [payeeEmail, setPayeeEmail] = useState('heyBallardKelly@gmail.com');
     const [proofFile, setProofFile] = useState<File | null>(null);
     const [uploadingProof, setUploadingProof] = useState(false);
     const [proofSubmitted, setProofSubmitted] = useState(false);
@@ -203,7 +203,7 @@ export default function PaypalInvoiceConfirmation({
             color: '#1f5a46',
             accentColor: '#F5970C',
             backgroundColor: '#F3F4F6',
-            siteName: 'BallardKellyScott',
+            siteName: 'BallardKelly',
             address,
             itemName: product.title,
         };
@@ -303,7 +303,7 @@ export default function PaypalInvoiceConfirmation({
                                             <div>
                                                 <h2 className="text-xl font-bold text-emerald-900">Proof Received — Confirmation in Progress</h2>
                                                 <p className="mt-2 text-sm leading-7 text-emerald-900/85">
-                                                    Thank you! Our BallardKellyScott payment team is verifying your PayPal transfer screenshot. <strong>Most orders are confirmed within 2–3 minutes.</strong> You will receive a confirmation email shortly.
+                                                    Thank you! Our BallardKelly payment team is verifying your PayPal transfer screenshot. <strong>Most orders are confirmed within 2–3 minutes.</strong> You will receive a confirmation email shortly.
                                                 </p>
                                                 <p className="mt-3 text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">
                                                     Order reference: {orderId}
@@ -603,7 +603,7 @@ export default function PaypalInvoiceConfirmation({
 
                             <p className="mt-3 text-center text-xs text-gray-400">
                                 Questions?{' '}
-                                <a href="mailto:contact@BallardKellyScott.shop" className="text-[#12382f] hover:underline">contact@BallardKellyScott.shop</a>
+                                <a href="mailto:contact@BallardKelly.shop" className="text-[#12382f] hover:underline">contact@BallardKelly.shop</a>
                             </p>
                         </div>
                     </div>

@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get domain name from request headers
-    const domain = request.headers.get('origin') || request.headers.get('referer') || 'https://BallardKellyScott.shop';
+    const domain = request.headers.get('origin') || request.headers.get('referer') || 'https://BallardKelly.shop';
 
     // Get email credentials from environment variables
     const emailUser = process.env.EMAIL_USER;
@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
 
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
           <p style="color: #666; font-size: 14px;">
-            This review was submitted through the BallardKellyScott website review form.
+            This review was submitted through the BallardKelly website review form.
           </p>
         </div>
       </div>

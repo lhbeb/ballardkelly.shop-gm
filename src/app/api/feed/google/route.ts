@@ -7,7 +7,7 @@ import { enrichGmcDescription } from '@/lib/gmc-description';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const BASE_URL = 'https://BallardKellyScott.shop';
+const BASE_URL = 'https://BallardKelly.shop';
 
 function escapeXml(unsafe: string): string {
   return unsafe
@@ -119,9 +119,9 @@ export async function GET() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>BallardKellyScott Google Merchant Center Feed</title>
+    <title>BallardKelly Google Merchant Center Feed</title>
     <link>${BASE_URL}</link>
-    <description>US product feed for BallardKellyScott outdoor power equipment</description>
+    <description>US product feed for BallardKelly outdoor power equipment</description>
     ${itemsXml}
   </channel>
 </rss>`;

@@ -33,24 +33,24 @@ export default function AboutPage() {
     '@graph': [
       {
         '@type': 'AboutPage',
-        '@id': 'https://BallardKellyScott.shop/about#webpage',
-        url: 'https://BallardKellyScott.shop/about',
+        '@id': 'https://BallardKelly.shop/about#webpage',
+        url: 'https://BallardKelly.shop/about',
         name: 'About Ballard Kelly',
         description:
           'Ballard Kelly is a collector-run ecommerce shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectibles.',
         mainEntity: {
-          '@id': 'https://BallardKellyScott.shop/#organization',
+          '@id': 'https://BallardKelly.shop/#organization',
         },
       },
       {
         '@type': 'OnlineStore',
-        '@id': 'https://BallardKellyScott.shop/#organization',
+        '@id': 'https://BallardKelly.shop/#organization',
         name: 'Ballard Kelly',
-        alternateName: 'BallardKellyScott',
-        url: 'https://BallardKellyScott.shop',
+        alternateName: 'BallardKelly',
+        url: 'https://BallardKelly.shop',
         description:
           'Collector-run ecommerce shop for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectible goods.',
-        email: 'contact@BallardKellyScott.shop',
+        email: 'contact@BallardKelly.shop',
         telephone: ['+1 (913) 593-7677'],
         address: {
           '@type': 'PostalAddress',
@@ -261,7 +261,7 @@ export default function AboutPage() {
                 <Mail className="h-5 w-5 text-[#1f5a46]" />
                 <div className="font-medium text-[#262626]">Email</div>
               </div>
-              <div className="ml-8 text-gray-600">contact@BallardKellyScott.shop</div>
+              <div className="ml-8 text-gray-600">contact@BallardKelly.shop</div>
             </div>
             <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
               <div className="mb-3 flex items-center gap-3">

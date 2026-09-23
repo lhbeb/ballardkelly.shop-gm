@@ -287,7 +287,7 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
               <Image
                 src="/logosvg.svg"
-                alt="BallardKellyScott Logo"
+                alt="BallardKelly Logo"
                 width={182}
                 height={32}
                 priority

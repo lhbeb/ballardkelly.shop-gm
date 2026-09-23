@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Report Security Issues | BallardKellyScott',
-  description: 'Report security vulnerabilities and issues on BallardKellyScott.',
+  title: 'Report Security Issues | BallardKelly',
+  description: 'Report security vulnerabilities and issues on BallardKelly.',
 };
 
 export default function ReportSecurityIssuesPage() {
@@ -17,7 +17,7 @@ export default function ReportSecurityIssuesPage() {
             Report Security Issues
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-[#f2f7f4]/80 sm:text-lg">
-            If you’ve found a security vulnerability on BallardKellyScott.shop, we encourage you to contact us immediately. We review all legitimate reports and aim to resolve issues quickly. Before reporting, please review this document — including our fundamentals, bounty program, reward guidelines, and non-reportable issues.
+            If you’ve found a security vulnerability on BallardKelly.shop, we encourage you to contact us immediately. We review all legitimate reports and aim to resolve issues quickly. Before reporting, please review this document — including our fundamentals, bounty program, reward guidelines, and non-reportable issues.
           </p>
         </section>
 
@@ -27,7 +27,7 @@ export default function ReportSecurityIssuesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Fundamentals</h2>
             <p className="text-gray-600 mb-4">
-              If you follow the principles below when reporting a security issue to BallardKellyScott.shop, we will not initiate legal action or enforcement investigations against you in response to your report.
+              If you follow the principles below when reporting a security issue to BallardKelly.shop, we will not initiate legal action or enforcement investigations against you in response to your report.
             </p>
             <p className="text-gray-600 mb-4 font-semibold">We ask that:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
@@ -42,7 +42,7 @@ export default function ReportSecurityIssuesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Bounty Program</h2>
             <p className="text-gray-600 mb-4">
-              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at BallardKellyScott.shop&apos;s discretion, based on risk, impact, and report quality.
+              We recognize and reward security researchers who help protect our platform by reporting vulnerabilities. Bounties are awarded at BallardKelly.shop&apos;s discretion, based on risk, impact, and report quality.
             </p>
             <p className="text-gray-600 mb-4 font-semibold">To potentially qualify for a bounty, you must:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-600">
@@ -124,7 +124,7 @@ export default function ReportSecurityIssuesPage() {
                 <strong>✆ Phone:</strong> +1 (913) 593-7677
               </p>
               <p>
-                <strong>✉ Email:</strong> <a href="mailto:contact@BallardKellyScott.shop" className="text-[#1f5a46] hover:underline">contact@BallardKellyScott.shop</a>
+                <strong>✉ Email:</strong> <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">contact@BallardKelly.shop</a>
               </p>
             </div>
           </section>

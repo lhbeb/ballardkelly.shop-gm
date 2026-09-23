@@ -182,7 +182,7 @@ export default function PaymentSettingsPage() {
     };
 
     const handleDisconnectStripe = async () => {
-        if (!window.confirm('Disconnect this Stripe account from BallardKellyScott checkout?')) return;
+        if (!window.confirm('Disconnect this Stripe account from BallardKelly checkout?')) return;
 
         setIsDisconnectingStripe(true);
         setStatusMessage(null);
@@ -202,7 +202,7 @@ export default function PaymentSettingsPage() {
                 return;
             }
 
-            setStatusMessage({ type: 'success', text: 'Stripe account disconnected from BallardKellyScott checkout.' });
+            setStatusMessage({ type: 'success', text: 'Stripe account disconnected from BallardKelly checkout.' });
             await fetchSettings();
         } catch {
             setStatusMessage({ type: 'error', text: 'Could not disconnect Stripe. Please try again.' });
@@ -470,7 +470,7 @@ export default function PaymentSettingsPage() {
                                             </div>
                                         ) : (
                                             <p className="mt-2 max-w-md text-sm leading-6 text-gray-600">
-                                                Authorize an existing Stripe account. BallardKellyScott will use it for new embedded Stripe Checkout sessions.
+                                                Authorize an existing Stripe account. BallardKelly will use it for new embedded Stripe Checkout sessions.
                                             </p>
                                         )}
                                     </div>

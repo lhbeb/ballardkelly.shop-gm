@@ -30,7 +30,7 @@ export default function LocalPickupPage() {
               Local Pickup Guide
             </div>
             <h1 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
-              Pick up your BallardKellyScott order with confidence
+              Pick up your BallardKelly order with confidence
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#D9E6FF] sm:text-base">
               Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Wichita, Kansas. This page covers what to expect, what to bring, and how collection works once your order is ready.
@@ -80,7 +80,7 @@ export default function LocalPickupPage() {
                 </p>
                 <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="mailto:contact@BallardKellyScott.shop"
+                    href="mailto:contact@BallardKelly.shop"
                     className="inline-flex items-center justify-center rounded-2xl bg-[#1f5a46] px-5 py-3 text-sm font-semibold text-[#f2f7f4] transition hover:bg-[#102820]"
                   >
                     Email Support

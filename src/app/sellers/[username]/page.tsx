@@ -13,17 +13,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!seller) {
     return {
-      title: 'Seller Not Found | BallardKellyScott',
+      title: 'Seller Not Found | BallardKelly',
       description: 'The requested seller profile could not be found.',
     };
   }
 
   return {
-    title: `${seller.name} | BallardKellyScott Seller`,
-    description: seller.bio || `Shop products from ${seller.name} on BallardKellyScott.`,
+    title: `${seller.name} | BallardKelly Seller`,
+    description: seller.bio || `Shop products from ${seller.name} on BallardKelly.`,
     openGraph: {
-      title: `${seller.name} - BallardKellyScott`,
-      description: seller.bio || `Check out ${seller.name}'s profile and listings on BallardKellyScott.`,
+      title: `${seller.name} - BallardKelly`,
+      description: seller.bio || `Check out ${seller.name}'s profile and listings on BallardKelly.`,
       images: seller.avatarUrl ? [{ url: seller.avatarUrl }] : [],
     },
   };
