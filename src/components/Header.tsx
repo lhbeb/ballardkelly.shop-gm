@@ -11,7 +11,7 @@ import SearchBar from './SearchBar';
 
 
 const desktopNavLinkClass =
-  'relative py-1 text-sm font-medium text-[#1f5a46] transition-colors duration-200 hover:text-[#5f8f7a] focus-visible:text-[#5f8f7a] focus-visible:outline-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-[#5f8f7a] after:transition-transform after:duration-200 hover:after:scale-x-100 focus-visible:after:scale-x-100';
+  'relative shrink-0 whitespace-nowrap py-1 text-sm font-medium text-[#1f5a46] transition-colors duration-200 hover:text-[#5f8f7a] focus-visible:text-[#5f8f7a] focus-visible:outline-none after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-full after:bg-[#5f8f7a] after:transition-transform after:duration-200 hover:after:scale-x-100 focus-visible:after:scale-x-100';
 
 const mobileMenuLinkClass =
   'text-center font-medium text-[#1f5a46] transition-colors duration-200 hover:text-[#5f8f7a] focus-visible:text-[#5f8f7a] focus-visible:outline-none';
