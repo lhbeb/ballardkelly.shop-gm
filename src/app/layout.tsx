@@ -133,22 +133,22 @@ export default function RootLayout({
                 "description": "Ballard Kelly is a collector-run shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures.",
                 "sameAs": [
                   "https://www.tiktok.com/@BallardKelly_officiel",
-                  "https://www.instagram.com/ballardkelly.shop/",
+                  "https://www.instagram.com/ballardkelly_shop/",
                   "https://www.pinterest.com/BallardKelly_officiel/"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "contactType": "customer service",
                   "email": "contact@BallardKelly.shop",
-                  "telephone": "+1 (913) 593-7677",
+                  "telephone": "+1 (308) 260-1935",
                   "areaServed": "US"
                 },
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "1239 N Washington Ave",
-                  "addressLocality": "Wichita",
-                  "addressRegion": "KS",
-                  "postalCode": "67214",
+                  "streetAddress": "823 Center Ave N",
+                  "addressLocality": "Curtis",
+                  "addressRegion": "NE",
+                  "postalCode": "69025",
                   "addressCountry": "US"
                 }
               })

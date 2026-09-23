@@ -50,7 +50,7 @@ const InstagramSection: React.FC = () => {
               {/* Follow Us Button */}
               <div className="flex-shrink-0">
                 <a
-                  href="https://www.instagram.com/ballardkelly.shop/"
+                  href="https://www.instagram.com/ballardkelly_shop/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-[#1f5a46] hover:bg-[#174434] text-white font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"

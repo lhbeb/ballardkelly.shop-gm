@@ -27,8 +27,8 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 shrink-0 text-[#5f8f7a] mr-2" />
-                <a href="tel:+1 (913) 593-7677" className="hover:text-[#c8942f] transition-colors duration-300">
-                  <span className="font-semibold">United States:</span> +1 (913) 593-7677
+                <a href="tel:+13082601935" className="hover:text-[#c8942f] transition-colors duration-300">
+                  <span className="font-semibold">United States:</span> +1 (308) 260-1935
                 </a>
               </div>
               <div className="flex items-center">
@@ -42,7 +42,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 shrink-0 text-[#5f8f7a] mr-2 mt-1" />
                 <div>
                   <span className="block font-semibold text-white">Address</span>
-                  <span>1239 N Washington Ave, Wichita, KS 67214, USA</span>
+                  <span>823 Center Ave N, Curtis, NE 69025, United States</span>
                 </div>
               </div>
               <div className="pt-2 flex gap-3">
@@ -58,7 +58,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/ballardkelly.shop/"
+                  href="https://www.instagram.com/ballardkelly_shop/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={socialIconClass}

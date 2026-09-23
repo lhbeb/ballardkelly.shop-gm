@@ -51,13 +51,13 @@ export default function AboutPage() {
         description:
           'Collector-run ecommerce shop for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectible goods.',
         email: 'contact@BallardKelly.shop',
-        telephone: ['+1 (913) 593-7677'],
+        telephone: ['+1 (308) 260-1935'],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: '1239 N Washington Ave',
-          addressLocality: 'Wichita',
-          addressRegion: 'KS',
-          postalCode: '67214',
+          streetAddress: '823 Center Ave N',
+          addressLocality: 'Curtis',
+          addressRegion: 'NE',
+          postalCode: '69025',
           addressCountry: 'US',
         },
         founder: {
@@ -245,15 +245,15 @@ export default function AboutPage() {
                 <MapPin className="h-5 w-5 text-[#1f5a46]" />
                 <div className="font-medium text-[#262626]">Address</div>
               </div>
-              <div className="ml-8 text-gray-600">1239 N Washington Ave, Wichita, KS 67214, USA</div>
+              <div className="ml-8 text-gray-600">823 Center Ave N, Curtis, NE 69025, United States</div>
             </div>
             <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
               <div className="mb-3 flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#1f5a46]" />
                 <div className="font-medium text-[#262626]">Phone</div>
               </div>
-              <a href="tel:+1 (913) 593-7677" className="ml-8 text-gray-600 hover:text-[#1f5a46]">
-                +1 (913) 593-7677
+              <a href="tel:+13082601935" className="ml-8 text-gray-600 hover:text-[#1f5a46]">
+                +1 (308) 260-1935
               </a>
             </div>
             <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">

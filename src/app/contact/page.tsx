@@ -36,11 +36,11 @@ export default function ContactPage() {
         'name': 'BallardKelly',
         'url': 'https://BallardKelly.shop',
         'email': 'contact@BallardKelly.shop',
-        'telephone': ['+1 (913) 593-7677'],
+        'telephone': ['+1 (308) 260-1935'],
         'contactPoint': [
           {
             '@type': 'ContactPoint',
-            'telephone': '+1 (913) 593-7677',
+            'telephone': '+1 (308) 260-1935',
             'contactType': 'customer service',
             'areaServed': 'US',
             'availableLanguage': ['en'],
@@ -48,10 +48,10 @@ export default function ContactPage() {
         ],
         'address': {
           '@type': 'PostalAddress',
-            'streetAddress': '1239 N Washington Ave',
-            'addressLocality': 'Wichita',
-            'addressRegion': 'KS',
-            'postalCode': '67214',
+            'streetAddress': '823 Center Ave N',
+            'addressLocality': 'Curtis',
+            'addressRegion': 'NE',
+            'postalCode': '69025',
             'addressCountry': 'US',
         },
       },
@@ -215,14 +215,14 @@ export default function ContactPage() {
                       <MapPin className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Address</h3>
-                        <p className="text-gray-600 mt-1">1239 N Washington Ave, Wichita, KS 67214, USA</p>
+                        <p className="text-gray-600 mt-1">823 Center Ave N, Curtis, NE 69025, United States</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Phone className="h-6 w-6 text-[#12382f] mt-1 shrink-0" />
                       <div className="ml-4">
                         <h3 className="font-medium text-[#262626]">Phone Support</h3>
-                        <p className="text-gray-600 mt-1"><span className="font-semibold">Phone:</span> +1 (913) 593-7677</p>
+                        <p className="text-gray-600 mt-1"><span className="font-semibold">Phone:</span> +1 (308) 260-1935</p>
                       </div>
                     </div>
                     <div className="flex items-start">

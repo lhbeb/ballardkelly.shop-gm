@@ -118,10 +118,10 @@ export default function ReportSecurityIssuesPage() {
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Contact Information</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                <strong>📍 Address:</strong> <a href="https://maps.google.com/?q=1239+N+Washington+Ave,+Wichita,+KS+67214,+USA" target="_blank" rel="noopener noreferrer" className="text-[#1f5a46] hover:underline">1239 N Washington Ave, Wichita, KS 67214, USA</a>
+                <strong>📍 Address:</strong> <a href="https://maps.google.com/?q=823+Center+Ave+N,+Curtis,+NE+69025,+United+States" target="_blank" rel="noopener noreferrer" className="text-[#1f5a46] hover:underline">823 Center Ave N, Curtis, NE 69025, United States</a>
               </p>
               <p>
-                <strong>✆ Phone:</strong> +1 (913) 593-7677
+                <strong>✆ Phone:</strong> +1 (308) 260-1935
               </p>
               <p>
                 <strong>✉ Email:</strong> <a href="mailto:contact@BallardKelly.shop" className="text-[#1f5a46] hover:underline">contact@BallardKelly.shop</a>

@@ -201,7 +201,7 @@ const TermsPage = () => {
             <div className="bg-gray-50 rounded-lg p-6 space-y-3">
               <div>
                 <div className="font-medium text-[#262626] mb-1">Phone:</div>
-                <div className="text-gray-600">+1 (913) 593-7677</div>
+                <div className="text-gray-600">+1 (308) 260-1935</div>
               </div>
               <div>
                 <div className="font-medium text-[#262626] mb-1">Email:</div>
@@ -210,7 +210,7 @@ const TermsPage = () => {
 
               <div>
                 <div className="font-medium text-[#262626] mb-1">Address:</div>
-                <div className="text-gray-600">1239 N Washington Ave, Wichita, KS 67214, USA</div>
+                <div className="text-gray-600">823 Center Ave N, Curtis, NE 69025, United States</div>
               </div>
               <div>
                 <div className="font-medium text-[#262626] mb-1">Hours:</div>

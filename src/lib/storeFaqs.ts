@@ -72,7 +72,7 @@ export const STORE_FAQS: readonly StoreFaq[] = [
   {
     question: 'How can I contact BallardKelly?',
     answer:
-      'You can use our contact form, email contact@BallardKelly.shop, or call +1 (913) 593-7677 during published support hours.',
+      'You can use our contact form, email contact@BallardKelly.shop, or call +1 (308) 260-1935 during published support hours.',
     linkHref: '/contact',
     linkLabel: 'Contact our team',
   },

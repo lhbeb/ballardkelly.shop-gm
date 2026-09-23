@@ -46,7 +46,7 @@ const InstagramWidget: React.FC = () => {
 
         {/* Follow Button */}
         <a
-          href="https://www.instagram.com/ballardkelly.shop/"
+          href="https://www.instagram.com/ballardkelly_shop/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#1f5a46] text-white font-medium rounded-lg hover:bg-[#174434] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"

@@ -183,7 +183,7 @@ export default function ReturnPolicyPage() {
             <p>All returns are handled <strong>by mail</strong>. Here&apos;s how it works:</p>
             <ol className="list-decimal pl-6 space-y-3">
               <li>
-                <strong>Contact us</strong> at <a href="mailto:contact@BallardKelly.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKelly.shop</a> or call <span className="font-semibold">+1 (913) 593-7677</span>.
+                <strong>Contact us</strong> at <a href="mailto:contact@BallardKelly.shop" className="text-emerald-700 hover:underline font-semibold">contact@BallardKelly.shop</a> or call <span className="font-semibold">+1 (308) 260-1935</span>.
               </li>
               <li>
                 <strong>Get your return label</strong>. We&apos;ll email you a prepaid label after approving your return request.
@@ -249,7 +249,7 @@ export default function ReturnPolicyPage() {
                   <span>Phone</span>
                 </div>
                 <div className="text-sm text-gray-600 pl-7 space-y-1">
-                  <div>+1 (913) 593-7677</div>
+                  <div>+1 (308) 260-1935</div>
                 </div>
 
                 <div className="flex items-center gap-2 font-bold text-[#12382f] pt-2">
@@ -270,7 +270,7 @@ export default function ReturnPolicyPage() {
 
                   <div>
                     <strong className="text-gray-900 block">Address:</strong>
-                    1239 N Washington Ave, Wichita, KS 67214, USA
+                    823 Center Ave N, Curtis, NE 69025, United States
                   </div>
                 </div>
               </div>

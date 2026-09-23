@@ -33,7 +33,7 @@ export default function LocalPickupPage() {
               Pick up your BallardKelly order with confidence
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-[#D9E6FF] sm:text-base">
-              Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Wichita, Kansas. This page covers what to expect, what to bring, and how collection works once your order is ready.
+              Eligible resold and sourced outdoor power equipment for home, backyard, acreage, and farm care can be collected from our location in Curtis, Nebraska. This page covers what to expect, what to bring, and how collection works once your order is ready.
             </p>
           </section>
 
@@ -106,9 +106,9 @@ export default function LocalPickupPage() {
                     <div className="mt-4 space-y-4 text-sm leading-7 text-[#5B6785]">
                       <address className="not-italic">
                         <span className="block font-semibold text-[#262626]">USA</span>
-                        1239 N Washington Ave
+                        823 Center Ave N
                         <br />
-                        Wichita, KS 67214
+                        Curtis, NE 69025
                         <br />
                         USA
                       </address>
