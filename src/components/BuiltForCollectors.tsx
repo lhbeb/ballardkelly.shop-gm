@@ -27,7 +27,7 @@ export default function BuiltForCollectors() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <p className="text-sm font-black uppercase tracking-[0.24em] text-[#f1cf74]">
+            <p className="text-sm font-black uppercase tracking-[0.24em] text-[#6ee7a8]">
               Ballard Kelly Standard
             </p>
             <h2
@@ -35,7 +35,7 @@ export default function BuiltForCollectors() {
               className="mt-3 text-4xl font-black uppercase leading-none tracking-normal text-[#f2f7f4] md:text-6xl"
             >
               Built for{' '}
-              <span className="bg-gradient-to-r from-[#f1cf74] via-[#c8942f] to-[#8fb7a4] bg-clip-text text-transparent">
+              <span className="text-[#6ee7a8]">
                 Collectors
               </span>
             </h2>
@@ -53,13 +53,13 @@ export default function BuiltForCollectors() {
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <Icon className="h-7 w-7 shrink-0 text-[#f1cf74] md:hidden" aria-hidden="true" />
-                    <div className="bg-gradient-to-r from-[#f1cf74] via-[#c8942f] to-[#8fb7a4] bg-clip-text text-6xl font-black leading-none tracking-normal text-transparent md:text-7xl">
+                    <Icon className="h-7 w-7 shrink-0 text-[#6ee7a8] md:hidden" aria-hidden="true" />
+                    <div className="text-6xl font-black leading-none tracking-normal text-[#6ee7a8] md:text-7xl">
                       {row.value}
                     </div>
                   </div>
                   <div className="flex items-start gap-5">
-                    <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#f1cf74]/30 bg-[#f2f7f4]/8 text-[#f1cf74] md:flex">
+                    <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#6ee7a8]/35 bg-[#f2f7f4]/8 text-[#6ee7a8] md:flex">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <div>
@@ -77,7 +77,7 @@ export default function BuiltForCollectors() {
           </div>
 
           <div className="mt-8 flex items-start gap-3 rounded-lg bg-[#f2f7f4] px-5 py-4 text-[#1f5a46] md:px-6">
-            <Info className="mt-1 h-5 w-5 shrink-0 text-[#c8942f]" aria-hidden="true" />
+            <Info className="mt-1 h-5 w-5 shrink-0 text-[#1f8f5f]" aria-hidden="true" />
             <p className="text-base leading-7 md:text-lg">
               Based on Ballard Kelly&apos;s collector-first listing standards and product review process.
             </p>
