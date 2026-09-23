@@ -15,33 +15,22 @@ import type { Product } from '@/types/product';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const OUTDOOR_EQUIPMENT_CATEGORIES = new Set([
-  'lawn mowers',
-  'pressure washers',
-  'outdoor power equipment',
-]);
-
-const OUTDOOR_EQUIPMENT_TERMS = [
-  'mower',
-  'mowers',
-  'mähroboter',
-  'maehroboter',
-  'automower',
-  'miimo',
-  'robocut',
-  'pressure washer',
-  'chainsaw',
-  'chain saw',
-  'blower',
-  'trimmer',
-  'generator',
+const COLLECTIBLES_TERMS = [
+  'trading card',
+  'collectible',
+  'comic',
+  'figure',
+  'pokemon',
+  'sports card',
+  'action figure',
+  'memorabilia',
 ];
 
 function normalizeCatalogText(value?: string) {
   return value?.trim().toLowerCase() ?? '';
 }
 
-function isOutdoorCareProduct(product: Product) {
+function isCollectibleProduct(product: Product) {
   const category = normalizeCatalogText(product.category);
   const searchable = `${normalizeCatalogText(product.title)} ${normalizeCatalogText(product.brand)} ${category}`;
 
@@ -50,8 +39,7 @@ function isOutdoorCareProduct(product: Product) {
     product.inStock !== false &&
     Boolean(product.slug) &&
     Boolean(product.images?.[0]) &&
-    (OUTDOOR_EQUIPMENT_CATEGORIES.has(category) ||
-      OUTDOOR_EQUIPMENT_TERMS.some((term) => searchable.includes(term)))
+    COLLECTIBLES_TERMS.some((term) => searchable.includes(term))
   );
 }
 
@@ -62,7 +50,7 @@ export default async function HomePage() {
       getProducts(),
     ]);
 
-    const outdoorCareProducts = products.filter(isOutdoorCareProduct);
+    const collectibleProducts = products.filter(isCollectibleProduct);
 
     const smallToolProducts = products.filter((product) =>
       product.collections?.includes('power-tools') &&
@@ -87,16 +75,16 @@ export default async function HomePage() {
 
       <BrandCatalogSection />
 
-      {outdoorCareProducts.length > 0 && (
+      {collectibleProducts.length > 0 && (
         <Suspense fallback={null}>
           <ProductGrid
-            products={outdoorCareProducts}
-            sectionId="lawn-garden-equipment"
+            products={collectibleProducts}
+            sectionId="trading-cards-collectibles-comics-figures"
             title=""
             editorialCard={{
-              title: 'Equipment for Lawn, Backyard, and Farm Care',
+              title: 'Trading Cards, Collectibles, Comics & Figures',
               description:
-                'BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and outdoor power equipment for routine yard care, backyard upkeep, acreage, and farm maintenance.',
+                'Explore memorable finds for collectors, fans, and hobby enthusiasts—from trading cards and comics to figures and unique collectibles.',
             }}
             randomizeForVisitor
             visitorShuffleKey="home-outdoor-care"
@@ -111,7 +99,7 @@ export default async function HomePage() {
           <ProductGrid
             products={smallToolProducts}
             sectionId="durable-tools"
-            title="Equipment for Home, Backyard, and Farm Work"
+            title="More to Discover for Collectors"
             randomizeForVisitor
             visitorShuffleKey="home-durable-tools"
           />

@@ -26,9 +26,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
-  description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott. Reliable products for home, backyard, acreage, and farm upkeep.",
-  keywords: "BallardKellyScott, reseller, sourced equipment, lawn mowers, pressure washers, chainsaws, blowers, trimmers, outdoor power equipment, backyard equipment, farm equipment, home maintenance equipment",
+  title: "BallardKellyScott | Trading Cards, Collectibles, Comics & Figures",
+  description: "Explore trading cards, collectibles, comics, and figures at BallardKellyScott. Discover memorable pieces for collectors, fans, and hobby enthusiasts.",
+  keywords: "BallardKellyScott, trading cards, collectibles, comics, figures, card collecting, comic books, collectible figures, hobby shop, collector gifts",
   authors: [{ name: "BallardKellyScott" }],
   creator: "BallardKellyScott",
   publisher: "BallardKellyScott",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://BallardKellyScott.shop"),
   openGraph: {
-    title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
-    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott.",
+    title: "BallardKellyScott | Trading Cards, Collectibles, Comics & Figures",
+    description: "Shop trading cards, collectibles, comics, and figures at BallardKellyScott.",
     url: "https://BallardKellyScott.shop",
     siteName: "BallardKellyScott",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "/g7x.jpeg",
         width: 1200,
         height: 630,
-        alt: "BallardKellyScott - Outdoor Power Equipment for Home, Backyard, and Farm Care",
+        alt: "BallardKellyScott - Trading Cards, Collectibles, Comics and Figures",
       },
     ],
     locale: "en_US",
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BallardKellyScott - Equipment for Home, Backyard, and Farm Care",
-    description: "Shop resold and sourced lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment at BallardKellyScott.",
+    title: "BallardKellyScott | Trading Cards, Collectibles, Comics & Figures",
+    description: "Discover trading cards, collectibles, comics, and figures at BallardKellyScott.",
     images: ["/g7x.jpeg"],
   },
   robots: {
@@ -129,7 +129,7 @@ export default function RootLayout({
                 "name": "BallardKellyScott",
                 "url": "https://BallardKellyScott.shop",
                 "logo": "https://BallardKellyScott.shop/logosvg.svg",
-                "description": "BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
+                "description": "BallardKellyScott offers trading cards, collectibles, comics, and figures for collectors, fans, and hobby enthusiasts.",
                 "sameAs": [
                   "https://www.tiktok.com/@BallardKellyScott_officiel",
                   "https://www.instagram.com/BallardKellyScott_officiel/",
@@ -166,7 +166,7 @@ export default function RootLayout({
                 "@type": "WebSite",
                 "name": "BallardKellyScott",
                 "url": "https://BallardKellyScott.shop",
-                "description": "BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.",
+                "description": "BallardKellyScott offers trading cards, collectibles, comics, and figures for collectors, fans, and hobby enthusiasts.",
                 "potentialAction": {
                   "@type": "SearchAction",
                   "target": {

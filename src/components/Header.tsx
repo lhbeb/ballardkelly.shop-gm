@@ -26,9 +26,10 @@ interface NavLink {
 const allProductsLink: NavLink = { label: 'All Products', href: '/search' };
 
 const fallbackCatalogCategories = [
-  'Pressure Washers',
-  'Outdoor Power Equipment',
-  'Lawn Mowers',
+  'Trading Cards',
+  'Collectibles',
+  'Comics',
+  'Figures',
 ];
 
 const staleCatalogCategoryLabels = new Set([
@@ -39,6 +40,9 @@ const staleCatalogCategoryLabels = new Set([
   'Fashion',
   'Hardware',
   'Hobbies & Collectibles',
+  'Pressure Washers',
+  'Outdoor Power Equipment',
+  'Lawn Mowers',
 ]);
 
 const utilityNavLinks = [
