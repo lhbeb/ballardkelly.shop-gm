@@ -18,7 +18,7 @@ const Footer = () => {
                 alt="BallardKelly Logo"
                 width={260}
                 height={46}
-                className="h-auto w-52 brightness-0 invert sm:w-64"
+                className="h-auto w-[6.5rem] brightness-0 invert sm:w-32"
               />
             </Link>
             <p className="mb-4 text-[#f2f7f4]">
