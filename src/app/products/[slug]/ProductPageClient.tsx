@@ -12,7 +12,7 @@ import { addToCart } from '@/utils/cart';
 import { preventScrollOnClick } from '@/utils/scrollUtils';
 import { debugNavigation, debugError, debugLog } from '@/utils/debug';
 import { trackPixelEvent } from '@/lib/pixel';
-import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp, X, ShoppingCart, Zap, Eye, ZoomIn, Info, Ruler } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp, X, ShoppingCart, Zap, ZoomIn, Info, Ruler } from 'lucide-react';
 import { useState, useEffect, useMemo, useRef, type CSSProperties } from 'react';
 import type { Product } from '@/types/product';
 import Image from 'next/image';
@@ -40,7 +40,6 @@ export default function ProductPageClient({ product: initialProduct, userMarket 
   const [showZoom, setShowZoom] = useState(false);
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isBuyingNow, setIsBuyingNow] = useState(false);
-  const [viewedCount, setViewedCount] = useState<number | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number } | null>(null);
@@ -88,37 +87,6 @@ export default function ProductPageClient({ product: initialProduct, userMarket 
     const preview = descriptionText.slice(0, 360).trimEnd();
     return `${preview}${preview.endsWith(".") ? "" : "…"}`;
   }, [descriptionText, shouldCollapseDescription]);
-
-  // Generate viewed count that persists during session
-  useEffect(() => {
-    if (!product || typeof window === 'undefined') return;
-
-    const sessionKey = `product_viewed_${product.slug}`;
-
-    // Check if we already have a count for this product in this session
-    const storedCount = sessionStorage.getItem(sessionKey);
-
-    if (storedCount) {
-      // Use the stored count
-      setViewedCount(parseInt(storedCount, 10));
-    } else {
-      // Generate a new random number based on product slug for consistency
-      let hash = 0;
-      for (let i = 0; i < product.slug.length; i++) {
-        const char = product.slug.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash;
-      }
-
-      // Generate a random number between 27 and 123 based on hash
-      const seed = Math.abs(hash);
-      const count = 27 + (seed % 97); // 27 to 123 range (123 - 27 + 1 = 97)
-
-      // Store it in sessionStorage for this session
-      sessionStorage.setItem(sessionKey, count.toString());
-      setViewedCount(count);
-    }
-  }, [product]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -631,27 +599,6 @@ export default function ProductPageClient({ product: initialProduct, userMarket 
                   </>
                 )}
               </div>
-
-              <ClientOnly>
-                {viewedCount !== null && viewedCount > 0 && (
-                  <div className="mt-6 bg-[#1f5a46]/10 border border-[#1f5a46]/30 rounded-xl p-3 sm:p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2 sm:space-x-4">
-                        <div className="flex items-center text-[#1f5a46]">
-                          <Eye className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-1.5" />
-                          <span className="text-xs sm:text-sm font-medium">
-                            {viewedCount.toLocaleString()} viewed in the last 24 hours
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-[#1f5a46] rounded-full animate-pulse mr-2"></div>
-                        <span className="text-xs text-[#1f5a46] font-medium hidden sm:inline">Live activity</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </ClientOnly>
 
               {/* Size Selector Section */}
               {!!(product?.meta?.has_mens_sizes || product?.meta?.has_womens_sizes || product?.meta?.hasSizes) && (
