@@ -8,23 +8,23 @@ const InstagramWidget: React.FC = () => {
       {/* Profile Header */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex items-center space-x-4 mb-6">
-          {/* Profile Picture with Instagram Gradient Ring */}
-          <div className="w-20 h-20 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full p-0.5 flex-shrink-0">
-            <div className="w-full h-full bg-white rounded-full overflow-hidden">
+          {/* Profile Picture */}
+          <div className="w-20 h-20 bg-gradient-to-tr from-[#1f5a46] via-[#5f8f7a] to-[#c8942f] rounded-full p-0.5 flex-shrink-0">
+            <div className="w-full h-full bg-white rounded-full overflow-hidden p-2">
               <Image
-                src="/pdp.png"
-                alt="BallardKellyScott Profile"
+                src="/logosvg.svg"
+                alt="Ballard Kelly profile"
                 width={80}
                 height={80}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
 
           {/* Profile Info */}
           <div className="flex-grow">
-            <h3 className="font-bold text-[#262626] text-xl mb-1">@BallardKellyScott_officiel</h3>
-            <p className="text-gray-600 text-sm mb-3">BallardKellyScott</p>
+            <h3 className="font-bold text-[#262626] text-xl mb-1">@ballardkelly.shop</h3>
+            <p className="text-gray-600 text-sm mb-3">Ballard Kelly</p>
 
             {/* Statistics */}
             <div className="flex items-center space-x-6 text-sm">
@@ -46,10 +46,10 @@ const InstagramWidget: React.FC = () => {
 
         {/* Follow Button */}
         <a
-          href="https://www.instagram.com/BallardKellyScott_officiel/"
+          href="https://www.instagram.com/ballardkelly.shop/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+          className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#1f5a46] text-white font-medium rounded-lg hover:bg-[#174434] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
         >
           <Instagram className="h-5 w-5 mr-2" />
           Follow on Instagram

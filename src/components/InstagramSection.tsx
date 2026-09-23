@@ -11,23 +11,23 @@ const InstagramSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-6">
               {/* Profile Info */}
               <div className="flex items-center space-x-4">
-                {/* Profile Picture with Instagram Gradient Border */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full p-0.5 flex-shrink-0">
-                  <div className="w-full h-full bg-white rounded-full overflow-hidden">
+                {/* Profile Picture */}
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-tr from-[#1f5a46] via-[#5f8f7a] to-[#c8942f] rounded-full p-0.5 flex-shrink-0">
+                  <div className="w-full h-full bg-white rounded-full overflow-hidden p-2">
                     <Image
-                      src="/pdp.png"
-                      alt="BallardKellyScott Profile"
+                      src="/logosvg.svg"
+                      alt="Ballard Kelly profile"
                       width={80}
                       height={80}
-                      className="object-cover w-full h-full"
+                      className="object-contain w-full h-full"
                     />
                   </div>
                 </div>
 
                 {/* Profile Details */}
                 <div className="flex-grow">
-                  <h3 className="font-bold text-[#262626] text-lg sm:text-xl mb-1">@BallardKellyScott_officiel</h3>
-                  <p className="text-gray-600 text-sm sm:text-base mb-2">BallardKellyScott</p>
+                  <h3 className="font-bold text-[#262626] text-lg sm:text-xl mb-1">@ballardkelly.shop</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-2">Ballard Kelly</p>
 
                   {/* Statistics */}
                   <div className="flex items-center space-x-4 sm:space-x-6 text-sm">
@@ -50,10 +50,10 @@ const InstagramSection: React.FC = () => {
               {/* Follow Us Button */}
               <div className="flex-shrink-0">
                 <a
-                  href="https://www.instagram.com/BallardKellyScott_officiel/"
+                  href="https://www.instagram.com/ballardkelly.shop/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-[#1f5a46] hover:bg-[#174434] text-white font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
                 >
                   <Instagram className="h-5 w-5 mr-2" />
                   <span className="hidden sm:inline">Follow Us</span>

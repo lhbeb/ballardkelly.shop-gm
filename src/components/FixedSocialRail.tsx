@@ -27,8 +27,8 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/BallardKellyScott_officiel/',
-    className: 'bg-[#C94775] text-white hover:bg-[#B73C68]',
+    href: 'https://www.instagram.com/ballardkelly.shop/',
+    className: 'bg-[#1f5a46] text-white hover:bg-[#174434]',
     icon: <Instagram className="h-4 w-4" aria-hidden="true" />,
   },
   {
