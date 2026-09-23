@@ -1,5 +1,5 @@
 const catalogMarks =
-  'Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, Husqvarna, and other product or model marks shown in our catalog';
+  'Topps, Pokemon, sports leagues, entertainment properties, comic publishers, figure makers, and other product or character marks shown in our catalog';
 
 interface ResellerBrandNoticeProps {
   compact?: boolean;
@@ -12,7 +12,7 @@ export default function ResellerBrandNotice({ compact = false }: ResellerBrandNo
         Independent Reseller & Brand Marks Notice
       </h2>
       <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
-        BallardKellyScott is an independent ecommerce seller and reseller of outdoor power, lawn, backyard, home-care, and farm-care equipment. Some listings may come through authorized reseller or supplier relationships where applicable; others may come through verified resale, marketplace partner, private seller, auction, wholesale, liquidation, or overstock channels.
+        Ballard Kelly is an independent ecommerce shop founded by Ballard Kelly Scott, an enthusiast collector of trading cards, collectibles, Topps releases, Pokemon cards, booster boxes, comics, figures, and related hobby goods. Some listings may come through authorized reseller or supplier relationships where applicable; others may come through verified resale, marketplace partner, private seller, auction, wholesale, liquidation, or overstock channels.
       </p>
       <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
         Product names, brand names, logos, and marks including {catalogMarks} are used only to identify the products offered for sale. Each mark remains the property of its respective owner, and use of those marks does not imply manufacturer affiliation, sponsorship, or endorsement unless BallardKellyScott expressly states that relationship for a specific listing.

@@ -42,7 +42,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   }
 
   return (
-    <section id="outdoor-power-equipment" className="py-16 bg-white">
+    <section id="collector-finds" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

@@ -27,9 +27,10 @@ const allProductsLink: NavLink = { label: 'All Products', href: '/search' };
 
 const fallbackCatalogCategories = [
   'Trading Cards',
+  'Topps',
+  'Pokemon Cards',
+  'Booster Boxes',
   'Collectibles',
-  'Comics',
-  'Figures',
 ];
 
 const staleCatalogCategoryLabels = new Set([
@@ -46,7 +47,8 @@ const staleCatalogCategoryLabels = new Set([
 ]);
 
 const utilityNavLinks = [
-  { label: 'Featured', href: '/#featured' },
+  { label: 'New Finds', href: '/#featured' },
+  { label: 'About Ballard Kelly', href: '/about' },
   { label: 'Track Order', href: '/track' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -83,7 +85,7 @@ const Header = () => {
     </span>,
     <span key="nav-2" className="inline-flex items-center gap-2">
       <PackageCheck className={`h-4 w-4 ${promoAccentClass}`} aria-hidden="true" />
-      <span><span className="font-bold">Free Returns</span> for <span className="font-bold">30 Days</span></span>
+      <span><span className="font-bold">Collector Checked</span> before it ships</span>
     </span>,
     "livechat-contact" // Marker for Live Chat announcement
   ];
@@ -238,7 +240,7 @@ const Header = () => {
                   aria-label="Inquiries? Live Chat Available"
                 >
                   <MessageSquare className={`w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0 ${promoAccentClass}`} />
-                  <span className="whitespace-nowrap">Inquiries? <span className="font-bold">Live Chat Available</span></span>
+                  <span className="whitespace-nowrap">Questions about a card or box? <span className="font-bold">Live Chat Available</span></span>
                   <span className={`underline whitespace-nowrap font-bold ${promoAccentClass} ml-1`}>Chat With Us</span>
                 </Link>
               </div>
@@ -302,7 +304,7 @@ const Header = () => {
               >
                 <input
                   type="text"
-                  placeholder="Search for items..."
+                  placeholder="Search cards, booster boxes, collectibles..."
                   className="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder-gray-500 cursor-pointer"
                   readOnly
                 />
@@ -370,7 +372,7 @@ const Header = () => {
               >
                 <input
                   type="text"
-                  placeholder="Search for items..."
+                  placeholder="Search cards, booster boxes, collectibles..."
                   className="flex-1 bg-transparent outline-none text-sm text-[#1f5a46] placeholder-[#1f5a46]/60 cursor-pointer"
                   readOnly
                 />
@@ -409,7 +411,10 @@ const Header = () => {
                   </Link>
                 ))}
                 <Link href="/#featured" className={`${mobileMenuLinkClass} py-4 border-b border-[#1f5a46]/10`} onClick={handleMobileMenuClose}>
-                  Featured
+                  New Finds
+                </Link>
+                <Link href="/about" className={`${mobileMenuLinkClass} py-4 border-b border-[#1f5a46]/10`} onClick={handleMobileMenuClose}>
+                  About Ballard Kelly
                 </Link>
                 <Link href="/track" className={`${mobileMenuLinkClass} py-4 border-b border-[#1f5a46]/10`} onClick={handleMobileMenuClose}>
                   Track Order

@@ -6,6 +6,8 @@ import HomeReviews from '@/components/HomeReviews';
 import CategorySection from '@/components/CategorySection';
 import PopularCategories from '@/components/PopularCategories';
 import BrandCatalogSection from '@/components/BrandCatalogSection';
+import BuiltForCollectors from '@/components/BuiltForCollectors';
+import CollectorChoiceComparison from '@/components/CollectorChoiceComparison';
 import { getFeaturedProducts, getProducts } from '@/lib/data';
 import { homeReviews, homeReviewsStats } from '@/lib/homeReviews';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -75,6 +77,10 @@ export default async function HomePage() {
 
       <BrandCatalogSection />
 
+      <BuiltForCollectors />
+
+      <CollectorChoiceComparison />
+
       {collectibleProducts.length > 0 && (
         <Suspense fallback={null}>
           <ProductGrid
@@ -82,12 +88,12 @@ export default async function HomePage() {
             sectionId="trading-cards-collectibles-comics-figures"
             title=""
             editorialCard={{
-              title: 'Trading Cards, Collectibles, Comics & Figures',
+              title: 'Trading Cards, Topps, Pokemon & Collectibles',
               description:
-                'Explore memorable finds for collectors, fans, and hobby enthusiasts—from trading cards and comics to figures and unique collectibles.',
+                'Explore collector-led finds from Ballard Kelly: trading cards, Topps releases, Pokemon cards, booster boxes, comics, figures, and unique collectibles.',
             }}
             randomizeForVisitor
-            visitorShuffleKey="home-outdoor-care"
+            visitorShuffleKey="home-collector-finds"
           />
         </Suspense>
       )}

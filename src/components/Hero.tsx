@@ -97,57 +97,52 @@ function createTile(
 export default function Hero({ products = [] }: HeroProps) {
   const usedSlugs = new Set<string>();
 
-  const lawnMower = findProduct(products, 'Lawn Mowers', ['honda', 'craftsman', 'cub cadet', 'ego', 'mower']);
-  if (lawnMower?.slug) usedSlugs.add(lawnMower.slug);
+  const tradingCards =
+    findProduct(products, 'Trading Cards', ['topps', 'pokemon', 'sports card', 'trading card']) ??
+    findProductByTerms(products, ['topps', 'pokemon', 'booster', 'trading card', 'sports card']);
+  if (tradingCards?.slug) usedSlugs.add(tradingCards.slug);
 
-  const pressureWasher = findProduct(products, 'Pressure Washers', ['pressure washer']);
-  if (pressureWasher?.slug) usedSlugs.add(pressureWasher.slug);
+  const boosterBox =
+    findProduct(products, 'Booster Boxes', ['booster', 'box', 'sealed'], usedSlugs) ??
+    findProductByTerms(products, ['booster box', 'sealed box', 'topps box', 'pokemon box'], usedSlugs);
+  if (boosterBox?.slug) usedSlugs.add(boosterBox.slug);
 
-  const chainsaw =
-    findProduct(products, 'Outdoor Power Equipment', ['chainsaw'], usedSlugs) ??
-    findProductByTerms(products, ['chainsaw', 'chain saw'], usedSlugs);
-  if (chainsaw?.slug) usedSlugs.add(chainsaw.slug);
+  const collectibles =
+    findProduct(products, 'Collectibles', ['figure', 'memorabilia', 'collectible'], usedSlugs) ??
+    findProductByTerms(products, ['collectible', 'memorabilia', 'figure', 'graded'], usedSlugs);
+  if (collectibles?.slug) usedSlugs.add(collectibles.slug);
 
-  const blowerOrTrimmer =
-    findProduct(
-      products,
-      'Outdoor Power Equipment',
-      ['blower', 'trimmer', 'splitter'],
-      usedSlugs,
-    ) ?? findProductByTerms(products, ['blower', 'trimmer', 'splitter'], usedSlugs);
+  const comicsOrFigures =
+    findProduct(products, 'Comics', ['comic'], usedSlugs) ??
+    findProduct(products, 'Figures', ['figure'], usedSlugs) ??
+    findProductByTerms(products, ['comic', 'figure', 'vintage', 'rare'], usedSlugs);
 
   const tiles = [
     createTile(
-      lawnMower,
-      'Lawn Mowers',
-      'Mowers for Home and Farm Care',
-      'Shop riding, self-propelled, walk-behind, and zero-turn mower options from the BallardKellyScott catalog.',
+      tradingCards,
+      'Collector Shop',
+      'Cards, Boxes & Collectibles Chosen by a Real Collector',
+      'Ballard Kelly is a collector-led shop founded by Ballard Kelly Scott, built around trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectible pieces worth looking at twice.',
     ),
     createTile(
-      pressureWasher,
-      'Pressure Washers',
-      'Pressure Washers for Tough Cleanup',
-      'Clean driveways, decks, tools, equipment, siding, and outdoor work areas.',
+      boosterBox,
+      'Booster Boxes',
+      'Sealed Boxes & Pack-Rip Energy',
+      'Browse sealed boxes, hobby finds, and card lots selected for collectors who love the chase.',
     ),
     createTile(
-      chainsaw,
-      normalize(chainsaw?.category) === 'outdoor power equipment' ? 'Outdoor Power Equipment' : 'Mower Options',
-      normalize(chainsaw?.category) === 'outdoor power equipment'
-        ? 'Chainsaws & Wood Care'
-        : 'Practical Mowers',
-      normalize(chainsaw?.category) === 'outdoor power equipment'
-        ? 'Power saws and outdoor equipment for tree work, firewood, and property upkeep.'
-        : 'Reliable mower listings selected from the current BallardKellyScott catalog.',
+      collectibles,
+      'Collectibles',
+      'Shelf-Worthy Finds',
+      'Figures, memorabilia, display pieces, and hard-to-place collectibles sourced with an enthusiast collector eye.',
     ),
     createTile(
-      blowerOrTrimmer,
-      normalize(blowerOrTrimmer?.category) === 'outdoor power equipment' ? 'Outdoor Power Equipment' : 'Mower Options',
-      normalize(blowerOrTrimmer?.category) === 'outdoor power equipment'
-        ? 'Blowers, Trimmers & Yard Tools'
-        : 'Compact Mowers',
-      normalize(blowerOrTrimmer?.category) === 'outdoor power equipment'
-        ? 'Equipment for clearing, trimming, and keeping outdoor spaces under control.'
-        : 'Compact mower choices for everyday residential lawn upkeep.',
+      comicsOrFigures,
+      normalize(comicsOrFigures?.category) === 'comics' ? 'Comics' : 'Figures & More',
+      normalize(comicsOrFigures?.category) === 'comics'
+        ? 'Comics with Character'
+        : 'Figures, Vintage Pieces & Oddball Wins',
+      'A rotating mix of comics, figures, and collectible finds for fans who enjoy the hunt.',
     ),
   ].filter((tile): tile is HeroTile => Boolean(tile));
 

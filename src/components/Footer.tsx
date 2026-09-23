@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </Link>
             <p className="mb-4 text-[#f2f7f4]">
-              BallardKellyScott sells and resells lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for homes, backyards, acreage, and farm upkeep.
+              Ballard Kelly is a collector-run shop founded by Ballard Kelly Scott, built around trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectible pieces with real hobby appeal.
             </p>
             <div className="space-y-2">
               <div className="flex items-center">
@@ -85,9 +85,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Shop Collections</h3>
             <ul className="space-y-2">
               <li><Link href="/search" className="hover:text-[#c8942f] transition-colors duration-300">All Products</Link></li>
-              <li><Link href="/search?category=Lawn+Mowers" className="hover:text-[#c8942f] transition-colors duration-300">Lawn Mowers</Link></li>
-              <li><Link href="/search?category=Pressure+Washers" className="hover:text-[#c8942f] transition-colors duration-300">Pressure Washers</Link></li>
-              <li><Link href="/search?category=Outdoor+Power+Equipment" className="hover:text-[#c8942f] transition-colors duration-300">Outdoor Power Equipment</Link></li>
+              <li><Link href="/search?category=Trading+Cards" className="hover:text-[#c8942f] transition-colors duration-300">Trading Cards</Link></li>
+              <li><Link href="/search?query=Topps" className="hover:text-[#c8942f] transition-colors duration-300">Topps</Link></li>
+              <li><Link href="/search?query=Pokemon" className="hover:text-[#c8942f] transition-colors duration-300">Pokemon Cards</Link></li>
+              <li><Link href="/search?query=Booster+Box" className="hover:text-[#c8942f] transition-colors duration-300">Booster Boxes</Link></li>
+              <li><Link href="/search?category=Collectibles" className="hover:text-[#c8942f] transition-colors duration-300">Collectibles</Link></li>
             </ul>
           </div>
 
@@ -95,8 +97,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-[#f2f7f4] mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-[#c8942f] transition-colors duration-300">Home</Link></li>
-              <li><Link href="/#products" className="hover:text-[#c8942f] transition-colors duration-300">Products</Link></li>
-              <li><Link href="/#featured" className="hover:text-[#c8942f] transition-colors duration-300">Featured</Link></li>
+              <li><Link href="/#collector-finds" className="hover:text-[#c8942f] transition-colors duration-300">Collector Finds</Link></li>
+              <li><Link href="/#featured" className="hover:text-[#c8942f] transition-colors duration-300">New Finds</Link></li>
               <li><Link href="/track" className="hover:text-[#c8942f] transition-colors duration-300">Track Order</Link></li>
               <li><Link href="/contact" className="hover:text-[#c8942f] transition-colors duration-300">Contact Us</Link></li>
             </ul>

@@ -62,11 +62,11 @@ const NewsletterSection = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join BallardKellyScott&apos;s Project List
+            Join Ballard Kelly&apos;s Collector List
           </h2>
 
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Be first to discover lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for your home, backyard, acreage, and farm, without the inbox clutter.
+            Be first to see new trading cards, Topps drops, Pokemon finds, booster boxes, comics, figures, and collectible arrivals without the inbox clutter.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -127,7 +127,7 @@ const NewsletterSection = () => {
           </form>
 
           <p className="text-white/60 text-sm mt-6 opacity-80">
-            Practical updates for real projects. Unsubscribe anytime.
+            Collector updates only. Unsubscribe anytime.
           </p>
         </div>
       </div>

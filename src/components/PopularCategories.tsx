@@ -18,36 +18,38 @@ interface CategoryTile {
 
 const CATEGORY_RULES: CategoryRule[] = [
   {
-    name: 'Lawn Mowers',
-    href: '/search?category=Lawn%20Mowers',
-    category: 'Lawn Mowers',
-    terms: ['mower', 'mowers', 'mähroboter', 'maehroboter', 'automower', 'miimo', 'robocut'],
+    name: 'Trading Cards',
+    href: '/search?category=Trading+Cards',
+    category: 'Trading Cards',
+    terms: ['trading card', 'sports card', 'rookie card', 'card lot'],
   },
   {
-    name: 'Honda Mowers',
-    href: '/search?query=Honda',
-    terms: ['honda'],
+    name: 'Topps Cards',
+    href: '/search?query=Topps',
+    terms: ['topps'],
   },
   {
-    name: 'Husqvarna Outdoor Equipment',
-    href: '/search?query=Husqvarna',
-    terms: ['husqvarna'],
+    name: 'Pokemon Cards',
+    href: '/search?query=Pokemon',
+    terms: ['pokemon', 'pikachu', 'charizard'],
   },
   {
-    name: 'Pressure Washers',
-    href: '/search?category=Pressure%20Washers',
-    category: 'Pressure Washers',
-    terms: ['pressure washer', 'psi', 'gpm'],
+    name: 'Booster Boxes',
+    href: '/search?query=Booster+Box',
+    category: 'Booster Boxes',
+    terms: ['booster box', 'sealed box', 'hobby box', 'blaster box'],
   },
   {
-    name: 'Chainsaws',
-    href: '/search?query=Chainsaw',
-    terms: ['chainsaw', 'chain saw'],
+    name: 'Comics',
+    href: '/search?category=Comics',
+    category: 'Comics',
+    terms: ['comic', 'comics', 'graphic novel'],
   },
   {
-    name: 'Blowers & Trimmers',
-    href: '/search?query=Blower%20Trimmer',
-    terms: ['blower', 'trimmer', 'string trimmer'],
+    name: 'Figures & Collectibles',
+    href: '/search?query=Figures+Collectibles',
+    category: 'Collectibles',
+    terms: ['figure', 'collectible', 'memorabilia', 'display piece'],
   },
 ];
 
@@ -115,7 +117,7 @@ export default function PopularCategories({ products }: PopularCategoriesProps) 
               id="popular-categories-title"
               className="text-3xl font-bold text-[#1f5a46] md:text-4xl"
             >
-              Explore Popular Categories
+              Explore Collector Categories
             </h2>
           </div>
 

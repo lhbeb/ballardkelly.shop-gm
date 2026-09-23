@@ -4,29 +4,27 @@ import Link from 'next/link';
 import AboutNotifier from '@/components/AboutNotifier';
 import ResellerBrandNotice from '@/components/ResellerBrandNotice';
 import {
-  Users,
-  Shield,
-  Heart,
-  Zap,
+  BadgeCheck,
+  Boxes,
   CheckCircle2,
-  Award,
-  Target,
-  Sparkles,
-  Package,
-  Eye,
-  DollarSign,
-  Leaf,
-  Headphones,
-  MapPin,
-  Phone,
-  Mail,
   Clock,
+  Heart,
+  Mail,
+  MapPin,
+  Package,
+  Phone,
+  SearchCheck,
+  Shield,
+  Sparkles,
+  Star,
+  Target,
+  Users,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | BallardKellyScott',
+  title: 'About Ballard Kelly | Collector-Run Card & Collectibles Shop',
   description:
-    'Learn about BallardKellyScott, a US-based seller and reseller of lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment for home, backyard, acreage, and farm care.',
+    'Learn about Ballard Kelly, a collector-run shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectibles.',
 };
 
 export default function AboutPage() {
@@ -36,403 +34,248 @@ export default function AboutPage() {
       {
         '@type': 'AboutPage',
         '@id': 'https://BallardKellyScott.shop/about#webpage',
-        'url': 'https://BallardKellyScott.shop/about',
-        'name': 'About BallardKellyScott',
-        'description':
-          'BallardKellyScott is an ecommerce seller and reseller serving customers across the United States with outdoor power equipment for home, backyard, acreage, and farm care.',
-        'mainEntity': {
+        url: 'https://BallardKellyScott.shop/about',
+        name: 'About Ballard Kelly',
+        description:
+          'Ballard Kelly is a collector-run ecommerce shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectibles.',
+        mainEntity: {
           '@id': 'https://BallardKellyScott.shop/#organization',
         },
       },
       {
         '@type': 'OnlineStore',
         '@id': 'https://BallardKellyScott.shop/#organization',
-        'name': 'BallardKellyScott',
-        'url': 'https://BallardKellyScott.shop',
-        'description':
-          'Ecommerce seller and reseller serving the United States with lawn mowers, pressure washers, chainsaws, blowers, trimmers, and outdoor power equipment.',
-        'email': 'contact@BallardKellyScott.shop',
-        'telephone': ['+1 (913) 593-7677'],
-        'address': {
+        name: 'Ballard Kelly',
+        alternateName: 'BallardKellyScott',
+        url: 'https://BallardKellyScott.shop',
+        description:
+          'Collector-run ecommerce shop for trading cards, Topps finds, Pokemon cards, booster boxes, comics, figures, and collectible goods.',
+        email: 'contact@BallardKellyScott.shop',
+        telephone: ['+1 (913) 593-7677'],
+        address: {
           '@type': 'PostalAddress',
-            'streetAddress': '1239 N Washington Ave',
-            'addressLocality': 'Wichita',
-            'addressRegion': 'KS',
-            'postalCode': '67214',
-            'addressCountry': 'US',
+          streetAddress: '1239 N Washington Ave',
+          addressLocality: 'Wichita',
+          addressRegion: 'KS',
+          postalCode: '67214',
+          addressCountry: 'US',
         },
-        'contactPoint': [
-          {
-            '@type': 'ContactPoint',
-            'telephone': '+1 (913) 593-7677',
-            'contactType': 'customer service',
-            'areaServed': 'US',
-            'availableLanguage': ['en'],
-          },
-        ],
+        founder: {
+          '@type': 'Person',
+          name: 'Ballard Kelly Scott',
+        },
       },
     ],
   };
 
+  const differenceCards = [
+    {
+      title: 'Collector Taste',
+      text: 'The catalog favors cards, sealed product, comics, figures, and collectibles with real hobby interest.',
+      icon: Star,
+    },
+    {
+      title: 'Useful Details',
+      text: 'Listings are written to help customers understand condition, category, and what they are buying.',
+      icon: Package,
+    },
+    {
+      title: 'Fair Value',
+      text: 'Pricing is reviewed against current market signals so collectors can shop with context.',
+      icon: CheckCircle2,
+    },
+    {
+      title: 'Buyer Trust',
+      text: 'We keep support reachable and order expectations clear from checkout through delivery.',
+      icon: Shield,
+    },
+  ] as const;
+
   return (
     <div className="min-h-screen flex flex-col bg-[#f2f7f4]">
-      {/* Schema.org AboutPage & OnlineStore Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
       <AboutNotifier />
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#1f5a46] to-[#1f5a46] text-[#f2f7f4] py-16">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h1 className="text-5xl font-bold mb-6">About BallardKellyScott</h1>
-          <p className="text-xl text-[#f2f7f4]/85 leading-relaxed max-w-3xl mx-auto">
-            Welcome to BallardKellyScott, a US-based seller and reseller of outdoor power equipment for the places you maintain every week: your home, backyard, acreage, workshop, and farm. We help customers find reliable lawn mowers, pressure washers, chainsaws, blowers, trimmers, and related equipment at fair and transparent prices.
+      <div className="bg-[#102820] text-[#f2f7f4] py-16">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#f1cf74]">
+            Cards, boxes, comics, figures, collectibles
+          </p>
+          <h1 className="text-4xl font-bold leading-tight md:text-6xl">About Ballard Kelly</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#f2f7f4]/85 md:text-xl">
+            Ballard Kelly is a shop founded by Ballard Kelly Scott, an enthusiast collector with a
+            soft spot for trading cards, Topps releases, Pokemon cards, sealed booster boxes,
+            comics, figures, memorabilia, and the unexpected finds that make collecting fun.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-4xl py-12">
+      <div className="container mx-auto px-4 max-w-5xl py-12">
         <div className="mb-12">
           <ResellerBrandNotice />
         </div>
 
-        {/* US Presence */}
-        <section className="mb-12 border-y border-[#1f5a46]/15 py-9">
+        <section className="mb-12 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              icon: BadgeCheck,
+              title: 'Collector Led',
+              text: 'Inventory is chosen with hobby instincts, not generic marketplace filler.',
+            },
+            {
+              icon: Boxes,
+              title: 'Cards & Sealed Finds',
+              text: 'Topps, Pokemon cards, booster boxes, sports cards, and card lots sit at the center.',
+            },
+            {
+              icon: SearchCheck,
+              title: 'Checked Listings',
+              text: 'Photos, condition notes, and product details are reviewed before products go live.',
+            },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="rounded-xl border border-[#1f5a46]/10 bg-white p-6 shadow-sm">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[#1f5a46] text-[#f2f7f4]">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <h2 className="text-xl font-bold text-[#262626]">{item.title}</h2>
+                <p className="mt-3 leading-7 text-gray-700">{item.text}</p>
+              </div>
+            );
+          })}
+        </section>
+
+        <section className="mb-12 rounded-2xl border border-[#1f5a46]/10 bg-white p-8 shadow-sm">
           <div className="grid gap-8 md:grid-cols-[220px_minmax(0,1fr)] md:items-start">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#1f5a46] text-white">
-                <MapPin className="h-6 w-6" />
+                <Sparkles className="h-6 w-6" />
               </div>
-              <h2 className="mt-4 text-2xl font-bold text-[#262626]">Proudly US-based</h2>
+              <h2 className="mt-4 text-2xl font-bold text-[#262626]">What We Sell</h2>
             </div>
             <div className="space-y-4 text-base leading-7 text-gray-700">
               <p>
-                BallardKellyScott operates out of Wichita, Kansas, serving customers across the United States. Our central warehouse and fulfillment operations are designed to get your order to you fast.
+                The Ballard Kelly catalog is built for collectors who like variety: trading cards,
+                Topps sets and singles, Pokemon cards, sealed booster boxes, comics, figures,
+                memorabilia, display pieces, and limited-run hobby finds.
               </p>
               <p>
-                Eligible products can be collected locally from our Wichita, Kansas location. Our team confirms the available pickup address and collection time for each order before you travel.
+                Some items are modern. Some are nostalgic. Some are practical collection builders,
+                and some are the kind of oddball listing that only makes sense when you love the
+                hunt.
               </p>
-              <Link href="/local-pickup" className="inline-flex font-semibold text-[#1f5a46] hover:text-[#102820] hover:underline">
-                View the local pickup guide
+              <Link href="/search" className="inline-flex font-semibold text-[#1f5a46] hover:text-[#102820] hover:underline">
+                Browse the current catalog
               </Link>
             </div>
           </div>
         </section>
 
-        {/* How We Source Responsibly */}
-        <div className="bg-white rounded-2xl shadow-lg border border-[#1f5a46]/10 p-8 mb-12">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold text-[#262626]">How We Source Responsibly</h2>
-          </div>
-          <p className="text-gray-700 mb-8 text-lg">
-            Our business model is based on legitimate resale, authorized reseller or supplier relationships only where they apply, smart sourcing, and efficient fulfillment. We purchase differently from traditional stores, then inspect, verify, and present each product clearly before it is offered for sale.
-          </p>
-
-          <div className="space-y-6">
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 border-l-4 border-l-[#1f5a46]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1f5a46] text-[#f2f7f4] rounded-full flex items-center justify-center font-bold text-lg">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We source equipment through auctions and verified resale channels</h3>
-                  <p className="text-gray-700">
-                    Our sourcing team participates in high volume auctions and resale channels across multiple platforms. By buying carefully and in bulk, we secure lower costs on equipment for homes, backyards, acreage, and farm work.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 border-l-4 border-l-[#1f5a46]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1f5a46] text-[#f2f7f4] rounded-full flex items-center justify-center font-bold text-lg">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We negotiate with sellers and suppliers</h3>
-                  <p className="text-gray-700">
-                    Our team works with approved private sellers, marketplace partners, wholesalers, liquidators, and supplier channels. That mix helps us carry a practical range of lawn mowers, pressure washers, chainsaws, blowers, trimmers, and other outdoor power equipment.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 border-l-4 border-l-[#1f5a46]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1f5a46] text-[#f2f7f4] rounded-full flex items-center justify-center font-bold text-lg">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We partner with the return and liquidation departments of major retailers</h3>
-                  <p className="text-gray-700 mb-2">
-                    When possible, we obtain bulk lots from retailer and supplier programs. These lots may include overstock, open box items, shelf pulls, refurbished pieces, and customer returns.
-                  </p>
-                  <p className="text-gray-700">
-                    Every product is carefully inspected, tested, cleaned, or refurbished before being listed.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 border-l-4 border-l-[#1f5a46]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1f5a46] text-[#f2f7f4] rounded-full flex items-center justify-center font-bold text-lg">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">We hunt for deals locally</h3>
-                  <p className="text-gray-700">
-                    Our team regularly visits community auctions, garage sales, estate sales, local wholesalers, and liquidation centers. This allows us to discover unique finds and high value items that are often unavailable in traditional stores.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 border-l-4 border-l-[#1f5a46]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#1f5a46] text-[#f2f7f4] rounded-full flex items-center justify-center font-bold text-lg">
-                  5
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#262626] mb-2">Fair pricing keeps our store competitive</h3>
-                  <p className="text-gray-700">
-                    Instead of adding heavy markups, we focus on fair margins and fast turnover. This approach keeps our prices consistent, honest, and genuinely competitive.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Private Sellers Section */}
-        <div className="bg-white rounded-2xl shadow-lg border border-[#1f5a46]/10 p-8 mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-[#1f5a46]/10 rounded-xl">
-              <Users className="h-8 w-8 text-[#1f5a46]" />
-            </div>
-            <h2 className="text-3xl font-bold text-[#262626]">A New Addition to Our Model: Approved Private Sellers</h2>
-          </div>
-          <p className="text-gray-700 mb-4 text-lg">
-            Over the past three years, we have expanded our sourcing model by partnering with a network of private sellers who share the same dedication to quality and fairness as our in-house team.
-          </p>
-          <p className="text-gray-700 mb-6">
-            These private sellers find, source, and curate their own products, then ship their items to our warehouse. Once the items arrive, our inspection team performs a full evaluation, which includes:
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="bg-[#f2f7f4] rounded-lg p-4 border border-[#1f5a46]/10">
-              <CheckCircle2 className="h-6 w-6 text-[#1f5a46] mb-2" />
-              <p className="text-gray-700 font-medium">checking condition and listing accuracy</p>
-            </div>
-            <div className="bg-[#f2f7f4] rounded-lg p-4 border border-[#1f5a46]/10">
-              <Zap className="h-6 w-6 text-[#1f5a46] mb-2" />
-              <p className="text-gray-700 font-medium">testing function where applicable</p>
-            </div>
-            <div className="bg-[#f2f7f4] rounded-lg p-4 border border-[#1f5a46]/10">
-              <DollarSign className="h-6 w-6 text-[#1f5a46] mb-2" />
-              <p className="text-gray-700 font-medium">reviewing price against current market data</p>
-            </div>
-          </div>
-
-          <p className="text-gray-700 mb-6 bg-[#f2f7f4] rounded-lg p-4 border border-[#1f5a46]/10">
-            Only after the inspection is complete does the item become available for purchase.
-          </p>
-
-          <div className="bg-[#f2f7f4] rounded-lg p-6 border border-[#1f5a46]/10">
-            <h3 className="text-xl font-bold text-[#262626] mb-3 flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-[#1f5a46]" />
-              How it works for customers
-            </h3>
-            <p className="text-gray-700 mb-3">
-              When you purchase from a private seller on our platform, it is clearly stated on the product page. The seller sends the item to us first, we inspect it, and only then do we ship it to you.
-            </p>
-            <p className="text-gray-700 mb-3">
-              This process protects buyers and helps each product, whether sold by us or by an approved partner, meet the same listing and fulfillment standards.
-            </p>
-            <p className="text-gray-700">
-              Private sellers benefit by earning their own fair profits, while customers benefit from greater variety and consistent quality control.
+        <section className="mb-12 rounded-2xl bg-[#1f5a46] p-8 text-[#f2f7f4] shadow-sm md:p-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <Target className="mx-auto mb-5 h-10 w-10 text-[#f1cf74]" />
+            <h2 className="text-3xl font-bold">Our Mission</h2>
+            <p className="mt-5 text-lg leading-8 text-[#f2f7f4]/85">
+              To make collecting feel personal again by offering cards and collectibles that are
+              clearly presented, fairly priced, and selected by someone who understands why a
+              box, card, issue, or figure can matter to a collector.
             </p>
           </div>
-        </div>
+        </section>
 
-        {/* Our Mission */}
-        <div className="bg-gradient-to-r from-[#1f5a46] to-[#1f5a46] rounded-2xl shadow-lg p-10 mb-12 text-[#f2f7f4] text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#c8942f]/15 rounded-full mb-6">
-            <Target className="h-8 w-8" />
-          </div>
-          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-          <p className="text-xl text-[#f2f7f4]/85 mb-4">
-            To give homeowners, property owners, contractors, and farm operators access to quality outdoor and power equipment at honest prices.
-          </p>
-          <p className="text-lg text-[#f2f7f4]/85">
-            Whether you need a riding mower, walk-behind mower, pressure washer, chainsaw, leaf blower, trimmer, or other equipment for your land and buildings, you should not have to pay more than necessary.
-          </p>
-        </div>
-
-        {/* What Makes Us Different */}
-        <div className="bg-white rounded-2xl shadow-lg border border-[#1f5a46]/10 p-8 mb-12">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-[#c8942f] rounded-xl">
-              <Sparkles className="h-8 w-8 text-[#1f5a46]" />
+        <section className="mb-12 rounded-2xl border border-[#1f5a46]/10 bg-white p-8 shadow-sm">
+          <div className="mb-8 flex items-center gap-4">
+            <div className="rounded-xl bg-[#f1cf74] p-3 text-[#1f5a46]">
+              <Heart className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-[#262626]">What Makes Us Different</h2>
+            <h2 className="text-3xl font-bold text-[#262626]">What Makes Ballard Kelly Different</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
-                <Package className="h-6 w-6 text-[#1f5a46]" />
-                <h3 className="text-xl font-bold text-[#262626]">Curated Inventory</h3>
-              </div>
-              <p className="text-gray-700">Every product is carefully inspected and verified before it is shipped to the customer.</p>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
-                <Eye className="h-6 w-6 text-[#1f5a46]" />
-                <h3 className="text-xl font-bold text-[#262626]">Transparent Product Details</h3>
-              </div>
-              <p className="text-gray-700">We clearly list whether an item is new, open box, refurbished, or pre owned. Customers always know what they are buying.</p>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
-                <DollarSign className="h-6 w-6 text-[#1f5a46]" />
-                <h3 className="text-xl font-bold text-[#262626]">Real Value</h3>
-              </div>
-              <p className="text-gray-700">We compare listings against current market pricing so customers can judge the value clearly before they buy.</p>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
-                <Headphones className="h-6 w-6 text-[#1f5a46]" />
-                <h3 className="text-xl font-bold text-[#262626]">Customer Focus</h3>
-              </div>
-              <p className="text-gray-700">We offer free standard shipping within the United States, with 1 business day processing, 1-3 business days in transit, a 30 day return policy, and reliable human support.</p>
-            </div>
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10 md:col-span-2">
-              <div className="flex items-center gap-3 mb-3">
-                <Leaf className="h-6 w-6 text-[#1f5a46]" />
-                <h3 className="text-xl font-bold text-[#262626]">Sustainable Shopping</h3>
-              </div>
-              <p className="text-gray-700">By reselling returns, overstock, and refurbished goods, you help reduce waste and support a more sustainable buying cycle.</p>
-            </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {differenceCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div key={card.title} className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
+                  <div className="mb-3 flex items-center gap-3">
+                    <Icon className="h-6 w-6 text-[#1f5a46]" />
+                    <h3 className="text-xl font-bold text-[#262626]">{card.title}</h3>
+                  </div>
+                  <p className="leading-7 text-gray-700">{card.text}</p>
+                </div>
+              );
+            })}
           </div>
-        </div>
+        </section>
 
-        {/* Our Values */}
-        <div className="bg-white rounded-2xl shadow-lg border border-[#1f5a46]/10 p-8 mb-12">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-[#c8942f] rounded-xl">
-              <Heart className="h-8 w-8 text-[#1f5a46]" />
+        <section className="mb-12 rounded-2xl border border-[#1f5a46]/10 bg-white p-8 shadow-sm">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="rounded-xl bg-[#1f5a46]/10 p-3 text-[#1f5a46]">
+              <Users className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-[#262626]">Our Values</h2>
+            <h2 className="text-3xl font-bold text-[#262626]">How We Source</h2>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-[#f2f7f4] rounded-xl p-6 text-center border border-[#1f5a46]/10">
-              <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#c8942f]">
-                <Shield className="h-8 w-8 text-[#1f5a46]" />
-              </div>
-              <h3 className="font-bold text-[#262626] text-lg">Integrity</h3>
-            </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 text-center border border-[#1f5a46]/10">
-              <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#c8942f]">
-                <Award className="h-8 w-8 text-[#1f5a46]" />
-              </div>
-              <h3 className="font-bold text-[#262626] text-lg">Quality</h3>
-            </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 text-center border border-[#1f5a46]/10">
-              <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#c8942f]">
-                <Users className="h-8 w-8 text-[#1f5a46]" />
-              </div>
-              <h3 className="font-bold text-[#262626] text-lg">Customer Trust</h3>
-            </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 text-center border border-[#1f5a46]/10">
-              <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#c8942f]">
-                <Zap className="h-8 w-8 text-[#1f5a46]" />
-              </div>
-              <h3 className="font-bold text-[#262626] text-lg">Innovation and continuous improvement</h3>
-            </div>
+          <div className="space-y-4 leading-7 text-gray-700">
+            <p>
+              Ballard Kelly sources through a mix of collector networks, verified resale channels,
+              private sellers, wholesalers, auctions, liquidation opportunities, and supplier
+              relationships where they apply.
+            </p>
+            <p>
+              That mix lets the shop carry new arrivals, sealed product, collection builders, and
+              unexpected collectible pieces without pretending every listing came from the same
+              shelf.
+            </p>
           </div>
-        </div>
+        </section>
 
-        {/* Customer Expectations */}
-        <div className="bg-gradient-to-r from-[#1f5a46] to-[#1f5a46] rounded-2xl shadow-lg p-10 mb-12 text-[#f2f7f4]">
-          <h3 className="text-3xl font-bold mb-8 text-center">What Customers Can Expect</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-[#f2f7f4]/10 backdrop-blur-sm rounded-xl border border-[#f2f7f4]/20">
-              <div className="text-4xl font-bold mb-2">US</div>
-              <div className="text-[#f2f7f4]/80 text-sm">dispatch support</div>
+        <section className="rounded-2xl border border-[#1f5a46]/10 bg-white p-8 shadow-sm">
+          <div className="mb-6 flex items-center gap-4">
+            <div className="rounded-xl bg-[#1f5a46]/10 p-3 text-[#1f5a46]">
+              <Phone className="h-7 w-7" />
             </div>
-            <div className="text-center p-6 bg-[#f2f7f4]/10 backdrop-blur-sm rounded-xl border border-[#f2f7f4]/20">
-              <div className="text-4xl font-bold mb-2">Curated</div>
-              <div className="text-[#f2f7f4]/80 text-sm">equipment selection</div>
-            </div>
-            <div className="text-center p-6 bg-[#f2f7f4]/10 backdrop-blur-sm rounded-xl border border-[#f2f7f4]/20">
-              <div className="text-4xl font-bold mb-2">30-day</div>
-              <div className="text-[#f2f7f4]/80 text-sm">return window</div>
-            </div>
-            <div className="text-center p-6 bg-[#f2f7f4]/10 backdrop-blur-sm rounded-xl border border-[#f2f7f4]/20">
-              <div className="text-4xl font-bold mb-2">Human</div>
-              <div className="text-[#f2f7f4]/80 text-sm">customer support</div>
-            </div>
+            <h2 className="text-2xl font-bold text-[#262626]">Contact Information</h2>
           </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-white rounded-2xl shadow-lg border border-[#1f5a46]/10 p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-[#1f5a46]/10 rounded-xl">
-              <Phone className="h-8 w-8 text-[#1f5a46]" />
-            </div>
-            <h3 className="text-2xl font-bold text-[#262626]">Contact Information</h3>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
+              <div className="mb-3 flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-[#1f5a46]" />
                 <div className="font-medium text-[#262626]">Address</div>
               </div>
-              <div className="text-gray-600 ml-8">1239 N Washington Ave, Wichita, KS 67214, USA</div>
+              <div className="ml-8 text-gray-600">1239 N Washington Ave, Wichita, KS 67214, USA</div>
             </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
+            <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
+              <div className="mb-3 flex items-center gap-3">
                 <Phone className="h-5 w-5 text-[#1f5a46]" />
                 <div className="font-medium text-[#262626]">Phone</div>
               </div>
-              <div className="ml-8 space-y-3 text-gray-600">
-                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-1">
-                  <a href="tel:+1 (913) 593-7677" className="whitespace-nowrap hover:text-[#1f5a46] transition-colors">
-                    +1 (913) 593-7677
-                  </a>
-                </div>
-              </div>
+              <a href="tel:+1 (913) 593-7677" className="ml-8 text-gray-600 hover:text-[#1f5a46]">
+                +1 (913) 593-7677
+              </a>
             </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
+            <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
+              <div className="mb-3 flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#1f5a46]" />
-                <div className="font-medium text-[#262626]">Email:</div>
+                <div className="font-medium text-[#262626]">Email</div>
               </div>
-              <div className="text-gray-600 ml-8">contact@BallardKellyScott.shop</div>
+              <div className="ml-8 text-gray-600">contact@BallardKellyScott.shop</div>
             </div>
-            <div className="bg-[#f2f7f4] rounded-xl p-6 border border-[#1f5a46]/10">
-              <div className="flex items-center gap-3 mb-3">
+            <div className="rounded-xl border border-[#1f5a46]/10 bg-[#f2f7f4] p-6">
+              <div className="mb-3 flex items-center gap-3">
                 <Clock className="h-5 w-5 text-[#1f5a46]" />
-                <div className="font-medium text-[#262626]">Business Hours:</div>
+                <div className="font-medium text-[#262626]">Business Hours</div>
               </div>
-              <div className="text-gray-600 ml-8 space-y-1">
+              <div className="ml-8 space-y-1 text-gray-600">
                 <div>Monday to Friday, 9:00 AM to 5:00 PM CT</div>
                 <div>Saturday, 10:00 AM to 3:00 PM CT</div>
                 <div>Sunday, Closed</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
