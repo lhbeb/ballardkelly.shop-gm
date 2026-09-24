@@ -26,21 +26,21 @@ const InstagramSection: React.FC = () => {
 
                 {/* Profile Details */}
                 <div className="flex-grow">
-                  <h3 className="font-bold text-[#262626] text-lg sm:text-xl mb-1">@ballardkelly.shop</h3>
-                  <p className="text-gray-600 text-sm sm:text-base mb-2">Ballard Kelly</p>
+                  <h3 className="font-bold text-[#262626] text-lg sm:text-xl mb-1">@ballardkelly_shop</h3>
+                  <p className="text-gray-600 text-sm sm:text-base mb-2">ballardkelly</p>
 
                   {/* Statistics */}
                   <div className="flex items-center space-x-4 sm:space-x-6 text-sm">
                     <div className="text-center">
-                      <div className="font-bold text-[#262626]">8</div>
+                      <div className="font-bold text-[#262626]">12</div>
                       <div className="text-gray-500 text-xs">posts</div>
                     </div>
                     <div className="text-center">
-                      <div className="font-bold text-[#262626]">1,423</div>
+                      <div className="font-bold text-[#262626]">215</div>
                       <div className="text-gray-500 text-xs">followers</div>
                     </div>
                     <div className="text-center">
-                      <div className="font-bold text-[#262626]">10</div>
+                      <div className="font-bold text-[#262626]">21</div>
                       <div className="text-gray-500 text-xs">following</div>
                     </div>
                   </div>

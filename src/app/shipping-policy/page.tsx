@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Shipping & Delivery | BallardKelly',
-  description: 'BallardKelly Shipping & Delivery Policy. Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+  description: 'BallardKelly Shipping & Delivery Policy. Free standard shipping across the United States with 0-1 business day processing and 3-4 business days to arrive.',
 };
 
 export default function ShippingPolicyPage() {
@@ -16,7 +16,7 @@ export default function ShippingPolicyPage() {
         'url': 'https://BallardKelly.shop/shipping-policy',
         'name': 'Shipping & Delivery | BallardKelly',
         'description':
-          'BallardKelly Shipping & Delivery Policy: Free standard shipping across the United States with 1 business day processing and 1-3 business days in transit.',
+          'BallardKelly Shipping & Delivery Policy: Free standard shipping across the United States with 0-1 business day processing and 3-4 business days to arrive.',
       },
       {
         '@type': 'OfferShippingDetails',
@@ -34,14 +34,14 @@ export default function ShippingPolicyPage() {
           '@type': 'ShippingDeliveryTime',
           'handlingTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 1,
-            'maxValue': 1,
+            minValue: 0,
+            maxValue: 1,
             'unitCode': 'DAY',
           },
           'transitTime': {
             '@type': 'QuantitativeValue',
-            'minValue': 1,
-            'maxValue': 3,
+            minValue: 3,
+            maxValue: 4,
             'unitCode': 'DAY',
           },
           'cutoffTime': '14:00:00-05:00',
@@ -90,9 +90,8 @@ export default function ShippingPolicyPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Delivery Details</h2>
             <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-relaxed">
-              <li><strong>Handling Time:</strong> 1 business day (Mon–Fri)</li>
-              <li><strong>Transit Time:</strong> 1–3 business days (Mon–Fri)</li>
-              <li><strong>Order Cut-off Time:</strong> 02:00 PM Central Time</li>
+              <li><strong>Processing Time:</strong> 0–1 business day (Mon–Fri)</li>
+              <li><strong>Estimated Arrival:</strong> 3–4 business days (Mon–Fri)</li>
             </ul>
           </section>
 

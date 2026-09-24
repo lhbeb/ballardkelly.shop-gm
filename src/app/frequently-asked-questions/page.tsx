@@ -6,7 +6,7 @@ import { STORE_FAQS } from '@/lib/storeFaqs';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | BallardKelly',
   description:
-    'Find answers about BallardKelly resold and sourced outdoor power equipment, product marks, ordering, shipping, returns, tracking, local pickup, and customer support.',
+    'Find answers about BallardKelly collectibles, product details, ordering, shipping, returns, tracking, and customer support.',
   alternates: {
     canonical: 'https://BallardKelly.shop/frequently-asked-questions',
   },
@@ -42,7 +42,7 @@ export default function FrequentlyAskedQuestionsPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-[#f2f7f4]/75 sm:text-lg">
-            Straightforward answers about shopping for BallardKelly equipment, product marks, delivery, returns, pickup, and support.
+            Straightforward answers about shopping for BallardKelly collectibles, delivery, returns, and support.
           </p>
         </div>
       </section>

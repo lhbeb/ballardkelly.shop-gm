@@ -7,72 +7,62 @@ export interface StoreFaq {
 
 export const STORE_FAQS: readonly StoreFaq[] = [
   {
-    question: 'What products does BallardKelly sell?',
+    question: 'What collectibles does BallardKelly sell?',
     answer:
-      'BallardKelly sells and resells outdoor power and property-care equipment for homes, backyards, acreage, and farms, including lawn mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials from product marks such as Briggs & Stratton, Craftsman, Cub Cadet, DEWALT, EGO, Greenworks, Honda, and Husqvarna.',
+      'BallardKelly offers a changing selection of collectibles and hobby items. Available categories, themes, editions, and condition details are shown on each product page.',
   },
   {
-    question: 'Is BallardKelly affiliated with the brands shown?',
+    question: 'Are collectibles new or pre-owned?',
     answer:
-      'BallardKelly is an independent ecommerce seller and reseller. Some listings may come through authorized reseller or supplier relationships where applicable; others come through verified resale, supplier, marketplace, auction, liquidation, overstock, or private seller channels. Brand and model names are used to identify products and remain the property of their respective owners.',
+      'Condition varies by item. Each product page identifies whether a collectible is new, used, vintage, sealed, open-box, or otherwise pre-owned, along with the available listing details.',
   },
   {
-    question: 'How does BallardKelly review products before sale?',
+    question: 'What should I check before buying a collectible?',
     answer:
-      'Products handled through our warehouse are reviewed for listing accuracy, condition, and function where applicable before fulfillment. The product page shows the available condition and listing details before you order.',
+      'Review the item description, edition or model information, condition, dimensions, included pieces, photos, and any noted imperfections on the product page. If you need clarification, contact us before ordering.',
   },
   {
-    question: 'Are your products new or pre-owned?',
+    question: 'Are accessories or original packaging included?',
     answer:
-      'Product condition varies by item. The exact condition is displayed on each product page so you can review it before adding the item to your cart.',
-  },
-  {
-    question: 'How do I place an order?',
-    answer:
-      'Choose a product, add it to your cart, and continue to checkout. Review the product, delivery address, total price, and available payment instructions before completing your order.',
+      'Included items vary by listing. Check the product description and photos for original packaging, certificates, inserts, accessories, display stands, or other pieces before completing your order.',
   },
   {
     question: 'Where do you ship and how long does delivery take?',
     answer:
-      'BallardKelly currently offers free standard shipping across the United States. Orders are processed within 1 business day, transit time is 1-3 business days, and tracking is provided after an eligible order is dispatched.',
+      'BallardKelly offers free standard shipping across the United States. Orders are processed within 0–1 business day, with estimated delivery in 3–4 business days. Tracking is provided after an eligible order ships.',
     linkHref: '/shipping-policy',
     linkLabel: 'Read our Shipping Policy',
   },
   {
-    question: 'How can I track my order?',
+    question: 'How can I track my collectibles order?',
     answer:
-      'When your order ships, we send tracking information to the email address used during checkout. You can also use our Track Order page for updates.',
+      'When your order ships, tracking information is sent to the email address used during checkout. You can also use our Track Order page for updates.',
     linkHref: '/track',
     linkLabel: 'Track your order',
   },
   {
-    question: 'What is your return policy?',
+    question: 'What is your return policy for collectibles?',
     answer:
-      'Eligible items may be returned within 30 calendar days of delivery. Return eligibility, required condition, postage responsibility, refund timing, and step-by-step instructions are explained in our Return & Exchange Policy.',
+      'Eligible items may be returned within 30 calendar days of delivery. Return eligibility, condition requirements, postage responsibility, refund timing, and instructions are explained in our Return & Exchange Policy.',
     linkHref: '/return-policy',
     linkLabel: 'Read our Return & Exchange Policy',
   },
   {
-    question: 'Can I exchange an item?',
+    question: 'Can I arrange local pickup?',
     answer:
-      'Exchanges are accepted for eligible items when replacement inventory is available. Contact our support team within 30 days of delivery before sending anything back.',
-  },
-  {
-    question: 'Is local pickup available?',
-    answer:
-      'Local pickup is available only for eligible products and must be confirmed by our team. Please wait for a pickup-ready confirmation before travelling to the pickup location.',
+      'Local pickup is available only for eligible products and must be confirmed by our team. Wait for a pickup-ready confirmation before travelling to the pickup location.',
     linkHref: '/local-pickup',
     linkLabel: 'View the Local Pickup Guide',
   },
   {
-    question: 'Can I change or cancel an order?',
+    question: 'Can I change or cancel a collectibles order?',
     answer:
-      'Contact us as soon as possible. We will try to help before fulfillment begins, but changes or cancellations cannot be guaranteed after an order has entered processing or shipped.',
+      'Contact us as soon as possible. We will try to help before fulfillment begins, but changes or cancellations cannot be guaranteed after an order enters processing or ships.',
   },
   {
-    question: 'How can I contact BallardKelly?',
+    question: 'How can I contact BallardKelly about a collectible?',
     answer:
-      'You can use our contact form, email contact@BallardKelly.shop, or call +1 (308) 260-1935 during published support hours.',
+      'Use our contact form, email contact@BallardKelly.shop, or call +1 (308) 260-1935 during published support hours for product or order questions.',
     linkHref: '/contact',
     linkLabel: 'Contact our team',
   },

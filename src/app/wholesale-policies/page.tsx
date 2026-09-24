@@ -82,7 +82,7 @@ export default function WholesalePoliciesPage() {
           <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl font-bold text-[#262626] mb-4">Fulfillment</h2>
             <p className="text-gray-600 leading-relaxed">
-              Once payment has been received, orders take between 1-2 business days to fulfill unless otherwise notified.
+              Once payment has been received, orders take between 0-1 business days to fulfill unless otherwise notified.
             </p>
           </section>
 

@@ -1,29 +1,29 @@
 import { Info, PackageCheck, SearchCheck, ShieldCheck } from 'lucide-react';
 
-const collectorRows = [
+const equipmentRows = [
   {
     value: '100%',
-    title: 'Authentic Cards',
-    text: 'Shop with confidence from a collector-focused store.',
+    title: 'Practical Equipment',
+    text: 'Find dependable tools for lawns, backyards, acreage, and farms.',
     icon: ShieldCheck,
   },
   {
     value: '100%',
-    title: 'Collector Focused',
-    text: 'Built around the hobby Ballard Kelly Scott loves.',
+    title: 'Clear Product Details',
+    text: 'Review condition, specifications, included items, and compatibility before ordering.',
     icon: SearchCheck,
   },
   {
     value: 'Curated',
-    title: 'Fresh Finds',
-    text: 'Cards, booster boxes, comics, figures, and collectibles selected for real hobby appeal.',
+    title: 'Property-Care Essentials',
+    text: 'Mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and more.',
     icon: PackageCheck,
   },
 ] as const;
 
 export default function BuiltForCollectors() {
   return (
-    <section className="bg-[#102820] py-16 text-[#f2f7f4] md:py-20" aria-labelledby="built-for-collectors-title">
+    <section className="bg-[#102820] py-16 text-[#f2f7f4] md:py-20" aria-labelledby="built-for-equipment-title">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
@@ -36,13 +36,13 @@ export default function BuiltForCollectors() {
             >
               Built for{' '}
               <span className="text-[#6ee7a8]">
-                Collectors
+                Property Care
               </span>
             </h2>
           </div>
 
           <div className="border-y border-[#f2f7f4]/25">
-            {collectorRows.map((row, index) => {
+            {equipmentRows.map((row, index) => {
               const Icon = row.icon;
 
               return (
@@ -79,7 +79,7 @@ export default function BuiltForCollectors() {
           <div className="mt-8 flex items-start gap-3 rounded-lg bg-[#f2f7f4] px-5 py-4 text-[#1f5a46] md:px-6">
             <Info className="mt-1 h-5 w-5 shrink-0 text-[#1f8f5f]" aria-hidden="true" />
             <p className="text-base leading-7 md:text-lg">
-              Based on Ballard Kelly&apos;s collector-first listing standards and product review process.
+              Based on Ballard Kelly&apos;s equipment listing standards and product review process.
             </p>
           </div>
         </div>

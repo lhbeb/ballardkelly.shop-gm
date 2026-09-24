@@ -35,7 +35,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             </h1>
 
             <p className="text-lg leading-relaxed font-normal mb-12">
-              Orders are processed within 1 business day (Mon–Fri), followed by 1–3 business days in transit (Mon–Fri), for an estimated total delivery time of 2–4 business days. Orders placed by 2:00 PM Central Time receive the stated processing window.
+              0–1 business day processing. Estimated delivery: 3–4 business days.
             </p>
             <Link
               href="/shipping-policy"
@@ -108,7 +108,7 @@ const SameDayShipping: React.FC<SameDayShippingProps> = ({ fullWidth = false, co
             Ready to get your order moving?
           </p>
           <p className="text-2xl md:text-3xl font-bold text-[#262626]">
-            <span className="text-[#1f5a46]">2–4 business days</span> total delivery: 1 business day processing plus 1–3 business days in transit
+            <span className="text-[#1f5a46]">3–4 business days</span> to arrive, with 0–1 business day processing
           </p>
         </div>
         <a

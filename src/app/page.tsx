@@ -17,22 +17,27 @@ import type { Product } from '@/types/product';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const COLLECTIBLES_TERMS = [
-  'trading card',
-  'collectible',
-  'comic',
-  'figure',
-  'pokemon',
-  'sports card',
-  'action figure',
-  'memorabilia',
+const EQUIPMENT_TERMS = [
+  'lawn mower',
+  'mower',
+  'pressure washer',
+  'chainsaw',
+  'blower',
+  'trimmer',
+  'log splitter',
+  'brush cutter',
+  'string trimmer',
+  'outdoor power',
+  'property care',
+  'generator',
+  'tiller',
 ];
 
 function normalizeCatalogText(value?: string) {
   return value?.trim().toLowerCase() ?? '';
 }
 
-function isCollectibleProduct(product: Product) {
+function isEquipmentProduct(product: Product) {
   const category = normalizeCatalogText(product.category);
   const searchable = `${normalizeCatalogText(product.title)} ${normalizeCatalogText(product.brand)} ${category}`;
 
@@ -41,7 +46,7 @@ function isCollectibleProduct(product: Product) {
     product.inStock !== false &&
     Boolean(product.slug) &&
     Boolean(product.images?.[0]) &&
-    COLLECTIBLES_TERMS.some((term) => searchable.includes(term))
+    EQUIPMENT_TERMS.some((term) => searchable.includes(term))
   );
 }
 
@@ -52,7 +57,7 @@ export default async function HomePage() {
       getProducts(),
     ]);
 
-    const collectibleProducts = products.filter(isCollectibleProduct);
+    const equipmentProducts = products.filter(isEquipmentProduct);
 
     const smallToolProducts = products.filter((product) =>
       product.collections?.includes('power-tools') &&
@@ -81,19 +86,19 @@ export default async function HomePage() {
 
       <CollectorChoiceComparison />
 
-      {collectibleProducts.length > 0 && (
+      {equipmentProducts.length > 0 && (
         <Suspense fallback={null}>
           <ProductGrid
-            products={collectibleProducts}
-            sectionId="trading-cards-collectibles-comics-figures"
+            products={equipmentProducts}
+            sectionId="outdoor-power-equipment"
             title=""
             editorialCard={{
-              title: 'Trading Cards, Topps, Pokemon & Collectibles',
+              title: 'Outdoor Power & Property-Care Equipment',
               description:
-                'Explore collector-led finds from Ballard Kelly: trading cards, Topps releases, Pokemon cards, booster boxes, comics, figures, and unique collectibles.',
+                'Shop practical equipment for homes, backyards, acreage, and farms, including mowers, pressure washers, chainsaws, blowers, trimmers, log splitters, and related essentials.',
             }}
             randomizeForVisitor
-            visitorShuffleKey="home-collector-finds"
+            visitorShuffleKey="home-outdoor-equipment"
           />
         </Suspense>
       )}
@@ -105,7 +110,7 @@ export default async function HomePage() {
           <ProductGrid
             products={smallToolProducts}
             sectionId="durable-tools"
-            title="More to Discover for Collectors"
+            title="More Property-Care Essentials"
             randomizeForVisitor
             visitorShuffleKey="home-durable-tools"
           />
