@@ -30,8 +30,8 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     locale: 'en-US',
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
-    deliveryDaysMin: 4,
-    deliveryDaysMax: 5,
+    deliveryDaysMin: 2,
+    deliveryDaysMax: 4,
     freeShippingText: 'Free standard shipping',
     returnsText: '30-day returns',
     faqShippingAnswer:
@@ -47,8 +47,8 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     locale: 'en-GB',
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
-    deliveryDaysMin: 4,
-    deliveryDaysMax: 5,
+    deliveryDaysMin: 2,
+    deliveryDaysMax: 4,
     freeShippingText: 'Free delivery to United Kingdom',
     returnsText: '30-day returns',
     faqShippingAnswer:
@@ -64,8 +64,8 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     locale: 'de-DE',
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
-    deliveryDaysMin: 4,
-    deliveryDaysMax: 5,
+    deliveryDaysMin: 2,
+    deliveryDaysMax: 4,
     freeShippingText: 'Free delivery across Europe',
     returnsText: '30-day returns',
     faqShippingAnswer:
@@ -81,8 +81,8 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     locale: 'en-CA',
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
-    deliveryDaysMin: 4,
-    deliveryDaysMax: 5,
+    deliveryDaysMin: 2,
+    deliveryDaysMax: 4,
     freeShippingText: 'Free standard shipping across Canada',
     returnsText: '30-day returns',
     faqShippingAnswer:
@@ -98,8 +98,8 @@ export const MARKETS: Record<MarketKey, MarketConfig> = {
     locale: 'en-AU',
     shipsFrom: 'United States',
     shipsFromFlag: '🇺🇸',
-    deliveryDaysMin: 4,
-    deliveryDaysMax: 5,
+    deliveryDaysMin: 2,
+    deliveryDaysMax: 4,
     freeShippingText: 'Free standard shipping across Australia',
     returnsText: '30-day returns',
     faqShippingAnswer:
@@ -137,10 +137,21 @@ export function formatMarketPrice(price: number, market: MarketConfig): string {
  */
 export function getDeliveryRange(market: MarketConfig): string {
   const today = new Date();
-  const start = new Date(today);
-  const end = new Date(today);
-  start.setDate(today.getDate() + market.deliveryDaysMin);
-  end.setDate(today.getDate() + market.deliveryDaysMax);
+  const addBusinessDays = (date: Date, days: number) => {
+    const result = new Date(date);
+    let remaining = days;
+
+    while (remaining > 0) {
+      result.setDate(result.getDate() + 1);
+      const day = result.getDay();
+      if (day !== 0 && day !== 6) remaining -= 1;
+    }
+
+    return result;
+  };
+
+  const start = addBusinessDays(today, market.deliveryDaysMin);
+  const end = addBusinessDays(today, market.deliveryDaysMax);
 
   const locale = market.locale;
   if (start.getMonth() === end.getMonth()) {
