@@ -132,9 +132,7 @@ export default function RootLayout({
                 "logo": "https://BallardKelly.shop/logosvg.svg",
                 "description": "Ballard Kelly is a collector-run shop founded by Ballard Kelly Scott for trading cards, Topps finds, Pokemon cards, booster boxes, collectibles, comics, and figures.",
                 "sameAs": [
-                  "https://www.tiktok.com/@BallardKelly_officiel",
-                  "https://www.instagram.com/ballardkelly_shop/",
-                  "https://www.pinterest.com/BallardKelly_officiel/"
+                  "https://www.instagram.com/ballardkelly_shop/"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
