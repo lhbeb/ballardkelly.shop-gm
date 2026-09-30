@@ -80,7 +80,6 @@ const CookiesPage = () => (
             We may use services provided by third parties that use cookies, such as:
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>Google Analytics for website performance and analytics</li>
             <li>PayPal for secure payment processing</li>
             <li>Social media platforms for sharing and engagement</li>
             <li>Advertising partners for targeted advertising</li>
